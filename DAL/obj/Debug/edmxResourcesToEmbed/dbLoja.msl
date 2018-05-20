@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="quiteriamodasModelStoreContainer" CdmEntityContainer="quiteriamodasEntities">
+    <EntitySetMapping Name="categoria">
+      <EntityTypeMapping TypeName="quiteriamodasModel.categoria">
+        <MappingFragment StoreEntitySet="categoria">
+          <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fornecedor">
+      <EntityTypeMapping TypeName="quiteriamodasModel.fornecedor">
+        <MappingFragment StoreEntitySet="fornecedor">
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="telefone2" ColumnName="telefone2" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedido">
+      <EntityTypeMapping TypeName="quiteriamodasModel.pedido">
+        <MappingFragment StoreEntitySet="pedido">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fornecedorid" ColumnName="fornecedorid" />
+          <ScalarProperty Name="valordopedido" ColumnName="valordopedido" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produto">
+      <EntityTypeMapping TypeName="quiteriamodasModel.produto">
+        <MappingFragment StoreEntitySet="produto">
+          <ScalarProperty Name="tamanho" ColumnName="tamanho" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="codigodebarra" ColumnName="codigodebarra" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="categoriaid" ColumnName="categoriaid" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="preco" ColumnName="preco" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produtospedido">
+      <EntityTypeMapping TypeName="quiteriamodasModel.produtospedido">
+        <MappingFragment StoreEntitySet="produtospedido">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="produtoid" ColumnName="produtoid" />
+          <ScalarProperty Name="pedidoid" ColumnName="pedidoid" />
+          <ScalarProperty Name="tamanhosdesc" ColumnName="tamanhosdesc" />
+          <ScalarProperty Name="qtd" ColumnName="qtd" />
+          <ScalarProperty Name="precounitariopago" ColumnName="precounitariopago" />
+          <ScalarProperty Name="precototalpago" ColumnName="precototalpago" />
+          <ScalarProperty Name="precounitariovenda" ColumnName="precounitariovenda" />
+          <ScalarProperty Name="precototalvenda" ColumnName="precototalvenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estoque">
+      <EntityTypeMapping TypeName="quiteriamodasModel.estoque">
+        <MappingFragment StoreEntitySet="estoque">
+          <ScalarProperty Name="categoriaid" ColumnName="categoriaid" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="qtd" ColumnName="qtd" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="tamanho" ColumnName="tamanho" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="qtdminima" ColumnName="qtdminima" />
+          <ScalarProperty Name="pontodepedido" ColumnName="pontodepedido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

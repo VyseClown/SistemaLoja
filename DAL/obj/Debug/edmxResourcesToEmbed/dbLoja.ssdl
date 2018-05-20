@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="quiteriamodasModel.Store" Provider="Devart.Data.PostgreSql" ProviderManifestToken="PostgreSQL, 9.6.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" />
+    <Property Name="idcategoria" Type="int" />
+  </EntityType>
+  <EntityType Name="estoque">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="pontodepedido" Type="int" />
+    <Property Name="qtdminima" Type="int" />
+    <Property Name="modelo" Type="varchar" MaxLength="50" />
+    <Property Name="tamanho" Type="varchar" MaxLength="20" />
+    <Property Name="marca" Type="varchar" MaxLength="20" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qtd" Type="int" />
+    <Property Name="nome" Type="varchar" MaxLength="50" />
+    <Property Name="categoriaid" Type="int" />
+  </EntityType>
+  <EntityType Name="fornecedor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="50" />
+    <Property Name="telefone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telefone2" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="80" />
+    <Property Name="marca" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="pedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fornecedorid" Type="int" />
+    <Property Name="valordopedido" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="200" />
+    <Property Name="data" Type="date" />
+  </EntityType>
+  <EntityType Name="produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoriaid" Type="int" />
+    <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="preco" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="marca" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="100" />
+    <Property Name="codigodebarra" Type="char" MaxLength="13" />
+    <Property Name="modelo" Type="varchar" MaxLength="50" />
+    <Property Name="tamanho" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="produtospedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="produtoid" Type="int" />
+    <Property Name="pedidoid" Type="int" />
+    <Property Name="tamanhosdesc" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="qtd" Type="int" Nullable="false" />
+    <Property Name="precounitariopago" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="precototalpago" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="precounitariovenda" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="precototalvenda" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="categoria_idcategoria_fkey">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="0..1" />
+    <End Role="categoria1" Type="Self.categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="categoria1">
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pedido_fornecedorid_fkey">
+    <End Role="fornecedor" Type="Self.fornecedor" Multiplicity="0..1" />
+    <End Role="pedido" Type="Self.pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fornecedor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="pedido">
+        <PropertyRef Name="fornecedorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="produto_categoriaid_fkey">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="0..1" />
+    <End Role="produto" Type="Self.produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="produto">
+        <PropertyRef Name="categoriaid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="produtospedido_pedidoid_fkey">
+    <End Role="pedido" Type="Self.pedido" Multiplicity="0..1" />
+    <End Role="produtospedido" Type="Self.produtospedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pedido">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="produtospedido">
+        <PropertyRef Name="pedidoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="produtospedido_produtoid_fkey">
+    <End Role="produto" Type="Self.produto" Multiplicity="0..1" />
+    <End Role="produtospedido" Type="Self.produtospedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="produtospedido">
+        <PropertyRef Name="produtoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="quiteriamodasModelStoreContainer">
+    <EntitySet Name="categoria" EntityType="Self.categoria" Schema="public" store:Type="Tables" />
+    <EntitySet Name="estoque" EntityType="Self.estoque" Schema="public" store:Type="Tables" />
+    <EntitySet Name="fornecedor" EntityType="Self.fornecedor" Schema="public" store:Type="Tables" />
+    <EntitySet Name="pedido" EntityType="Self.pedido" Schema="public" store:Type="Tables" />
+    <EntitySet Name="produto" EntityType="Self.produto" Schema="public" store:Type="Tables" />
+    <EntitySet Name="produtospedido" EntityType="Self.produtospedido" Schema="public" store:Type="Tables" />
+    <AssociationSet Name="categoria_idcategoria_fkey" Association="Self.categoria_idcategoria_fkey">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="categoria1" EntitySet="categoria" />
+    </AssociationSet>
+    <AssociationSet Name="pedido_fornecedorid_fkey" Association="Self.pedido_fornecedorid_fkey">
+      <End Role="fornecedor" EntitySet="fornecedor" />
+      <End Role="pedido" EntitySet="pedido" />
+    </AssociationSet>
+    <AssociationSet Name="produto_categoriaid_fkey" Association="Self.produto_categoriaid_fkey">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="produto" EntitySet="produto" />
+    </AssociationSet>
+    <AssociationSet Name="produtospedido_pedidoid_fkey" Association="Self.produtospedido_pedidoid_fkey">
+      <End Role="pedido" EntitySet="pedido" />
+      <End Role="produtospedido" EntitySet="produtospedido" />
+    </AssociationSet>
+    <AssociationSet Name="produtospedido_produtoid_fkey" Association="Self.produtospedido_produtoid_fkey">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="produtospedido" EntitySet="produtospedido" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

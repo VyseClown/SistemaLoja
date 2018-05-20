@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbLojaQuiteriaModasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="quiteriamodasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="dbLojaQuiteriaModasModel.Categoria" />
+    <EntitySet Name="Fornecedor" EntityType="dbLojaQuiteriaModasModel.Fornecedor" />
+    <EntitySet Name="Marcas" EntityType="dbLojaQuiteriaModasModel.Marcas" />
+    <EntitySet Name="Modelo" EntityType="dbLojaQuiteriaModasModel.Modelo" />
+    <EntitySet Name="Pedido" EntityType="dbLojaQuiteriaModasModel.Pedido" />
+    <EntitySet Name="Produto" EntityType="dbLojaQuiteriaModasModel.Produto" />
+    <EntitySet Name="ProdutosPedido" EntityType="dbLojaQuiteriaModasModel.ProdutosPedido" />
+    <EntitySet Name="sysdiagrams" EntityType="dbLojaQuiteriaModasModel.sysdiagrams" />
+    <EntitySet Name="Tamanhos" EntityType="dbLojaQuiteriaModasModel.Tamanhos" />
+    <AssociationSet Name="FK__Produto__categor__286302EC" Association="dbLojaQuiteriaModasModel.FK__Produto__categor__286302EC">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pedido__forneced__2D27B809" Association="dbLojaQuiteriaModasModel.FK__Pedido__forneced__2D27B809">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Marcas" Association="dbLojaQuiteriaModasModel.FK_Produto_Marcas">
+      <End Role="Marcas" EntitySet="Marcas" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Modelo" Association="dbLojaQuiteriaModasModel.FK_Produto_Modelo">
+      <End Role="Modelo" EntitySet="Modelo" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProdutosP__pedid__30F848ED" Association="dbLojaQuiteriaModasModel.FK__ProdutosP__pedid__30F848ED">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="ProdutosPedido" EntitySet="ProdutosPedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Tamanhos" Association="dbLojaQuiteriaModasModel.FK_Produto_Tamanhos">
+      <End Role="Tamanhos" EntitySet="Tamanhos" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdutosPedido_Produto" Association="dbLojaQuiteriaModasModel.FK_ProdutosPedido_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="ProdutosPedido" EntitySet="ProdutosPedido" />
+    </AssociationSet>
+    <EntitySet Name="City" EntityType="dbLojaQuiteriaModasModel.City" />
+    <EntitySet Name="Cor" EntityType="dbLojaQuiteriaModasModel.Cor" />
+    <EntitySet Name="Country" EntityType="dbLojaQuiteriaModasModel.Country" />
+    <EntitySet Name="State" EntityType="dbLojaQuiteriaModasModel.State" />
+    <AssociationSet Name="FK_City_State" Association="dbLojaQuiteriaModasModel.FK_City_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Cor" Association="dbLojaQuiteriaModasModel.FK_Produto_Cor">
+      <End Role="Cor" EntitySet="Cor" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Country" Association="dbLojaQuiteriaModasModel.FK_State_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <EntitySet Name="Cliente" EntityType="dbLojaQuiteriaModasModel.Cliente" />
+    <EntitySet Name="Endereco" EntityType="dbLojaQuiteriaModasModel.Endereco" />
+    <EntitySet Name="Pessoa" EntityType="dbLojaQuiteriaModasModel.Pessoa" />
+    <AssociationSet Name="FK_Endereco_City" Association="dbLojaQuiteriaModasModel.FK_Endereco_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Pessoa" Association="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pessoa_Endereco" Association="dbLojaQuiteriaModasModel.FK_Pessoa_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+    <EntitySet Name="Conta" EntityType="dbLojaQuiteriaModasModel.Conta" />
+    <EntitySet Name="ContasAPagar" EntityType="dbLojaQuiteriaModasModel.ContasAPagar" />
+    <EntitySet Name="Funcionario" EntityType="dbLojaQuiteriaModasModel.Funcionario" />
+    <AssociationSet Name="FK_Funcionario_Pessoa" Association="dbLojaQuiteriaModasModel.FK_Funcionario_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK__Produto__categor__286302EC" FromRole="Categoria" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Fornecedor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="marca" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pedido" Relationship="dbLojaQuiteriaModasModel.FK__Pedido__forneced__2D27B809" FromRole="Fornecedor" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="Marcas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Marcas" FromRole="Marcas" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Modelo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Modelo" FromRole="Modelo" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fornecedorid" Type="Int32" />
+    <Property Name="valordopedido" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="descricao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="data" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Fornecedor" Relationship="dbLojaQuiteriaModasModel.FK__Pedido__forneced__2D27B809" FromRole="Pedido" ToRole="Fornecedor" />
+    <NavigationProperty Name="ProdutosPedido" Relationship="dbLojaQuiteriaModasModel.FK__ProdutosP__pedid__30F848ED" FromRole="Pedido" ToRole="ProdutosPedido" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoriaid" Type="Int32" />
+    <Property Name="preco" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="marca" Type="Int32" />
+    <Property Name="descricao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="codigodebarra" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="modelo" Type="Int32" />
+    <Property Name="tamanho" Type="Int32" />
+    <Property Name="precoCompra" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="condicional" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Categoria" Relationship="dbLojaQuiteriaModasModel.FK__Produto__categor__286302EC" FromRole="Produto" ToRole="Categoria" />
+    <NavigationProperty Name="Marcas" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Marcas" FromRole="Produto" ToRole="Marcas" />
+    <NavigationProperty Name="Modelo1" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Modelo" FromRole="Produto" ToRole="Modelo" />
+    <NavigationProperty Name="Tamanhos" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Tamanhos" FromRole="Produto" ToRole="Tamanhos" />
+    <NavigationProperty Name="ProdutosPedido" Relationship="dbLojaQuiteriaModasModel.FK_ProdutosPedido_Produto" FromRole="Produto" ToRole="ProdutosPedido" />
+    <Property Name="cor" Type="Int32" />
+    <NavigationProperty Name="Cor1" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Cor" FromRole="Produto" ToRole="Cor" />
+    <Property Name="quantidade" Type="Int32" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="ProdutosPedido">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="produtoid" Type="Int32" />
+    <Property Name="pedidoid" Type="Int32" />
+    <Property Name="tamanhosdesc" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="qtd" Type="Int32" Nullable="false" />
+    <Property Name="precoUnitarioPago" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="precototalpago" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="precounitariovenda" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="precototalvenda" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Pedido" Relationship="dbLojaQuiteriaModasModel.FK__ProdutosP__pedid__30F848ED" FromRole="ProdutosPedido" ToRole="Pedido" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_ProdutosPedido_Produto" FromRole="ProdutosPedido" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tamanhos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Tamanhos" FromRole="Tamanhos" ToRole="Produto" />
+  </EntityType>
+  <Association Name="FK__Produto__categor__286302EC">
+    <End Type="dbLojaQuiteriaModasModel.Categoria" Role="Categoria" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="categoriaid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pedido__forneced__2D27B809">
+    <End Type="dbLojaQuiteriaModasModel.Fornecedor" Role="Fornecedor" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Pedido" Role="Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="fornecedorid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Marcas">
+    <End Type="dbLojaQuiteriaModasModel.Marcas" Role="Marcas" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marcas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Modelo">
+    <End Type="dbLojaQuiteriaModasModel.Modelo" Role="Modelo" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modelo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="modelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProdutosP__pedid__30F848ED">
+    <End Type="dbLojaQuiteriaModasModel.Pedido" Role="Pedido" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ProdutosPedido" Role="ProdutosPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProdutosPedido">
+        <PropertyRef Name="pedidoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Tamanhos">
+    <End Type="dbLojaQuiteriaModasModel.Tamanhos" Role="Tamanhos" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tamanhos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="tamanho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdutosPedido_Produto">
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ProdutosPedido" Role="ProdutosPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ProdutosPedido">
+        <PropertyRef Name="produtoid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdState" Type="Int32" />
+    <NavigationProperty Name="State" Relationship="dbLojaQuiteriaModasModel.FK_City_State" FromRole="City" ToRole="State" />
+    <NavigationProperty Name="Endereco" Relationship="dbLojaQuiteriaModasModel.FK_Endereco_City" FromRole="City" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="Cor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Cor" FromRole="Cor" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="State" Relationship="dbLojaQuiteriaModasModel.FK_State_Country" FromRole="Country" ToRole="State" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCountry" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Acronym" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="City" Relationship="dbLojaQuiteriaModasModel.FK_City_State" FromRole="State" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="dbLojaQuiteriaModasModel.FK_State_Country" FromRole="State" ToRole="Country" />
+  </EntityType>
+  <Association Name="FK_City_State">
+    <End Type="dbLojaQuiteriaModasModel.State" Role="State" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="IdState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Cor">
+    <End Type="dbLojaQuiteriaModasModel.Cor" Role="Cor" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="cor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Country">
+    <End Type="dbLojaQuiteriaModasModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.State" Role="State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="IdCountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="limitecredito" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="idPessoa" Type="Int32" />
+    <Property Name="totalComprado" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DataUltimoPagamento" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" FromRole="Cliente" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCidade" Type="Int32" />
+    <Property Name="rua" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="City" Relationship="dbLojaQuiteriaModasModel.FK_Endereco_City" FromRole="Endereco" ToRole="City" />
+    <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Pessoa_Endereco" FromRole="Endereco" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CPF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datanascimento" Type="DateTime" Precision="0" />
+    <Property Name="idEndereco" Type="Int32" />
+    <Property Name="celular2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" FromRole="Pessoa" ToRole="Cliente" />
+    <NavigationProperty Name="Endereco" Relationship="dbLojaQuiteriaModasModel.FK_Pessoa_Endereco" FromRole="Pessoa" ToRole="Endereco" />
+    <NavigationProperty Name="Funcionario" Relationship="dbLojaQuiteriaModasModel.FK_Funcionario_Pessoa" FromRole="Pessoa" ToRole="Funcionario" />
+  </EntityType>
+  <Association Name="FK_Endereco_City">
+    <End Type="dbLojaQuiteriaModasModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Endereco" Role="Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="idCidade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Pessoa">
+    <End Type="dbLojaQuiteriaModasModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pessoa_Endereco">
+    <End Type="dbLojaQuiteriaModasModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Pessoa" Role="Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="idEndereco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Conta">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Valor" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Data" Type="DateTime" Precision="0" />
+    <Property Name="Recorrente" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="DataFinal" Type="DateTime" Precision="0" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ContasAPagar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SomaSalarios" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="SomaDividas" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="SomaPedidos" Type="Decimal" Precision="20" Scale="2" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Vendas" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="idPessoa" Type="Int32" />
+    <Property Name="Salario" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="idUsuario" Type="Int32" />
+    <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Funcionario_Pessoa" FromRole="Funcionario" ToRole="Pessoa" />
+  </EntityType>
+  <Association Name="FK_Funcionario_Pessoa">
+    <End Type="dbLojaQuiteriaModasModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Funcionario" Role="Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

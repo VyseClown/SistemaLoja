@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="886c9d3b08654917960253318ca02c0b" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Categoria" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Fornecedor" Width="1.5" PointX="3.75" PointY="15" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Marcas" Width="1.5" PointX="3.75" PointY="9.25" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Modelo" Width="1.5" PointX="3.75" PointY="11.875" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Pedido" Width="1.5" PointX="6" PointY="15" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Produto" Width="1.5" PointX="3" PointY="4.25" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.ProdutosPedido" Width="1.5" PointX="8.25" PointY="4.625" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Tamanhos" Width="1.5" PointX="0.75" PointY="5.25" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK__Produto__categor__286302EC" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK__Pedido__forneced__2D27B809" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Produto_Marcas" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Produto_Modelo" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK__ProdutosP__pedid__30F848ED" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Produto_Tamanhos" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ProdutosPedido_Produto" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.City" Width="1.5" PointX="11.25" PointY="1.125" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Cor" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Country" Width="1.5" PointX="6.75" PointY="1.25" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.State" Width="1.5" PointX="9" PointY="0.875" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_City_State" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Produto_Cor" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_State_Country" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Cliente" Width="1.5" PointX="18" PointY="5.875" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Endereco" Width="1.5" PointX="13.5" PointY="5.75" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Pessoa" Width="1.5" PointX="15.75" PointY="5.25" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Endereco_City" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Pessoa_Endereco" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Conta" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.ContasAPagar" Width="1.5" PointX="6.375" PointY="8.75" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Funcionario" Width="1.5" PointX="18" PointY="9" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Funcionario_Pessoa" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

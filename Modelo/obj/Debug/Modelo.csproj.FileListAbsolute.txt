@@ -1,0 +1,14 @@
+c:\users\aledo\documents\visual studio 2015\Projects\SistemaLoja\Modelo\bin\Debug\Modelo.dll
+c:\users\aledo\documents\visual studio 2015\Projects\SistemaLoja\Modelo\bin\Debug\Modelo.pdb
+c:\users\aledo\documents\visual studio 2015\Projects\SistemaLoja\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+c:\users\aledo\documents\visual studio 2015\Projects\SistemaLoja\Modelo\obj\Debug\Modelo.dll
+c:\users\aledo\documents\visual studio 2015\Projects\SistemaLoja\Modelo\obj\Debug\Modelo.pdb
+E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\Modelo\bin\Debug\Modelo.dll
+E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\Modelo\bin\Debug\Modelo.pdb
+E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\Modelo\obj\Debug\Modelo.dll
+E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\Modelo\obj\Debug\Modelo.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\bin\Debug\Modelo.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\bin\Debug\Modelo.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
