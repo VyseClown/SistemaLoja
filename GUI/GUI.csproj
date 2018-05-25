@@ -96,6 +96,12 @@
     <Compile Include="frmCADProduto.Designer.cs">
       <DependentUpon>frmCADProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCADTipoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCADTipoPagamento.Designer.cs">
+      <DependentUpon>frmCADTipoPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCADVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCADProduto.resx">
       <DependentUpon>frmCADProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCADTipoPagamento.resx">
+      <DependentUpon>frmCADTipoPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCADVenda.resx">
       <DependentUpon>frmCADVenda.cs</DependentUpon>

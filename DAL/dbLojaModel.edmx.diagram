@@ -38,6 +38,9 @@
         <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.ContasAPagar" Width="1.5" PointX="6.375" PointY="8.75" />
         <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Funcionario" Width="1.5" PointX="18" PointY="9" />
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Funcionario_Pessoa" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.CargoFuncionario" Width="1.5" PointX="8.375" PointY="8.875" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.CategoriaPagamento" Width="1.5" PointX="10.375" PointY="4.75" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Funcionario_CargoFuncionario" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -59,6 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.btnCadTipoPagamento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,7 +288,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.Location = new System.Drawing.Point(55, 431);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(176, 31);
@@ -364,11 +365,23 @@
             this.txtTotal.Size = new System.Drawing.Size(127, 30);
             this.txtTotal.TabIndex = 70;
             // 
+            // btnCadTipoPagamento
+            // 
+            this.btnCadTipoPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnCadTipoPagamento.Location = new System.Drawing.Point(237, 468);
+            this.btnCadTipoPagamento.Name = "btnCadTipoPagamento";
+            this.btnCadTipoPagamento.Size = new System.Drawing.Size(358, 32);
+            this.btnCadTipoPagamento.TabIndex = 71;
+            this.btnCadTipoPagamento.Text = "Cadastrar tipo de pagamento";
+            this.btnCadTipoPagamento.UseVisualStyleBackColor = true;
+            this.btnCadTipoPagamento.Click += new System.EventHandler(this.btnCadTipoPagamento_Click);
+            // 
             // frmCADVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 722);
+            this.Controls.Add(this.btnCadTipoPagamento);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label12);
@@ -442,5 +455,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnCadTipoPagamento;
     }
 }

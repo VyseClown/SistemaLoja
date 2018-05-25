@@ -140,5 +140,11 @@ namespace GUI
                 avisos.Visible = false;
             }
         }
+
+        private void btnCadTipoPagamento_Click(object sender, EventArgs e)
+        {
+            frmCADTipoPagamento frmCAD = new frmCADTipoPagamento();
+            frmCAD.Show();
+        }
     }
 }

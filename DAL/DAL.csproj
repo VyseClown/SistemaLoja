@@ -158,6 +158,7 @@
     <Compile Include="DALCategoria.cs" />
     <Compile Include="DALPessoa.cs" />
     <Compile Include="DALProduto.cs" />
+    <Compile Include="DALVenda.cs" />
     <Compile Include="dbLojaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

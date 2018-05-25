@@ -12,16 +12,9 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Funcionario
+    public partial class CategoriaPagamento
     {
         public int id { get; set; }
-        public Nullable<decimal> Vendas { get; set; }
-        public Nullable<int> idPessoa { get; set; }
-        public Nullable<decimal> Salario { get; set; }
-        public Nullable<int> idUsuario { get; set; }
-        public Nullable<int> idCargo { get; set; }
-    
-        public virtual Pessoa Pessoa { get; set; }
-        public virtual CargoFuncionario CargoFuncionario { get; set; }
+        public string nome { get; set; }
     }
 }

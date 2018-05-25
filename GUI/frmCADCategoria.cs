@@ -53,6 +53,10 @@ namespace GUI
                 cat.descricao = txtDescricao.Text;
 
                 BLLCat.Incluir(cat);
+                txtDescricao.Text = "";
+                cbCategoria.DataSource = BLLProduto.selecionarcategoria("");
+                cbCategoria.ValueMember = "id";
+                cbCategoria.DisplayMember = "descricao";
                 MessageBox.Show("Salvo com sucesso !");
             }
             else

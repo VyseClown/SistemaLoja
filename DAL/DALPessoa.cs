@@ -239,7 +239,17 @@ namespace DAL
             }
             return end;
         }
-
+        public bool retornarPessoaCPF(string cpf)
+        {
+            Pessoa pes = new Pessoa();
+            using(quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                if ((pes = (from p in db.Pessoa where p.CPF == cpf select p).FirstOrDefault()) != null)
+                    return true;
+                else
+                    return false;
+            }
+        }
 
         public ClienteModel retornarPessoaCliente(string cpf)
         {

@@ -12,16 +12,18 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Funcionario
+    public partial class CargoFuncionario
     {
-        public int id { get; set; }
-        public Nullable<decimal> Vendas { get; set; }
-        public Nullable<int> idPessoa { get; set; }
-        public Nullable<decimal> Salario { get; set; }
-        public Nullable<int> idUsuario { get; set; }
-        public Nullable<int> idCargo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CargoFuncionario()
+        {
+            this.Funcionario = new HashSet<Funcionario>();
+        }
     
-        public virtual Pessoa Pessoa { get; set; }
-        public virtual CargoFuncionario CargoFuncionario { get; set; }
+        public int id { get; set; }
+        public string nome { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Funcionario> Funcionario { get; set; }
     }
 }

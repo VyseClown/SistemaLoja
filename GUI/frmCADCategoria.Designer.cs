@@ -59,6 +59,8 @@
             this.btnSalvarCor = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCor = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,7 +74,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(9, 63);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 8;
+            this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -82,7 +84,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(9, 37);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(100, 20);
-            this.txtDescricao.TabIndex = 7;
+            this.txtDescricao.TabIndex = 1;
             // 
             // label1
             // 
@@ -104,7 +106,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(260, 237);
-            this.tabControl1.TabIndex = 9;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -137,7 +139,7 @@
             this.cbCategoria.Location = new System.Drawing.Point(115, 37);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbCategoria.TabIndex = 9;
+            this.cbCategoria.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -159,7 +161,7 @@
             this.txtNomeModelo.Location = new System.Drawing.Point(9, 39);
             this.txtNomeModelo.Name = "txtNomeModelo";
             this.txtNomeModelo.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeModelo.TabIndex = 90;
+            this.txtNomeModelo.TabIndex = 0;
             // 
             // label5
             // 
@@ -175,7 +177,7 @@
             this.btnSalvarModelo.Location = new System.Drawing.Point(9, 65);
             this.btnSalvarModelo.Name = "btnSalvarModelo";
             this.btnSalvarModelo.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvarModelo.TabIndex = 88;
+            this.btnSalvarModelo.TabIndex = 2;
             this.btnSalvarModelo.Text = "Salvar";
             this.btnSalvarModelo.UseVisualStyleBackColor = true;
             this.btnSalvarModelo.Click += new System.EventHandler(this.btnSalvarModelo_Click);
@@ -196,7 +198,7 @@
             this.cbModelo.Location = new System.Drawing.Point(115, 39);
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(121, 21);
-            this.cbModelo.TabIndex = 22;
+            this.cbModelo.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -218,7 +220,7 @@
             this.txtNomeMarca.Location = new System.Drawing.Point(9, 42);
             this.txtNomeMarca.Name = "txtNomeMarca";
             this.txtNomeMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeMarca.TabIndex = 88;
+            this.txtNomeMarca.TabIndex = 0;
             // 
             // label7
             // 
@@ -234,7 +236,7 @@
             this.btnSalvarMarca.Location = new System.Drawing.Point(9, 68);
             this.btnSalvarMarca.Name = "btnSalvarMarca";
             this.btnSalvarMarca.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvarMarca.TabIndex = 86;
+            this.btnSalvarMarca.TabIndex = 2;
             this.btnSalvarMarca.Text = "Salvar";
             this.btnSalvarMarca.UseVisualStyleBackColor = true;
             this.btnSalvarMarca.Click += new System.EventHandler(this.btnSalvarMarca_Click);
@@ -246,7 +248,7 @@
             this.cbMarca.Location = new System.Drawing.Point(115, 42);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(121, 21);
-            this.cbMarca.TabIndex = 85;
+            this.cbMarca.TabIndex = 1;
             // 
             // label6
             // 
@@ -277,7 +279,7 @@
             this.txtNomeTamanho.Location = new System.Drawing.Point(9, 43);
             this.txtNomeTamanho.Name = "txtNomeTamanho";
             this.txtNomeTamanho.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeTamanho.TabIndex = 89;
+            this.txtNomeTamanho.TabIndex = 0;
             // 
             // label8
             // 
@@ -293,7 +295,7 @@
             this.btnSalvaTamanho.Location = new System.Drawing.Point(9, 69);
             this.btnSalvaTamanho.Name = "btnSalvaTamanho";
             this.btnSalvaTamanho.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvaTamanho.TabIndex = 87;
+            this.btnSalvaTamanho.TabIndex = 2;
             this.btnSalvaTamanho.Text = "Salvar";
             this.btnSalvaTamanho.UseVisualStyleBackColor = true;
             this.btnSalvaTamanho.Click += new System.EventHandler(this.btnSalvaTamanho_Click);
@@ -314,10 +316,12 @@
             this.cbTamanho.Location = new System.Drawing.Point(115, 42);
             this.cbTamanho.Name = "cbTamanho";
             this.cbTamanho.Size = new System.Drawing.Size(121, 21);
-            this.cbTamanho.TabIndex = 85;
+            this.cbTamanho.TabIndex = 1;
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button2);
+            this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Controls.Add(this.txtCor);
             this.tabPage5.Controls.Add(this.label9);
             this.tabPage5.Controls.Add(this.btnSalvarCor);
@@ -336,7 +340,7 @@
             this.txtCor.Location = new System.Drawing.Point(9, 44);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(100, 20);
-            this.txtCor.TabIndex = 94;
+            this.txtCor.TabIndex = 0;
             // 
             // label9
             // 
@@ -352,7 +356,7 @@
             this.btnSalvarCor.Location = new System.Drawing.Point(9, 70);
             this.btnSalvarCor.Name = "btnSalvarCor";
             this.btnSalvarCor.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvarCor.TabIndex = 92;
+            this.btnSalvarCor.TabIndex = 2;
             this.btnSalvarCor.Text = "Salvar";
             this.btnSalvarCor.UseVisualStyleBackColor = true;
             this.btnSalvarCor.Click += new System.EventHandler(this.btnSalvarCor_Click);
@@ -373,7 +377,25 @@
             this.cbCor.Location = new System.Drawing.Point(115, 43);
             this.cbCor.Name = "cbCor";
             this.cbCor.Size = new System.Drawing.Size(121, 21);
-            this.cbCor.TabIndex = 90;
+            this.cbCor.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(115, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 94;
+            this.button1.Text = "Alterar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(115, 99);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 95;
+            this.button2.Text = "Alterar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmCADCategoria
             // 
@@ -431,5 +453,7 @@
         private System.Windows.Forms.Button btnSalvarCor;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCor;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

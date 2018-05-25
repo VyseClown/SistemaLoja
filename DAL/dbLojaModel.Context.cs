@@ -44,5 +44,7 @@ namespace DAL
         public virtual DbSet<Conta> Conta { get; set; }
         public virtual DbSet<ContasAPagar> ContasAPagar { get; set; }
         public virtual DbSet<Funcionario> Funcionario { get; set; }
+        public virtual DbSet<CargoFuncionario> CargoFuncionario { get; set; }
+        public virtual DbSet<CategoriaPagamento> CategoriaPagamento { get; set; }
     }
 }
