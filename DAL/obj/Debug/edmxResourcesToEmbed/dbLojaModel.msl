@@ -150,6 +150,7 @@
     <EntitySetMapping Name="Endereco">
       <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Endereco">
         <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
           <ScalarProperty Name="bairro" ColumnName="bairro" />
           <ScalarProperty Name="numero" ColumnName="numero" />
           <ScalarProperty Name="rua" ColumnName="rua" />
@@ -200,10 +201,27 @@
     <EntitySetMapping Name="Funcionario">
       <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Funcionario">
         <MappingFragment StoreEntitySet="Funcionario">
+          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="Salario" ColumnName="Salario" />
           <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />
           <ScalarProperty Name="Vendas" ColumnName="Vendas" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CargoFuncionario">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.CargoFuncionario">
+        <MappingFragment StoreEntitySet="CargoFuncionario">
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriaPagamento">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.CategoriaPagamento">
+        <MappingFragment StoreEntitySet="CategoriaPagamento">
+          <ScalarProperty Name="nome" ColumnName="nome" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

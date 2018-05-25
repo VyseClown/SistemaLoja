@@ -24,7 +24,7 @@ namespace GUI
             BLLPessoa BLLObj = new BLLPessoa();
             cbEstado.DataSource = BLLObj.listarEstados();
             cbEstado.ValueMember = "Id";
-            cbEstado.DisplayMember = "name";
+            cbEstado.DisplayMember = "Acronym";
 
             cbCidade.DataSource = BLLObj.listarCidades(int.Parse(cbEstado.SelectedValue.ToString()));
             cbCidade.ValueMember = "Id";
@@ -70,7 +70,7 @@ namespace GUI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (validarConteudoTextBoxes(this.Controls) == true)
+            if (validarConteudoTextBoxes(this.Controls) == true)//verificar o CPF já existe antes de adicionar
             {
                 Pessoa pes = new Pessoa();
                 BLLPessoa BLLObj = new BLLPessoa();
@@ -123,7 +123,7 @@ namespace GUI
 
                                 cbEstado.DataSource = BLLObj.listarEstados();
                                 cbEstado.ValueMember = "Id";
-                                cbEstado.DisplayMember = "name";
+                                cbEstado.DisplayMember = "Acronym";
 
                                 cbCidade.DataSource = BLLObj.listarCidades(int.Parse(cbEstado.SelectedValue.ToString()));
                                 cbCidade.ValueMember = "Id";
@@ -298,7 +298,7 @@ namespace GUI
 
                             cbEstado.DataSource = BLLObj.listarEstados();
                             cbEstado.ValueMember = "Id";
-                            cbEstado.DisplayMember = "name";
+                            cbEstado.DisplayMember = "Acronym";
 
                             cbCidade.DataSource = BLLObj.listarCidades(int.Parse(cbEstado.SelectedValue.ToString()));
                             cbCidade.ValueMember = "Id";
@@ -334,7 +334,7 @@ namespace GUI
 
             cbCidade.DataSource = endbus.listarCidades(int.Parse(cbEstado.SelectedValue.ToString()));
             cbCidade.ValueMember = "Id";
-            cbCidade.DisplayMember = "name";
+            cbCidade.DisplayMember = "Acronym";
         }
 
         private void txtLimite_Leave(object sender, EventArgs e)

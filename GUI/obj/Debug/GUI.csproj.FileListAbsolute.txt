@@ -94,3 +94,4 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Rep
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\stdole.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADPessoa.resources
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCaixa.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADTipoPagamento.resources

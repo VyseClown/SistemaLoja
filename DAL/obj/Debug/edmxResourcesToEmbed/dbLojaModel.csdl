@@ -76,6 +76,12 @@
       <End Role="Pessoa" EntitySet="Pessoa" />
       <End Role="Funcionario" EntitySet="Funcionario" />
     </AssociationSet>
+    <EntitySet Name="CargoFuncionario" EntityType="dbLojaQuiteriaModasModel.CargoFuncionario" />
+    <EntitySet Name="CategoriaPagamento" EntityType="dbLojaQuiteriaModasModel.CategoriaPagamento" />
+    <AssociationSet Name="FK_Funcionario_CargoFuncionario" Association="dbLojaQuiteriaModasModel.FK_Funcionario_CargoFuncionario">
+      <End Role="CargoFuncionario" EntitySet="CargoFuncionario" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Categoria">
     <Key>
@@ -362,6 +368,7 @@
     <Property Name="bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="City" Relationship="dbLojaQuiteriaModasModel.FK_Endereco_City" FromRole="Endereco" ToRole="City" />
     <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Pessoa_Endereco" FromRole="Endereco" ToRole="Pessoa" />
+    <Property Name="CEP" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
   </EntityType>
   <EntityType Name="Pessoa">
     <Key>
@@ -448,6 +455,8 @@
     <Property Name="Salario" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="idUsuario" Type="Int32" />
     <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Funcionario_Pessoa" FromRole="Funcionario" ToRole="Pessoa" />
+    <Property Name="idCargo" Type="Int32" />
+    <NavigationProperty Name="CargoFuncionario" Relationship="dbLojaQuiteriaModasModel.FK_Funcionario_CargoFuncionario" FromRole="Funcionario" ToRole="CargoFuncionario" />
   </EntityType>
   <Association Name="FK_Funcionario_Pessoa">
     <End Type="dbLojaQuiteriaModasModel.Pessoa" Role="Pessoa" Multiplicity="0..1" />
@@ -458,6 +467,33 @@
       </Principal>
       <Dependent Role="Funcionario">
         <PropertyRef Name="idPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CargoFuncionario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Funcionario" Relationship="dbLojaQuiteriaModasModel.FK_Funcionario_CargoFuncionario" FromRole="CargoFuncionario" ToRole="Funcionario" />
+  </EntityType>
+  <EntityType Name="CategoriaPagamento">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Funcionario_CargoFuncionario">
+    <End Type="dbLojaQuiteriaModasModel.CargoFuncionario" Role="CargoFuncionario" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Funcionario" Role="Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoFuncionario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="idCargo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

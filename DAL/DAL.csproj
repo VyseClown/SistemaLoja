@@ -133,7 +133,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargoFuncionario.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Categoria.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriaPagamento.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="City.cs">
