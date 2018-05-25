@@ -70,7 +70,8 @@ namespace GUI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (validarConteudoTextBoxes(this.Controls) == true)//verificar o CPF já existe antes de adicionar
+            DALPessoa objDAL = new DALPessoa();
+            if (validarConteudoTextBoxes(this.Controls) == true && (objDAL.retornarPessoaCPF(txtCPF.Text) == false))//verificar o CPF pertence ao tipo de pessoa igual ao que está querendo adicionar ao banco
             {
                 Pessoa pes = new Pessoa();
                 BLLPessoa BLLObj = new BLLPessoa();
@@ -153,6 +154,8 @@ namespace GUI
                 }
 
             }
+            else
+                MessageBox.Show("O CPF da pessoa já existe no banco !");
         }
 
 
@@ -182,7 +185,7 @@ namespace GUI
                 {
                     if (ctrl is TextBox)
                     {
-                        if (((TextBox)(ctrl)).Text.Contains(""))
+                        if (((TextBox)(ctrl)).Text == "" && ((TextBox)(ctrl)).Name != ("txtLimite") && ((TextBox)(ctrl)).Name != ("txtSalario") && ((TextBox)(ctrl)).Name != ("txtEmail"))
                         {
                             MessageBox.Show("Preencha todos os campos !");
                             return false;
@@ -192,7 +195,7 @@ namespace GUI
                     }
 
                     else
-                        if (((MaskedTextBox)(ctrl)).Text.Contains(""))
+                        if (((MaskedTextBox)(ctrl)).Text == "" && ((MaskedTextBox)(ctrl)).Name != ("txtCelular2") && ((MaskedTextBox)(ctrl)).Name != ("txtTelefone2") && ((MaskedTextBox)(ctrl)).Name != ("txtCelular") && ((MaskedTextBox)(ctrl)).Name != ("txtTelefone") && ((MaskedTextBox)(ctrl)).Name != ("txtRG"))
                     {
                         MessageBox.Show("Preencha todos os campos !");
                         return false;

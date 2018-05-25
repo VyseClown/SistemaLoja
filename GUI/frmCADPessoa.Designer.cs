@@ -64,12 +64,12 @@
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.gbFuncionario = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnLocalizar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtCEP = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.LabelCEP = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbCliente.SuspendLayout();
             this.gbFuncionario.SuspendLayout();
@@ -450,6 +450,16 @@
             this.gbFuncionario.TabStop = false;
             this.gbFuncionario.Text = "Funcionário Salário";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(6, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 25);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Salario";
+            // 
             // txtSalario
             // 
             this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
@@ -484,36 +494,26 @@
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.maskedTextBox1.Location = new System.Drawing.Point(52, 476);
-            this.maskedTextBox1.Mask = "00000000-000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(179, 30);
-            this.maskedTextBox1.TabIndex = 15;
-            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextBox1.ValidatingType = typeof(int);
-            // 
             // txtCEP
             // 
-            this.txtCEP.AutoSize = true;
             this.txtCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtCEP.Location = new System.Drawing.Point(47, 448);
+            this.txtCEP.Location = new System.Drawing.Point(52, 476);
+            this.txtCEP.Mask = "00000-000";
             this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(56, 25);
-            this.txtCEP.TabIndex = 116;
-            this.txtCEP.Text = "CEP";
+            this.txtCEP.Size = new System.Drawing.Size(179, 30);
+            this.txtCEP.TabIndex = 15;
+            this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCEP.ValidatingType = typeof(int);
             // 
-            // label17
+            // LabelCEP
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(6, 28);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 25);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Salario";
+            this.LabelCEP.AutoSize = true;
+            this.LabelCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.LabelCEP.Location = new System.Drawing.Point(47, 448);
+            this.LabelCEP.Name = "LabelCEP";
+            this.LabelCEP.Size = new System.Drawing.Size(56, 25);
+            this.LabelCEP.TabIndex = 116;
+            this.LabelCEP.Text = "CEP";
             // 
             // groupBox1
             // 
@@ -533,8 +533,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 651);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.LabelCEP);
             this.Controls.Add(this.btnLocalizar);
             this.Controls.Add(this.gbFuncionario);
             this.Controls.Add(this.gbCliente);
@@ -623,8 +623,8 @@
         private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnLocalizar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label txtCEP;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.Label LabelCEP;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox1;
     }

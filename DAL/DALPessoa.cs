@@ -284,6 +284,7 @@ namespace DAL
                            rua = e.rua,
                            idEstado = s.Id,
                            RG = p.RG,
+                           CEP = e.CEP,
                        }).FirstOrDefault();
             }
             return obj;
