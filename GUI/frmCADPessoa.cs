@@ -154,8 +154,8 @@ namespace GUI
                 }
 
             }
-            else
-                MessageBox.Show("O CPF da pessoa já existe no banco !");
+            //else
+               // MessageBox.Show("O CPF da pessoa já existe no banco !");
         }
 
 
@@ -445,7 +445,7 @@ namespace GUI
                 else
                     MessageBox.Show("O CPF não está cadastrado como cliente !");
             }
-            else if (rbFuncionario.Checked && txtCPF.Text != "")
+            else if (rbFuncionario.Checked && IsCpf(txtCPF.Text) == true)
             {
                 BLLPessoa objBLL = new BLLPessoa();
                 FuncionarioModel cli = new FuncionarioModel();
@@ -477,6 +477,12 @@ namespace GUI
                 else
                     MessageBox.Show("O CPF não está cadastrado como funcionário !");
             }
+            else if (IsCpf(txtCPF.Text) == true)
+            {
+                MessageBox.Show("O CPF não está cadastrado !");
+            }
+            else
+                MessageBox.Show("Informe um CPF valido !");
         }
     }
 }

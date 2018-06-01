@@ -34,5 +34,25 @@ namespace DAL
                 db.SaveChanges();
             }
         }
+        public List<CategoriaPagamento> listarCategoriaPagamento()
+        {
+            List<CategoriaPagamento> lista = new List<CategoriaPagamento>();
+            using(quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                lista = (from cp in db.CategoriaPagamento select cp).ToList();
+            }
+            return lista;
+        }
+        public CategoriaPagamento SelecionarCategoriaPagamentoComCodigo(int id)
+        {
+            CategoriaPagamento cp;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                cp = (from m in db.CategoriaPagamento
+                        where m.id == id
+                        select m).FirstOrDefault();
+            }
+            return cp;
+        }
     }
 }

@@ -117,6 +117,121 @@ namespace BLL
                 return false;
 
         }
+        public bool Excluir(Categoria item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALProduto();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+
+        }
+        public bool Excluir(DAL.Modelo item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALProduto();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+
+        }
+        public bool Excluir(Marcas item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALProduto();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+
+        }
+        public bool Excluir(Tamanhos item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALProduto();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+
+        }
+        public bool Excluir(Cor item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALProduto();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+
+        }
+        public Categoria selecionarCategoriaComID(int id)
+        {
+            //List<categoria> lista =new List<categoria>();
+            DALProduto objDAL = new DALProduto();
+            Categoria cat;
+            //var objDAL = new DALCategoria();
+            cat = objDAL.SelecionarCategoriaID(id);
+            //objDAL = null;
+            return cat;
+        }
+        public DAL.Modelo selecionarModeloComID(int id)
+        {
+            //List<categoria> lista =new List<categoria>();
+            DALProduto objDAL = new DALProduto();
+            DAL.Modelo modelo;
+            //var objDAL = new DALCategoria();
+            modelo = objDAL.SelecionarModeloID(id);
+            //objDAL = null;
+            return modelo;
+        }
+        public Marcas selecionarMarcaComID(int id)
+        {
+            //List<categoria> lista =new List<categoria>();
+            DALProduto objDAL = new DALProduto();
+            Marcas cat;
+            //var objDAL = new DALCategoria();
+            cat = objDAL.SelecionarMarcaID(id);
+            //objDAL = null;
+            return cat;
+        }
+        public Tamanhos selecionarTamanhoComID(int id)
+        {
+            //List<categoria> lista =new List<categoria>();
+            DALProduto objDAL = new DALProduto();
+            Tamanhos cat;
+            //var objDAL = new DALCategoria();
+            cat = objDAL.SelecionarTamanhoID(id);
+            //objDAL = null;
+            return cat;
+        }
+        public Cor selecionarCorComID(int id)
+        {
+            //List<categoria> lista =new List<categoria>();
+            DALProduto objDAL = new DALProduto();
+            Cor cat;
+            //var objDAL = new DALCategoria();
+            cat = objDAL.SelecionarCorID(id);
+            //objDAL = null;
+            return cat;
+        }
         public static List<Categoria> selecionarcategoria(string descricao)
         {
             //List<categoria> lista =new List<categoria>();

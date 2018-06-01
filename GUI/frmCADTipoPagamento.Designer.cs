@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -79,18 +80,30 @@
             this.txtDescricao.Size = new System.Drawing.Size(100, 20);
             this.txtDescricao.TabIndex = 12;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(118, 59);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmCADTipoPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 103);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescricao);
             this.Name = "frmCADTipoPagamento";
-            this.Text = "frmCADTipoPagamento";
+            this.Text = "Cadastro de forma de pagamento";
+            this.Load += new System.EventHandler(this.frmCADTipoPagamento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +116,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

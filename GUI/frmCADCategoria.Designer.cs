@@ -31,7 +31,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -59,9 +59,12 @@
             this.btnSalvarCor = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCor = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.btnExcluirCategoria = new System.Windows.Forms.Button();
+            this.btnExcluirModelo = new System.Windows.Forms.Button();
+            this.btnExcluirMarca = new System.Windows.Forms.Button();
+            this.btnExcluirTamanho = new System.Windows.Forms.Button();
+            this.btnExcluirCor = new System.Windows.Forms.Button();
+            this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -95,21 +98,22 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nome";
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(260, 237);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage4);
+            this.tabControl.Controls.Add(this.tabPage5);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(260, 237);
+            this.tabControl.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnExcluirCategoria);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.cbCategoria);
             this.tabPage1.Controls.Add(this.label1);
@@ -143,6 +147,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnExcluirModelo);
             this.tabPage2.Controls.Add(this.txtNomeModelo);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.btnSalvarModelo);
@@ -202,6 +207,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnExcluirMarca);
             this.tabPage3.Controls.Add(this.txtNomeMarca);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.btnSalvarMarca);
@@ -261,6 +267,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnExcluirTamanho);
             this.tabPage4.Controls.Add(this.txtNomeTamanho);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.btnSalvaTamanho);
@@ -320,8 +327,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button2);
-            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.btnExcluirCor);
             this.tabPage5.Controls.Add(this.txtCor);
             this.tabPage5.Controls.Add(this.label9);
             this.tabPage5.Controls.Add(this.btnSalvarCor);
@@ -379,33 +385,65 @@
             this.cbCor.Size = new System.Drawing.Size(121, 21);
             this.cbCor.TabIndex = 1;
             // 
-            // button1
+            // btnExcluirCategoria
             // 
-            this.button1.Location = new System.Drawing.Point(115, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "Alterar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExcluirCategoria.Location = new System.Drawing.Point(161, 64);
+            this.btnExcluirCategoria.Name = "btnExcluirCategoria";
+            this.btnExcluirCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirCategoria.TabIndex = 11;
+            this.btnExcluirCategoria.Text = "Excluir";
+            this.btnExcluirCategoria.UseVisualStyleBackColor = true;
+            this.btnExcluirCategoria.Click += new System.EventHandler(this.btnExcluirCategoria_Click);
             // 
-            // button2
+            // btnExcluirModelo
             // 
-            this.button2.Location = new System.Drawing.Point(115, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 95;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExcluirModelo.Location = new System.Drawing.Point(161, 66);
+            this.btnExcluirModelo.Name = "btnExcluirModelo";
+            this.btnExcluirModelo.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirModelo.TabIndex = 90;
+            this.btnExcluirModelo.Text = "Excluir";
+            this.btnExcluirModelo.UseVisualStyleBackColor = true;
+            this.btnExcluirModelo.Click += new System.EventHandler(this.btnExcluirModelo_Click);
+            // 
+            // btnExcluirMarca
+            // 
+            this.btnExcluirMarca.Location = new System.Drawing.Point(161, 68);
+            this.btnExcluirMarca.Name = "btnExcluirMarca";
+            this.btnExcluirMarca.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirMarca.TabIndex = 88;
+            this.btnExcluirMarca.Text = "Excluir";
+            this.btnExcluirMarca.UseVisualStyleBackColor = true;
+            this.btnExcluirMarca.Click += new System.EventHandler(this.btnExcluirMarca_Click);
+            // 
+            // btnExcluirTamanho
+            // 
+            this.btnExcluirTamanho.Location = new System.Drawing.Point(161, 69);
+            this.btnExcluirTamanho.Name = "btnExcluirTamanho";
+            this.btnExcluirTamanho.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirTamanho.TabIndex = 89;
+            this.btnExcluirTamanho.Text = "Excluir";
+            this.btnExcluirTamanho.UseVisualStyleBackColor = true;
+            this.btnExcluirTamanho.Click += new System.EventHandler(this.btnExcluirTamanho_Click);
+            // 
+            // btnExcluirCor
+            // 
+            this.btnExcluirCor.Location = new System.Drawing.Point(161, 70);
+            this.btnExcluirCor.Name = "btnExcluirCor";
+            this.btnExcluirCor.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirCor.TabIndex = 96;
+            this.btnExcluirCor.Text = "Excluir";
+            this.btnExcluirCor.UseVisualStyleBackColor = true;
+            this.btnExcluirCor.Click += new System.EventHandler(this.btnExcluirCor_Click);
             // 
             // frmCADCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Name = "frmCADCategoria";
             this.Text = "Cadastro";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -425,7 +463,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -453,7 +491,10 @@
         private System.Windows.Forms.Button btnSalvarCor;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCor;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcluirCategoria;
+        private System.Windows.Forms.Button btnExcluirModelo;
+        private System.Windows.Forms.Button btnExcluirMarca;
+        private System.Windows.Forms.Button btnExcluirTamanho;
+        private System.Windows.Forms.Button btnExcluirCor;
     }
 }

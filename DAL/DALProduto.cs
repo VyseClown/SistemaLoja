@@ -40,6 +40,101 @@ namespace DAL
                 db.SaveChanges();
             }
         }
+        public void Excluir(Categoria item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public void Excluir(Modelo item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public void Excluir(Marcas item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public void Excluir(Tamanhos item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public void Excluir(Cor item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public Categoria SelecionarCategoriaID(int id)
+        {
+            Categoria prod = new Categoria();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                prod = (from c in db.Categoria
+                        where c.id == id
+                        select c).FirstOrDefault();
+            }
+            return prod;
+        }
+        public Modelo SelecionarModeloID(int id)
+        {
+            Modelo prod = new Modelo();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                prod = (from c in db.Modelo
+                        where c.id == id
+                        select c).FirstOrDefault();
+            }
+            return prod;
+        }
+        public Marcas SelecionarMarcaID(int id)
+        {
+            Marcas prod = new Marcas();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                prod = (from c in db.Marcas
+                        where c.id == id
+                        select c).FirstOrDefault();
+            }
+            return prod;
+        }
+        public Tamanhos SelecionarTamanhoID(int id)
+        {
+            Tamanhos prod = new Tamanhos();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                prod = (from c in db.Tamanhos
+                        where c.id == id
+                        select c).FirstOrDefault();
+            }
+            return prod;
+        }
+        public Cor SelecionarCorID(int id)
+        {
+            Cor prod = new Cor();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                prod = (from c in db.Cor
+                        where c.id == id
+                        select c).FirstOrDefault();
+            }
+            return prod;
+        }
         public void DiminuirEstoque(Produto produto)
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())

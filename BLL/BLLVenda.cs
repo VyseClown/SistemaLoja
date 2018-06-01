@@ -31,5 +31,33 @@ namespace BLL
                 return false;
             }
         }
+        public static List<CategoriaPagamento> listarCategoriaPagamento()
+        {
+            DALVenda objDAL = new DALVenda();
+            return objDAL.listarCategoriaPagamento();
+        }
+        public bool Excluir(CategoriaPagamento item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALVenda();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+
+        }
+        public CategoriaPagamento selecionarCategoriaPagamentoComID(int id)
+        {
+            //List<categoria> lista =new List<categoria>();
+            DALVenda objDAL = new DALVenda();
+            CategoriaPagamento cat;
+            //var objDAL = new DALCategoria();
+            cat = objDAL.SelecionarCategoriaPagamentoComCodigo(id);
+            //objDAL = null;
+            return cat;
+        }
     }
 }

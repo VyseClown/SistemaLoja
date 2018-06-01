@@ -140,5 +140,30 @@ namespace GUI
             else
                 MessageBox.Show("Informe algum nome !");
         }
+
+        private void btnExcluirCategoria_Click(object sender, EventArgs e)
+        {
+            new BLLProduto().Excluir(new BLLProduto().selecionarCategoriaComID(int.Parse(cbCategoria.SelectedValue.ToString())));
+        }
+
+        private void btnExcluirModelo_Click(object sender, EventArgs e)
+        {
+            new BLLProduto().Excluir(new BLLProduto().selecionarModeloComID(int.Parse(cbModelo.SelectedValue.ToString())));
+        }
+
+        private void btnExcluirMarca_Click(object sender, EventArgs e)
+        {
+            new BLLProduto().Excluir(new BLLProduto().selecionarMarcaComID(int.Parse(cbMarca.SelectedValue.ToString())));
+        }
+
+        private void btnExcluirTamanho_Click(object sender, EventArgs e)
+        {
+            new BLLProduto().Excluir(new BLLProduto().selecionarTamanhoComID(int.Parse(cbTamanho.SelectedValue.ToString())));
+        }
+
+        private void btnExcluirCor_Click(object sender, EventArgs e)
+        {
+            new BLLProduto().Excluir(new BLLProduto().selecionarCorComID(int.Parse(cbCor.SelectedValue.ToString())));
+        }
     }
 }
