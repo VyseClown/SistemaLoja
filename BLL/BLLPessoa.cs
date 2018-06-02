@@ -330,5 +330,83 @@ namespace BLL
                 return null;
             }
         }
+        public Cliente retornarUltimoCliente()
+        {
+            try
+            {
+                DALPessoa objDALPessoa = new DALPessoa();
+                Cliente cli = objDALPessoa.retornarUltimoCliente();
+                return cli;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+        public Funcionario retornarUltimoFuncionario()
+        {
+            try
+            {
+                DALPessoa objDALPessoa = new DALPessoa();
+                Funcionario func = objDALPessoa.retornarUltimoFuncionario();
+                return func;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+        public Pessoa retornarUltimaPessoa()
+        {
+            try
+            {
+                DALPessoa objDALPessoa = new DALPessoa();
+                Pessoa func = objDALPessoa.retornarUltimaPessoa();
+                return func;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+        public bool Excluir(Cliente item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALPessoa();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+        }
+        public bool Excluir(Funcionario item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALPessoa();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+        }
+        public bool Excluir(Pessoa item)
+        {
+            //escreve a função de excluir, krl
+            var objDAL = new DALPessoa();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

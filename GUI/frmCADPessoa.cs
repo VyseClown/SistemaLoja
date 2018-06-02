@@ -71,11 +71,12 @@ namespace GUI
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             DALPessoa objDAL = new DALPessoa();
+            int CliOUFunc = 0;
             if (validarConteudoTextBoxes(this.Controls) == true && (objDAL.retornarPessoaCPF(txtCPF.Text) == false))//verificar o CPF pertence ao tipo de pessoa igual ao que está querendo adicionar ao banco
             {
                 Pessoa pes = new Pessoa();
                 BLLPessoa BLLObj = new BLLPessoa();
-
+                
 
 
                 pes.nome = txtNome.Text;
@@ -101,12 +102,16 @@ namespace GUI
                             cli.idPessoa = pes.id;
                             cli.limitecredito = Decimal.Parse(txtLimite.Text);
                             func = BLLObj.Salvar(cli);
+                            if (func != false)
+                                CliOUFunc = 1;
                         }
                         else
                         {
                             fun.idPessoa = pes.id;
                             fun.Salario = Decimal.Parse(txtSalario.Text);
                             func = BLLObj.Salvar(fun);
+                            if (func != false)
+                                CliOUFunc = 2;
                         }
 
                         if (func != false)
@@ -136,14 +141,22 @@ namespace GUI
                             }
                             else
                             {
+                                if(CliOUFunc == 1)
+                                {
+                                    new BLLPessoa().Excluir(new BLLPessoa().retornarUltimoCliente());
+                                }
+                                else if(CliOUFunc == 2)
+                                {
+                                    new BLLPessoa().Excluir(new BLLPessoa().retornarUltimoFuncionario());
+                                }
                                 //apagar ultimo item adicionado
                             }
                         }
                         else
                         {
+                            new BLLPessoa().Excluir(new BLLPessoa().retornarUltimaPessoa());
                             //apagar ultimo item adicionado
                         }
-
                     }
 
                 }
@@ -153,6 +166,36 @@ namespace GUI
                     MessageBox.Show("Informe o CPF valido !");
                 }
 
+            }
+            else if ((objDAL.retornarPessoaCliente(txtCPF.Text) == null && rbCliente.Checked == true))
+            {
+                ClienteModel climodel = new ClienteModel();
+                climodel = objDAL.retornarPessoaCliente(txtCPF.Text);
+                bool func = false;
+                BLLPessoa BLLObj = new BLLPessoa();
+                Cliente cli = new Cliente();
+                cli.idPessoa = climodel.id;
+                cli.limitecredito = Decimal.Parse(txtLimite.Text);
+                func = BLLObj.Salvar(cli);
+            }
+            else if((objDAL.retornarPessoaFuncionario(txtCPF.Text) == null && rbFuncionario.Checked == true))
+            {
+                FuncionarioModel funmodel = new FuncionarioModel();
+                funmodel = objDAL.retornarPessoaFuncionario(txtCPF.Text);
+                bool func = false;
+                BLLPessoa BLLObj = new BLLPessoa();
+                Funcionario fun = new Funcionario();
+                fun.idPessoa = funmodel.id;
+                fun.Salario = Decimal.Parse(txtSalario.Text);
+                func = BLLObj.Salvar(fun);
+            }
+            else if ((objDAL.retornarPessoaCliente(txtCPF.Text) != null && rbCliente.Checked == true))
+            {
+                MessageBox.Show("A pessoa já está cadastrada como cliente !");
+            }
+            else if ((objDAL.retornarPessoaFuncionario(txtCPF.Text) != null && rbFuncionario.Checked == true))
+            {
+                MessageBox.Show("A pessoa já está cadastrada como funcionario !");
             }
             //else
                // MessageBox.Show("O CPF da pessoa já existe no banco !");

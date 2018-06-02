@@ -289,6 +289,41 @@ namespace DAL
             }
             return obj;
         }
+
+        public Funcionario retornarUltimoFuncionario()
+        {
+            Funcionario func = new Funcionario();
+
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                func = (from e in db.Funcionario orderby e.id descending select e).First();
+                return func;
+            }
+        }
+
+        public Cliente retornarUltimoCliente()
+        {
+            Cliente func = new Cliente();
+
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                func = (from e in db.Cliente orderby e.id descending select e).First();
+                return func;
+            }
+            
+        }
+        public Pessoa retornarUltimaPessoa()
+        {
+            Pessoa func = new Pessoa();
+
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                func = (from e in db.Pessoa orderby e.id descending select e).First();
+                return func;
+            }
+
+        }
+
         public FuncionarioModel retornarPessoaFuncionario(string cpf)
         {
             FuncionarioModel obj = new FuncionarioModel();
@@ -401,6 +436,22 @@ namespace DAL
             return obj;
         }
         public void Excluir(Pessoa item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public void Excluir(Cliente item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        public void Excluir(Funcionario item)
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {

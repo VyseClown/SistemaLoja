@@ -145,7 +145,7 @@ namespace BLL
         }
         public bool Excluir(Marcas item)
         {
-            //escreve a função de excluir, krl
+            //escreve a função de excluir
             var objDAL = new DALProduto();
             if (objDAL != null)
             {
@@ -158,7 +158,7 @@ namespace BLL
         }
         public bool Excluir(Tamanhos item)
         {
-            //escreve a função de excluir, krl
+            //escreve a função de excluir
             var objDAL = new DALProduto();
             if (objDAL != null)
             {
@@ -171,7 +171,7 @@ namespace BLL
         }
         public bool Excluir(Cor item)
         {
-            //escreve a função de excluir, krl
+            //escreve a função de excluir
             var objDAL = new DALProduto();
             if (objDAL != null)
             {
