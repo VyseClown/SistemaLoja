@@ -169,8 +169,8 @@ namespace GUI
             }
             else if ((objDAL.retornarPessoaCliente(txtCPF.Text) == null && rbCliente.Checked == true))
             {
-                ClienteModel climodel = new ClienteModel();
-                climodel = objDAL.retornarPessoaCliente(txtCPF.Text);
+                Pessoa climodel = new Pessoa();
+                climodel = objDAL.retornarPessoaCPFObjeto(txtCPF.Text);
                 bool func = false;
                 BLLPessoa BLLObj = new BLLPessoa();
                 Cliente cli = new Cliente();
@@ -180,8 +180,8 @@ namespace GUI
             }
             else if((objDAL.retornarPessoaFuncionario(txtCPF.Text) == null && rbFuncionario.Checked == true))
             {
-                FuncionarioModel funmodel = new FuncionarioModel();
-                funmodel = objDAL.retornarPessoaFuncionario(txtCPF.Text);
+                Pessoa funmodel = new Pessoa();
+                funmodel = objDAL.retornarPessoaCPFObjeto(txtCPF.Text);
                 bool func = false;
                 BLLPessoa BLLObj = new BLLPessoa();
                 Funcionario fun = new Funcionario();
@@ -351,17 +351,23 @@ namespace GUI
                             cbCidade.DisplayMember = "name";
 
                             limparTextBoxes(this.Controls);
+                            txtSalario.Text = "";
+                            txtLimite.Text = "";
                         }
                         else
                         {
                             //apagar ultimo item adicionado
                             limparTextBoxes(this.Controls);
+                            txtSalario.Text = "";
+                            txtLimite.Text = "";
                         }
                     }
                     else
                     {
                         //apagar ultimo item adicionado
                         limparTextBoxes(this.Controls);
+                        txtSalario.Text = "";
+                        txtLimite.Text = "";
                     }
 
                 }

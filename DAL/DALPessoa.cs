@@ -250,6 +250,15 @@ namespace DAL
                     return false;
             }
         }
+        public Pessoa retornarPessoaCPFObjeto(string cpf)
+        {
+            Pessoa pes = new Pessoa();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                pes = (from p in db.Pessoa where p.CPF == cpf select p).FirstOrDefault();
+                return pes;
+            }
+        }
 
         public ClienteModel retornarPessoaCliente(string cpf)
         {
@@ -357,6 +366,7 @@ namespace DAL
                            rua = e.rua,
                            idEstado = s.Id,
                            RG = p.RG,
+                           CEP = e.CEP,
                        }).FirstOrDefault();
             }
             return obj;

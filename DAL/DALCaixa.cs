@@ -88,5 +88,24 @@ namespace DAL
             }
 
         }
+
+        public void Excluir(Conta item)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+        }
+        //public decimal somarContasAPagar()
+        //{
+        //    using (quiteriamodasEntities db = new quiteriamodasEntities())
+        //    {
+        //        Conta divida = new Conta();
+        //        divida = (from e in db.Conta
+        //                  select e.Valor).FirstOrDefault();
+        //        return divida;
+        //    }
+        //}
     }
 }

@@ -93,7 +93,7 @@
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(838, 30);
-            this.txtNome.TabIndex = 2;
+            this.txtNome.TabIndex = 4;
             // 
             // btnSalvar
             // 
@@ -101,7 +101,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(17, 27);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(176, 58);
-            this.btnSalvar.TabIndex = 20;
+            this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -335,7 +335,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(222, 27);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(176, 58);
-            this.btnAlterar.TabIndex = 21;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -348,7 +348,7 @@
             this.dtpNascimento.Location = new System.Drawing.Point(895, 179);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(217, 30);
-            this.dtpNascimento.TabIndex = 3;
+            this.dtpNascimento.TabIndex = 5;
             this.dtpNascimento.Value = new System.DateTime(2017, 11, 7, 0, 0, 0, 0);
             // 
             // txtNumero
@@ -369,7 +369,7 @@
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(165, 30);
-            this.txtCPF.TabIndex = 5;
+            this.txtCPF.TabIndex = 2;
             this.txtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtCelular
@@ -401,7 +401,7 @@
             this.txtRG.Mask = "00000000000";
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(151, 30);
-            this.txtRG.TabIndex = 4;
+            this.txtRG.TabIndex = 6;
             this.txtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtRG.ValidatingType = typeof(int);
             // 
@@ -478,7 +478,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(430, 27);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(176, 58);
-            this.btnLimpar.TabIndex = 22;
+            this.btnLimpar.TabIndex = 2;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -489,7 +489,7 @@
             this.btnLocalizar.Location = new System.Drawing.Point(232, 101);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(55, 30);
-            this.btnLocalizar.TabIndex = 6;
+            this.btnLocalizar.TabIndex = 3;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);

@@ -401,7 +401,17 @@ namespace GUI
 
         private void txtPreco_KeyUp(object sender, KeyEventArgs e)
         {
-
+            if (txtPreco.Text != null)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPreco.Text, "[0-9]") || txtPreco.Text.Contains(",") || txtPreco.Text.Contains("."))
+                {
+                    txtPreco.Text = "";
+                    //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
+                    //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
+                }
+            }
+            else
+                txtPreco.Text = "";
         }
 
         private void txtPreco_Leave(object sender, EventArgs e)
@@ -415,6 +425,17 @@ namespace GUI
         private void txtPorcentagem_KeyUp(object sender, KeyEventArgs e)
        {
             decimal numero;
+            if (txtPorcentagem.Text != null)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPorcentagem.Text, "[0-9]") || txtPorcentagem.Text.Contains(",") || txtPorcentagem.Text.Contains("."))
+                {
+                    txtPorcentagem.Text = "";
+                    //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
+                    //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
+                }
+            }
+            else
+                txtPorcentagem.Text = "";
             if (txtPrecoCompra.Text != null)
             {
                 
@@ -465,6 +486,17 @@ namespace GUI
         private void txtPrecoCompra_KeyUp(object sender, KeyEventArgs e)
         {
             txtPorcentagem.Enabled = true;
+            if (txtPrecoCompra.Text != null)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPrecoCompra.Text, "[0-9]") || txtPrecoCompra.Text.Contains(",") || txtPrecoCompra.Text.Contains("."))
+                {
+                    txtPrecoCompra.Text = "";
+                    //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
+                    //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
+                }
+            }
+            else
+                txtPrecoCompra.Text = "";
         }
 
         private void dgvProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -516,6 +548,21 @@ namespace GUI
             limparTextBoxes(this.Controls);
             txtCodigoDeBarras.Focus();
 
+        }
+
+        private void txtQtd_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txtQtd.Text != null)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtQtd.Text, "[0-9]") || txtQtd.Text.Contains(",") || txtQtd.Text.Contains("."))
+                {
+                    txtQtd.Text = "";
+                    //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
+                    //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
+                }
+            }
+            else
+                txtQtd.Text = "";
         }
     }
 }

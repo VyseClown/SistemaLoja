@@ -48,6 +48,7 @@
             this.cbRecorrente = new System.Windows.Forms.CheckBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,7 +63,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(589, 535);
+            this.tabControl1.Size = new System.Drawing.Size(437, 389);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -74,7 +75,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(581, 509);
+            this.tabPage1.Size = new System.Drawing.Size(429, 363);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Caixa";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(165, 40);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(343, 222);
+            this.dataGridView1.Size = new System.Drawing.Size(258, 222);
             this.dataGridView1.TabIndex = 3;
             // 
             // txtCaixa
@@ -115,6 +116,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnExcluir);
             this.tabPage2.Controls.Add(this.dgvDividas);
             this.tabPage2.Controls.Add(this.btnAlterar);
             this.tabPage2.Controls.Add(this.btnLimpar);
@@ -131,7 +133,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(581, 509);
+            this.tabPage2.Size = new System.Drawing.Size(429, 363);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Divida";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -139,19 +141,19 @@
             // dgvDividas
             // 
             this.dgvDividas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDividas.Location = new System.Drawing.Point(38, 197);
+            this.dgvDividas.Location = new System.Drawing.Point(11, 199);
             this.dgvDividas.Name = "dgvDividas";
-            this.dgvDividas.Size = new System.Drawing.Size(497, 306);
-            this.dgvDividas.TabIndex = 7;
+            this.dgvDividas.Size = new System.Drawing.Size(408, 155);
+            this.dgvDividas.TabIndex = 8;
             this.dgvDividas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDividas_CellDoubleClick);
             // 
             // btnAlterar
             // 
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnAlterar.Location = new System.Drawing.Point(203, 145);
+            this.btnAlterar.Location = new System.Drawing.Point(104, 147);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(131, 46);
-            this.btnAlterar.TabIndex = 5;
+            this.btnAlterar.Size = new System.Drawing.Size(86, 46);
+            this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -159,10 +161,10 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnLimpar.Location = new System.Drawing.Point(351, 145);
+            this.btnLimpar.Location = new System.Drawing.Point(300, 147);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(134, 46);
-            this.btnLimpar.TabIndex = 6;
+            this.btnLimpar.Size = new System.Drawing.Size(119, 46);
+            this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -170,10 +172,10 @@
             // btnGravar
             // 
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnGravar.Location = new System.Drawing.Point(77, 145);
+            this.btnGravar.Location = new System.Drawing.Point(11, 147);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(119, 46);
-            this.btnGravar.TabIndex = 4;
+            this.btnGravar.Size = new System.Drawing.Size(87, 46);
+            this.btnGravar.TabIndex = 5;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
@@ -182,7 +184,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(346, 81);
+            this.label4.Location = new System.Drawing.Point(280, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 25);
             this.label4.TabIndex = 8;
@@ -192,7 +194,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(198, 79);
+            this.label3.Location = new System.Drawing.Point(132, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 25);
             this.label3.TabIndex = 7;
@@ -202,7 +204,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(77, 79);
+            this.label2.Location = new System.Drawing.Point(11, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 6;
@@ -212,7 +214,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(72, 13);
+            this.label1.Location = new System.Drawing.Point(6, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 5;
@@ -223,27 +225,28 @@
             this.dtpDataFinal.Enabled = false;
             this.dtpDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataFinal.Location = new System.Drawing.Point(351, 109);
+            this.dtpDataFinal.Location = new System.Drawing.Point(285, 111);
             this.dtpDataFinal.Name = "dtpDataFinal";
             this.dtpDataFinal.Size = new System.Drawing.Size(134, 30);
-            this.dtpDataFinal.TabIndex = 3;
+            this.dtpDataFinal.TabIndex = 4;
             // 
             // dtpData
             // 
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(203, 107);
+            this.dtpData.Location = new System.Drawing.Point(137, 109);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(131, 30);
-            this.dtpData.TabIndex = 2;
+            this.dtpData.TabIndex = 3;
             // 
             // cbRecorrente
             // 
             this.cbRecorrente.AutoSize = true;
-            this.cbRecorrente.Location = new System.Drawing.Point(356, 56);
+            this.cbRecorrente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbRecorrente.Location = new System.Drawing.Point(274, 46);
             this.cbRecorrente.Name = "cbRecorrente";
-            this.cbRecorrente.Size = new System.Drawing.Size(79, 17);
-            this.cbRecorrente.TabIndex = 2;
+            this.cbRecorrente.Size = new System.Drawing.Size(136, 29);
+            this.cbRecorrente.TabIndex = 1;
             this.cbRecorrente.Text = "Recorrente";
             this.cbRecorrente.UseVisualStyleBackColor = true;
             this.cbRecorrente.CheckStateChanged += new System.EventHandler(this.cbRecorrente_CheckStateChanged);
@@ -251,26 +254,37 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtValor.Location = new System.Drawing.Point(77, 107);
+            this.txtValor.Location = new System.Drawing.Point(11, 109);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 30);
-            this.txtValor.TabIndex = 1;
+            this.txtValor.TabIndex = 2;
             this.txtValor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValor_KeyUp);
             this.txtValor.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtNome.Location = new System.Drawing.Point(77, 43);
+            this.txtNome.Location = new System.Drawing.Point(11, 45);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(257, 30);
             this.txtNome.TabIndex = 0;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnExcluir.Location = new System.Drawing.Point(196, 147);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(98, 46);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // frmCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 560);
+            this.ClientSize = new System.Drawing.Size(465, 412);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "frmCaixa";
@@ -309,5 +323,6 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvDividas;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

@@ -417,7 +417,7 @@ namespace GUI
         private void cbModelo_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //como fazer essa merda ?
-            //cbMudanca();
+            cbMudanca(this.Controls);
         }
 
         private void cbTamanho_SelectedIndexChanged(object sender, EventArgs e)

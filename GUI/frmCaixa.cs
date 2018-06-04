@@ -171,5 +171,35 @@ namespace GUI
             else
                 MessageBox.Show("Selecione uma conta antes !");
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            id = (int)dgvDividas.CurrentRow.Cells[0].Value;
+            if (id != 0)
+            {
+                Conta divida = new Conta();
+                BLLCaixa BLLObj = new BLLCaixa();
+                divida = BLLObj.retornarDivida(id);
+                divida.Nome = txtNome.Text;
+                divida.Valor = decimal.Parse(txtValor.Text);
+                divida.Data = dtpData.Value;
+                if (cbRecorrente.Checked)
+                {
+                    divida.DataFinal = dtpDataFinal.Value;
+                    divida.Recorrente = "S";
+                }
+                else
+                {
+                    divida.Recorrente = "N";
+                    divida.DataFinal = null;
+                }
+                BLLObj.Excluir(divida);
+                dgvDividas.DataSource = BLLObj.listarDividas();
+                limparTextBoxes(this.Controls);
+            }
+            else
+                MessageBox.Show("Selecione uma conta antes !");
+        }
     }
 }

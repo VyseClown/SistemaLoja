@@ -144,26 +144,48 @@ namespace GUI
         private void btnExcluirCategoria_Click(object sender, EventArgs e)
         {
             new BLLProduto().Excluir(new BLLProduto().selecionarCategoriaComID(int.Parse(cbCategoria.SelectedValue.ToString())));
+            string descricao = "";
+            //cbCategoria.DataSource = objCBCategoriaB.selecionarcategoria(descricao);
+            cbCategoria.DataSource = BLLProduto.selecionarcategoria(descricao);
+            cbCategoria.ValueMember = "id";
+            cbCategoria.DisplayMember = "descricao";
+            MessageBox.Show("Categoria excluida !");
         }
 
         private void btnExcluirModelo_Click(object sender, EventArgs e)
         {
             new BLLProduto().Excluir(new BLLProduto().selecionarModeloComID(int.Parse(cbModelo.SelectedValue.ToString())));
+            cbModelo.DataSource = BLLProduto.ListarModelo();
+            cbModelo.ValueMember = "id";
+            cbModelo.DisplayMember = "nome";
+            MessageBox.Show("Modelo excluida !");
         }
 
         private void btnExcluirMarca_Click(object sender, EventArgs e)
         {
             new BLLProduto().Excluir(new BLLProduto().selecionarMarcaComID(int.Parse(cbMarca.SelectedValue.ToString())));
+            cbMarca.DataSource = BLLProduto.ListarMarca();
+            cbMarca.ValueMember = "id";
+            cbMarca.DisplayMember = "nome";
+            MessageBox.Show("Marca excluida !");
         }
 
         private void btnExcluirTamanho_Click(object sender, EventArgs e)
         {
             new BLLProduto().Excluir(new BLLProduto().selecionarTamanhoComID(int.Parse(cbTamanho.SelectedValue.ToString())));
+            cbTamanho.DataSource = BLLProduto.ListarTamanho();
+            cbTamanho.ValueMember = "id";
+            cbTamanho.DisplayMember = "nome";
+            MessageBox.Show("Tamanho excluida !");
         }
 
         private void btnExcluirCor_Click(object sender, EventArgs e)
         {
             new BLLProduto().Excluir(new BLLProduto().selecionarCorComID(int.Parse(cbCor.SelectedValue.ToString())));
+            cbCor.DataSource = BLLProduto.ListarCor();
+            cbCor.ValueMember = "id";
+            cbCor.DisplayMember = "Nome";
+            MessageBox.Show("Cor excluida !");
         }
     }
 }

@@ -104,5 +104,17 @@ namespace BLL
                 return false;
             }
         }
+        public bool Excluir(Conta item)
+        {
+            //escreve a função de excluir, krl
+            DALCaixa objDAL = new DALCaixa();
+            if (objDAL != null)
+            {
+                objDAL.Excluir(item);
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

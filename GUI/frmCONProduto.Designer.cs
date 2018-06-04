@@ -51,6 +51,7 @@
             this.lblQtd = new System.Windows.Forms.Label();
             this.cbSemEstoque = new System.Windows.Forms.CheckBox();
             this.lblAvisos = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(14, 377);
+            this.label1.Location = new System.Drawing.Point(17, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 2;
@@ -87,7 +88,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(321, 163);
+            this.label5.Location = new System.Drawing.Point(1141, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 25);
             this.label5.TabIndex = 78;
@@ -97,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(321, 90);
+            this.label4.Location = new System.Drawing.Point(728, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 25);
             this.label4.TabIndex = 77;
@@ -107,7 +108,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(14, 163);
+            this.label6.Location = new System.Drawing.Point(845, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 25);
             this.label6.TabIndex = 75;
@@ -118,9 +119,9 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(326, 191);
+            this.cbCategoria.Location = new System.Drawing.Point(1146, 47);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(299, 33);
+            this.cbCategoria.Size = new System.Drawing.Size(216, 33);
             this.cbCategoria.TabIndex = 6;
             this.cbCategoria.SelectedIndexChanged += new System.EventHandler(this.cbCategoria_SelectedIndexChanged);
             // 
@@ -128,7 +129,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(14, 90);
+            this.label7.Location = new System.Drawing.Point(433, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 25);
             this.label7.TabIndex = 72;
@@ -137,9 +138,9 @@
             // btnRetira
             // 
             this.btnRetira.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnRetira.Location = new System.Drawing.Point(326, 307);
+            this.btnRetira.Location = new System.Drawing.Point(662, 124);
             this.btnRetira.Name = "btnRetira";
-            this.btnRetira.Size = new System.Drawing.Size(299, 36);
+            this.btnRetira.Size = new System.Drawing.Size(216, 36);
             this.btnRetira.TabIndex = 79;
             this.btnRetira.Text = "Retirar do Estoque";
             this.btnRetira.UseVisualStyleBackColor = true;
@@ -150,14 +151,14 @@
             this.txtQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.txtQtd.Location = new System.Drawing.Point(326, 47);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(299, 30);
+            this.txtQtd.Size = new System.Drawing.Size(87, 30);
             this.txtQtd.TabIndex = 80;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(321, 19);
+            this.label9.Location = new System.Drawing.Point(303, 19);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 25);
             this.label9.TabIndex = 81;
@@ -168,9 +169,9 @@
             this.cbTamanho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTamanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbTamanho.FormattingEnabled = true;
-            this.cbTamanho.Location = new System.Drawing.Point(326, 118);
+            this.cbTamanho.Location = new System.Drawing.Point(733, 47);
             this.cbTamanho.Name = "cbTamanho";
-            this.cbTamanho.Size = new System.Drawing.Size(299, 33);
+            this.cbTamanho.Size = new System.Drawing.Size(98, 33);
             this.cbTamanho.TabIndex = 84;
             this.cbTamanho.SelectedIndexChanged += new System.EventHandler(this.cbTamanho_SelectedIndexChanged);
             // 
@@ -179,7 +180,7 @@
             this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(19, 191);
+            this.cbMarca.Location = new System.Drawing.Point(850, 47);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(285, 33);
             this.cbMarca.TabIndex = 83;
@@ -190,7 +191,7 @@
             this.cbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbModelo.FormattingEnabled = true;
-            this.cbModelo.Location = new System.Drawing.Point(19, 118);
+            this.cbModelo.Location = new System.Drawing.Point(431, 47);
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(285, 33);
             this.cbModelo.TabIndex = 82;
@@ -202,9 +203,9 @@
             this.cbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbCor.FormattingEnabled = true;
-            this.cbCor.Location = new System.Drawing.Point(19, 259);
+            this.cbCor.Location = new System.Drawing.Point(22, 127);
             this.cbCor.Name = "cbCor";
-            this.cbCor.Size = new System.Drawing.Size(285, 33);
+            this.cbCor.Size = new System.Drawing.Size(172, 33);
             this.cbCor.TabIndex = 86;
             this.cbCor.SelectedIndexChanged += new System.EventHandler(this.cbCor_SelectedIndexChanged);
             // 
@@ -212,7 +213,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(14, 231);
+            this.label2.Location = new System.Drawing.Point(17, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 25);
             this.label2.TabIndex = 85;
@@ -221,16 +222,16 @@
             // txtPreco
             // 
             this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPreco.Location = new System.Drawing.Point(326, 262);
+            this.txtPreco.Location = new System.Drawing.Point(217, 127);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(299, 30);
+            this.txtPreco.Size = new System.Drawing.Size(131, 30);
             this.txtPreco.TabIndex = 87;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(321, 234);
+            this.label8.Location = new System.Drawing.Point(202, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 25);
             this.label8.TabIndex = 88;
@@ -239,7 +240,7 @@
             // btnConsulta
             // 
             this.btnConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnConsulta.Location = new System.Drawing.Point(19, 307);
+            this.btnConsulta.Location = new System.Drawing.Point(371, 124);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(285, 36);
             this.btnConsulta.TabIndex = 89;
@@ -250,27 +251,29 @@
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Location = new System.Drawing.Point(19, 405);
+            this.dgvProdutos.Location = new System.Drawing.Point(22, 219);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.RowHeadersWidth = 4;
-            this.dgvProdutos.Size = new System.Drawing.Size(1101, 374);
+            this.dgvProdutos.Size = new System.Drawing.Size(1340, 374);
             this.dgvProdutos.TabIndex = 90;
             // 
             // lblQtd
             // 
             this.lblQtd.AutoSize = true;
-            this.lblQtd.Location = new System.Drawing.Point(632, 47);
+            this.lblQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.lblQtd.Location = new System.Drawing.Point(1141, 140);
             this.lblQtd.Name = "lblQtd";
-            this.lblQtd.Size = new System.Drawing.Size(62, 13);
+            this.lblQtd.Size = new System.Drawing.Size(124, 25);
             this.lblQtd.TabIndex = 91;
             this.lblQtd.Text = "Quantidade";
             // 
             // cbSemEstoque
             // 
             this.cbSemEstoque.AutoSize = true;
-            this.cbSemEstoque.Location = new System.Drawing.Point(701, 47);
+            this.cbSemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbSemEstoque.Location = new System.Drawing.Point(896, 108);
             this.cbSemEstoque.Name = "cbSemEstoque";
-            this.cbSemEstoque.Size = new System.Drawing.Size(182, 17);
+            this.cbSemEstoque.Size = new System.Drawing.Size(350, 29);
             this.cbSemEstoque.TabIndex = 92;
             this.cbSemEstoque.Text = "Mostrar produtos fora do estoque";
             this.cbSemEstoque.UseVisualStyleBackColor = true;
@@ -283,11 +286,22 @@
             this.lblAvisos.Size = new System.Drawing.Size(0, 13);
             this.lblAvisos.TabIndex = 93;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(891, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(244, 25);
+            this.label10.TabIndex = 94;
+            this.label10.Text = "Quantidade de produtos";
+            // 
             // frmCONProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 791);
+            this.ClientSize = new System.Drawing.Size(1370, 609);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblAvisos);
             this.Controls.Add(this.cbSemEstoque);
             this.Controls.Add(this.lblQtd);
@@ -345,5 +359,6 @@
         private System.Windows.Forms.Label lblQtd;
         private System.Windows.Forms.CheckBox cbSemEstoque;
         private System.Windows.Forms.Label lblAvisos;
+        private System.Windows.Forms.Label label10;
     }
 }
