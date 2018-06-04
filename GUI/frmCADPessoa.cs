@@ -158,6 +158,8 @@ namespace GUI
                             //apagar ultimo item adicionado
                         }
                     }
+                    else
+                        MessageBox.Show("A pessoa não pôde ser cadastrada !");
 
                 }
                 else
@@ -165,9 +167,8 @@ namespace GUI
                     //mensagem de aviso
                     MessageBox.Show("Informe o CPF valido !");
                 }
-
             }
-            else if ((objDAL.retornarPessoaCliente(txtCPF.Text) == null && rbCliente.Checked == true))
+            else if ((validarConteudoTextBoxes(this.Controls) == true && objDAL.retornarPessoaCliente(txtCPF.Text) == null && rbCliente.Checked == true))
             {
                 Pessoa climodel = new Pessoa();
                 climodel = objDAL.retornarPessoaCPFObjeto(txtCPF.Text);
@@ -177,8 +178,9 @@ namespace GUI
                 cli.idPessoa = climodel.id;
                 cli.limitecredito = Decimal.Parse(txtLimite.Text);
                 func = BLLObj.Salvar(cli);
+                MessageBox.Show("A pessoa foi cadastrada como funcionario !");
             }
-            else if((objDAL.retornarPessoaFuncionario(txtCPF.Text) == null && rbFuncionario.Checked == true))
+            else if((validarConteudoTextBoxes(this.Controls) == true && objDAL.retornarPessoaFuncionario(txtCPF.Text) == null && rbFuncionario.Checked == true))
             {
                 Pessoa funmodel = new Pessoa();
                 funmodel = objDAL.retornarPessoaCPFObjeto(txtCPF.Text);
@@ -188,17 +190,18 @@ namespace GUI
                 fun.idPessoa = funmodel.id;
                 fun.Salario = Decimal.Parse(txtSalario.Text);
                 func = BLLObj.Salvar(fun);
+                MessageBox.Show("A pessoa foi cadastrada como funcionario !");
             }
             else if ((objDAL.retornarPessoaCliente(txtCPF.Text) != null && rbCliente.Checked == true))
             {
-                MessageBox.Show("A pessoa já está cadastrada como cliente !");
+                MessageBox.Show("A pessoa já está cadastrada como cliente ! Altere informações no botão Alterar!");
             }
             else if ((objDAL.retornarPessoaFuncionario(txtCPF.Text) != null && rbFuncionario.Checked == true))
             {
-                MessageBox.Show("A pessoa já está cadastrada como funcionario !");
+                MessageBox.Show("A pessoa já está cadastrada como funcionario ! Altere informações no botão Alterar!");
             }
             //else
-               // MessageBox.Show("O CPF da pessoa já existe no banco !");
+              // MessageBox.Show("Preencha todos os campos corretamente !");
         }
 
 
@@ -353,6 +356,7 @@ namespace GUI
                             limparTextBoxes(this.Controls);
                             txtSalario.Text = "";
                             txtLimite.Text = "";
+                            MessageBox.Show("A pessoa foi alterada !");
                         }
                         else
                         {
@@ -455,6 +459,8 @@ namespace GUI
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             limparTextBoxes(this.Controls);
+            txtSalario.Text = "";
+            txtLimite.Text = "";
         }
 
         private void btnLocalizar_Click(object sender, EventArgs e)

@@ -26,33 +26,39 @@ namespace GUI
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            BLLCaixa OBJBll = new BLLCaixa();
-            Conta divida = new Conta();
-            divida.Data = dtpData.Value;
-            divida.Nome = txtNome.Text;
-            divida.Valor = Decimal.Parse(txtValor.Text);
-            if (cbRecorrente.Checked)
-            {            
-                divida.DataFinal = dtpDataFinal.Value;
-                divida.Recorrente = "S";
-            }
-            if (OBJBll.Salvar(divida) == true)
+            if (txtNome.Text != "" && txtValor.Text != "")
             {
-                MessageBox.Show("Conta salva com sucesso !");
+                BLLCaixa OBJBll = new BLLCaixa();
+                Conta divida = new Conta();
+                divida.Data = dtpData.Value;
+                divida.Nome = txtNome.Text;
+                divida.Valor = Decimal.Parse(txtValor.Text);
+                if (cbRecorrente.Checked)
+                {
+                    divida.DataFinal = dtpDataFinal.Value;
+                    divida.Recorrente = "S";
+                }
+                if (OBJBll.Salvar(divida) == true)
+                {
+                    MessageBox.Show("Conta salva com sucesso !");
+                    limparTextBoxes(this.Controls);
+                }
+
+                //msg salvo com sucesso
+                else
+                    MessageBox.Show("Conta não foi salva !");
+                //msg não foi salvo
+
+                dgvDividas.DataSource = OBJBll.listarDividas();
                 limparTextBoxes(this.Controls);
             }
-                
-            //msg salvo com sucesso
             else
-                MessageBox.Show("Conta não foi salva !");
-            //msg não foi salvo
-
-            dgvDividas.DataSource = OBJBll.listarDividas();
-            limparTextBoxes(this.Controls);
+                MessageBox.Show("Informe um nome e um valor!");
 
         }
-        private void validarConteudoTextBoxes(Control.ControlCollection controles)
+        private bool validarConteudoTextBoxes(Control.ControlCollection controles)
         {
+            int cont = 0;
             foreach (Control ctrl in controles)
             {
                 //Se o contorle for um TextBox...
@@ -63,6 +69,7 @@ namespace GUI
                         if(((TextBox)(ctrl)).Text.Contains(""))
                         {
                             MessageBox.Show("Preencha todos os campos !");
+                            cont++;
                         }
                     }
                         
@@ -70,9 +77,14 @@ namespace GUI
                         if(((MaskedTextBox)(ctrl)).Text.Contains(""))
                         {
                             MessageBox.Show("Preencha todos os campos !");
+                        cont++;
                         }
                 }
             }
+            if (cont == 0)
+                return true;
+            else
+                return false;
         }
         private void limparTextBoxes(Control.ControlCollection controles)
         {
@@ -146,7 +158,7 @@ namespace GUI
         {
             int id = 0;
             id = (int)dgvDividas.CurrentRow.Cells[0].Value;
-            if (id != 0)
+            if (id != 0 && txtNome.Text != "" && txtValor.Text != "")
             {
                 Conta divida = new Conta();
                 BLLCaixa BLLObj = new BLLCaixa();
@@ -176,7 +188,7 @@ namespace GUI
         {
             int id = 0;
             id = (int)dgvDividas.CurrentRow.Cells[0].Value;
-            if (id != 0)
+            if (id != 0 && txtNome.Text != "" && txtValor.Text != "")
             {
                 Conta divida = new Conta();
                 BLLCaixa BLLObj = new BLLCaixa();

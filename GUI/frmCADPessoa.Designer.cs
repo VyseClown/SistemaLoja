@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCADPessoa));
             this.label12 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -486,11 +487,11 @@
             // btnLocalizar
             // 
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnLocalizar.Location = new System.Drawing.Point(232, 101);
+            this.btnLocalizar.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalizar.Image")));
+            this.btnLocalizar.Location = new System.Drawing.Point(225, 101);
             this.btnLocalizar.Name = "btnLocalizar";
-            this.btnLocalizar.Size = new System.Drawing.Size(55, 30);
+            this.btnLocalizar.Size = new System.Drawing.Size(39, 30);
             this.btnLocalizar.TabIndex = 3;
-            this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 

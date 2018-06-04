@@ -24,6 +24,8 @@ namespace GUI
         {
             //var objCBCategoria = new Categoria();
             //var objCBCategoriaB = new BLLProduto();
+            
+
             string descricao = "";
             
             var categorias = BLLProduto.selecionarcategoria(descricao);
@@ -55,6 +57,7 @@ namespace GUI
             cbCor.DataSource = cores;
             cbCor.ValueMember = "id";
             cbCor.DisplayMember = "Nome";
+
             txtCodigoDeBarras.Focus();
         }
 
@@ -134,15 +137,6 @@ namespace GUI
                 //txtPrecoCompra.Text = objP.precoCompra.ToString();
                 //txtQtd.Text = objP.quantidade.ToString();
                 txtQtd.Text = obj.quantidade.ToString();
-                //if (objP.condicional == "Sim")
-                //    cbCondicional.Checked = true;
-                //else
-                //    cbCondicional.Checked = false;
-                //cbNome.Text = obj.nome.Trim();
-
-                //var objCBCategoria = new Categoria();
-                //int categoria = Convert.ToInt16(obj.categoriaid);
-                //string categoriaDescricao = "";
 
 
 
@@ -179,6 +173,10 @@ namespace GUI
                 //avisos.Text = "Codigo de barras já registrado !";
                 dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
 
+                dgvProdutos.Columns[0].Visible = false;
+                dgvProdutos.Columns[8].Visible = false;
+                dgvProdutos.Columns[9].Visible = false;
+
 
                 cbMarca.Focus();
             }
@@ -214,6 +212,10 @@ namespace GUI
                 cbCor.DisplayMember = "Nome";
 
                 dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
+
+                dgvProdutos.Columns[0].Visible = false;
+                dgvProdutos.Columns[8].Visible = false;
+                dgvProdutos.Columns[9].Visible = false;
             }
         }
 
@@ -401,7 +403,22 @@ namespace GUI
 
             List<Produto> listaProduto = new List<Produto>();
             listaProduto = objBLL.RetornarListaFiltro(cmd);
+
+
+
             dgvProdutos.DataSource = listaProduto;
+
+
+            dgvProdutos.Columns[0].Visible = false;
+            dgvProdutos.Columns[8].Visible = false;
+            dgvProdutos.Columns[9].Visible = false;
+            dgvProdutos.Columns[12].Visible = false;
+            dgvProdutos.Columns[13].Visible = false;
+            dgvProdutos.Columns[14].Visible = false;
+            dgvProdutos.Columns[15].Visible = false;
+            dgvProdutos.Columns[16].Visible = false;
+            dgvProdutos.Columns[17].Visible = false;
+            dgvProdutos.Columns[18].Visible = false;
             int contador = 0;
             foreach (var item in listaProduto)
             {

@@ -521,33 +521,37 @@ namespace GUI
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto();
-            DALProduto objDAL = new DALProduto();
-            int id = (int)dgvProdutos.CurrentRow.Cells[0].Value;
-            produto = objDAL.SelecionarProdutoID(id);
-            produto.marca = (int)cbMarca.SelectedValue;
-            produto.modelo = (int)cbModelo.SelectedValue;
-            produto.categoriaid = (int)cbCategoria.SelectedValue;
-            produto.tamanho = (int)cbTamanho.SelectedValue;
-            produto.cor = (int)cbCor.SelectedValue;
-          //  produto.descricao = txtDescricao.Text;
-            produto.quantidade = int.Parse(txtQtd.Text);
-            if (txtPrecoCompra.Text != "")
-                produto.precoCompra = decimal.Parse(txtPrecoCompra.Text);
-            else
-                produto.precoCompra = null;
-            if (cbCondicional.Checked == true)
-                produto.condicional = "Sim";
-            else
-                produto.condicional = "Não";
+            if (dgvProdutos.Rows.Count > 0)
+            {
+                Produto produto = new Produto();
+                DALProduto objDAL = new DALProduto();
+                int id = (int)dgvProdutos.CurrentRow.Cells[0].Value;
+                produto = objDAL.SelecionarProdutoID(id);
+                produto.marca = (int)cbMarca.SelectedValue;
+                produto.modelo = (int)cbModelo.SelectedValue;
+                produto.categoriaid = (int)cbCategoria.SelectedValue;
+                produto.tamanho = (int)cbTamanho.SelectedValue;
+                produto.cor = (int)cbCor.SelectedValue;
+                //  produto.descricao = txtDescricao.Text;
+                produto.quantidade = int.Parse(txtQtd.Text);
+                if (txtPrecoCompra.Text != "")
+                    produto.precoCompra = decimal.Parse(txtPrecoCompra.Text);
+                else
+                    produto.precoCompra = null;
+                if (cbCondicional.Checked == true)
+                    produto.condicional = "Sim";
+                else
+                    produto.condicional = "Não";
 
-            produto.preco = decimal.Parse(txtPreco.Text);
-            objDAL.Alterar(produto);
-            dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
-            avisos.Text = "Alterado com sucesso !";
-            limparTextBoxes(this.Controls);
-            txtCodigoDeBarras.Focus();
-
+                produto.preco = decimal.Parse(txtPreco.Text);
+                objDAL.Alterar(produto);
+                dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
+                avisos.Text = "Alterado com sucesso !";
+                limparTextBoxes(this.Controls);
+                txtCodigoDeBarras.Focus();
+            }
+            else
+                MessageBox.Show("Selecione um produto antes!");
         }
 
         private void txtQtd_KeyUp(object sender, KeyEventArgs e)

@@ -354,6 +354,7 @@
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnLimpar
             // 
@@ -364,6 +365,7 @@
             this.btnLimpar.TabIndex = 2;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnNovaCategoria
             // 
@@ -374,6 +376,7 @@
             this.btnNovaCategoria.TabIndex = 4;
             this.btnNovaCategoria.Text = "Cadastrar Nova Categoria /Marca/Modelo/Tamanho/Cor";
             this.btnNovaCategoria.UseVisualStyleBackColor = true;
+            this.btnNovaCategoria.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnExcluir
             // 
@@ -384,6 +387,7 @@
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Diminuir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -394,6 +398,7 @@
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmCADProduto
             // 

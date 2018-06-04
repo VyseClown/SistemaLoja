@@ -413,6 +413,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
             this.Name = "frmCADVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCADVenda";

@@ -42,6 +42,17 @@ E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\GUI\obj\Debu
 E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\GUI\obj\Debug\GUI.frmPrincipal.resources
 E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\GUI\obj\Debug\GUI.Properties.Resources.resources
 E:\Box Sync\Trabalhos\Sistemas\SistemaLojaQuiteriaModas\SistemaLoja\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADCategoria.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADPessoa.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADProduto.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADTipoPagamento.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADVenda.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCaixa.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCONProduto.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmPrincipal.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\GUI.exe.config
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\GUI.exe
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\GUI.pdb
@@ -55,27 +66,6 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Modelo.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.dll.config
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.dll.config
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Modelo.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\EntityFramework.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions.Logging.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADCategoria.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADProduto.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCONProduto.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmPrincipal.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.Properties.Resources.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.exe
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADVenda.resources
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.ReportSource.dll
@@ -92,6 +82,16 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Rep
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\stdole.dll
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADPessoa.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCaixa.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADTipoPagamento.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.dll.config
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.dll.config
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Modelo.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\EntityFramework.xml
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.exe
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.pdb
