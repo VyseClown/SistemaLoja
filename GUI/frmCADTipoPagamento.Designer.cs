@@ -39,53 +39,59 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(140, 17);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(118, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(135, 25);
             this.label4.TabIndex = 15;
             this.label4.Text = "Cadastrados";
             // 
             // cbCategoria
             // 
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(118, 33);
+            this.cbCategoria.Location = new System.Drawing.Point(123, 45);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbCategoria.TabIndex = 14;
+            this.cbCategoria.Size = new System.Drawing.Size(146, 33);
+            this.cbCategoria.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 17);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "Nome";
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 59);
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 84);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 13;
+            this.btnSalvar.Size = new System.Drawing.Size(121, 39);
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(12, 33);
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtDescricao.Location = new System.Drawing.Point(17, 45);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(100, 20);
-            this.txtDescricao.TabIndex = 12;
+            this.txtDescricao.Size = new System.Drawing.Size(100, 30);
+            this.txtDescricao.TabIndex = 0;
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(118, 59);
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnExcluir.Location = new System.Drawing.Point(148, 84);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.Size = new System.Drawing.Size(121, 39);
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -94,15 +100,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 103);
+            this.ClientSize = new System.Drawing.Size(292, 152);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescricao);
+            this.MaximizeBox = false;
             this.Name = "frmCADTipoPagamento";
-            this.Text = "Cadastro de forma de pagamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Pagamento";
             this.Load += new System.EventHandler(this.frmCADTipoPagamento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

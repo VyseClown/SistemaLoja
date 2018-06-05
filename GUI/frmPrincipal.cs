@@ -37,7 +37,8 @@ namespace GUI
 
         private void btnVenda_Click(object sender, EventArgs e)
         {
-
+            frmCADVenda frmCAD = new frmCADVenda();
+            frmCAD.Show();
         }
 
         private void btnConsultaProd_Click(object sender, EventArgs e)

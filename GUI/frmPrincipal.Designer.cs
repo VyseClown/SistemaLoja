@@ -134,7 +134,6 @@
             // 
             // btnVenda
             // 
-            this.btnVenda.Enabled = false;
             this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnVenda.Location = new System.Drawing.Point(177, 58);
             this.btnVenda.Name = "btnVenda";

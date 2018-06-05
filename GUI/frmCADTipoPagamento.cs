@@ -31,7 +31,7 @@ namespace GUI
 
                 BLLCat.Salvar(cat);
                 txtDescricao.Text = "";
-                cbCategoria.DataSource = BLLProduto.selecionarcategoria("");
+                cbCategoria.DataSource = BLLVenda.listarCategoriaPagamento();
                 cbCategoria.ValueMember = "id";
                 cbCategoria.DisplayMember = "descricao";
                 MessageBox.Show("Salvo com sucesso !");
@@ -50,6 +50,9 @@ namespace GUI
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             new BLLVenda().Excluir(new BLLVenda().selecionarCategoriaPagamentoComID(int.Parse(cbCategoria.SelectedValue.ToString())));
+            cbCategoria.DataSource = BLLVenda.listarCategoriaPagamento();
+            cbCategoria.ValueMember = "id";
+            cbCategoria.DisplayMember = "nome";
             MessageBox.Show("Tipo de pagamento apagado com sucesso !");
         }
     }
