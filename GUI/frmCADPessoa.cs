@@ -200,8 +200,8 @@ namespace GUI
             {
                 MessageBox.Show("A pessoa já está cadastrada como funcionario ! Altere informações no botão Alterar!");
             }
-            //else
-              // MessageBox.Show("Preencha todos os campos corretamente !");
+            else
+              MessageBox.Show("Preencha todos os campos corretamente !");
         }
 
 
@@ -233,7 +233,7 @@ namespace GUI
                     {
                         if (((TextBox)(ctrl)).Text == "" && ((TextBox)(ctrl)).Name != ("txtLimite") && ((TextBox)(ctrl)).Name != ("txtSalario") && ((TextBox)(ctrl)).Name != ("txtEmail"))
                         {
-                            MessageBox.Show("Preencha todos os campos !");
+                          //  MessageBox.Show("Preencha todos os campos !");
                             return false;
                         }
                         else
@@ -243,7 +243,7 @@ namespace GUI
                     else
                         if (((MaskedTextBox)(ctrl)).Text == "" && ((MaskedTextBox)(ctrl)).Name != ("txtCelular2") && ((MaskedTextBox)(ctrl)).Name != ("txtTelefone2") && ((MaskedTextBox)(ctrl)).Name != ("txtCelular") && ((MaskedTextBox)(ctrl)).Name != ("txtTelefone") && ((MaskedTextBox)(ctrl)).Name != ("txtRG"))
                     {
-                        MessageBox.Show("Preencha todos os campos !");
+                        //MessageBox.Show("Preencha todos os campos !");
                         return false;
                     }
                     else
