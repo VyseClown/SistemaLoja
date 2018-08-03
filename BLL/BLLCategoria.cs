@@ -42,8 +42,11 @@ namespace BLL
         public int selecionarIDCategoria(string categoria)
         {
             //DALCategoria objDAL = new DALCategoria();
-            
-            return DALCategoria.Selecionarcod(categoria);
+            int codigo = DALCategoria.Selecionarcod(categoria);
+            if (codigo != 0)
+                return codigo;
+            else
+                return 0;
         }
         public List<Categoria> listarTodasCat()
         {

@@ -299,7 +299,7 @@
             this.cbCor.FormattingEnabled = true;
             this.cbCor.Location = new System.Drawing.Point(638, 351);
             this.cbCor.Name = "cbCor";
-            this.cbCor.Size = new System.Drawing.Size(86, 33);
+            this.cbCor.Size = new System.Drawing.Size(155, 33);
             this.cbCor.TabIndex = 4;
             // 
             // label11

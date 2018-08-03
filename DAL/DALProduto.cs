@@ -191,7 +191,7 @@ namespace DAL
         }
         public List<Produto> retornaListaFiltroProduto(string cmd)
         {
-            string conexao = "Server=DESKTOP-SPLTF78;Database=dbLojaQuiteriaModas;Trusted_Connection=True;";//SPLTF78 ou  FIMICD4 //"metadata=res://*/dbLojaModel.csdl|res://*/dbLojaModel.ssdl|res://*/dbLojaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-SPLTF78;initial catalog=dbLojaQuiteriaModas;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+            string conexao = "Server=DESKTOP-FIMICD4;Database=dbLojaQuiteriaModas;Trusted_Connection=True;";//SPLTF78 ou  FIMICD4 //"metadata=res://*/dbLojaModel.csdl|res://*/dbLojaModel.ssdl|res://*/dbLojaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-SPLTF78;initial catalog=dbLojaQuiteriaModas;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
             List<Produto> lista = new List<Produto>();
             using (SqlConnection connection = new SqlConnection(conexao))
             {

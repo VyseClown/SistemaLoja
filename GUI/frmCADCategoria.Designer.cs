@@ -110,7 +110,7 @@
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(335, 204);
+            this.tabControl.Size = new System.Drawing.Size(419, 293);
             this.tabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -124,7 +124,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(432, 217);
+            this.tabPage1.Size = new System.Drawing.Size(411, 255);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Categoria";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(117, 49);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(146, 33);
+            this.cbCategoria.Size = new System.Drawing.Size(227, 33);
             this.cbCategoria.TabIndex = 1;
             // 
             // tabPage2
@@ -168,7 +168,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(327, 166);
+            this.tabPage2.Size = new System.Drawing.Size(411, 255);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modelo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             this.cbModelo.FormattingEnabled = true;
             this.cbModelo.Location = new System.Drawing.Point(117, 48);
             this.cbModelo.Name = "cbModelo";
-            this.cbModelo.Size = new System.Drawing.Size(146, 33);
+            this.cbModelo.Size = new System.Drawing.Size(227, 33);
             this.cbModelo.TabIndex = 1;
             // 
             // tabPage3
@@ -239,7 +239,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(432, 217);
+            this.tabPage3.Size = new System.Drawing.Size(411, 255);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Marca";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -287,7 +287,7 @@
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(117, 51);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(146, 33);
+            this.cbMarca.Size = new System.Drawing.Size(227, 33);
             this.cbMarca.TabIndex = 1;
             // 
             // label6
@@ -310,7 +310,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(432, 217);
+            this.tabPage4.Size = new System.Drawing.Size(411, 255);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tamanho";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -367,7 +367,7 @@
             this.cbTamanho.FormattingEnabled = true;
             this.cbTamanho.Location = new System.Drawing.Point(117, 52);
             this.cbTamanho.Name = "cbTamanho";
-            this.cbTamanho.Size = new System.Drawing.Size(146, 33);
+            this.cbTamanho.Size = new System.Drawing.Size(227, 33);
             this.cbTamanho.TabIndex = 1;
             // 
             // tabPage5
@@ -381,7 +381,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(327, 217);
+            this.tabPage5.Size = new System.Drawing.Size(411, 255);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Cor";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -438,14 +438,14 @@
             this.cbCor.FormattingEnabled = true;
             this.cbCor.Location = new System.Drawing.Point(117, 46);
             this.cbCor.Name = "cbCor";
-            this.cbCor.Size = new System.Drawing.Size(146, 33);
+            this.cbCor.Size = new System.Drawing.Size(227, 33);
             this.cbCor.TabIndex = 1;
             // 
             // frmCADCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 230);
+            this.ClientSize = new System.Drawing.Size(443, 317);
             this.Controls.Add(this.tabControl);
             this.MaximizeBox = false;
             this.Name = "frmCADCategoria";

@@ -48,7 +48,7 @@ namespace GUI
             var cat = new Categoria();
             var BLLCat = new BLLCategoria();
 
-            if (txtDescricao.Text != "")
+            if (txtDescricao.Text != "" && BLLCat.selecionarIDCategoria(txtDescricao.Text) == 0)
             {
                 cat.descricao = txtDescricao.Text;
 
@@ -60,14 +60,15 @@ namespace GUI
                 MessageBox.Show("Salvo com sucesso !");
             }
             else
-                MessageBox.Show("Informe algum nome !");
+                MessageBox.Show("Informe algum nome ! Lembre-se, não pode ser um que já existe!");
         }
 
         private void btnSalvarModelo_Click(object sender, EventArgs e)
         {
             DAL.Modelo mod = new DAL.Modelo();
             BLLProduto objProduto = new BLLProduto();
-            if (txtNomeModelo.Text != "")
+            var BLLCat = new BLLCategoria();
+            if (txtNomeModelo.Text != "" /*&& BLLCat.selecionarIDCategoria(txtNomeModelo.Text) == 0*/)
             {
                 mod.nome = txtNomeModelo.Text;
                 objProduto.IncluirModelo(mod);
@@ -79,7 +80,7 @@ namespace GUI
                 txtNomeModelo.Focus();
             }
             else
-                MessageBox.Show("Informe algum nome !");
+                MessageBox.Show("Informe algum nome ! Lembre-se, não pode ser um que já existe!");
                 
             
         }
@@ -88,7 +89,8 @@ namespace GUI
         {
             Marcas m = new Marcas();
             BLLProduto objProduto = new BLLProduto();
-            if (txtNomeMarca.Text != "")
+            var BLLCat = new BLLCategoria();
+            if (txtNomeMarca.Text != ""/* && BLLCat.selecionarIDCategoria(txtNomeMarca.Text) == 0*/)
             {
                 m.nome = txtNomeMarca.Text;
                 objProduto.IncluirMarca(m);
@@ -100,14 +102,15 @@ namespace GUI
                 txtNomeMarca.Focus();
             }
             else
-                MessageBox.Show("Informe algum nome !");
+                MessageBox.Show("Informe algum nome ! Lembre-se, não pode ser um que já existe!");
         }
 
         private void btnSalvaTamanho_Click(object sender, EventArgs e)
         {
             Tamanhos tam = new Tamanhos();
             BLLProduto objProduto = new BLLProduto();
-            if (txtNomeTamanho.Text != "")
+            var BLLCat = new BLLCategoria();
+            if (txtNomeTamanho.Text != "" /*&& BLLCat.selecionarIDCategoria(txtNomeTamanho.Text) == 0*/)
             {
                 tam.nome = txtNomeTamanho.Text;
                 objProduto.IncluirTamanho(tam);
@@ -119,14 +122,15 @@ namespace GUI
                 txtNomeTamanho.Focus();
             }
             else
-                MessageBox.Show("Informe algum nome !");
+                MessageBox.Show("Informe algum nome ! Lembre-se, não pode ser um que já existe!");
         }
 
         private void btnSalvarCor_Click(object sender, EventArgs e)
         {
             Cor m = new Cor();
             BLLProduto objProduto = new BLLProduto();
-            if (txtCor.Text != "")
+            var BLLCat = new BLLCategoria();
+            if (txtCor.Text != "" /*&& BLLCat.selecionarIDCategoria(txtCor.Text) == 0*/)
             {
                 m.Nome = txtCor.Text;
                 objProduto.IncluirCor(m);
@@ -138,7 +142,7 @@ namespace GUI
                 txtCor.Focus();
             }
             else
-                MessageBox.Show("Informe algum nome !");
+                MessageBox.Show("Informe algum nome ! Lembre-se, não pode ser um que já existe!");
         }
 
         private void btnExcluirCategoria_Click(object sender, EventArgs e)

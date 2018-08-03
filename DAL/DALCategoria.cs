@@ -75,15 +75,16 @@ namespace DAL
         public static int Selecionarcod(string descricao)
         {
             //var obj = new categoria();
-            int obj;
+            Categoria obj;
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
                 obj = (from c in db.Categoria
                        where c.descricao.Contains(descricao)
                          orderby c.descricao
-                         select c.id).FirstOrDefault();
+                         select c).FirstOrDefault();
             }
-            return obj;
+
+            return obj?.id ?? 0;
         }
 
         public static string SelecionarcodInt(int codigo)
