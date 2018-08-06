@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
 using System.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
@@ -44,40 +45,82 @@ namespace DAL
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
-                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("A categoria já foi cadastrada em um produto!");
+
+                }
+                
             }
         }
         public void Excluir(Modelo item)
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
-                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("A categoria já foi cadastrada em um produto!");
+
+                }
             }
         }
         public void Excluir(Marcas item)
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
-                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("A categoria já foi cadastrada em um produto!");
+
+                }
             }
         }
         public void Excluir(Tamanhos item)
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
-                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("A categoria já foi cadastrada em um produto!");
+
+                }
             }
         }
         public void Excluir(Cor item)
         {
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
-                db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("A categoria já foi cadastrada em um produto!");
+
+                }
+                
             }
         }
         public Categoria SelecionarCategoriaID(int id)
@@ -191,7 +234,7 @@ namespace DAL
         }
         public List<Produto> retornaListaFiltroProduto(string cmd)
         {
-            string conexao = "Server=DESKTOP-FIMICD4;Database=dbLojaQuiteriaModas;Trusted_Connection=True;";//SPLTF78 ou  FIMICD4 //"metadata=res://*/dbLojaModel.csdl|res://*/dbLojaModel.ssdl|res://*/dbLojaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-SPLTF78;initial catalog=dbLojaQuiteriaModas;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+            string conexao = "Server=DESKTOP-SPLTF78;Database=dbLojaQuiteriaModas;Trusted_Connection=True;";//SPLTF78 ou  FIMICD4 //"metadata=res://*/dbLojaModel.csdl|res://*/dbLojaModel.ssdl|res://*/dbLojaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-SPLTF78;initial catalog=dbLojaQuiteriaModas;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
             List<Produto> lista = new List<Produto>();
             using (SqlConnection connection = new SqlConnection(conexao))
             {

@@ -153,7 +153,7 @@ namespace GUI
             cbCategoria.DataSource = BLLProduto.selecionarcategoria(descricao);
             cbCategoria.ValueMember = "id";
             cbCategoria.DisplayMember = "descricao";
-            MessageBox.Show("Categoria excluida !");
+            //MessageBox.Show("Categoria excluida !");
         }
 
         private void btnExcluirModelo_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace GUI
             cbModelo.DataSource = BLLProduto.ListarModelo();
             cbModelo.ValueMember = "id";
             cbModelo.DisplayMember = "nome";
-            MessageBox.Show("Modelo excluida !");
+            //MessageBox.Show("Modelo excluida !");
         }
 
         private void btnExcluirMarca_Click(object sender, EventArgs e)
@@ -171,7 +171,7 @@ namespace GUI
             cbMarca.DataSource = BLLProduto.ListarMarca();
             cbMarca.ValueMember = "id";
             cbMarca.DisplayMember = "nome";
-            MessageBox.Show("Marca excluida !");
+            //MessageBox.Show("Marca excluida !");
         }
 
         private void btnExcluirTamanho_Click(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace GUI
             cbTamanho.DataSource = BLLProduto.ListarTamanho();
             cbTamanho.ValueMember = "id";
             cbTamanho.DisplayMember = "nome";
-            MessageBox.Show("Tamanho excluida !");
+            //MessageBox.Show("Tamanho excluida !");
         }
 
         private void btnExcluirCor_Click(object sender, EventArgs e)
@@ -189,7 +189,7 @@ namespace GUI
             cbCor.DataSource = BLLProduto.ListarCor();
             cbCor.ValueMember = "id";
             cbCor.DisplayMember = "Nome";
-            MessageBox.Show("Cor excluida !");
+            //MessageBox.Show("Cor excluida !");
         }
     }
 }

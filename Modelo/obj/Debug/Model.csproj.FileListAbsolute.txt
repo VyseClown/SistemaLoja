@@ -2,3 +2,4 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\bin\Debug\Modelo.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\bin\Debug\Modelo.pdb
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Model.csprojResolveAssemblyReference.cache
