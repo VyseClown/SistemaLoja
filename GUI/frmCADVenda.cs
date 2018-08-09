@@ -44,7 +44,7 @@ namespace GUI
                 cbMarca.Text = obj.marca.Trim();
                 cbModelo.Text = obj.modelo.Trim();
                 cbTamanho.Text = obj.tamanho;
-                txtPrecoCompra.Text = objP.precoCompra.ToString();
+                //txtPrecoCompra.Text = objP.precoCompra.ToString();
                 //txtQtd.Text = objP.quantidade.ToString();
                 txtQtd.Text = "1";
                 if (objP.condicional == "Sim")
@@ -99,10 +99,10 @@ namespace GUI
             {
                 MessageBox.Show("O produto não esta cadastrado !");
                 cbMarca.Focus();
-                txtPrecoCompra.Text = "";
+                //txtPrecoCompra.Text = "";
                 //txtDescricao.Text = "";
                 txtPreco.Text = "";
-                txtPorcentagem.Text = "";
+                //txtPorcentagem.Text = "";
                 txtQtd.Text = "1";
                 //txtDescricao.Text = "2017";
 

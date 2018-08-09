@@ -46,8 +46,6 @@
             this.cbCondicional = new System.Windows.Forms.CheckBox();
             this.txtPrecoCompra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtPorcentagem = new System.Windows.Forms.TextBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCor = new System.Windows.Forms.ComboBox();
@@ -57,9 +55,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPorcentagem = new System.Windows.Forms.TextBox();
             this.btnNovaCategoria = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -251,26 +251,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Preço de compra";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(485, 430);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 25);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Porcentagem";
-            // 
-            // txtPorcentagem
-            // 
-            this.txtPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPorcentagem.Location = new System.Drawing.Point(510, 455);
-            this.txtPorcentagem.MaxLength = 3;
-            this.txtPorcentagem.Name = "txtPorcentagem";
-            this.txtPorcentagem.Size = new System.Drawing.Size(97, 30);
-            this.txtPorcentagem.TabIndex = 8;
-            this.txtPorcentagem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPorcentagem_KeyUp);
-            // 
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -367,6 +347,37 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(6, 19);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(128, 31);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(485, 430);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 25);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Porcentagem";
+            // 
+            // txtPorcentagem
+            // 
+            this.txtPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtPorcentagem.Location = new System.Drawing.Point(510, 455);
+            this.txtPorcentagem.MaxLength = 3;
+            this.txtPorcentagem.Name = "txtPorcentagem";
+            this.txtPorcentagem.Size = new System.Drawing.Size(97, 30);
+            this.txtPorcentagem.TabIndex = 8;
+            this.txtPorcentagem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPorcentagem_KeyUp);
+            // 
             // btnNovaCategoria
             // 
             this.btnNovaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
@@ -388,17 +399,6 @@
             this.btnExcluir.Text = "Diminuir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(6, 19);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(128, 31);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmCADProduto
             // 
@@ -463,8 +463,6 @@
         private System.Windows.Forms.CheckBox cbCondicional;
         private System.Windows.Forms.TextBox txtPrecoCompra;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPorcentagem;
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCor;
@@ -474,8 +472,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovaCategoria;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPorcentagem;
     }
 }

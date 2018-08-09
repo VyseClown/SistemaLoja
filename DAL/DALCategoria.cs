@@ -87,6 +87,7 @@ namespace DAL
             return obj?.id ?? 0;
         }
 
+
         public static string SelecionarcodInt(int codigo)
         {
             //var obj = new Categoria();

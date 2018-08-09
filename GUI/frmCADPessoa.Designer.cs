@@ -72,6 +72,8 @@
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.LabelCEP = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.ddlCliente = new System.Windows.Forms.ComboBox();
             this.gbCliente.SuspendLayout();
             this.gbFuncionario.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -528,11 +530,32 @@
             this.groupBox1.TabIndex = 117;
             this.groupBox1.TabStop = false;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(286, 73);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 25);
+            this.label16.TabIndex = 119;
+            this.label16.Text = "Nome";
+            // 
+            // ddlCliente
+            // 
+            this.ddlCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.ddlCliente.FormattingEnabled = true;
+            this.ddlCliente.Location = new System.Drawing.Point(288, 101);
+            this.ddlCliente.Name = "ddlCliente";
+            this.ddlCliente.Size = new System.Drawing.Size(717, 33);
+            this.ddlCliente.TabIndex = 118;
+            // 
             // frmCADPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 651);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.ddlCliente);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.LabelCEP);
@@ -628,5 +651,7 @@
         private System.Windows.Forms.Label LabelCEP;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox ddlCliente;
     }
 }
