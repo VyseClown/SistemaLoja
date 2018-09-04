@@ -469,5 +469,19 @@ namespace DAL
                 db.SaveChanges();
             }
         }
+
+        public List<Pessoa> listarPessoas()
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                List<Pessoa> lista = new List<Pessoa>();
+                lista = (from e in db.Pessoa
+                    
+                    join c in db.Cliente on e.id equals c.idPessoa
+                    orderby e.nome
+                    select e).ToList();
+                return lista;
+            }
+        }
     }
 }

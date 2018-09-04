@@ -226,5 +226,55 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ClientePagamentos">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.ClientePagamentos">
+        <MappingFragment StoreEntitySet="ClientePagamentos">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Condicional">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Condicional">
+        <MappingFragment StoreEntitySet="Condicional">
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItensCondicional">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.ItensCondicional">
+        <MappingFragment StoreEntitySet="ItensCondicional">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="idCondicional" ColumnName="idCondicional" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItensVenda">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.ItensVenda">
+        <MappingFragment StoreEntitySet="ItensVenda">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="idVenda" ColumnName="idVenda" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venda">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Venda">
+        <MappingFragment StoreEntitySet="Venda">
+          <ScalarProperty Name="qtdParcelas" ColumnName="qtdParcelas" />
+          <ScalarProperty Name="idCategoriaPagamento" ColumnName="idCategoriaPagamento" />
+          <ScalarProperty Name="valorrestante" ColumnName="valorrestante" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

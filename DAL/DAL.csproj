@@ -148,6 +148,12 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClientePagamentos.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Condicional.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Conta.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
@@ -189,6 +195,12 @@
     <Compile Include="Funcionario.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ItensCondicional.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItensVenda.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Marcas.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
@@ -221,6 +233,9 @@
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Tamanhos.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Venda.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

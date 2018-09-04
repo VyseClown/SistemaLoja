@@ -374,7 +374,7 @@ namespace BLL
         }
         public bool Excluir(Cliente item)
         {
-            //escreve a função de excluir, krl
+            //escreve a função de excluir
             var objDAL = new DALPessoa();
             if (objDAL != null)
             {
@@ -386,7 +386,7 @@ namespace BLL
         }
         public bool Excluir(Funcionario item)
         {
-            //escreve a função de excluir, krl
+            //escreve a função de excluir
             var objDAL = new DALPessoa();
             if (objDAL != null)
             {
@@ -398,7 +398,7 @@ namespace BLL
         }
         public bool Excluir(Pessoa item)
         {
-            //escreve a função de excluir, krl
+            //escreve a função de excluir
             var objDAL = new DALPessoa();
             if (objDAL != null)
             {
@@ -407,6 +407,11 @@ namespace BLL
             }
             else
                 return false;
+        }
+
+        public List<Pessoa> listarClientes()
+        {
+            return (new DALPessoa().listarPessoas());
         }
     }
 }

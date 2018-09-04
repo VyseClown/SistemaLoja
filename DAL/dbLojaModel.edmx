@@ -4,167 +4,201 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="dbLojaQuiteriaModasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+    <Schema Namespace="dbLojaQuiteriaModasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CargoFuncionario">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="20" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="descricao" MaxLength="30" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="CategoriaPagamento">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="20" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="City">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Name" Nullable="false" MaxLength="50" Type="varchar" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IdState" Type="int" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="limitecredito" Precision="18" Scale="2" Type="decimal" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="limitecredito" Type="decimal" Precision="18" Scale="2" />
           <Property Name="idPessoa" Type="int" />
-          <Property Name="totalComprado" Precision="18" Scale="2" Type="decimal" />
+          <Property Name="totalComprado" Type="decimal" Precision="18" Scale="2" />
           <Property Name="DataUltimoPagamento" Type="date" />
+        </EntityType>
+        <EntityType Name="ClientePagamentos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="data" Type="date" />
+          <Property Name="valor" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="idCliente" Type="int" />
+        </EntityType>
+        <EntityType Name="Condicional">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idCliente" Type="int" />
+          <Property Name="data" Type="date" />
+          <Property Name="status" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Conta">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="Nome" MaxLength="20" Type="varchar" />
-          <Property Name="Valor" Precision="18" Scale="2" Type="decimal" />
+          <Property Name="Nome" Type="varchar" MaxLength="20" />
+          <Property Name="Valor" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Data" Type="date" />
-          <Property Name="Recorrente" MaxLength="1" Type="char" />
+          <Property Name="Recorrente" Type="char" MaxLength="1" />
           <Property Name="DataFinal" Type="date" />
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="ContasAPagar">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="SomaSalarios" Precision="20" Scale="2" Type="decimal" />
-          <Property Name="SomaDividas" Precision="20" Scale="2" Type="decimal" />
-          <Property Name="SomaPedidos" Precision="20" Scale="2" Type="decimal" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SomaSalarios" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="SomaDividas" Type="decimal" Precision="20" Scale="2" />
+          <Property Name="SomaPedidos" Type="decimal" Precision="20" Scale="2" />
         </EntityType>
         <EntityType Name="Cor">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Nome" MaxLength="20" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Country">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Name" MaxLength="50" Type="varchar" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Endereco">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idCidade" Type="int" />
-          <Property Name="rua" MaxLength="50" Type="varchar" />
-          <Property Name="numero" MaxLength="50" Type="varchar" />
-          <Property Name="bairro" MaxLength="50" Type="varchar" />
-          <Property Name="CEP" MaxLength="20" Type="varchar" />
+          <Property Name="rua" Type="varchar" MaxLength="50" />
+          <Property Name="numero" Type="varchar" MaxLength="50" />
+          <Property Name="bairro" Type="varchar" MaxLength="50" />
+          <Property Name="CEP" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Fornecedor">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="50" Type="varchar" />
-          <Property Name="telefone" Nullable="false" MaxLength="50" Type="varchar" />
-          <Property Name="telefone2" MaxLength="50" Type="varchar" />
-          <Property Name="email" MaxLength="80" Type="varchar" />
-          <Property Name="marca" MaxLength="80" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
+          <Property Name="telefone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefone2" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="80" />
+          <Property Name="marca" Type="varchar" MaxLength="80" />
         </EntityType>
         <EntityType Name="Funcionario">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Vendas" Precision="20" Scale="2" Type="decimal" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vendas" Type="decimal" Precision="20" Scale="2" />
           <Property Name="idPessoa" Type="int" />
-          <Property Name="Salario" Precision="18" Scale="2" Type="decimal" />
+          <Property Name="Salario" Type="decimal" Precision="18" Scale="2" />
           <Property Name="idUsuario" Type="int" />
           <Property Name="idCargo" Type="int" />
+        </EntityType>
+        <EntityType Name="ItensCondicional">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idCondicional" Type="int" />
+          <Property Name="idProduto" Type="int" />
+        </EntityType>
+        <EntityType Name="ItensVenda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idVenda" Type="int" />
+          <Property Name="idProduto" Type="int" />
         </EntityType>
         <EntityType Name="Marcas">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="50" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Modelo">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="50" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Pedido">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fornecedorid" Type="int" />
-          <Property Name="valordopedido" Nullable="false" Precision="18" Scale="2" Type="decimal" />
-          <Property Name="descricao" MaxLength="200" Type="varchar" />
+          <Property Name="valordopedido" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="200" />
           <Property Name="data" Type="datetime" />
         </EntityType>
         <EntityType Name="Pessoa">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="50" Type="varchar" />
-          <Property Name="telefone" MaxLength="50" Type="varchar" />
-          <Property Name="telefone2" MaxLength="50" Type="varchar" />
-          <Property Name="CPF" MaxLength="50" Type="varchar" />
-          <Property Name="email" MaxLength="50" Type="varchar" />
-          <Property Name="celular" MaxLength="50" Type="varchar" />
-          <Property Name="RG" MaxLength="50" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
+          <Property Name="telefone" Type="varchar" MaxLength="50" />
+          <Property Name="telefone2" Type="varchar" MaxLength="50" />
+          <Property Name="CPF" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="celular" Type="varchar" MaxLength="50" />
+          <Property Name="RG" Type="varchar" MaxLength="50" />
           <Property Name="datanascimento" Type="date" />
           <Property Name="idEndereco" Type="int" />
-          <Property Name="celular2" MaxLength="50" Type="varchar" />
+          <Property Name="celular2" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Produto">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="categoriaid" Type="int" />
-          <Property Name="preco" Precision="10" Scale="2" Type="decimal" />
+          <Property Name="preco" Type="decimal" Precision="10" Scale="2" />
           <Property Name="marca" Type="int" />
-          <Property Name="descricao" MaxLength="100" Type="varchar" />
-          <Property Name="codigodebarra" MaxLength="30" Type="varchar" />
+          <Property Name="descricao" Type="varchar" MaxLength="100" />
+          <Property Name="codigodebarra" Type="varchar" MaxLength="30" />
           <Property Name="modelo" Type="int" />
           <Property Name="tamanho" Type="int" />
-          <Property Name="precoCompra" Precision="10" Scale="2" Type="decimal" />
-          <Property Name="condicional" MaxLength="5" Type="varchar" />
+          <Property Name="precoCompra" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="condicional" Type="varchar" MaxLength="5" />
           <Property Name="cor" Type="int" />
           <Property Name="quantidade" Type="int" />
           <Property Name="data" Type="date" />
@@ -173,32 +207,32 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="produtoid" Type="int" />
           <Property Name="pedidoid" Type="int" />
-          <Property Name="tamanhosdesc" Nullable="false" MaxLength="200" Type="varchar" />
-          <Property Name="qtd" Nullable="false" Type="int" />
-          <Property Name="precoUnitarioPago" Nullable="false" Precision="10" Scale="2" Type="decimal" />
-          <Property Name="precototalpago" Nullable="false" Precision="18" Scale="2" Type="decimal" />
-          <Property Name="precounitariovenda" Nullable="false" Precision="10" Scale="2" Type="decimal" />
-          <Property Name="precototalvenda" Nullable="false" Precision="18" Scale="2" Type="decimal" />
+          <Property Name="tamanhosdesc" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="qtd" Type="int" Nullable="false" />
+          <Property Name="precoUnitarioPago" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="precototalpago" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="precounitariovenda" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="precototalvenda" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="State">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdCountry" Type="int" />
-          <Property Name="Name" MaxLength="100" Type="varchar" />
-          <Property Name="Acronym" Nullable="false" MaxLength="2" Type="varchar" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Acronym" Type="varchar" MaxLength="2" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Nullable="false" MaxLength="128" Type="nvarchar" />
-          <Property Name="principal_id" Nullable="false" Type="int" />
-          <Property Name="diagram_id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
@@ -206,12 +240,25 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="nome" MaxLength="50" Type="varchar" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Venda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idCliente" Type="int" />
+          <Property Name="Valor" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="data" Type="date" />
+          <Property Name="valorrestante" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="idCategoriaPagamento" Type="int" />
+          <Property Name="qtdParcelas" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="20" />
         </EntityType>
         <Association Name="FK__Pedido__forneced__2D27B809">
-          <End Type="Self.Fornecedor" Multiplicity="0..1" Role="Fornecedor" />
-          <End Type="Self.Pedido" Multiplicity="*" Role="Pedido" />
+          <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+          <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fornecedor">
               <PropertyRef Name="id" />
@@ -222,8 +269,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Produto__categor__286302EC">
-          <End Type="Self.Categoria" Multiplicity="0..1" Role="Categoria" />
-          <End Type="Self.Produto" Multiplicity="*" Role="Produto" />
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Categoria">
               <PropertyRef Name="id" />
@@ -234,8 +281,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ProdutosP__pedid__30F848ED">
-          <End Type="Self.Pedido" Multiplicity="0..1" Role="Pedido" />
-          <End Type="Self.ProdutosPedido" Multiplicity="*" Role="ProdutosPedido" />
+          <End Role="Pedido" Type="Self.Pedido" Multiplicity="0..1" />
+          <End Role="ProdutosPedido" Type="Self.ProdutosPedido" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pedido">
               <PropertyRef Name="id" />
@@ -246,8 +293,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_City_State">
-          <End Type="Self.State" Multiplicity="0..1" Role="State" />
-          <End Type="Self.City" Multiplicity="*" Role="City" />
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="State">
               <PropertyRef Name="Id" />
@@ -258,8 +305,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cliente_Pessoa">
-          <End Type="Self.Pessoa" Multiplicity="0..1" Role="Pessoa" />
-          <End Type="Self.Cliente" Multiplicity="*" Role="Cliente" />
+          <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pessoa">
               <PropertyRef Name="id" />
@@ -269,9 +316,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ClientePagamentos_Cliente">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+          <End Role="ClientePagamentos" Type="Self.ClientePagamentos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ClientePagamentos">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Endereco_City">
-          <End Type="Self.City" Multiplicity="0..1" Role="City" />
-          <End Type="Self.Endereco" Multiplicity="*" Role="Endereco" />
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="City">
               <PropertyRef Name="Id" />
@@ -282,8 +341,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Funcionario_CargoFuncionario">
-          <End Type="Self.CargoFuncionario" Multiplicity="0..1" Role="CargoFuncionario" />
-          <End Type="Self.Funcionario" Multiplicity="*" Role="Funcionario" />
+          <End Role="CargoFuncionario" Type="Self.CargoFuncionario" Multiplicity="0..1" />
+          <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CargoFuncionario">
               <PropertyRef Name="id" />
@@ -294,8 +353,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Funcionario_Pessoa">
-          <End Type="Self.Pessoa" Multiplicity="0..1" Role="Pessoa" />
-          <End Type="Self.Funcionario" Multiplicity="*" Role="Funcionario" />
+          <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+          <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pessoa">
               <PropertyRef Name="id" />
@@ -305,9 +364,57 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ItensCondicional_Condicional">
+          <End Role="Condicional" Type="Self.Condicional" Multiplicity="0..1" />
+          <End Role="ItensCondicional" Type="Self.ItensCondicional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Condicional">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensCondicional">
+              <PropertyRef Name="idCondicional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensCondicional_Produto">
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="ItensCondicional" Type="Self.ItensCondicional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensCondicional">
+              <PropertyRef Name="idProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensVenda_Produto">
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="ItensVenda" Type="Self.ItensVenda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensVenda">
+              <PropertyRef Name="idProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensVenda_Venda">
+          <End Role="Venda" Type="Self.Venda" Multiplicity="0..1" />
+          <End Role="ItensVenda" Type="Self.ItensVenda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venda">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensVenda">
+              <PropertyRef Name="idVenda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Pessoa_Endereco">
-          <End Type="Self.Endereco" Multiplicity="0..1" Role="Endereco" />
-          <End Type="Self.Pessoa" Multiplicity="*" Role="Pessoa" />
+          <End Role="Endereco" Type="Self.Endereco" Multiplicity="0..1" />
+          <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Endereco">
               <PropertyRef Name="id" />
@@ -318,8 +425,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Produto_Cor">
-          <End Type="Self.Cor" Multiplicity="0..1" Role="Cor" />
-          <End Type="Self.Produto" Multiplicity="*" Role="Produto" />
+          <End Role="Cor" Type="Self.Cor" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Cor">
               <PropertyRef Name="id" />
@@ -330,8 +437,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Produto_Marcas">
-          <End Type="Self.Marcas" Multiplicity="0..1" Role="Marcas" />
-          <End Type="Self.Produto" Multiplicity="*" Role="Produto" />
+          <End Role="Marcas" Type="Self.Marcas" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Marcas">
               <PropertyRef Name="id" />
@@ -342,8 +449,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Produto_Modelo">
-          <End Type="Self.Modelo" Multiplicity="0..1" Role="Modelo" />
-          <End Type="Self.Produto" Multiplicity="*" Role="Produto" />
+          <End Role="Modelo" Type="Self.Modelo" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Modelo">
               <PropertyRef Name="id" />
@@ -354,8 +461,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Produto_Tamanhos">
-          <End Type="Self.Tamanhos" Multiplicity="0..1" Role="Tamanhos" />
-          <End Type="Self.Produto" Multiplicity="*" Role="Produto" />
+          <End Role="Tamanhos" Type="Self.Tamanhos" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tamanhos">
               <PropertyRef Name="id" />
@@ -366,8 +473,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProdutosPedido_Produto">
-          <End Type="Self.Produto" Multiplicity="0..1" Role="Produto" />
-          <End Type="Self.ProdutosPedido" Multiplicity="*" Role="ProdutosPedido" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="ProdutosPedido" Type="Self.ProdutosPedido" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Produto">
               <PropertyRef Name="id" />
@@ -378,8 +485,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_State_Country">
-          <End Type="Self.Country" Multiplicity="0..1" Role="Country" />
-          <End Type="Self.State" Multiplicity="*" Role="State" />
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="State" Type="Self.State" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Country">
               <PropertyRef Name="Id" />
@@ -389,12 +496,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Venda_CategoriaPagamento">
+          <End Role="CategoriaPagamento" Type="Self.CategoriaPagamento" Multiplicity="0..1" />
+          <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaPagamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="idCategoriaPagamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Venda_Cliente">
+          <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+          <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="dbLojaQuiteriaModasModelStoreContainer">
           <EntitySet Name="CargoFuncionario" EntityType="Self.CargoFuncionario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CategoriaPagamento" EntityType="Self.CategoriaPagamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientePagamentos" EntityType="Self.ClientePagamentos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Condicional" EntityType="Self.Condicional" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Conta" EntityType="Self.Conta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ContasAPagar" EntityType="Self.ContasAPagar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cor" EntityType="Self.Cor" Schema="dbo" store:Type="Tables" />
@@ -402,6 +535,8 @@
           <EntitySet Name="Endereco" EntityType="Self.Endereco" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItensCondicional" EntityType="Self.ItensCondicional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItensVenda" EntityType="Self.ItensVenda" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Marcas" EntityType="Self.Marcas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Modelo" EntityType="Self.Modelo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pedido" EntityType="Self.Pedido" Schema="dbo" store:Type="Tables" />
@@ -411,65 +546,94 @@
           <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tamanhos" EntityType="Self.Tamanhos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venda" EntityType="Self.Venda" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Pedido__forneced__2D27B809" Association="Self.FK__Pedido__forneced__2D27B809">
-            <End EntitySet="Fornecedor" Role="Fornecedor" />
-            <End EntitySet="Pedido" Role="Pedido" />
+            <End Role="Fornecedor" EntitySet="Fornecedor" />
+            <End Role="Pedido" EntitySet="Pedido" />
           </AssociationSet>
           <AssociationSet Name="FK__Produto__categor__286302EC" Association="Self.FK__Produto__categor__286302EC">
-            <End EntitySet="Categoria" Role="Categoria" />
-            <End EntitySet="Produto" Role="Produto" />
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Produto" EntitySet="Produto" />
           </AssociationSet>
           <AssociationSet Name="FK__ProdutosP__pedid__30F848ED" Association="Self.FK__ProdutosP__pedid__30F848ED">
-            <End EntitySet="Pedido" Role="Pedido" />
-            <End EntitySet="ProdutosPedido" Role="ProdutosPedido" />
+            <End Role="Pedido" EntitySet="Pedido" />
+            <End Role="ProdutosPedido" EntitySet="ProdutosPedido" />
           </AssociationSet>
           <AssociationSet Name="FK_City_State" Association="Self.FK_City_State">
-            <End EntitySet="State" Role="State" />
-            <End EntitySet="City" Role="City" />
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
           </AssociationSet>
           <AssociationSet Name="FK_Cliente_Pessoa" Association="Self.FK_Cliente_Pessoa">
-            <End EntitySet="Pessoa" Role="Pessoa" />
-            <End EntitySet="Cliente" Role="Cliente" />
+            <End Role="Pessoa" EntitySet="Pessoa" />
+            <End Role="Cliente" EntitySet="Cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientePagamentos_Cliente" Association="Self.FK_ClientePagamentos_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="ClientePagamentos" EntitySet="ClientePagamentos" />
           </AssociationSet>
           <AssociationSet Name="FK_Endereco_City" Association="Self.FK_Endereco_City">
-            <End EntitySet="City" Role="City" />
-            <End EntitySet="Endereco" Role="Endereco" />
+            <End Role="City" EntitySet="City" />
+            <End Role="Endereco" EntitySet="Endereco" />
           </AssociationSet>
           <AssociationSet Name="FK_Funcionario_CargoFuncionario" Association="Self.FK_Funcionario_CargoFuncionario">
-            <End EntitySet="CargoFuncionario" Role="CargoFuncionario" />
-            <End EntitySet="Funcionario" Role="Funcionario" />
+            <End Role="CargoFuncionario" EntitySet="CargoFuncionario" />
+            <End Role="Funcionario" EntitySet="Funcionario" />
           </AssociationSet>
           <AssociationSet Name="FK_Funcionario_Pessoa" Association="Self.FK_Funcionario_Pessoa">
-            <End EntitySet="Pessoa" Role="Pessoa" />
-            <End EntitySet="Funcionario" Role="Funcionario" />
+            <End Role="Pessoa" EntitySet="Pessoa" />
+            <End Role="Funcionario" EntitySet="Funcionario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensCondicional_Condicional" Association="Self.FK_ItensCondicional_Condicional">
+            <End Role="Condicional" EntitySet="Condicional" />
+            <End Role="ItensCondicional" EntitySet="ItensCondicional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensCondicional_Produto" Association="Self.FK_ItensCondicional_Produto">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="ItensCondicional" EntitySet="ItensCondicional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensVenda_Produto" Association="Self.FK_ItensVenda_Produto">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="ItensVenda" EntitySet="ItensVenda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensVenda_Venda" Association="Self.FK_ItensVenda_Venda">
+            <End Role="Venda" EntitySet="Venda" />
+            <End Role="ItensVenda" EntitySet="ItensVenda" />
           </AssociationSet>
           <AssociationSet Name="FK_Pessoa_Endereco" Association="Self.FK_Pessoa_Endereco">
-            <End EntitySet="Endereco" Role="Endereco" />
-            <End EntitySet="Pessoa" Role="Pessoa" />
+            <End Role="Endereco" EntitySet="Endereco" />
+            <End Role="Pessoa" EntitySet="Pessoa" />
           </AssociationSet>
           <AssociationSet Name="FK_Produto_Cor" Association="Self.FK_Produto_Cor">
-            <End EntitySet="Cor" Role="Cor" />
-            <End EntitySet="Produto" Role="Produto" />
+            <End Role="Cor" EntitySet="Cor" />
+            <End Role="Produto" EntitySet="Produto" />
           </AssociationSet>
           <AssociationSet Name="FK_Produto_Marcas" Association="Self.FK_Produto_Marcas">
-            <End EntitySet="Marcas" Role="Marcas" />
-            <End EntitySet="Produto" Role="Produto" />
+            <End Role="Marcas" EntitySet="Marcas" />
+            <End Role="Produto" EntitySet="Produto" />
           </AssociationSet>
           <AssociationSet Name="FK_Produto_Modelo" Association="Self.FK_Produto_Modelo">
-            <End EntitySet="Modelo" Role="Modelo" />
-            <End EntitySet="Produto" Role="Produto" />
+            <End Role="Modelo" EntitySet="Modelo" />
+            <End Role="Produto" EntitySet="Produto" />
           </AssociationSet>
           <AssociationSet Name="FK_Produto_Tamanhos" Association="Self.FK_Produto_Tamanhos">
-            <End EntitySet="Tamanhos" Role="Tamanhos" />
-            <End EntitySet="Produto" Role="Produto" />
+            <End Role="Tamanhos" EntitySet="Tamanhos" />
+            <End Role="Produto" EntitySet="Produto" />
           </AssociationSet>
           <AssociationSet Name="FK_ProdutosPedido_Produto" Association="Self.FK_ProdutosPedido_Produto">
-            <End EntitySet="Produto" Role="Produto" />
-            <End EntitySet="ProdutosPedido" Role="ProdutosPedido" />
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="ProdutosPedido" EntitySet="ProdutosPedido" />
           </AssociationSet>
           <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
-            <End EntitySet="Country" Role="Country" />
-            <End EntitySet="State" Role="State" />
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Venda_CategoriaPagamento" Association="Self.FK_Venda_CategoriaPagamento">
+            <End Role="CategoriaPagamento" EntitySet="CategoriaPagamento" />
+            <End Role="Venda" EntitySet="Venda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Venda_Cliente" Association="Self.FK_Venda_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Venda" EntitySet="Venda" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -558,6 +722,39 @@
             <End Role="CargoFuncionario" EntitySet="CargoFuncionario" />
             <End Role="Funcionario" EntitySet="Funcionario" />
           </AssociationSet>
+          <EntitySet Name="ClientePagamentos" EntityType="dbLojaQuiteriaModasModel.ClientePagamentos" />
+          <EntitySet Name="Condicional" EntityType="dbLojaQuiteriaModasModel.Condicional" />
+          <EntitySet Name="ItensCondicional" EntityType="dbLojaQuiteriaModasModel.ItensCondicional" />
+          <EntitySet Name="ItensVenda" EntityType="dbLojaQuiteriaModasModel.ItensVenda" />
+          <EntitySet Name="Venda" EntityType="dbLojaQuiteriaModasModel.Venda" />
+          <AssociationSet Name="FK_ClientePagamentos_Cliente" Association="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="ClientePagamentos" EntitySet="ClientePagamentos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Venda_Cliente" Association="dbLojaQuiteriaModasModel.FK_Venda_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Venda" EntitySet="Venda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensCondicional_Condicional" Association="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional">
+            <End Role="Condicional" EntitySet="Condicional" />
+            <End Role="ItensCondicional" EntitySet="ItensCondicional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensCondicional_Produto" Association="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="ItensCondicional" EntitySet="ItensCondicional" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensVenda_Produto" Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="ItensVenda" EntitySet="ItensVenda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItensVenda_Venda" Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda">
+            <End Role="Venda" EntitySet="Venda" />
+            <End Role="ItensVenda" EntitySet="ItensVenda" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Venda_CategoriaPagamento" Association="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento">
+            <End Role="CategoriaPagamento" EntitySet="CategoriaPagamento" />
+            <End Role="Venda" EntitySet="Venda" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Categoria">
           <Key>
@@ -630,6 +827,8 @@
           <NavigationProperty Name="Cor1" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Cor" FromRole="Produto" ToRole="Cor" />
           <Property Name="quantidade" Type="Int32" />
           <Property Name="data" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" FromRole="Produto" ToRole="ItensCondicional" />
+          <NavigationProperty Name="ItensVenda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" FromRole="Produto" ToRole="ItensVenda" />
         </EntityType>
         <EntityType Name="ProdutosPedido">
           <Key>
@@ -832,6 +1031,8 @@
           <Property Name="totalComprado" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="DataUltimoPagamento" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" FromRole="Cliente" ToRole="Pessoa" />
+          <NavigationProperty Name="ClientePagamentos" Relationship="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" FromRole="Cliente" ToRole="ClientePagamentos" />
+          <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_Venda_Cliente" FromRole="Cliente" ToRole="Venda" />
         </EntityType>
         <EntityType Name="Endereco">
           <Key>
@@ -960,6 +1161,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" FromRole="CategoriaPagamento" ToRole="Venda" />
         </EntityType>
         <Association Name="FK_Funcionario_CargoFuncionario">
           <End Type="dbLojaQuiteriaModasModel.CargoFuncionario" Role="CargoFuncionario" Multiplicity="0..1" />
@@ -970,6 +1172,146 @@
             </Principal>
             <Dependent Role="Funcionario">
               <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ClientePagamentos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="DateTime" Precision="0" />
+          <Property Name="valor" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="idCliente" Type="Int32" />
+          <NavigationProperty Name="Cliente" Relationship="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" FromRole="ClientePagamentos" ToRole="Cliente" />
+        </EntityType>
+        <EntityType Name="Condicional">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCliente" Type="Int32" />
+          <Property Name="data" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional" FromRole="Condicional" ToRole="ItensCondicional" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ItensCondicional">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCondicional" Type="Int32" />
+          <Property Name="idProduto" Type="Int32" />
+          <NavigationProperty Name="Condicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional" FromRole="ItensCondicional" ToRole="Condicional" />
+          <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" FromRole="ItensCondicional" ToRole="Produto" />
+        </EntityType>
+        <EntityType Name="ItensVenda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idVenda" Type="Int32" />
+          <Property Name="idProduto" Type="Int32" />
+          <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" FromRole="ItensVenda" ToRole="Produto" />
+          <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda" FromRole="ItensVenda" ToRole="Venda" />
+        </EntityType>
+        <EntityType Name="Venda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCliente" Type="Int32" />
+          <Property Name="Valor" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="data" Type="DateTime" Precision="0" />
+          <Property Name="valorrestante" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="Cliente" Relationship="dbLojaQuiteriaModasModel.FK_Venda_Cliente" FromRole="Venda" ToRole="Cliente" />
+          <NavigationProperty Name="ItensVenda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda" FromRole="Venda" ToRole="ItensVenda" />
+          <Property Name="idCategoriaPagamento" Type="Int32" />
+          <Property Name="qtdParcelas" Type="Int32" />
+          <NavigationProperty Name="CategoriaPagamento" Relationship="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" FromRole="Venda" ToRole="CategoriaPagamento" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_ClientePagamentos_Cliente">
+          <End Type="dbLojaQuiteriaModasModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.ClientePagamentos" Role="ClientePagamentos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ClientePagamentos">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Venda_Cliente">
+          <End Type="dbLojaQuiteriaModasModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.Venda" Role="Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensCondicional_Condicional">
+          <End Type="dbLojaQuiteriaModasModel.Condicional" Role="Condicional" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.ItensCondicional" Role="ItensCondicional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Condicional">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensCondicional">
+              <PropertyRef Name="idCondicional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensCondicional_Produto">
+          <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.ItensCondicional" Role="ItensCondicional" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensCondicional">
+              <PropertyRef Name="idProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensVenda_Produto">
+          <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.ItensVenda" Role="ItensVenda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensVenda">
+              <PropertyRef Name="idProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItensVenda_Venda">
+          <End Type="dbLojaQuiteriaModasModel.Venda" Role="Venda" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.ItensVenda" Role="ItensVenda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venda">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ItensVenda">
+              <PropertyRef Name="idVenda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Venda_CategoriaPagamento">
+          <End Type="dbLojaQuiteriaModasModel.CategoriaPagamento" Role="CategoriaPagamento" Multiplicity="0..1" />
+          <End Type="dbLojaQuiteriaModasModel.Venda" Role="Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaPagamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="idCategoriaPagamento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1200,6 +1542,58 @@
             <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.CategoriaPagamento">
               <MappingFragment StoreEntitySet="CategoriaPagamento">
                 <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientePagamentos">
+            <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.ClientePagamentos">
+              <MappingFragment StoreEntitySet="ClientePagamentos">
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Condicional">
+            <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Condicional">
+              <MappingFragment StoreEntitySet="Condicional">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItensCondicional">
+            <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.ItensCondicional">
+              <MappingFragment StoreEntitySet="ItensCondicional">
+                <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+                <ScalarProperty Name="idCondicional" ColumnName="idCondicional" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItensVenda">
+            <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.ItensVenda">
+              <MappingFragment StoreEntitySet="ItensVenda">
+                <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+                <ScalarProperty Name="idVenda" ColumnName="idVenda" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Venda">
+            <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Venda">
+              <MappingFragment StoreEntitySet="Venda">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="qtdParcelas" ColumnName="qtdParcelas" />
+                <ScalarProperty Name="idCategoriaPagamento" ColumnName="idCategoriaPagamento" />
+                <ScalarProperty Name="valorrestante" ColumnName="valorrestante" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

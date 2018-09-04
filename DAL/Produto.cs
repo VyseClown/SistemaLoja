@@ -18,6 +18,8 @@ namespace DAL
         public Produto()
         {
             this.ProdutosPedido = new HashSet<ProdutosPedido>();
+            this.ItensCondicional = new HashSet<ItensCondicional>();
+            this.ItensVenda = new HashSet<ItensVenda>();
         }
     
         public int id { get; set; }
@@ -41,5 +43,9 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProdutosPedido> ProdutosPedido { get; set; }
         public virtual Cor Cor1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ItensCondicional> ItensCondicional { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ItensVenda> ItensVenda { get; set; }
     }
 }

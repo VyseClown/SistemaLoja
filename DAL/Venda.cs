@@ -12,25 +12,26 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Venda
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Venda()
         {
-            this.ClientePagamentos = new HashSet<ClientePagamentos>();
-            this.Venda = new HashSet<Venda>();
+            this.ItensVenda = new HashSet<ItensVenda>();
         }
     
         public int id { get; set; }
-        public Nullable<decimal> limitecredito { get; set; }
-        public Nullable<int> idPessoa { get; set; }
-        public Nullable<decimal> totalComprado { get; set; }
-        public Nullable<System.DateTime> DataUltimoPagamento { get; set; }
+        public Nullable<int> idCliente { get; set; }
+        public Nullable<decimal> Valor { get; set; }
+        public Nullable<System.DateTime> data { get; set; }
+        public Nullable<decimal> valorrestante { get; set; }
+        public Nullable<int> idCategoriaPagamento { get; set; }
+        public Nullable<int> qtdParcelas { get; set; }
+        public string status { get; set; }
     
-        public virtual Pessoa Pessoa { get; set; }
+        public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClientePagamentos> ClientePagamentos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venda> Venda { get; set; }
+        public virtual ICollection<ItensVenda> ItensVenda { get; set; }
+        public virtual CategoriaPagamento CategoriaPagamento { get; set; }
     }
 }

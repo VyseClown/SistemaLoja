@@ -46,5 +46,10 @@ namespace DAL
         public virtual DbSet<Funcionario> Funcionario { get; set; }
         public virtual DbSet<CargoFuncionario> CargoFuncionario { get; set; }
         public virtual DbSet<CategoriaPagamento> CategoriaPagamento { get; set; }
+        public virtual DbSet<ClientePagamentos> ClientePagamentos { get; set; }
+        public virtual DbSet<Condicional> Condicional { get; set; }
+        public virtual DbSet<ItensCondicional> ItensCondicional { get; set; }
+        public virtual DbSet<ItensVenda> ItensVenda { get; set; }
+        public virtual DbSet<Venda> Venda { get; set; }
     }
 }

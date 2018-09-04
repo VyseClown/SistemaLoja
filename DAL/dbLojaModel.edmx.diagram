@@ -41,6 +41,18 @@
         <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.CargoFuncionario" Width="1.5" PointX="8.375" PointY="8.875" />
         <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.CategoriaPagamento" Width="1.5" PointX="10.375" PointY="4.75" />
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Funcionario_CargoFuncionario" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.ClientePagamentos" Width="1.5" PointX="20.25" PointY="4.625" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Condicional" Width="1.5" PointX="4" PointY="18.875" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.ItensCondicional" Width="1.5" PointX="6.25" PointY="11.75" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.ItensVenda" Width="1.5" PointX="22.5" PointY="6" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Venda" Width="1.5" PointX="20.25" PointY="7.375" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Venda_Cliente" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

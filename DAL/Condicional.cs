@@ -12,25 +12,20 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Condicional
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Condicional()
         {
-            this.ClientePagamentos = new HashSet<ClientePagamentos>();
-            this.Venda = new HashSet<Venda>();
+            this.ItensCondicional = new HashSet<ItensCondicional>();
         }
     
         public int id { get; set; }
-        public Nullable<decimal> limitecredito { get; set; }
-        public Nullable<int> idPessoa { get; set; }
-        public Nullable<decimal> totalComprado { get; set; }
-        public Nullable<System.DateTime> DataUltimoPagamento { get; set; }
+        public Nullable<int> idCliente { get; set; }
+        public Nullable<System.DateTime> data { get; set; }
+        public string status { get; set; }
     
-        public virtual Pessoa Pessoa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClientePagamentos> ClientePagamentos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venda> Venda { get; set; }
+        public virtual ICollection<ItensCondicional> ItensCondicional { get; set; }
     }
 }

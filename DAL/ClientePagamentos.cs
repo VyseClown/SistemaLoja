@@ -12,18 +12,13 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class CategoriaPagamento
+    public partial class ClientePagamentos
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CategoriaPagamento()
-        {
-            this.Venda = new HashSet<Venda>();
-        }
-    
         public int id { get; set; }
-        public string nome { get; set; }
+        public Nullable<System.DateTime> data { get; set; }
+        public Nullable<decimal> valor { get; set; }
+        public Nullable<int> idCliente { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venda> Venda { get; set; }
+        public virtual Cliente Cliente { get; set; }
     }
 }

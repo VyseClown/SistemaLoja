@@ -82,6 +82,39 @@
       <End Role="CargoFuncionario" EntitySet="CargoFuncionario" />
       <End Role="Funcionario" EntitySet="Funcionario" />
     </AssociationSet>
+    <EntitySet Name="ClientePagamentos" EntityType="dbLojaQuiteriaModasModel.ClientePagamentos" />
+    <EntitySet Name="Condicional" EntityType="dbLojaQuiteriaModasModel.Condicional" />
+    <EntitySet Name="ItensCondicional" EntityType="dbLojaQuiteriaModasModel.ItensCondicional" />
+    <EntitySet Name="ItensVenda" EntityType="dbLojaQuiteriaModasModel.ItensVenda" />
+    <EntitySet Name="Venda" EntityType="dbLojaQuiteriaModasModel.Venda" />
+    <AssociationSet Name="FK_ClientePagamentos_Cliente" Association="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="ClientePagamentos" EntitySet="ClientePagamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venda_Cliente" Association="dbLojaQuiteriaModasModel.FK_Venda_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Venda" EntitySet="Venda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItensCondicional_Condicional" Association="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional">
+      <End Role="Condicional" EntitySet="Condicional" />
+      <End Role="ItensCondicional" EntitySet="ItensCondicional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItensCondicional_Produto" Association="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="ItensCondicional" EntitySet="ItensCondicional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItensVenda_Produto" Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="ItensVenda" EntitySet="ItensVenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItensVenda_Venda" Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda">
+      <End Role="Venda" EntitySet="Venda" />
+      <End Role="ItensVenda" EntitySet="ItensVenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venda_CategoriaPagamento" Association="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento">
+      <End Role="CategoriaPagamento" EntitySet="CategoriaPagamento" />
+      <End Role="Venda" EntitySet="Venda" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Categoria">
     <Key>
@@ -154,6 +187,8 @@
     <NavigationProperty Name="Cor1" Relationship="dbLojaQuiteriaModasModel.FK_Produto_Cor" FromRole="Produto" ToRole="Cor" />
     <Property Name="quantidade" Type="Int32" />
     <Property Name="data" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" FromRole="Produto" ToRole="ItensCondicional" />
+    <NavigationProperty Name="ItensVenda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" FromRole="Produto" ToRole="ItensVenda" />
   </EntityType>
   <EntityType Name="ProdutosPedido">
     <Key>
@@ -356,6 +391,8 @@
     <Property Name="totalComprado" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="DataUltimoPagamento" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" FromRole="Cliente" ToRole="Pessoa" />
+    <NavigationProperty Name="ClientePagamentos" Relationship="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" FromRole="Cliente" ToRole="ClientePagamentos" />
+    <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_Venda_Cliente" FromRole="Cliente" ToRole="Venda" />
   </EntityType>
   <EntityType Name="Endereco">
     <Key>
@@ -484,6 +521,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" FromRole="CategoriaPagamento" ToRole="Venda" />
   </EntityType>
   <Association Name="FK_Funcionario_CargoFuncionario">
     <End Type="dbLojaQuiteriaModasModel.CargoFuncionario" Role="CargoFuncionario" Multiplicity="0..1" />
@@ -494,6 +532,144 @@
       </Principal>
       <Dependent Role="Funcionario">
         <PropertyRef Name="idCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ClientePagamentos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+    <Property Name="valor" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="idCliente" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" FromRole="ClientePagamentos" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Condicional">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="Int32" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional" FromRole="Condicional" ToRole="ItensCondicional" />
+  </EntityType>
+  <EntityType Name="ItensCondicional">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCondicional" Type="Int32" />
+    <Property Name="idProduto" Type="Int32" />
+    <NavigationProperty Name="Condicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional" FromRole="ItensCondicional" ToRole="Condicional" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" FromRole="ItensCondicional" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="ItensVenda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idVenda" Type="Int32" />
+    <Property Name="idProduto" Type="Int32" />
+    <NavigationProperty Name="Produto" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" FromRole="ItensVenda" ToRole="Produto" />
+    <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda" FromRole="ItensVenda" ToRole="Venda" />
+  </EntityType>
+  <EntityType Name="Venda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="Int32" />
+    <Property Name="Valor" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+    <Property Name="valorrestante" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Cliente" Relationship="dbLojaQuiteriaModasModel.FK_Venda_Cliente" FromRole="Venda" ToRole="Cliente" />
+    <NavigationProperty Name="ItensVenda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda" FromRole="Venda" ToRole="ItensVenda" />
+    <Property Name="idCategoriaPagamento" Type="Int32" />
+    <Property Name="qtdParcelas" Type="Int32" />
+    <NavigationProperty Name="CategoriaPagamento" Relationship="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" FromRole="Venda" ToRole="CategoriaPagamento" />
+  </EntityType>
+  <Association Name="FK_ClientePagamentos_Cliente">
+    <End Type="dbLojaQuiteriaModasModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ClientePagamentos" Role="ClientePagamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ClientePagamentos">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venda_Cliente">
+    <End Type="dbLojaQuiteriaModasModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Venda" Role="Venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venda">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItensCondicional_Condicional">
+    <End Type="dbLojaQuiteriaModasModel.Condicional" Role="Condicional" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ItensCondicional" Role="ItensCondicional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Condicional">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ItensCondicional">
+        <PropertyRef Name="idCondicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItensCondicional_Produto">
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ItensCondicional" Role="ItensCondicional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ItensCondicional">
+        <PropertyRef Name="idProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItensVenda_Produto">
+    <End Type="dbLojaQuiteriaModasModel.Produto" Role="Produto" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ItensVenda" Role="ItensVenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ItensVenda">
+        <PropertyRef Name="idProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItensVenda_Venda">
+    <End Type="dbLojaQuiteriaModasModel.Venda" Role="Venda" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.ItensVenda" Role="ItensVenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venda">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ItensVenda">
+        <PropertyRef Name="idVenda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venda_CategoriaPagamento">
+    <End Type="dbLojaQuiteriaModasModel.CategoriaPagamento" Role="CategoriaPagamento" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.Venda" Role="Venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPagamento">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venda">
+        <PropertyRef Name="idCategoriaPagamento" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

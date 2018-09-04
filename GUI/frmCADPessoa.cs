@@ -101,6 +101,7 @@ namespace GUI
                         {
                             cli.idPessoa = pes.id;
                             cli.limitecredito = Decimal.Parse(txtLimite.Text);
+                            cli.totalComprado = 0;
                             func = BLLObj.Salvar(cli);
                             if (func != false)
                                 CliOUFunc = 1;
