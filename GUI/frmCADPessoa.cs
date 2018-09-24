@@ -540,5 +540,10 @@ namespace GUI
             else
                 MessageBox.Show("Informe um CPF valido !");
         }
+
+        private void ddlCliente_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

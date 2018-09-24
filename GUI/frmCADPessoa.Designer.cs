@@ -548,6 +548,7 @@
             this.ddlCliente.Name = "ddlCliente";
             this.ddlCliente.Size = new System.Drawing.Size(717, 33);
             this.ddlCliente.TabIndex = 118;
+            this.ddlCliente.Leave += new System.EventHandler(this.ddlCliente_Leave);
             // 
             // frmCADPessoa
             // 

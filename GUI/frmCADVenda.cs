@@ -19,10 +19,13 @@ namespace GUI
     public partial class frmCADVenda : Form
     {
         //private int cont = 0;//contador para criar as colunas no primeiro item do datagridview
-        List<ProdutoModel> listaproduto = null;
-        List<ProdutoModel> listaprodutocondicional = null;
-        List<ProdutoModel> listaprodutoestoque = null;
+        private List<ProdutoModel> listaproduto;
+        private List<ProdutoModel> listaprodutocondicional;
+        private List<ProdutoModel> listaprodutoestoque = null;
         private int idCondicional = 0;
+        private DateTime dataInicio;
+        private DateTime dataFinal;
+
 
         public frmCADVenda()
         {
@@ -50,26 +53,32 @@ namespace GUI
                 //ven.valorrestante = ven.Valor;
                 ven.idCategoriaPagamento = (int)cbTipoPagamento.SelectedValue;
                 ven.qtdParcelas = int.Parse(nudParcelamento.Text);
-                ven.valorrestante = 0;
-                ven.Valor = 0;
+                ven.valorrestante = Convert.ToDecimal(txtPrecoFinal.Text);
+                ven.Valor = Convert.ToDecimal(txtPrecoFinal.Text);
+                ven.status = "Faturado";
                 foreach (ProdutoModel prod in listaproduto)
                 {
                     ItensVenda iv2 = new ItensVenda();
                     iv2.idProduto = prod.id;
-                    ven.Valor = ven.Valor + prod.preco;
-                    ven.valorrestante = ven.valorrestante + prod.preco;
+                   // ven.Valor = ven.Valor + prod.preco;
+                    //ven.valorrestante = ven.valorrestante + prod.preco;
                     listiv.Add(iv2);
                 }
                 bool resultado = venda.RealizarVenda(ven, listiv, cli);
                 if (idCondicional != 0)
                 {
                     //string status = "Vendido";
-                    venda.ModificarStatusCondicional(idCondicional);
+                    venda.ModificarStatusCondicionalVenda(idCondicional);
+                    dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
                     idCondicional = 0;
                 }
                 listaproduto = null;
-                if(resultado == true)
+                if (resultado)
+                {
                     avisos.Text = "Venda completada !";
+                    frmCADVenda_Load(sender,e);
+                }
+
                 else
                 {
                     
@@ -105,10 +114,22 @@ namespace GUI
             cbCliente.DataSource = ((new BLLPessoa()).listarClientes());
             cbCliente.ValueMember = "id";
             cbCliente.DisplayMember = "nome";
+            cbClienteCond.DataSource = ((new BLLPessoa()).listarClientes());
+            cbClienteCond.ValueMember = "id";
+            cbClienteCond.DisplayMember = "nome";
+            cbClienteLista.DataSource = ((new BLLPessoa()).listarClientes());
+            cbClienteLista.ValueMember = "id";
+            cbClienteLista.DisplayMember = "nome";
             cbTipoPagamento.DataSource = BLLVenda.listarCategoriaPagamento();
             cbTipoPagamento.ValueMember = "id";
             cbTipoPagamento.DisplayMember = "nome";
-           // cbTipoPagamento.SelectedIndex = 0;
+            List<String> listaNomesCondicional = new List<string>(new string[]{"Pendente", "Devolvido"});
+            cbStatusCondicionalLista.DataSource = listaNomesCondicional;
+            dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
+
+            //dgvListaCondicionais.Columns[4].Visible = false;
+            
+            // cbTipoPagamento.SelectedIndex = 0;
             //cbCliente.Items.AddRange();
         }
         
@@ -187,64 +208,51 @@ namespace GUI
             {
                 txtCodigoDeBarras.Text = obj.codigodebarra.Trim();
                 //txtDescricao.Text = obj.descricao.Trim();
-                cbMarca.Text = obj.marca.Trim();
-                cbModelo.Text = obj.modelo.Trim();
-                cbTamanho.Text = obj.tamanho;
-                //txtPrecoCompra.Text = objP.precoCompra.ToString();
-                //txtQtd.Text = objP.quantidade.ToString();
+                //cbMarca.Text = obj.marca.Trim();
+                //cbModelo.Text = obj.modelo.Trim();
+                //cbTamanho.Text = obj.tamanho;
                 txtQtd.Text = "1";
-                //if (objP.condicional == "Sim")
-                //  cbCondicional.Checked = true;
-                //else
-                //  cbCondicional.Checked = false;
-                //cbNome.Text = obj.nome.Trim();
 
-                //var objCBCategoria = new Categoria();
-                //int categoria = Convert.ToInt16(obj.categoriaid);
-                //string categoriaDescricao = "";
+                
+                //cbCategoria.DataSource = BLLCat.listarTodasCat();//e é assim que selecionamos todos mas deixamos na categoria do próprio
+                //cbCategoria.ValueMember = "id";//produto !
+                //cbCategoria.DisplayMember = "descricao";
 
 
 
-                //categoriaDescricao = BLLProduto.selecionarcategoriaCodigoInt(categoria);
-                cbCategoria.DataSource = BLLCat.listarTodasCat();//e é assim que selecionamos todos mas deixamos na categoria do próprio
-                cbCategoria.ValueMember = "id";//produto !
-                cbCategoria.DisplayMember = "descricao";
+                //cbMarca.DataSource = BLLProduto.ListarMarca();
+                //cbMarca.ValueMember = "id";
+                //cbMarca.DisplayMember = "nome";
 
+                //cbModelo.DataSource = BLLProduto.ListarModelo();
+                //cbModelo.ValueMember = "id";
+                //cbModelo.DisplayMember = "nome";
 
+                //cbTamanho.DataSource = BLLProduto.ListarTamanho();
+                //cbTamanho.ValueMember = "id";
+                //cbTamanho.DisplayMember = "nome";
 
-                cbMarca.DataSource = BLLProduto.ListarMarca();
-                cbMarca.ValueMember = "id";
-                cbMarca.DisplayMember = "nome";
+                //cbCor.DataSource = BLLProduto.ListarCor();
+                //cbCor.ValueMember = "id";
+                //cbCor.DisplayMember = "Nome";
 
-                cbModelo.DataSource = BLLProduto.ListarModelo();
-                cbModelo.ValueMember = "id";
-                cbModelo.DisplayMember = "nome";
-
-                cbTamanho.DataSource = BLLProduto.ListarTamanho();
-                cbTamanho.ValueMember = "id";
-                cbTamanho.DisplayMember = "nome";
-
-                cbCor.DataSource = BLLProduto.ListarCor();
-                cbCor.ValueMember = "id";
-                cbCor.DisplayMember = "Nome";
-
-                cbCategoria.SelectedValue = objP.categoriaid;
-                cbMarca.SelectedValue = objP.marca;
-                cbModelo.SelectedValue = objP.modelo;
-                cbTamanho.SelectedValue = objP.tamanho;
-                cbCor.SelectedValue = objP.cor;
+                //cbCategoria.SelectedValue = objP.categoriaid;
+                //cbMarca.SelectedValue = objP.marca;
+                //cbModelo.SelectedValue = objP.modelo;
+                //cbTamanho.SelectedValue = objP.tamanho;
+                //cbCor.SelectedValue = objP.cor;
                 txtPreco.Text = obj.preco.ToString();
                 avisos.Visible = true;
                 avisos.Text = "Codigo de barras já registrado !";
                 dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
 
 
-                cbMarca.Focus();
+               // cbMarca.Focus();
             }
             else
             {
                 MessageBox.Show("O produto não esta cadastrado !");
-                cbMarca.Focus();
+               // cbMarca.Focus();
                 //txtPrecoCompra.Text = "";
                 //txtDescricao.Text = "";
                 txtPreco.Text = "";
@@ -252,25 +260,25 @@ namespace GUI
                 txtQtd.Text = "1";
                 //txtDescricao.Text = "2017";
 
-                cbMarca.DataSource = BLLProduto.ListarMarca();
-                cbMarca.ValueMember = "id";
-                cbMarca.DisplayMember = "nome";
+                //cbMarca.DataSource = BLLProduto.ListarMarca();
+                //cbMarca.ValueMember = "id";
+                //cbMarca.DisplayMember = "nome";
 
-                cbModelo.DataSource = BLLProduto.ListarModelo();
-                cbModelo.ValueMember = "id";
-                cbModelo.DisplayMember = "nome";
+                //cbModelo.DataSource = BLLProduto.ListarModelo();
+                //cbModelo.ValueMember = "id";
+                //cbModelo.DisplayMember = "nome";
 
-                cbTamanho.DataSource = BLLProduto.ListarTamanho();
-                cbTamanho.ValueMember = "id";
-                cbTamanho.DisplayMember = "nome";
+                //cbTamanho.DataSource = BLLProduto.ListarTamanho();
+                //cbTamanho.ValueMember = "id";
+                //cbTamanho.DisplayMember = "nome";
 
-                cbCategoria.DataSource = BLLCat.listarTodasCat();
-                cbCategoria.ValueMember = "id";
-                cbCategoria.DisplayMember = "descricao";
+                //cbCategoria.DataSource = BLLCat.listarTodasCat();
+                //cbCategoria.ValueMember = "id";
+                //cbCategoria.DisplayMember = "descricao";
 
-                cbCor.DataSource = BLLProduto.ListarCor();
-                cbCor.ValueMember = "id";
-                cbCor.DisplayMember = "Nome";
+                //cbCor.DataSource = BLLProduto.ListarCor();
+                //cbCor.ValueMember = "id";
+                //cbCor.DisplayMember = "Nome";
 
                 dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
             }
@@ -462,42 +470,42 @@ namespace GUI
             {
                 txtCodigoBarrasCond.Text = obj.codigodebarra.Trim();
                 //txtDescricao.Text = obj.descricao.Trim();
-                cbMarcaCond.Text = obj.marca.Trim();
-                cbModeloCond.Text = obj.modelo.Trim();
-                cbTamanhoCond.Text = obj.tamanho;
+                //cbMarcaCond.Text = obj.marca.Trim();
+                //cbModeloCond.Text = obj.modelo.Trim();
+                //cbTamanhoCond.Text = obj.tamanho;
                 txtQtdCond.Text = "1";
-                cbCategoriaCond.DataSource = BLLCat.listarTodasCat();//e é assim que selecionamos todos mas deixamos na categoria do próprio
-                cbCategoriaCond.ValueMember = "id";//produto !
-                cbCategoriaCond.DisplayMember = "descricao";
+                //cbCategoriaCond.DataSource = BLLCat.listarTodasCat();//e é assim que selecionamos todos mas deixamos na categoria do próprio
+                //cbCategoriaCond.ValueMember = "id";//produto !
+                //cbCategoriaCond.DisplayMember = "descricao";
 
-                cbMarcaCond.DataSource = BLLProduto.ListarMarca();
-                cbMarcaCond.ValueMember = "id";
-                cbMarcaCond.DisplayMember = "nome";
+                //cbMarcaCond.DataSource = BLLProduto.ListarMarca();
+                //cbMarcaCond.ValueMember = "id";
+                //cbMarcaCond.DisplayMember = "nome";
 
-                cbModeloCond.DataSource = BLLProduto.ListarModelo();
-                cbModeloCond.ValueMember = "id";
-                cbModeloCond.DisplayMember = "nome";
+                //cbModeloCond.DataSource = BLLProduto.ListarModelo();
+                //cbModeloCond.ValueMember = "id";
+                //cbModeloCond.DisplayMember = "nome";
 
-                cbTamanhoCond.DataSource = BLLProduto.ListarTamanho();
-                cbTamanhoCond.ValueMember = "id";
-                cbTamanhoCond.DisplayMember = "nome";
+                //cbTamanhoCond.DataSource = BLLProduto.ListarTamanho();
+                //cbTamanhoCond.ValueMember = "id";
+                //cbTamanhoCond.DisplayMember = "nome";
 
-                cbCorCond.DataSource = BLLProduto.ListarCor();
-                cbCorCond.ValueMember = "id";
-                cbCorCond.DisplayMember = "Nome";
+                //cbCorCond.DataSource = BLLProduto.ListarCor();
+                //cbCorCond.ValueMember = "id";
+                //cbCorCond.DisplayMember = "Nome";
 
-                cbCategoriaCond.SelectedValue = objP.categoriaid;
-                cbMarcaCond.SelectedValue = objP.marca;
-                cbModeloCond.SelectedValue = objP.modelo;
-                cbTamanhoCond.SelectedValue = objP.tamanho;
-                cbCorCond.SelectedValue = objP.cor;
+                //cbCategoriaCond.SelectedValue = objP.categoriaid;
+                //cbMarcaCond.SelectedValue = objP.marca;
+                //cbModeloCond.SelectedValue = objP.modelo;
+                //cbTamanhoCond.SelectedValue = objP.tamanho;
+                //cbCorCond.SelectedValue = objP.cor;
                 txtPrecoCond.Text = obj.preco.ToString();
                 avisosCond.Visible = true;
                 avisosCond.Text = "Codigo de barras já registrado !";
                 dgvCondicional.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
 
 
-                cbMarca.Focus();
+                //cbMarca.Focus();
             }
             else
             {
@@ -510,70 +518,71 @@ namespace GUI
                 txtQtdCond.Text = "1";
                 //txtDescricao.Text = "2017";
 
-                cbMarcaCond.DataSource = BLLProduto.ListarMarca();
-                cbMarcaCond.ValueMember = "id";
-                cbMarcaCond.DisplayMember = "nome";
+                //cbMarcaCond.DataSource = BLLProduto.ListarMarca();
+                //cbMarcaCond.ValueMember = "id";
+                //cbMarcaCond.DisplayMember = "nome";
 
-                cbModeloCond.DataSource = BLLProduto.ListarModelo();
-                cbModeloCond.ValueMember = "id";
-                cbModeloCond.DisplayMember = "nome";
+                //cbModeloCond.DataSource = BLLProduto.ListarModelo();
+                //cbModeloCond.ValueMember = "id";
+                //cbModeloCond.DisplayMember = "nome";
 
-                cbTamanhoCond.DataSource = BLLProduto.ListarTamanho();
-                cbTamanhoCond.ValueMember = "id";
-                cbTamanhoCond.DisplayMember = "nome";
+                //cbTamanhoCond.DataSource = BLLProduto.ListarTamanho();
+                //cbTamanhoCond.ValueMember = "id";
+                //cbTamanhoCond.DisplayMember = "nome";
 
-                cbCategoriaCond.DataSource = BLLCat.listarTodasCat();
-                cbCategoriaCond.ValueMember = "id";
-                cbCategoriaCond.DisplayMember = "descricao";
+                //cbCategoriaCond.DataSource = BLLCat.listarTodasCat();
+                //cbCategoriaCond.ValueMember = "id";
+                //cbCategoriaCond.DisplayMember = "descricao";
 
-                cbCorCond.DataSource = BLLProduto.ListarCor();
-                cbCorCond.ValueMember = "id";
-                cbCorCond.DisplayMember = "Nome";
+                //cbCorCond.DataSource = BLLProduto.ListarCor();
+                //cbCorCond.ValueMember = "id";
+                //cbCorCond.DisplayMember = "Nome";
 
                 dgvCondicional.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
             }
         }
 
-        private void btnRealizarCondicional_Click(object sender, EventArgs e)
+        private void btnRealizarCondicional_Click(object sender, EventArgs e)//modificar para condicional, será que manteremos o produto ou retiraremos já na condicional ?
         {
-            if (listaproduto != null && listaproduto.Count > 0)
+            if (listaprodutocondicional != null && listaprodutocondicional.Count > 0)
             {
                 DALVenda venda = new DALVenda();
-                Venda ven = new Venda();
+                Condicional ven = new Condicional();
                 Cliente cli = new Cliente();
-                List<ItensVenda> listiv = new List<ItensVenda>();
+                List<ItensCondicional> listiv = new List<ItensCondicional>();
                 ItensVenda iv = new ItensVenda();
                 DALPessoa dalpes = new DALPessoa();
-                cli = (dalpes.retornarCliente((int)cbCliente.SelectedValue));
+                cli = (dalpes.retornarCliente((int)cbClienteCond.SelectedValue));
                 ven.idCliente = cli.id;//(int)cbCliente.SelectedValue;
 
                 //ven.Valor = decimal.Parse(txtPreco.Text);
                 ven.data = DateTime.Now;
                 //ven.valorrestante = ven.Valor;
-                ven.idCategoriaPagamento = (int)cbTipoPagamento.SelectedValue;
-                ven.qtdParcelas = int.Parse(nudParcelamento.Text);
-                ven.valorrestante = 0;
-                ven.Valor = 0;
-                foreach (ProdutoModel prod in listaproduto)
+                //ven.idCategoriaPagamento = (int)cbTipoPagamento.SelectedValue;
+                //ven.qtdParcelas = int.Parse(nudParcelamento.Text);
+                //ven.valorrestante = 0;
+                ven.status = "Pendente";//cbStatusCondicionalLista.SelectedValue.ToString();
+                foreach (ProdutoModel prod in listaprodutocondicional)
                 {
-                    ItensVenda iv2 = new ItensVenda();
+                    ItensCondicional iv2 = new ItensCondicional();
                     iv2.idProduto = prod.id;
-                    ven.Valor = ven.Valor + prod.preco;
-                    ven.valorrestante = ven.valorrestante + prod.preco;
+                    
+                    //ven.Valor = ven.Valor + prod.preco;
+                    //ven.valorrestante = ven.valorrestante + prod.preco;
                     listiv.Add(iv2);
                 }
-                bool resultado = venda.RealizarVenda(ven, listiv, cli);
-                listaproduto = null;
-                if (resultado == true)
-                    avisos.Text = "Condicional completado !";
+                bool resultado = venda.RealizarCondicional(ven, listiv, cli);
+                dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
+                if (resultado)
+                    avisosCond.Text = "Condicional completado !";
                 else
                 {
-                    avisos.Text = "Condicional não completado !";
+                    avisosCond.Text = "Condicional não completado !";
                 }
             }
             else
             {
-                avisos.Text = "Selecine algum produto !";
+                avisosCond.Text = "Selecine algum produto !";
             }
         }
 
@@ -582,6 +591,13 @@ namespace GUI
             if (dgvProdutosCondicional.RowCount > 0)
             {
                 dgvVenda.DataSource = dgvProdutosCondicional.DataSource;
+                foreach (DataGridViewRow r in dgvProdutosCondicional.Rows)
+                {
+                    ProdutoModel prod = new ProdutoModel();
+                    prod = new DALProduto().SelecionarProdutoModelID((int)r.Cells[0].Value);//falta o teste, se funcionar é só colocar na parte da lista de condicionais também
+                    listaproduto.Add(prod);
+                }
+                
                 tabControl1.SelectTab(0);
             }
             else
@@ -601,12 +617,13 @@ namespace GUI
 
 
             List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
-            if (dgvVenda.RowCount > 0)
+            if (dgvProdutosCondicional.RowCount > 0)
             {
 
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
                 listaprodutocondicional.Add(obj);
                 dgvProdutosCondicional.DataSource = listaprodutocondicional;
+                
                 txtCodigoDeBarras.Text = "";
                 dgvCondicional.DataSource = null;
 
@@ -651,16 +668,192 @@ namespace GUI
 
         private void btnIrVendaLista_Click(object sender, EventArgs e)
         {
-            if (dgvProdutosCondicional.RowCount > 0)
+            if (dgvListaCondicionais.RowCount > 0)
             {
-                int id = (int)dgvListaCondicionais.CurrentRow.Cells[0].Value;
+                decimal precosomado = 0;
+                int id = (int)dgvListaCondicionais.CurrentRow.Cells[3].Value;
                 dgvVenda.DataSource = dgvProdutosCondicional.DataSource;
                 idCondicional = id;
+                dgvVenda.DataSource =(new DALVenda().listaProdutosModelsDoCondicional(idCondicional));
+                listaproduto = (new DALVenda().listaProdutosModelsDoCondicional(idCondicional));
+                foreach (ProdutoModel produto in listaproduto)
+                {
+                    precosomado += produto.preco;
+                }
+
+                txtPreco.Text = precosomado.ToString();
+                cbCliente.SelectedValue = (int)dgvListaCondicionais.CurrentRow.Cells[0].Value;
+                //foreach (DataGridViewRow r in dgvVenda.Rows)//na duvida se não der certo, só tirar esse foreach
+                //{
+                 //   ProdutoModel prod = new ProdutoModel();
+                  //  prod = new DALProduto().SelecionarProdutoModelID((int)r.Cells[0].Value);//falta o teste, se funcionar é só colocar na parte da lista de condicionais também
+                    //listaproduto.Add(prod);//erro agora, não está mais adicionando na lista
+                //}
                 tabControl1.SelectTab(0);
             }
             else
             {
                 MessageBox.Show("Não há produtos selecionados !");
+            }
+        }
+
+        private void btnMudarStatus_Click(object sender, EventArgs e)
+        {
+            if (dgvListaCondicionais.RowCount > 0)
+            {
+                int id = (int)dgvListaCondicionais.CurrentRow.Cells[0].Value;
+                //dgvVenda.DataSource = dgvListaCondicionais.DataSource;
+                idCondicional = id;
+                string status = cbStatusCondicionalLista.SelectedItem.ToString();
+                DALVenda objDAL = new DALVenda();
+                objDAL.ModificarStatusCondicional(id, status);
+                avisosLista.Text = "Status do condicional modificado !";
+                dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
+                idCondicional = 0;
+                //tabControl1.SelectTab(0);
+            }
+            else
+            {
+                MessageBox.Show("Não há condicional selecionado !");
+            }
+        }
+
+        private void btnLocalizarCond_Click(object sender, EventArgs e)
+        {
+            if (IsCpf(txtCPFCond.Text) == true)
+            {
+                BLLPessoa objBLL = new BLLPessoa();
+                ClienteModel cli = new ClienteModel();
+
+                cli = objBLL.retornarPessoaCliente(txtCPFCond.Text);
+                if (cli != null)
+                {
+                    cbClienteCond.Text = "";//testar se o codigo está mudando com a mudança do selectedtext
+                    cbClienteCond.SelectedText = cli.nome;
+
+                    //idPessoaGlobal = cli.id;
+                }
+                else
+                    MessageBox.Show("O CPF não está cadastrado como cliente !");
+            }
+            else if (IsCpf(txtCPFCond.Text) == true)
+            {
+                MessageBox.Show("O CPF não está cadastrado !");
+            }
+            else
+                MessageBox.Show("Informe um CPF valido !");
+        }
+
+        private void btnConsultaLista_Click(object sender, EventArgs e)
+        {
+            if (IsCpf(txtCPFLista.Text) == true)
+            {
+                BLLPessoa objBLL = new BLLPessoa();
+                ClienteModel cli = new ClienteModel();
+
+                cli = objBLL.retornarPessoaCliente(txtCPFLista.Text);
+                if (cli != null)
+                {
+                    cbClienteLista.Text = "";//testar se o codigo está mudando com a mudança do selectedtext
+                    cbClienteLista.SelectedText = cli.nome;
+                    new DALVenda().carregarCondicionaisPorCliente(cli.id);
+                    //idPessoaGlobal = cli.id;
+                }
+                else
+                    MessageBox.Show("O CPF não está cadastrado como cliente !");
+            }
+            else if (IsCpf(txtCPFLista.Text) == true)
+            {
+                MessageBox.Show("O CPF não está cadastrado !");
+            }
+            else
+                MessageBox.Show("Informe um CPF valido !");
+        }
+
+        private void filtrarData(DateTime inicio, DateTime fim)
+        {
+            if (inicio < fim)
+            {
+                dgvListaCondicionais.DataSource = DALVenda.carregarCondicionaisPorData(inicio, fim);
+            }
+        }
+
+        private void dtpInicio_ValueChanged(object sender, EventArgs e)
+        {
+            dataInicio =Convert.ToDateTime(dtpInicio);
+            filtrarData(dataInicio, dataFinal);
+        }
+
+        private void dtpFinal_ValueChanged(object sender, EventArgs e)
+        {
+            dataFinal = Convert.ToDateTime(dtpFinal);
+            filtrarData(dataInicio, dataFinal);
+        }
+
+        private void btnNomeCliente_Click(object sender, EventArgs e)
+        {
+            ClienteModel cli = new ClienteModel();
+            if ((cli = new DALPessoa().retornarPessoaCliente((int)cbClienteLista.SelectedValue)) != null)
+            {
+                BLLPessoa objBLL = new BLLPessoa();
+
+                //cli = objBLL.retornarPessoaCliente(txtCPFLista.Text);
+                    cbClienteLista.Text = "";//testar se o codigo está mudando com a mudança do selectedtext
+                    cbClienteLista.SelectedText = cli.nome;
+                    dgvListaCondicionais.DataSource = new DALVenda().carregarCondicionaisPorCliente(cli.id);
+                    //idPessoaGlobal = cli.id;
+            }
+            else if (IsCpf(txtCPFLista.Text) == true)
+            {
+                MessageBox.Show("O CPF não está cadastrado !");
+            }
+        }
+        private void txtPorcentagem_KeyUp(object sender, KeyEventArgs e)
+        {
+            decimal numero;
+            if (txtPorcentagem.Text != null)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPorcentagem.Text, "[0-9]") || txtPorcentagem.Text.Contains(",") || txtPorcentagem.Text.Contains("."))
+                {
+                    txtPorcentagem.Text = "";
+                    //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
+                    //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
+                }
+            }
+            else
+                txtPorcentagem.Text = "";
+            if (txtPreco.Text != null)
+            {
+
+                if (System.Text.RegularExpressions.Regex.IsMatch(txtPreco.Text, "[0-9]"))
+                {
+                    if (decimal.TryParse(txtPorcentagem.Text, out numero))
+                    {
+                        numero = (Decimal.Parse(txtPreco.Text) + (Decimal.Parse((txtPreco.Text)) * ((Decimal.Parse(txtPorcentagem.Text)) / 100)));
+                        txtPrecoFinal.Text = Math.Round(numero, 2).ToString();
+                    }
+                    else
+                        txtPrecoFinal.Text = "";
+                }
+                else
+                {
+                    //MessageBox.Show("Digite apenas numeros !");
+                    txtPorcentagem.Text = "";
+                }
+
+            }
+            else
+                txtPrecoFinal.Text = "";
+        }
+        private void limparTextBoxes(Control.ControlCollection controles)
+        {
+            foreach (Control ctrl in controles)
+            {
+                //Se o contorle for um TextBox...
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)(ctrl)).Text = String.Empty;
+                }
             }
         }
     }

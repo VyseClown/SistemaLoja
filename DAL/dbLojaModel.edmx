@@ -202,6 +202,7 @@
           <Property Name="cor" Type="int" />
           <Property Name="quantidade" Type="int" />
           <Property Name="data" Type="date" />
+          <Property Name="consignado" Type="varchar" MaxLength="5" />
         </EntityType>
         <EntityType Name="ProdutosPedido">
           <Key>
@@ -829,6 +830,7 @@
           <Property Name="data" Type="DateTime" Precision="0" />
           <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" FromRole="Produto" ToRole="ItensCondicional" />
           <NavigationProperty Name="ItensVenda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" FromRole="Produto" ToRole="ItensVenda" />
+          <Property Name="consignado" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ProdutosPedido">
           <Key>
@@ -1371,6 +1373,7 @@
           <EntitySetMapping Name="Produto">
             <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Produto">
               <MappingFragment StoreEntitySet="Produto">
+                <ScalarProperty Name="consignado" ColumnName="consignado" />
                 <ScalarProperty Name="data" ColumnName="data" />
                 <ScalarProperty Name="quantidade" ColumnName="quantidade" />
                 <ScalarProperty Name="cor" ColumnName="cor" />

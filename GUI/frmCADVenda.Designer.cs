@@ -34,29 +34,23 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtQtd = new System.Windows.Forms.TextBox();
-            this.cbCor = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.txtPreco = new System.Windows.Forms.TextBox();
-            this.cbTamanho = new System.Windows.Forms.ComboBox();
-            this.cbMarca = new System.Windows.Forms.ComboBox();
-            this.cbModelo = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.avisos = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCodigoDeBarras = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtPrecoFinal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPorcentagem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbTipoPagamento = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -69,10 +63,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVenda = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dgvProdutosCondicional = new System.Windows.Forms.DataGridView();
             this.btnLocalizarCond = new System.Windows.Forms.Button();
             this.txtCPFCond = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnIrVenda = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnRealizarCondicional = new System.Windows.Forms.Button();
             this.avisosCond = new System.Windows.Forms.Label();
@@ -84,38 +81,29 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtQtdCond = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbCorCond = new System.Windows.Forms.ComboBox();
-            this.cbCategoriaCond = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.txtPrecoCond = new System.Windows.Forms.TextBox();
             this.txtCodigoBarrasCond = new System.Windows.Forms.TextBox();
-            this.cbTamanhoCond = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.cbMarcaCond = new System.Windows.Forms.ComboBox();
             this.btnConsultarCond = new System.Windows.Forms.Button();
-            this.cbModeloCond = new System.Windows.Forms.ComboBox();
-            this.btnIrVenda = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dgvProdutosCondicional = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dgvListaCondicionais = new System.Windows.Forms.DataGridView();
+            this.btnNomeCliente = new System.Windows.Forms.Button();
+            this.avisosLista = new System.Windows.Forms.Label();
+            this.btnMudarStatus = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cbStatusCondicionalLista = new System.Windows.Forms.ComboBox();
+            this.btnIrVendaLista = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.label29 = new System.Windows.Forms.Label();
             this.btnConsultaLista = new System.Windows.Forms.Button();
             this.txtCPFLista = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cbClienteLista = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.btnIrVendaLista = new System.Windows.Forms.Button();
-            this.cbStatusCondicionalLista = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dgvListaCondicionais = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -123,9 +111,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudParcelamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosCondicional)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicional)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosCondicional)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCondicionais)).BeginInit();
             this.SuspendLayout();
@@ -165,7 +153,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(199, 513);
+            this.label12.Location = new System.Drawing.Point(30, 421);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(124, 25);
             this.label12.TabIndex = 64;
@@ -174,32 +162,12 @@
             // txtQtd
             // 
             this.txtQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtQtd.Location = new System.Drawing.Point(227, 538);
+            this.txtQtd.Location = new System.Drawing.Point(58, 446);
             this.txtQtd.MaxLength = 4;
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.ReadOnly = true;
             this.txtQtd.Size = new System.Drawing.Size(78, 30);
             this.txtQtd.TabIndex = 47;
-            // 
-            // cbCor
-            // 
-            this.cbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbCor.FormattingEnabled = true;
-            this.cbCor.Location = new System.Drawing.Point(714, 459);
-            this.cbCor.Name = "cbCor";
-            this.cbCor.Size = new System.Drawing.Size(155, 33);
-            this.cbCor.TabIndex = 44;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(715, 431);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 25);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "Cor";
             // 
             // label10
             // 
@@ -224,42 +192,12 @@
             // txtPreco
             // 
             this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPreco.Location = new System.Drawing.Point(353, 538);
+            this.txtPreco.Location = new System.Drawing.Point(41, 538);
             this.txtPreco.MaxLength = 18;
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ReadOnly = true;
             this.txtPreco.Size = new System.Drawing.Size(138, 30);
             this.txtPreco.TabIndex = 51;
-            // 
-            // cbTamanho
-            // 
-            this.cbTamanho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTamanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbTamanho.FormattingEnabled = true;
-            this.cbTamanho.Location = new System.Drawing.Point(35, 538);
-            this.cbTamanho.Name = "cbTamanho";
-            this.cbTamanho.Size = new System.Drawing.Size(124, 33);
-            this.cbTamanho.TabIndex = 45;
-            // 
-            // cbMarca
-            // 
-            this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(35, 459);
-            this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(190, 33);
-            this.cbMarca.TabIndex = 40;
-            // 
-            // cbModelo
-            // 
-            this.cbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbModelo.FormattingEnabled = true;
-            this.cbModelo.Location = new System.Drawing.Point(265, 459);
-            this.cbModelo.Name = "cbModelo";
-            this.cbModelo.Size = new System.Drawing.Size(190, 33);
-            this.cbModelo.TabIndex = 42;
             // 
             // btnConsultar
             // 
@@ -286,7 +224,7 @@
             // 
             this.avisos.AutoSize = true;
             this.avisos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.avisos.Location = new System.Drawing.Point(844, 3);
+            this.avisos.Location = new System.Drawing.Point(795, 3);
             this.avisos.Name = "avisos";
             this.avisos.Size = new System.Drawing.Size(74, 25);
             this.avisos.TabIndex = 59;
@@ -297,7 +235,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(348, 513);
+            this.label7.Location = new System.Drawing.Point(36, 513);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 25);
             this.label7.TabIndex = 58;
@@ -321,56 +259,6 @@
             this.label6.Size = new System.Drawing.Size(180, 25);
             this.label6.TabIndex = 57;
             this.label6.Text = "Codigo de Barras";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(489, 431);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 25);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Categoria";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(30, 513);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 25);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Tamanho";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(30, 431);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 25);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Marca";
-            // 
-            // cbCategoria
-            // 
-            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(494, 459);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(190, 33);
-            this.cbCategoria.TabIndex = 43;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(260, 431);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Modelo";
             // 
             // label8
             // 
@@ -398,14 +286,19 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(21, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1175, 709);
+            this.tabControl1.Size = new System.Drawing.Size(951, 709);
             this.tabControl1.TabIndex = 67;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtPrecoFinal);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.txtPorcentagem);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.cbTipoPagamento);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
@@ -427,27 +320,56 @@
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txtQtd);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.cbCor);
-            this.tabPage1.Controls.Add(this.cbCategoria);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txtPreco);
             this.tabPage1.Controls.Add(this.txtCodigoDeBarras);
-            this.tabPage1.Controls.Add(this.cbTamanho);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.cbMarca);
             this.tabPage1.Controls.Add(this.btnConsultar);
-            this.tabPage1.Controls.Add(this.cbModelo);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1167, 683);
+            this.tabPage1.Size = new System.Drawing.Size(943, 683);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Venda";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtPrecoFinal
+            // 
+            this.txtPrecoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtPrecoFinal.Location = new System.Drawing.Point(344, 538);
+            this.txtPrecoFinal.MaxLength = 18;
+            this.txtPrecoFinal.Name = "txtPrecoFinal";
+            this.txtPrecoFinal.ReadOnly = true;
+            this.txtPrecoFinal.Size = new System.Drawing.Size(138, 30);
+            this.txtPrecoFinal.TabIndex = 91;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(346, 513);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 25);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "Preço Final";
+            // 
+            // txtPorcentagem
+            // 
+            this.txtPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtPorcentagem.Location = new System.Drawing.Point(209, 538);
+            this.txtPorcentagem.MaxLength = 3;
+            this.txtPorcentagem.Name = "txtPorcentagem";
+            this.txtPorcentagem.Size = new System.Drawing.Size(97, 30);
+            this.txtPorcentagem.TabIndex = 89;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(184, 513);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 25);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Porcentagem";
             // 
             // cbTipoPagamento
             // 
@@ -580,27 +502,37 @@
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.txtQtdCond);
-            this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.cbCorCond);
-            this.tabPage2.Controls.Add(this.cbCategoriaCond);
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.label27);
             this.tabPage2.Controls.Add(this.txtPrecoCond);
             this.tabPage2.Controls.Add(this.txtCodigoBarrasCond);
-            this.tabPage2.Controls.Add(this.cbTamanhoCond);
             this.tabPage2.Controls.Add(this.label28);
-            this.tabPage2.Controls.Add(this.cbMarcaCond);
             this.tabPage2.Controls.Add(this.btnConsultarCond);
-            this.tabPage2.Controls.Add(this.cbModeloCond);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1167, 683);
+            this.tabPage2.Size = new System.Drawing.Size(943, 683);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Condicional";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(30, 128);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 25);
+            this.label15.TabIndex = 117;
+            this.label15.Text = "Produtos";
+            // 
+            // dgvProdutosCondicional
+            // 
+            this.dgvProdutosCondicional.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutosCondicional.Location = new System.Drawing.Point(35, 308);
+            this.dgvProdutosCondicional.Name = "dgvProdutosCondicional";
+            this.dgvProdutosCondicional.RowHeadersWidth = 4;
+            this.dgvProdutosCondicional.Size = new System.Drawing.Size(834, 121);
+            this.dgvProdutosCondicional.TabIndex = 116;
+            this.dgvProdutosCondicional.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutosCondicional_CellDoubleClick);
             // 
             // btnLocalizarCond
             // 
@@ -611,6 +543,7 @@
             this.btnLocalizarCond.Size = new System.Drawing.Size(39, 30);
             this.btnLocalizarCond.TabIndex = 114;
             this.btnLocalizarCond.UseVisualStyleBackColor = true;
+            this.btnLocalizarCond.Click += new System.EventHandler(this.btnLocalizarCond_Click);
             // 
             // txtCPFCond
             // 
@@ -643,6 +576,17 @@
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
             // 
+            // btnIrVenda
+            // 
+            this.btnIrVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrVenda.Location = new System.Drawing.Point(259, 19);
+            this.btnIrVenda.Name = "btnIrVenda";
+            this.btnIrVenda.Size = new System.Drawing.Size(250, 31);
+            this.btnIrVenda.TabIndex = 3;
+            this.btnIrVenda.Text = "Ir para venda";
+            this.btnIrVenda.UseVisualStyleBackColor = true;
+            this.btnIrVenda.Click += new System.EventHandler(this.btnIrVenda_Click);
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -668,7 +612,7 @@
             // 
             this.avisosCond.AutoSize = true;
             this.avisosCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.avisosCond.Location = new System.Drawing.Point(884, 3);
+            this.avisosCond.Location = new System.Drawing.Point(787, 3);
             this.avisosCond.Name = "avisosCond";
             this.avisosCond.Size = new System.Drawing.Size(82, 25);
             this.avisosCond.TabIndex = 107;
@@ -756,76 +700,6 @@
             this.txtQtdCond.Size = new System.Drawing.Size(78, 30);
             this.txtQtdCond.TabIndex = 98;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(260, 431);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(83, 25);
-            this.label23.TabIndex = 92;
-            this.label23.Text = "Modelo";
-            // 
-            // cbCorCond
-            // 
-            this.cbCorCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCorCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbCorCond.FormattingEnabled = true;
-            this.cbCorCond.Location = new System.Drawing.Point(714, 459);
-            this.cbCorCond.Name = "cbCorCond";
-            this.cbCorCond.Size = new System.Drawing.Size(155, 33);
-            this.cbCorCond.TabIndex = 95;
-            // 
-            // cbCategoriaCond
-            // 
-            this.cbCategoriaCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategoriaCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbCategoriaCond.FormattingEnabled = true;
-            this.cbCategoriaCond.Location = new System.Drawing.Point(494, 459);
-            this.cbCategoriaCond.Name = "cbCategoriaCond";
-            this.cbCategoriaCond.Size = new System.Drawing.Size(190, 33);
-            this.cbCategoriaCond.TabIndex = 94;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(715, 431);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 25);
-            this.label24.TabIndex = 109;
-            this.label24.Text = "Cor";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(30, 431);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(72, 25);
-            this.label25.TabIndex = 97;
-            this.label25.Text = "Marca";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label26.Location = new System.Drawing.Point(30, 513);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(103, 25);
-            this.label26.TabIndex = 99;
-            this.label26.Text = "Tamanho";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label27.Location = new System.Drawing.Point(489, 431);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(106, 25);
-            this.label27.TabIndex = 102;
-            this.label27.Text = "Categoria";
-            // 
             // txtPrecoCond
             // 
             this.txtPrecoCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
@@ -845,16 +719,6 @@
             this.txtCodigoBarrasCond.Size = new System.Drawing.Size(353, 30);
             this.txtCodigoBarrasCond.TabIndex = 89;
             // 
-            // cbTamanhoCond
-            // 
-            this.cbTamanhoCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTamanhoCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbTamanhoCond.FormattingEnabled = true;
-            this.cbTamanhoCond.Location = new System.Drawing.Point(35, 538);
-            this.cbTamanhoCond.Name = "cbTamanhoCond";
-            this.cbTamanhoCond.Size = new System.Drawing.Size(124, 33);
-            this.cbTamanhoCond.TabIndex = 96;
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -864,16 +728,6 @@
             this.label28.Size = new System.Drawing.Size(68, 25);
             this.label28.TabIndex = 106;
             this.label28.Text = "Preço";
-            // 
-            // cbMarcaCond
-            // 
-            this.cbMarcaCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMarcaCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbMarcaCond.FormattingEnabled = true;
-            this.cbMarcaCond.Location = new System.Drawing.Point(35, 459);
-            this.cbMarcaCond.Name = "cbMarcaCond";
-            this.cbMarcaCond.Size = new System.Drawing.Size(190, 33);
-            this.cbMarcaCond.TabIndex = 91;
             // 
             // btnConsultarCond
             // 
@@ -886,49 +740,11 @@
             this.btnConsultarCond.UseVisualStyleBackColor = true;
             this.btnConsultarCond.Click += new System.EventHandler(this.btnConsultarCond_Click);
             // 
-            // cbModeloCond
-            // 
-            this.cbModeloCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbModeloCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbModeloCond.FormattingEnabled = true;
-            this.cbModeloCond.Location = new System.Drawing.Point(265, 459);
-            this.cbModeloCond.Name = "cbModeloCond";
-            this.cbModeloCond.Size = new System.Drawing.Size(190, 33);
-            this.cbModeloCond.TabIndex = 93;
-            // 
-            // btnIrVenda
-            // 
-            this.btnIrVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrVenda.Location = new System.Drawing.Point(259, 19);
-            this.btnIrVenda.Name = "btnIrVenda";
-            this.btnIrVenda.Size = new System.Drawing.Size(250, 31);
-            this.btnIrVenda.TabIndex = 3;
-            this.btnIrVenda.Text = "Ir para venda";
-            this.btnIrVenda.UseVisualStyleBackColor = true;
-            this.btnIrVenda.Click += new System.EventHandler(this.btnIrVenda_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(30, 128);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 25);
-            this.label15.TabIndex = 117;
-            this.label15.Text = "Produtos";
-            // 
-            // dgvProdutosCondicional
-            // 
-            this.dgvProdutosCondicional.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutosCondicional.Location = new System.Drawing.Point(35, 308);
-            this.dgvProdutosCondicional.Name = "dgvProdutosCondicional";
-            this.dgvProdutosCondicional.RowHeadersWidth = 4;
-            this.dgvProdutosCondicional.Size = new System.Drawing.Size(834, 121);
-            this.dgvProdutosCondicional.TabIndex = 116;
-            this.dgvProdutosCondicional.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutosCondicional_CellDoubleClick);
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnNomeCliente);
+            this.tabPage3.Controls.Add(this.avisosLista);
+            this.tabPage3.Controls.Add(this.btnMudarStatus);
             this.tabPage3.Controls.Add(this.label32);
             this.tabPage3.Controls.Add(this.cbStatusCondicionalLista);
             this.tabPage3.Controls.Add(this.btnIrVendaLista);
@@ -946,10 +762,165 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1167, 683);
+            this.tabPage3.Size = new System.Drawing.Size(943, 683);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lista de condicionais";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnNomeCliente
+            // 
+            this.btnNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnNomeCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnNomeCliente.Image")));
+            this.btnNomeCliente.Location = new System.Drawing.Point(492, 47);
+            this.btnNomeCliente.Name = "btnNomeCliente";
+            this.btnNomeCliente.Size = new System.Drawing.Size(39, 30);
+            this.btnNomeCliente.TabIndex = 134;
+            this.btnNomeCliente.UseVisualStyleBackColor = true;
+            this.btnNomeCliente.Click += new System.EventHandler(this.btnNomeCliente_Click);
+            // 
+            // avisosLista
+            // 
+            this.avisosLista.AutoSize = true;
+            this.avisosLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.avisosLista.Location = new System.Drawing.Point(707, 3);
+            this.avisosLista.Name = "avisosLista";
+            this.avisosLista.Size = new System.Drawing.Size(82, 25);
+            this.avisosLista.TabIndex = 133;
+            this.avisosLista.Text = "label18";
+            this.avisosLista.Visible = false;
+            // 
+            // btnMudarStatus
+            // 
+            this.btnMudarStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMudarStatus.Location = new System.Drawing.Point(306, 502);
+            this.btnMudarStatus.Name = "btnMudarStatus";
+            this.btnMudarStatus.Size = new System.Drawing.Size(150, 31);
+            this.btnMudarStatus.TabIndex = 132;
+            this.btnMudarStatus.Text = "Mudar Status";
+            this.btnMudarStatus.UseVisualStyleBackColor = true;
+            this.btnMudarStatus.Click += new System.EventHandler(this.btnMudarStatus_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label32.Location = new System.Drawing.Point(175, 472);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(74, 25);
+            this.label32.TabIndex = 131;
+            this.label32.Text = "Status";
+            // 
+            // cbStatusCondicionalLista
+            // 
+            this.cbStatusCondicionalLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbStatusCondicionalLista.FormattingEnabled = true;
+            this.cbStatusCondicionalLista.Location = new System.Drawing.Point(180, 500);
+            this.cbStatusCondicionalLista.Name = "cbStatusCondicionalLista";
+            this.cbStatusCondicionalLista.Size = new System.Drawing.Size(121, 33);
+            this.cbStatusCondicionalLista.TabIndex = 130;
+            // 
+            // btnIrVendaLista
+            // 
+            this.btnIrVendaLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrVendaLista.Location = new System.Drawing.Point(24, 500);
+            this.btnIrVendaLista.Name = "btnIrVendaLista";
+            this.btnIrVendaLista.Size = new System.Drawing.Size(150, 31);
+            this.btnIrVendaLista.TabIndex = 129;
+            this.btnIrVendaLista.Text = "Ir para venda";
+            this.btnIrVendaLista.UseVisualStyleBackColor = true;
+            this.btnIrVendaLista.Click += new System.EventHandler(this.btnIrVendaLista_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label31.Location = new System.Drawing.Point(240, 125);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(45, 25);
+            this.label31.TabIndex = 128;
+            this.label31.Text = "Até";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label30.Location = new System.Drawing.Point(19, 122);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(39, 25);
+            this.label30.TabIndex = 127;
+            this.label30.Text = "De";
+            // 
+            // dtpFinal
+            // 
+            this.dtpFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFinal.Location = new System.Drawing.Point(306, 120);
+            this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.Size = new System.Drawing.Size(137, 30);
+            this.dtpFinal.TabIndex = 126;
+            this.dtpFinal.ValueChanged += new System.EventHandler(this.dtpFinal_ValueChanged);
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(79, 120);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(137, 30);
+            this.dtpInicio.TabIndex = 125;
+            this.dtpInicio.ValueChanged += new System.EventHandler(this.dtpInicio_ValueChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label29.Location = new System.Drawing.Point(19, 19);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(80, 25);
+            this.label29.TabIndex = 124;
+            this.label29.Text = "Cliente";
+            // 
+            // btnConsultaLista
+            // 
+            this.btnConsultaLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnConsultaLista.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultaLista.Image")));
+            this.btnConsultaLista.Location = new System.Drawing.Point(767, 47);
+            this.btnConsultaLista.Name = "btnConsultaLista";
+            this.btnConsultaLista.Size = new System.Drawing.Size(39, 30);
+            this.btnConsultaLista.TabIndex = 122;
+            this.btnConsultaLista.UseVisualStyleBackColor = true;
+            this.btnConsultaLista.Click += new System.EventHandler(this.btnConsultaLista_Click);
+            // 
+            // txtCPFLista
+            // 
+            this.txtCPFLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtCPFLista.Location = new System.Drawing.Point(589, 47);
+            this.txtCPFLista.Mask = "000.000.000-00";
+            this.txtCPFLista.Name = "txtCPFLista";
+            this.txtCPFLista.Size = new System.Drawing.Size(165, 30);
+            this.txtCPFLista.TabIndex = 121;
+            this.txtCPFLista.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(584, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 25);
+            this.label18.TabIndex = 123;
+            this.label18.Text = "CPF";
+            // 
+            // cbClienteLista
+            // 
+            this.cbClienteLista.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbClienteLista.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbClienteLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbClienteLista.FormattingEnabled = true;
+            this.cbClienteLista.Location = new System.Drawing.Point(24, 47);
+            this.cbClienteLista.Name = "cbClienteLista";
+            this.cbClienteLista.Size = new System.Drawing.Size(462, 33);
+            this.cbClienteLista.TabIndex = 120;
             // 
             // label16
             // 
@@ -967,138 +938,29 @@
             this.dgvListaCondicionais.Location = new System.Drawing.Point(24, 183);
             this.dgvListaCondicionais.Name = "dgvListaCondicionais";
             this.dgvListaCondicionais.RowHeadersWidth = 4;
-            this.dgvListaCondicionais.Size = new System.Drawing.Size(1012, 281);
+            this.dgvListaCondicionais.Size = new System.Drawing.Size(820, 281);
             this.dgvListaCondicionais.TabIndex = 118;
             // 
-            // btnConsultaLista
+            // tabPage4
             // 
-            this.btnConsultaLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnConsultaLista.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultaLista.Image")));
-            this.btnConsultaLista.Location = new System.Drawing.Point(686, 47);
-            this.btnConsultaLista.Name = "btnConsultaLista";
-            this.btnConsultaLista.Size = new System.Drawing.Size(39, 30);
-            this.btnConsultaLista.TabIndex = 122;
-            this.btnConsultaLista.UseVisualStyleBackColor = true;
-            // 
-            // txtCPFLista
-            // 
-            this.txtCPFLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtCPFLista.Location = new System.Drawing.Point(508, 47);
-            this.txtCPFLista.Mask = "000.000.000-00";
-            this.txtCPFLista.Name = "txtCPFLista";
-            this.txtCPFLista.Size = new System.Drawing.Size(165, 30);
-            this.txtCPFLista.TabIndex = 121;
-            this.txtCPFLista.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(503, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 25);
-            this.label18.TabIndex = 123;
-            this.label18.Text = "CPF";
-            // 
-            // cbClienteLista
-            // 
-            this.cbClienteLista.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbClienteLista.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbClienteLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbClienteLista.FormattingEnabled = true;
-            this.cbClienteLista.Location = new System.Drawing.Point(24, 47);
-            this.cbClienteLista.Name = "cbClienteLista";
-            this.cbClienteLista.Size = new System.Drawing.Size(462, 33);
-            this.cbClienteLista.TabIndex = 120;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label29.Location = new System.Drawing.Point(19, 19);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(80, 25);
-            this.label29.TabIndex = 124;
-            this.label29.Text = "Cliente";
-            // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicio.Location = new System.Drawing.Point(79, 120);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(137, 30);
-            this.dtpInicio.TabIndex = 125;
-            // 
-            // dtpFinal
-            // 
-            this.dtpFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFinal.Location = new System.Drawing.Point(306, 120);
-            this.dtpFinal.Name = "dtpFinal";
-            this.dtpFinal.Size = new System.Drawing.Size(137, 30);
-            this.dtpFinal.TabIndex = 126;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label30.Location = new System.Drawing.Point(19, 122);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(39, 25);
-            this.label30.TabIndex = 127;
-            this.label30.Text = "De";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label31.Location = new System.Drawing.Point(240, 125);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(45, 25);
-            this.label31.TabIndex = 128;
-            this.label31.Text = "Até";
-            // 
-            // btnIrVendaLista
-            // 
-            this.btnIrVendaLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrVendaLista.Location = new System.Drawing.Point(24, 500);
-            this.btnIrVendaLista.Name = "btnIrVendaLista";
-            this.btnIrVendaLista.Size = new System.Drawing.Size(250, 31);
-            this.btnIrVendaLista.TabIndex = 129;
-            this.btnIrVendaLista.Text = "Ir para venda";
-            this.btnIrVendaLista.UseVisualStyleBackColor = true;
-            this.btnIrVendaLista.Click += new System.EventHandler(this.btnIrVendaLista_Click);
-            // 
-            // cbStatusCondicionalLista
-            // 
-            this.cbStatusCondicionalLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbStatusCondicionalLista.FormattingEnabled = true;
-            this.cbStatusCondicionalLista.Location = new System.Drawing.Point(395, 500);
-            this.cbStatusCondicionalLista.Name = "cbStatusCondicionalLista";
-            this.cbStatusCondicionalLista.Size = new System.Drawing.Size(121, 33);
-            this.cbStatusCondicionalLista.TabIndex = 130;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label32.Location = new System.Drawing.Point(390, 472);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(74, 25);
-            this.label32.TabIndex = 131;
-            this.label32.Text = "Status";
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(943, 683);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Clientes para Condicional";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // frmCADVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1219, 730);
+            this.ClientSize = new System.Drawing.Size(999, 730);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "frmCADVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCADVenda";
+            this.Text = "Vneda";
             this.Load += new System.EventHandler(this.frmCADVenda_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
@@ -1109,9 +971,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosCondicional)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicional)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosCondicional)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCondicionais)).EndInit();
@@ -1125,30 +987,19 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtQtd;
-        private System.Windows.Forms.ComboBox cbCor;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.ComboBox cbTamanho;
-        private System.Windows.Forms.ComboBox cbMarca;
-        private System.Windows.Forms.ComboBox cbModelo;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label avisos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCodigoDeBarras;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbCategoria;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbCliente;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDescer;
         private System.Windows.Forms.Button btnSubir;
         private System.Windows.Forms.Label label1;
@@ -1160,38 +1011,6 @@
         private System.Windows.Forms.NumericUpDown nudParcelamento;
         private System.Windows.Forms.ComboBox cbTipoPagamento;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnLocalizarCond;
-        private System.Windows.Forms.MaskedTextBox txtCPFCond;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnRealizarCondicional;
-        private System.Windows.Forms.Label avisosCond;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dgvCondicional;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox cbClienteCond;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtQtdCond;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox cbCorCond;
-        private System.Windows.Forms.ComboBox cbCategoriaCond;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtPrecoCond;
-        private System.Windows.Forms.TextBox txtCodigoBarrasCond;
-        private System.Windows.Forms.ComboBox cbTamanhoCond;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox cbMarcaCond;
-        private System.Windows.Forms.Button btnConsultarCond;
-        private System.Windows.Forms.ComboBox cbModeloCond;
-        private System.Windows.Forms.Button btnIrVenda;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dgvProdutosCondicional;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dgvListaCondicionais;
@@ -1207,5 +1026,36 @@
         private System.Windows.Forms.Button btnIrVendaLista;
         private System.Windows.Forms.ComboBox cbStatusCondicionalLista;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button btnMudarStatus;
+        private System.Windows.Forms.Label avisosLista;
+        private System.Windows.Forms.Button btnNomeCliente;
+        private System.Windows.Forms.TextBox txtPorcentagem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPrecoFinal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dgvProdutosCondicional;
+        private System.Windows.Forms.Button btnLocalizarCond;
+        private System.Windows.Forms.MaskedTextBox txtCPFCond;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnIrVenda;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRealizarCondicional;
+        private System.Windows.Forms.Label avisosCond;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridView dgvCondicional;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbClienteCond;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtQtdCond;
+        private System.Windows.Forms.TextBox txtPrecoCond;
+        private System.Windows.Forms.TextBox txtCodigoBarrasCond;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button btnConsultarCond;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

@@ -55,6 +55,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idCliente" Type="int" />
     <Property Name="data" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="Conta">
     <Key>
@@ -196,6 +197,7 @@
     <Property Name="cor" Type="int" />
     <Property Name="quantidade" Type="int" />
     <Property Name="data" Type="date" />
+    <Property Name="consignado" Type="varchar" MaxLength="5" />
   </EntityType>
   <EntityType Name="ProdutosPedido">
     <Key>
@@ -248,6 +250,7 @@
     <Property Name="valorrestante" Type="decimal" Precision="10" Scale="2" />
     <Property Name="idCategoriaPagamento" Type="int" />
     <Property Name="qtdParcelas" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="20" />
   </EntityType>
   <Association Name="FK__Pedido__forneced__2D27B809">
     <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />

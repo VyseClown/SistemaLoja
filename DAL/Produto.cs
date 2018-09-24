@@ -35,6 +35,7 @@ namespace DAL
         public Nullable<int> cor { get; set; }
         public Nullable<int> quantidade { get; set; }
         public Nullable<System.DateTime> data { get; set; }
+        public string consignado { get; set; }
     
         public virtual Categoria Categoria { get; set; }
         public virtual Marcas Marcas { get; set; }

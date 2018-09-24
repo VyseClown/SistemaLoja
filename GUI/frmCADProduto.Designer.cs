@@ -43,7 +43,7 @@
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.cbTamanho = new System.Windows.Forms.ComboBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
-            this.cbCondicional = new System.Windows.Forms.CheckBox();
+            this.cbConsignado = new System.Windows.Forms.CheckBox();
             this.txtPrecoCompra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
@@ -55,11 +55,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnNovaCategoria = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPorcentagem = new System.Windows.Forms.TextBox();
-            this.btnNovaCategoria = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -218,17 +218,17 @@
             this.txtPreco.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPreco_KeyUp);
             this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
-            // cbCondicional
+            // cbConsignado
             // 
-            this.cbCondicional.AutoSize = true;
-            this.cbCondicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbCondicional.Location = new System.Drawing.Point(822, 426);
-            this.cbCondicional.Name = "cbCondicional";
-            this.cbCondicional.Size = new System.Drawing.Size(145, 29);
-            this.cbCondicional.TabIndex = 12;
-            this.cbCondicional.Text = "Condicional";
-            this.cbCondicional.UseVisualStyleBackColor = true;
-            this.cbCondicional.CheckedChanged += new System.EventHandler(this.cbCondicional_CheckedChanged);
+            this.cbConsignado.AutoSize = true;
+            this.cbConsignado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.cbConsignado.Location = new System.Drawing.Point(822, 426);
+            this.cbConsignado.Name = "cbConsignado";
+            this.cbConsignado.Size = new System.Drawing.Size(147, 29);
+            this.cbConsignado.TabIndex = 12;
+            this.cbConsignado.Text = "Consignado";
+            this.cbConsignado.UseVisualStyleBackColor = true;
+            this.cbConsignado.CheckedChanged += new System.EventHandler(this.cbCondicional_CheckedChanged);
             // 
             // txtPrecoCompra
             // 
@@ -347,6 +347,28 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // btnNovaCategoria
+            // 
+            this.btnNovaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnNovaCategoria.Location = new System.Drawing.Point(542, 19);
+            this.btnNovaCategoria.Name = "btnNovaCategoria";
+            this.btnNovaCategoria.Size = new System.Drawing.Size(274, 31);
+            this.btnNovaCategoria.TabIndex = 4;
+            this.btnNovaCategoria.Text = "Cadastrar Nova Categoria /Marca/Modelo/Tamanho/Cor";
+            this.btnNovaCategoria.UseVisualStyleBackColor = true;
+            this.btnNovaCategoria.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(408, 19);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(128, 31);
+            this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.Text = "Diminuir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -378,28 +400,6 @@
             this.txtPorcentagem.TabIndex = 8;
             this.txtPorcentagem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPorcentagem_KeyUp);
             // 
-            // btnNovaCategoria
-            // 
-            this.btnNovaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnNovaCategoria.Location = new System.Drawing.Point(542, 19);
-            this.btnNovaCategoria.Name = "btnNovaCategoria";
-            this.btnNovaCategoria.Size = new System.Drawing.Size(274, 31);
-            this.btnNovaCategoria.TabIndex = 4;
-            this.btnNovaCategoria.Text = "Cadastrar Nova Categoria /Marca/Modelo/Tamanho/Cor";
-            this.btnNovaCategoria.UseVisualStyleBackColor = true;
-            this.btnNovaCategoria.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(408, 19);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(128, 31);
-            this.btnExcluir.TabIndex = 3;
-            this.btnExcluir.Text = "Diminuir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
             // frmCADProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,7 +416,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPrecoCompra);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbCondicional);
+            this.Controls.Add(this.cbConsignado);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.cbTamanho);
             this.Controls.Add(this.cbMarca);
@@ -460,7 +460,7 @@
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.ComboBox cbTamanho;
         private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.CheckBox cbCondicional;
+        private System.Windows.Forms.CheckBox cbConsignado;
         private System.Windows.Forms.TextBox txtPrecoCompra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvProdutos;

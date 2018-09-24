@@ -51,6 +51,7 @@
     <EntitySetMapping Name="Produto">
       <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Produto">
         <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="consignado" ColumnName="consignado" />
           <ScalarProperty Name="data" ColumnName="data" />
           <ScalarProperty Name="quantidade" ColumnName="quantidade" />
           <ScalarProperty Name="cor" ColumnName="cor" />
@@ -239,6 +240,7 @@
     <EntitySetMapping Name="Condicional">
       <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Condicional">
         <MappingFragment StoreEntitySet="Condicional">
+          <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="data" ColumnName="data" />
           <ScalarProperty Name="idCliente" ColumnName="idCliente" />
           <ScalarProperty Name="id" ColumnName="id" />
@@ -266,6 +268,7 @@
     <EntitySetMapping Name="Venda">
       <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Venda">
         <MappingFragment StoreEntitySet="Venda">
+          <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="qtdParcelas" ColumnName="qtdParcelas" />
           <ScalarProperty Name="idCategoriaPagamento" ColumnName="idCategoriaPagamento" />
           <ScalarProperty Name="valorrestante" ColumnName="valorrestante" />

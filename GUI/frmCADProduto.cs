@@ -97,10 +97,10 @@ namespace GUI
                     produto.data = DateTime.Now.Date;
                     produto.cor = int.Parse(cbCor.SelectedValue.ToString());
                     produto.quantidade = int.Parse(txtQtd.Text);
-                    if (cbCondicional.Checked == true)
-                        produto.condicional = "Sim";
+                    if (cbConsignado.Checked == true)
+                        produto.consignado = "Sim";
                     else
-                        produto.condicional = "Não";
+                        produto.consignado = "Não";
                     if (txtPrecoCompra.Text != "")
                         produto.precoCompra = Convert.ToDecimal(txtPrecoCompra.Text);//fazer isso já que minha mãe não se lembra de quanto custou cada peça
 
@@ -267,10 +267,10 @@ namespace GUI
                 txtPrecoCompra.Text = objP.precoCompra.ToString();
                 //txtQtd.Text = objP.quantidade.ToString();
                 txtQtd.Text = "1";
-                if (objP.condicional == "Sim")
-                    cbCondicional.Checked = true;
+                if (objP.consignado == "Sim")
+                    cbConsignado.Checked = true;
                 else
-                    cbCondicional.Checked = false;
+                    cbConsignado.Checked = false;
                 //cbNome.Text = obj.nome.Trim();
 
                 //var objCBCategoria = new Categoria();
@@ -538,10 +538,10 @@ namespace GUI
                     produto.precoCompra = decimal.Parse(txtPrecoCompra.Text);
                 else
                     produto.precoCompra = null;
-                if (cbCondicional.Checked == true)
-                    produto.condicional = "Sim";
+                if (cbConsignado.Checked == true)
+                    produto.consignado = "Sim";
                 else
-                    produto.condicional = "Não";
+                    produto.consignado = "Não";
 
                 produto.preco = decimal.Parse(txtPreco.Text);
                 objDAL.Alterar(produto);

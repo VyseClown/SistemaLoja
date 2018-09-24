@@ -189,6 +189,7 @@
     <Property Name="data" Type="DateTime" Precision="0" />
     <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Produto" FromRole="Produto" ToRole="ItensCondicional" />
     <NavigationProperty Name="ItensVenda" Relationship="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" FromRole="Produto" ToRole="ItensVenda" />
+    <Property Name="consignado" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ProdutosPedido">
     <Key>
@@ -553,6 +554,7 @@
     <Property Name="idCliente" Type="Int32" />
     <Property Name="data" Type="DateTime" Precision="0" />
     <NavigationProperty Name="ItensCondicional" Relationship="dbLojaQuiteriaModasModel.FK_ItensCondicional_Condicional" FromRole="Condicional" ToRole="ItensCondicional" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ItensCondicional">
     <Key>
@@ -588,6 +590,7 @@
     <Property Name="idCategoriaPagamento" Type="Int32" />
     <Property Name="qtdParcelas" Type="Int32" />
     <NavigationProperty Name="CategoriaPagamento" Relationship="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" FromRole="Venda" ToRole="CategoriaPagamento" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK_ClientePagamentos_Cliente">
     <End Type="dbLojaQuiteriaModasModel.Cliente" Role="Cliente" Multiplicity="0..1" />

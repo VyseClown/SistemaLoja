@@ -18,7 +18,7 @@ namespace DAL
             {
                 using (quiteriamodasEntities db = new quiteriamodasEntities())
                 {
-
+                    item.condicional = "Não";
                     //db.categoria.Attach(item);
                     db.Produto.Add(item);
                     //db.Entry(item).State = System.Data.EntityState.Added;
@@ -310,7 +310,7 @@ namespace DAL
             }
             return obj;
         }
-        public static List<ProdutoModel> SelecionarListaUmItem(int codigo)
+        public static List<ProdutoModel> SelecionarListaUmItem(int ?codigo)
         {
             List<ProdutoModel> obj = new List<ProdutoModel>();
             //var itemE = new estoque();
@@ -340,6 +340,40 @@ namespace DAL
                         cor = c.Nome,
                         quantidade = p.quantidade.Value,
                     }).ToList();
+
+            }
+            return obj;
+        }
+        public static ProdutoModel SelecionarUmProdutoModel(int? codigo)
+        {
+            ProdutoModel obj = new ProdutoModel();
+            //var itemE = new estoque();
+            //itemE = item;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from p in db.Produto
+                    where p.id == codigo
+                    join m in db.Marcas on p.marca equals m.id
+                    join mod in db.Modelo on p.modelo equals mod.id
+                    join cat in db.Categoria on p.categoriaid equals cat.id
+                    join tam in db.Tamanhos on p.tamanho equals tam.id
+                    join c in db.Cor on p.cor equals c.id
+                    //orderby c.tamanho
+                    select new ProdutoModel()
+                    {
+                        categoria = cat.descricao,
+                        condicional = p.condicional,
+                        //descricao = p.descricao,
+                        data = p.data.Value,
+                        id = p.id,
+                        marca = m.nome,
+                        modelo = mod.nome,
+                        preco = p.preco.Value,
+                        tamanho = tam.nome,
+                        codigodebarra = p.codigodebarra,
+                        cor = c.Nome,
+                        quantidade = p.quantidade.Value,
+                    }).FirstOrDefault();
 
             }
             return obj;

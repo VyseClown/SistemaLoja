@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteModel.cs" />
+    <Compile Include="CondicionalModel.cs" />
     <Compile Include="DividaModel.cs" />
     <Compile Include="FuncionarioModel.cs" />
     <Compile Include="ProdutoModel.cs" />
