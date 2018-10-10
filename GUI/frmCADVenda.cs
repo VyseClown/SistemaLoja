@@ -72,11 +72,13 @@ namespace GUI
                     dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
                     idCondicional = 0;
                 }
-                listaproduto = null;
+                
                 if (resultado)
                 {
                     avisos.Text = "Venda completada !";
                     frmCADVenda_Load(sender,e);
+                    limparTextBoxes(this.Controls);
+                    listaproduto = null;
                 }
 
                 else
@@ -327,7 +329,9 @@ namespace GUI
             List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
             if (dgvVenda.RowCount > 0)
             {
-
+                decimal valor = decimal.Parse(txtPreco.Text);
+                valor = valor + obj.preco;
+                txtPreco.Text = valor.ToString();
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
                 listaproduto.Add(obj);
                 dgvVenda.DataSource = listaproduto;
@@ -411,6 +415,9 @@ namespace GUI
             {
 
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
+                decimal valor = decimal.Parse(txtPreco.Text);
+                valor = valor - obj.preco;
+                txtPreco.Text = valor.ToString();
                 listaproduto.Remove(obj);
                 dgvVenda.DataSource = listaproduto;//null;//list;
                 txtCodigoDeBarras.Text = "";
@@ -829,7 +836,7 @@ namespace GUI
                 {
                     if (decimal.TryParse(txtPorcentagem.Text, out numero))
                     {
-                        numero = (Decimal.Parse(txtPreco.Text) + (Decimal.Parse((txtPreco.Text)) * ((Decimal.Parse(txtPorcentagem.Text)) / 100)));
+                        numero = (Decimal.Parse(txtPreco.Text) - (Decimal.Parse((txtPreco.Text)) * ((Decimal.Parse(txtPorcentagem.Text)) / 100)));
                         txtPrecoFinal.Text = Math.Round(numero, 2).ToString();
                     }
                     else
@@ -855,6 +862,60 @@ namespace GUI
                     ((TextBox)(ctrl)).Text = String.Empty;
                 }
             }
+        }
+
+        private void cbCliente_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DALPessoa dalpes = new DALPessoa();
+            Pessoa pes = new Pessoa();
+            pes = (dalpes.retornarPessoa(((int)cbCliente.SelectedValue)));
+            txtCPF.Text = pes.CPF;
+        }
+
+        private void cbClienteLista_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DALPessoa dalpes = new DALPessoa();
+            Pessoa pes = new Pessoa();
+            pes = (dalpes.retornarPessoa(((int)cbClienteLista.SelectedValue)));
+            txtCPFLista.Text = pes.CPF;
+        }
+
+        private void cbClienteLista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbClienteCond_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DALPessoa dalpes = new DALPessoa();
+            Pessoa pes = new Pessoa();
+            pes = (dalpes.retornarPessoa(((int)cbClienteCond.SelectedValue)));
+            txtCPFCond.Text = pes.CPF;
+        }
+
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparTextBoxes(this.Controls);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            limparTextBoxes(this.Controls);
+        }
+
+        private void txtPrecoFinal_KeyUp(object sender, KeyEventArgs e)
+        {
+            txtPorcentagem.Enabled = true;
+            if (txtPrecoFinal.Text != null)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtPrecoFinal.Text, "[0-9]") || txtPrecoFinal.Text.Contains(",") || txtPrecoFinal.Text.Contains("."))
+                {
+                    txtPrecoFinal.Text = "";
+                }
+            }
+            else
+                txtPrecoFinal.Text = "";
         }
     }
 }

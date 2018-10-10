@@ -95,3 +95,4 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Microsoft.Extensions
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.exe
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmPagamento.resources

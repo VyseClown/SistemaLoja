@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnConsultaProd = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
+            this.btnPagamento = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,11 +177,23 @@
             this.btnCaixa.UseVisualStyleBackColor = true;
             this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
+            // btnPagamento
+            // 
+            this.btnPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagamento.Location = new System.Drawing.Point(179, 262);
+            this.btnPagamento.Name = "btnPagamento";
+            this.btnPagamento.Size = new System.Drawing.Size(157, 96);
+            this.btnPagamento.TabIndex = 8;
+            this.btnPagamento.Text = "Pagamento";
+            this.btnPagamento.UseVisualStyleBackColor = true;
+            this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 437);
+            this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.btnCaixa);
             this.Controls.Add(this.btnConsultaProd);
             this.Controls.Add(this.button2);
@@ -215,6 +228,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnConsultaProd;
         private System.Windows.Forms.Button btnCaixa;
+        private System.Windows.Forms.Button btnPagamento;
     }
 }
 

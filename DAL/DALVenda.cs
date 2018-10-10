@@ -39,7 +39,10 @@ namespace DAL
                     if((cli.limitecredito - cli.totalComprado) > item.Valor) { 
                     db.Venda.Add(item);
                     db.SaveChanges();
-                    cli.totalComprado = cli.totalComprado + item.Valor;
+                    if(item.idCategoriaPagamento != 2)
+                        cli.totalComprado = cli.totalComprado + item.Valor;
+                    cli.totalComprado = cli.totalComprado;
+
                     db.Entry(cli).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     foreach (ItensVenda iv in listaItems)
@@ -309,6 +312,32 @@ namespace DAL
             }
             return cp;
         }
+        public List<VendaModel> carregarVendasCliente(int id)
+        {
+            List<VendaModel> vm;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                vm = (from v in db.Venda
+                    join cli in db.Cliente on v.idCliente equals cli.id
+                    join pes in db.Pessoa on cli.idPessoa equals pes.id
+                    join cp in db.CategoriaPagamento on v.idCategoriaPagamento equals cp.id
+                    where pes.id == id
+
+
+                    select new VendaModel()
+                    {
+                        id = v.id,
+                        idCliente = cli.id,
+                        Valor = v.Valor,
+                        valorrestante = v.valorrestante,
+                        data = v.data,
+                        qtdParcelas = v.qtdParcelas,
+                        categoriapagamento = cp.nome,
+
+                    }).ToList();
+            }
+            return vm;
+        }
         public static List<CondicionalModel> carregarCondicionaisPorData(DateTime inicio, DateTime fim)
         {
             List<CondicionalModel> cp;
@@ -333,6 +362,67 @@ namespace DAL
             }
             return cp;
         }
+
+        public bool RealizarPagamento(int idVenda, int idCliente, decimal valorRestante, decimal valorPagamento)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                Venda v = new Venda();
+                Cliente c = new Cliente();
+
+                v = (from ven in db.Venda where ven.id == idVenda select ven).FirstOrDefault();
+                decimal ?resto = valorRestante - valorPagamento;
+                if (resto < 0)
+                {
+                    Venda vaux = new Venda();
+                    
+                    v.valorrestante = 0;
+                    while (resto < 0)
+                    {
+                        vaux = (from vend in db.Venda
+                            where vend.idCliente == idCliente && vend.valorrestante > 0
+                            select vend).FirstOrDefault();
+
+                        vaux.valorrestante = vaux.valorrestante - (resto * -1);
+                        resto = vaux.valorrestante;
+                        if (resto < 0)
+                        {
+                            vaux.valorrestante = 0;
+                        }
+                        db.Entry(vaux).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
+                    }
+                }
+                else { 
+                    v.valorrestante = v.valorrestante - valorPagamento;
+                    db.Entry(v).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                }
+                return true;
+            }
+
+            
+        }
+        public bool RealizarPagamentoComTroco(int idVenda, int idCliente, decimal valorRestante, decimal valorPagamento)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                Venda v = new Venda();
+                Cliente c = new Cliente();
+
+                v = (from ven in db.Venda where ven.id == idVenda select ven).FirstOrDefault();
+                decimal? resto = valorRestante - valorPagamento;
+                
+                    v.valorrestante = v.valorrestante - valorPagamento;
+                    db.Entry(v).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                
+                return true;
+            }
+
+
+        }
+
         //public bool validarExisteCondicional(int id)
         //{
         //    List<Condicional> cp;

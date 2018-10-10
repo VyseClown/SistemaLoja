@@ -215,6 +215,32 @@ namespace DAL
             }
             return pes;
         }
+        public Cliente retornarClienteComConta(int id)
+        {
+            Cliente pes = new Cliente();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                pes = (from p in db.Pessoa
+                    join c in db.Cliente on p.id equals c.idPessoa
+                   // join v in db.Venda on c.id equals v.idCliente
+                    where p.id == id && c.totalComprado > 0
+                    select c).FirstOrDefault();
+            }
+            return pes;
+        }
+        public List<Pessoa> ListarClienteComConta()
+        {
+            List<Pessoa> pes = new List<Pessoa>();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                pes = (from p in db.Pessoa
+                    join c in db.Cliente on p.id equals c.idPessoa
+                    // join v in db.Venda on c.id equals v.idCliente
+                    where c.totalComprado > 0
+                    select p).ToList();
+            }
+            return pes;
+        }
         public Funcionario retornarFuncionario(int id)
         {
             Funcionario pes = new Funcionario();

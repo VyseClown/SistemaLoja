@@ -31,30 +31,32 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPagamento));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtRestante = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPagamento = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvVenda = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvVenda = new System.Windows.Forms.DataGridView();
-            this.txtPreco = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +73,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.txtPreco);
+            this.tabPage1.Controls.Add(this.txtRestante);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.txtPagamento);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.label1);
@@ -91,19 +95,103 @@
             this.tabPage1.Text = "Pagamento";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // txtRestante
             // 
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(879, 628);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Cobrança";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.txtRestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtRestante.Location = new System.Drawing.Point(247, 521);
+            this.txtRestante.MaxLength = 18;
+            this.txtRestante.Name = "txtRestante";
+            this.txtRestante.ReadOnly = true;
+            this.txtRestante.Size = new System.Drawing.Size(138, 30);
+            this.txtRestante.TabIndex = 97;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(242, 496);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 25);
+            this.label4.TabIndex = 98;
+            this.label4.Text = "Valor restante";
+            // 
+            // txtPagamento
+            // 
+            this.txtPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.txtPagamento.Location = new System.Drawing.Point(28, 521);
+            this.txtPagamento.MaxLength = 18;
+            this.txtPagamento.Name = "txtPagamento";
+            this.txtPagamento.Size = new System.Drawing.Size(138, 30);
+            this.txtPagamento.TabIndex = 94;
+            this.txtPagamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPagamento_KeyUp);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(23, 496);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(206, 25);
+            this.label7.TabIndex = 96;
+            this.label7.Text = "Valor do pagamento";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnSalvar);
+            this.groupBox1.Location = new System.Drawing.Point(471, 496);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(284, 59);
+            this.groupBox1.TabIndex = 95;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(6, 19);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(272, 31);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.Text = "Realizar Pagamento";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(23, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 25);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Produtos da compra";
+            // 
+            // dgvVenda
+            // 
+            this.dgvVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVenda.Location = new System.Drawing.Point(28, 200);
+            this.dgvVenda.Name = "dgvVenda";
+            this.dgvVenda.RowHeadersWidth = 4;
+            this.dgvVenda.Size = new System.Drawing.Size(834, 109);
+            this.dgvVenda.TabIndex = 92;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(23, 172);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(206, 25);
+            this.label10.TabIndex = 91;
+            this.label10.Text = "Compras pendentes";
+            // 
+            // dgvProdutos
+            // 
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Location = new System.Drawing.Point(28, 352);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.RowHeadersWidth = 4;
+            this.dgvProdutos.Size = new System.Drawing.Size(834, 109);
+            this.dgvProdutos.TabIndex = 90;
             // 
             // btnLocalizar
             // 
@@ -114,6 +202,7 @@
             this.btnLocalizar.Size = new System.Drawing.Size(39, 30);
             this.btnLocalizar.TabIndex = 88;
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // txtCPF
             // 
@@ -155,83 +244,22 @@
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(462, 33);
             this.cbCliente.TabIndex = 85;
+            this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
+            this.cbCliente.SelectionChangeCommitted += new System.EventHandler(this.cbCliente_SelectionChangeCommitted);
             // 
-            // label10
+            // tabPage2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(23, 172);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(206, 25);
-            this.label10.TabIndex = 91;
-            this.label10.Text = "Compras pendentes";
-            // 
-            // dgvProdutos
-            // 
-            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Location = new System.Drawing.Point(28, 200);
-            this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.RowHeadersWidth = 4;
-            this.dgvProdutos.Size = new System.Drawing.Size(834, 109);
-            this.dgvProdutos.TabIndex = 90;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(23, 324);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 25);
-            this.label1.TabIndex = 93;
-            this.label1.Text = "Produtos da compra";
-            // 
-            // dgvVenda
-            // 
-            this.dgvVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenda.Location = new System.Drawing.Point(28, 352);
-            this.dgvVenda.Name = "dgvVenda";
-            this.dgvVenda.RowHeadersWidth = 4;
-            this.dgvVenda.Size = new System.Drawing.Size(834, 109);
-            this.dgvVenda.TabIndex = 92;
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPreco.Location = new System.Drawing.Point(28, 521);
-            this.txtPreco.MaxLength = 18;
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.ReadOnly = true;
-            this.txtPreco.Size = new System.Drawing.Size(138, 30);
-            this.txtPreco.TabIndex = 94;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(23, 496);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 25);
-            this.label7.TabIndex = 96;
-            this.label7.Text = "Valor";
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(6, 19);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(272, 31);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.Text = "Realizar Pagamento";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Location = new System.Drawing.Point(190, 496);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 59);
-            this.groupBox1.TabIndex = 95;
-            this.groupBox1.TabStop = false;
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(879, 628);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Cobrança";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -239,9 +267,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(6, 184);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 25);
+            this.label2.Size = new System.Drawing.Size(213, 25);
             this.label2.TabIndex = 97;
-            this.label2.Text = "Produtos da compra";
+            this.label2.Text = "Datas de Pagamento";
             // 
             // dataGridView1
             // 
@@ -258,9 +286,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(6, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 25);
+            this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 95;
-            this.label3.Text = "Compras pendentes";
+            this.label3.Text = "Clientes";
             // 
             // dataGridView2
             // 
@@ -279,14 +307,15 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "frmPagamento";
             this.Text = "Pagamentos/Cobrança";
+            this.Load += new System.EventHandler(this.frmPagamento_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -307,7 +336,7 @@
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvVenda;
-        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.TextBox txtPagamento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalvar;
@@ -315,5 +344,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtRestante;
+        private System.Windows.Forms.Label label4;
     }
 }

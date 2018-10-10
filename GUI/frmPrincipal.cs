@@ -58,5 +58,11 @@ namespace GUI
             frmCaixa frmCAD = new frmCaixa();
             frmCAD.Show();
         }
+
+        private void btnPagamento_Click(object sender, EventArgs e)
+        {
+            frmPagamento frmCAD = new frmPagamento();
+            frmCAD.Show();
+        }
     }
 }

@@ -104,6 +104,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dgvListaCondicionais = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvClientesParaCondicional = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -116,6 +118,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicional)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCondicionais)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientesParaCondicional)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLimpar
@@ -127,6 +131,7 @@
             this.btnLimpar.TabIndex = 2;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSalvar
             // 
@@ -280,6 +285,7 @@
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(462, 33);
             this.cbCliente.TabIndex = 65;
+            this.cbCliente.SelectionChangeCommitted += new System.EventHandler(this.cbCliente_SelectionChangeCommitted);
             // 
             // tabControl1
             // 
@@ -341,6 +347,7 @@
             this.txtPrecoFinal.ReadOnly = true;
             this.txtPrecoFinal.Size = new System.Drawing.Size(138, 30);
             this.txtPrecoFinal.TabIndex = 91;
+            this.txtPrecoFinal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPrecoFinal_KeyUp);
             // 
             // label3
             // 
@@ -360,16 +367,17 @@
             this.txtPorcentagem.Name = "txtPorcentagem";
             this.txtPorcentagem.Size = new System.Drawing.Size(97, 30);
             this.txtPorcentagem.TabIndex = 89;
+            this.txtPorcentagem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPorcentagem_KeyUp);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(184, 513);
+            this.label2.Location = new System.Drawing.Point(203, 513);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 25);
+            this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 90;
-            this.label2.Text = "Porcentagem";
+            this.label2.Text = "Desconto";
             // 
             // cbTipoPagamento
             // 
@@ -596,6 +604,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Limpar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnRealizarCondicional
             // 
@@ -659,6 +668,7 @@
             this.cbClienteCond.Name = "cbClienteCond";
             this.cbClienteCond.Size = new System.Drawing.Size(462, 33);
             this.cbClienteCond.TabIndex = 111;
+            this.cbClienteCond.SelectionChangeCommitted += new System.EventHandler(this.cbClienteCond_SelectionChangeCommitted);
             // 
             // button5
             // 
@@ -921,6 +931,8 @@
             this.cbClienteLista.Name = "cbClienteLista";
             this.cbClienteLista.Size = new System.Drawing.Size(462, 33);
             this.cbClienteLista.TabIndex = 120;
+            this.cbClienteLista.SelectedIndexChanged += new System.EventHandler(this.cbClienteLista_SelectedIndexChanged);
+            this.cbClienteLista.SelectionChangeCommitted += new System.EventHandler(this.cbClienteLista_SelectionChangeCommitted);
             // 
             // label16
             // 
@@ -943,6 +955,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.dgvClientesParaCondicional);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -950,6 +964,25 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Clientes para Condicional";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(16, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 25);
+            this.label4.TabIndex = 64;
+            this.label4.Text = "Clientes";
+            // 
+            // dgvClientesParaCondicional
+            // 
+            this.dgvClientesParaCondicional.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientesParaCondicional.Location = new System.Drawing.Point(21, 43);
+            this.dgvClientesParaCondicional.Name = "dgvClientesParaCondicional";
+            this.dgvClientesParaCondicional.RowHeadersWidth = 4;
+            this.dgvClientesParaCondicional.Size = new System.Drawing.Size(834, 427);
+            this.dgvClientesParaCondicional.TabIndex = 63;
             // 
             // frmCADVenda
             // 
@@ -977,6 +1010,9 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCondicionais)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientesParaCondicional)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1057,5 +1093,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btnConsultarCond;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvClientesParaCondicional;
     }
 }
