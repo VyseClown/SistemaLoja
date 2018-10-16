@@ -993,7 +993,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCADVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vneda";
+            this.Text = "Venda";
             this.Load += new System.EventHandler(this.frmCADVenda_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
