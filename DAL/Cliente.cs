@@ -26,6 +26,8 @@ namespace DAL
         public Nullable<int> idPessoa { get; set; }
         public Nullable<decimal> totalComprado { get; set; }
         public Nullable<System.DateTime> DataUltimoPagamento { get; set; }
+        public Nullable<System.DateTime> DataUltimaCobranca { get; set; }
+        public Nullable<int> Pontos { get; set; }
     
         public virtual Pessoa Pessoa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -47,8 +47,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnCobranca = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.Pagamentos = new System.Windows.Forms.DataGridView();
+            this.dgvPagamentos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
@@ -57,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pagamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -249,8 +250,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnCobranca);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.Pagamentos);
+            this.tabPage2.Controls.Add(this.dgvPagamentos);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.dgvClientes);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -260,6 +262,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cobrança";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnCobranca
+            // 
+            this.btnCobranca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCobranca.Location = new System.Drawing.Point(11, 521);
+            this.btnCobranca.Name = "btnCobranca";
+            this.btnCobranca.Size = new System.Drawing.Size(272, 31);
+            this.btnCobranca.TabIndex = 98;
+            this.btnCobranca.Text = "Realizar Cobrança";
+            this.btnCobranca.UseVisualStyleBackColor = true;
+            this.btnCobranca.Click += new System.EventHandler(this.btnCobranca_Click);
             // 
             // label2
             // 
@@ -271,14 +284,14 @@
             this.label2.TabIndex = 97;
             this.label2.Text = "Datas de Pagamento";
             // 
-            // Pagamentos
+            // dgvPagamentos
             // 
-            this.Pagamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Pagamentos.Location = new System.Drawing.Point(11, 286);
-            this.Pagamentos.Name = "Pagamentos";
-            this.Pagamentos.RowHeadersWidth = 4;
-            this.Pagamentos.Size = new System.Drawing.Size(834, 195);
-            this.Pagamentos.TabIndex = 96;
+            this.dgvPagamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPagamentos.Location = new System.Drawing.Point(11, 286);
+            this.dgvPagamentos.Name = "dgvPagamentos";
+            this.dgvPagamentos.RowHeadersWidth = 4;
+            this.dgvPagamentos.Size = new System.Drawing.Size(834, 195);
+            this.dgvPagamentos.TabIndex = 96;
             // 
             // label3
             // 
@@ -316,7 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pagamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
@@ -341,10 +354,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView Pagamentos;
+        private System.Windows.Forms.DataGridView dgvPagamentos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.TextBox txtRestante;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCobranca;
     }
 }

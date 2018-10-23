@@ -106,6 +106,8 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvClientesParaCondicional = new System.Windows.Forms.DataGridView();
+            this.btnCarregarClientes = new System.Windows.Forms.Button();
+            this.btnIrParaCondicional = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -461,6 +463,7 @@
             this.btnDescer.Size = new System.Drawing.Size(35, 33);
             this.btnDescer.TabIndex = 70;
             this.btnDescer.UseVisualStyleBackColor = true;
+            this.btnDescer.Visible = false;
             this.btnDescer.Click += new System.EventHandler(this.btnDescer_Click);
             // 
             // btnSubir
@@ -471,6 +474,7 @@
             this.btnSubir.Size = new System.Drawing.Size(35, 33);
             this.btnSubir.TabIndex = 69;
             this.btnSubir.UseVisualStyleBackColor = true;
+            this.btnSubir.Visible = false;
             this.btnSubir.Click += new System.EventHandler(this.btnSubir_Click);
             // 
             // label1
@@ -955,6 +959,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnIrParaCondicional);
+            this.tabPage4.Controls.Add(this.btnCarregarClientes);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.dgvClientesParaCondicional);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -983,6 +989,28 @@
             this.dgvClientesParaCondicional.RowHeadersWidth = 4;
             this.dgvClientesParaCondicional.Size = new System.Drawing.Size(834, 427);
             this.dgvClientesParaCondicional.TabIndex = 63;
+            // 
+            // btnCarregarClientes
+            // 
+            this.btnCarregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregarClientes.Location = new System.Drawing.Point(21, 533);
+            this.btnCarregarClientes.Name = "btnCarregarClientes";
+            this.btnCarregarClientes.Size = new System.Drawing.Size(263, 31);
+            this.btnCarregarClientes.TabIndex = 130;
+            this.btnCarregarClientes.Text = "Carregar clientes";
+            this.btnCarregarClientes.UseVisualStyleBackColor = true;
+            this.btnCarregarClientes.Click += new System.EventHandler(this.btnCarregarClientes_Click);
+            // 
+            // btnIrParaCondicional
+            // 
+            this.btnIrParaCondicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIrParaCondicional.Location = new System.Drawing.Point(327, 533);
+            this.btnIrParaCondicional.Name = "btnIrParaCondicional";
+            this.btnIrParaCondicional.Size = new System.Drawing.Size(263, 31);
+            this.btnIrParaCondicional.TabIndex = 131;
+            this.btnIrParaCondicional.Text = "Ir para condicional";
+            this.btnIrParaCondicional.UseVisualStyleBackColor = true;
+            this.btnIrParaCondicional.Click += new System.EventHandler(this.btnIrParaCondicional_Click);
             // 
             // frmCADVenda
             // 
@@ -1095,5 +1123,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvClientesParaCondicional;
+        private System.Windows.Forms.Button btnCarregarClientes;
+        private System.Windows.Forms.Button btnIrParaCondicional;
     }
 }

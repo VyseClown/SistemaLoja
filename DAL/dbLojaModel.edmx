@@ -43,6 +43,8 @@
           <Property Name="idPessoa" Type="int" />
           <Property Name="totalComprado" Type="decimal" Precision="18" Scale="2" />
           <Property Name="DataUltimoPagamento" Type="date" />
+          <Property Name="DataUltimaCobranca" Type="date" />
+          <Property Name="Pontos" Type="int" />
         </EntityType>
         <EntityType Name="ClientePagamentos">
           <Key>
@@ -1035,6 +1037,8 @@
           <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" FromRole="Cliente" ToRole="Pessoa" />
           <NavigationProperty Name="ClientePagamentos" Relationship="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" FromRole="Cliente" ToRole="ClientePagamentos" />
           <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_Venda_Cliente" FromRole="Cliente" ToRole="Venda" />
+          <Property Name="DataUltimaCobranca" Type="DateTime" Precision="0" />
+          <Property Name="Pontos" Type="Int32" />
         </EntityType>
         <EntityType Name="Endereco">
           <Key>
@@ -1462,6 +1466,8 @@
           <EntitySetMapping Name="Cliente">
             <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Cliente">
               <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="Pontos" ColumnName="Pontos" />
+                <ScalarProperty Name="DataUltimaCobranca" ColumnName="DataUltimaCobranca" />
                 <ScalarProperty Name="DataUltimoPagamento" ColumnName="DataUltimoPagamento" />
                 <ScalarProperty Name="totalComprado" ColumnName="totalComprado" />
                 <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />

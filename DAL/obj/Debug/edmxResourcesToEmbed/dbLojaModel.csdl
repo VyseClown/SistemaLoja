@@ -394,6 +394,8 @@
     <NavigationProperty Name="Pessoa" Relationship="dbLojaQuiteriaModasModel.FK_Cliente_Pessoa" FromRole="Cliente" ToRole="Pessoa" />
     <NavigationProperty Name="ClientePagamentos" Relationship="dbLojaQuiteriaModasModel.FK_ClientePagamentos_Cliente" FromRole="Cliente" ToRole="ClientePagamentos" />
     <NavigationProperty Name="Venda" Relationship="dbLojaQuiteriaModasModel.FK_Venda_Cliente" FromRole="Cliente" ToRole="Venda" />
+    <Property Name="DataUltimaCobranca" Type="DateTime" Precision="0" />
+    <Property Name="Pontos" Type="Int32" />
   </EntityType>
   <EntityType Name="Endereco">
     <Key>

@@ -140,6 +140,8 @@
     <EntitySetMapping Name="Cliente">
       <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Cliente">
         <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Pontos" ColumnName="Pontos" />
+          <ScalarProperty Name="DataUltimaCobranca" ColumnName="DataUltimaCobranca" />
           <ScalarProperty Name="DataUltimoPagamento" ColumnName="DataUltimoPagamento" />
           <ScalarProperty Name="totalComprado" ColumnName="totalComprado" />
           <ScalarProperty Name="idPessoa" ColumnName="idPessoa" />

@@ -38,6 +38,8 @@
     <Property Name="idPessoa" Type="int" />
     <Property Name="totalComprado" Type="decimal" Precision="18" Scale="2" />
     <Property Name="DataUltimoPagamento" Type="date" />
+    <Property Name="DataUltimaCobranca" Type="date" />
+    <Property Name="Pontos" Type="int" />
   </EntityType>
   <EntityType Name="ClientePagamentos">
     <Key>

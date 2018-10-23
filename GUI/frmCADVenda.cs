@@ -83,7 +83,7 @@ namespace GUI
 
                 else
                 {
-                    
+                    MessageBox.Show("Venda não completada !");
                 }
             }
             else
@@ -209,40 +209,7 @@ namespace GUI
             if (obj != null)
             {
                 txtCodigoDeBarras.Text = obj.codigodebarra.Trim();
-                //txtDescricao.Text = obj.descricao.Trim();
-                //cbMarca.Text = obj.marca.Trim();
-                //cbModelo.Text = obj.modelo.Trim();
-                //cbTamanho.Text = obj.tamanho;
                 txtQtd.Text = "1";
-
-                
-                //cbCategoria.DataSource = BLLCat.listarTodasCat();//e é assim que selecionamos todos mas deixamos na categoria do próprio
-                //cbCategoria.ValueMember = "id";//produto !
-                //cbCategoria.DisplayMember = "descricao";
-
-
-
-                //cbMarca.DataSource = BLLProduto.ListarMarca();
-                //cbMarca.ValueMember = "id";
-                //cbMarca.DisplayMember = "nome";
-
-                //cbModelo.DataSource = BLLProduto.ListarModelo();
-                //cbModelo.ValueMember = "id";
-                //cbModelo.DisplayMember = "nome";
-
-                //cbTamanho.DataSource = BLLProduto.ListarTamanho();
-                //cbTamanho.ValueMember = "id";
-                //cbTamanho.DisplayMember = "nome";
-
-                //cbCor.DataSource = BLLProduto.ListarCor();
-                //cbCor.ValueMember = "id";
-                //cbCor.DisplayMember = "Nome";
-
-                //cbCategoria.SelectedValue = objP.categoriaid;
-                //cbMarca.SelectedValue = objP.marca;
-                //cbModelo.SelectedValue = objP.modelo;
-                //cbTamanho.SelectedValue = objP.tamanho;
-                //cbCor.SelectedValue = objP.cor;
                 txtPreco.Text = obj.preco.ToString();
                 avisos.Visible = true;
                 avisos.Text = "Codigo de barras já registrado !";
@@ -254,33 +221,9 @@ namespace GUI
             else
             {
                 MessageBox.Show("O produto não esta cadastrado !");
-               // cbMarca.Focus();
-                //txtPrecoCompra.Text = "";
-                //txtDescricao.Text = "";
                 txtPreco.Text = "";
                 //txtPorcentagem.Text = "";
                 txtQtd.Text = "1";
-                //txtDescricao.Text = "2017";
-
-                //cbMarca.DataSource = BLLProduto.ListarMarca();
-                //cbMarca.ValueMember = "id";
-                //cbMarca.DisplayMember = "nome";
-
-                //cbModelo.DataSource = BLLProduto.ListarModelo();
-                //cbModelo.ValueMember = "id";
-                //cbModelo.DisplayMember = "nome";
-
-                //cbTamanho.DataSource = BLLProduto.ListarTamanho();
-                //cbTamanho.ValueMember = "id";
-                //cbTamanho.DisplayMember = "nome";
-
-                //cbCategoria.DataSource = BLLCat.listarTodasCat();
-                //cbCategoria.ValueMember = "id";
-                //cbCategoria.DisplayMember = "descricao";
-
-                //cbCor.DataSource = BLLProduto.ListarCor();
-                //cbCor.ValueMember = "id";
-                //cbCor.DisplayMember = "Nome";
 
                 dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
             }
@@ -293,13 +236,10 @@ namespace GUI
             ProdutoModel obj = objDAL.SelecionarProdutoModelID(id);
             ProdutoModel obj2 = DALProduto.pesquisarProduto(obj.codigodebarra);
 
-
-
             List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
             if (dgvVenda.RowCount > 0)
             {
-
-                //list = DALProduto.SelecionarListaUmItem(obj.id);
+                
                 listaproduto.Add(obj);
                 
                 dgvVenda.DataSource = listaproduto;
@@ -313,7 +253,6 @@ namespace GUI
                 txtCodigoDeBarras.Text = "";
                 dgvProdutos.DataSource = null;
             }
-            //List<DataGridViewRow> selRow = dgvProdutos.SelectedRows;
         }
 
         private void dgvProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -332,7 +271,6 @@ namespace GUI
                 decimal valor = decimal.Parse(txtPreco.Text);
                 valor = valor + obj.preco;
                 txtPreco.Text = valor.ToString();
-                //list = DALProduto.SelecionarListaUmItem(obj.id);
                 listaproduto.Add(obj);
                 dgvVenda.DataSource = listaproduto;
                 txtCodigoDeBarras.Text = "";
@@ -346,58 +284,6 @@ namespace GUI
                 txtCodigoDeBarras.Text = "";
                 dgvProdutos.DataSource = null;
             }
-            
-
-            
-            //int RowIndex = dgvVenda.RowCount - 1;
-            //DataGridViewRow row = dgvVenda.Rows[RowIndex];
-            //row.Cells["id"].Value = obj.id;
-            //row.Cells["tamanho"].Value = obj.tamanho;
-            //row.Cells["preco"].Value = obj.preco;
-            //row.Cells["marca"].Value = obj.marca;
-            //row.Cells["quantidade"].Value = obj.quantidade;
-            //row.Cells["cor"].Value = obj.cor;
-            //row.Cells["modelo"].Value = obj.modelo;
-            //row.Cells["categoria"].Value = obj2.categoria;
-            //row.Cells["data"].Value = obj.data;
-            //row.Cells["condicional"].Value = obj.condicional;
-            //row.Cells["codigodebarra"].Value = obj.codigodebarra;
-
-
-            //dgvVenda.Rows.Add(row);
-            //if (dgvVenda.RowCount > 0)
-            //{
-            //    dgvVenda.Rows.Add(row);
-            //}
-
-            //if (cont == 0)
-            //{
-            //DALProduto objDAL = new DALProduto();
-            //Produto obj = objDAL.SelecionarProdutoID(id);
-            //dgvVenda.DataSource = DALProduto.SelecionarLista(obj.codigodebarra);
-            //cont++;
-            //}
-            //else {
-            //    DALProduto objDAL = new DALProduto();
-            //    Produto obj = objDAL.SelecionarProdutoID(id);
-            //dgvVenda.DataSource = DALProduto.SelecionarLista(obj.codigodebarra);
-            //DataTable dataTable = (DataTable)dgvVenda.DataSource;
-            //    DataRow drToAdd = dataTable.NewRow();
-            //    drToAdd["id"] = obj.id;
-            //    drToAdd["tamanho"] = obj.tamanho;
-            //    drToAdd["preco"] = obj.preco;
-            //    drToAdd["marca"] = obj.marca;
-            //    drToAdd["quantidade"] = obj.quantidade;
-            //    drToAdd["cor"] = obj.cor;
-            //    drToAdd["modelo"] = obj.modelo;
-            //    drToAdd["categoria"] = obj.Categoria;
-            //    drToAdd["data"] = obj.data;
-            //    drToAdd["condicional"] = obj.condicional;
-            //    drToAdd["codigodebarra"] = obj.codigodebarra;
-            //    dataTable.Rows.Add(drToAdd);
-            //    dataTable.AcceptChanges();
-            //    dgvVenda.DataSource = dataTable;
-            //}
 
         }
 
@@ -476,40 +362,11 @@ namespace GUI
             if (obj != null)
             {
                 txtCodigoBarrasCond.Text = obj.codigodebarra.Trim();
-                //txtDescricao.Text = obj.descricao.Trim();
-                //cbMarcaCond.Text = obj.marca.Trim();
-                //cbModeloCond.Text = obj.modelo.Trim();
-                //cbTamanhoCond.Text = obj.tamanho;
                 txtQtdCond.Text = "1";
-                //cbCategoriaCond.DataSource = BLLCat.listarTodasCat();//e é assim que selecionamos todos mas deixamos na categoria do próprio
-                //cbCategoriaCond.ValueMember = "id";//produto !
-                //cbCategoriaCond.DisplayMember = "descricao";
-
-                //cbMarcaCond.DataSource = BLLProduto.ListarMarca();
-                //cbMarcaCond.ValueMember = "id";
-                //cbMarcaCond.DisplayMember = "nome";
-
-                //cbModeloCond.DataSource = BLLProduto.ListarModelo();
-                //cbModeloCond.ValueMember = "id";
-                //cbModeloCond.DisplayMember = "nome";
-
-                //cbTamanhoCond.DataSource = BLLProduto.ListarTamanho();
-                //cbTamanhoCond.ValueMember = "id";
-                //cbTamanhoCond.DisplayMember = "nome";
-
-                //cbCorCond.DataSource = BLLProduto.ListarCor();
-                //cbCorCond.ValueMember = "id";
-                //cbCorCond.DisplayMember = "Nome";
-
-                //cbCategoriaCond.SelectedValue = objP.categoriaid;
-                //cbMarcaCond.SelectedValue = objP.marca;
-                //cbModeloCond.SelectedValue = objP.modelo;
-                //cbTamanhoCond.SelectedValue = objP.tamanho;
-                //cbCorCond.SelectedValue = objP.cor;
                 txtPrecoCond.Text = obj.preco.ToString();
                 avisosCond.Visible = true;
                 avisosCond.Text = "Codigo de barras já registrado !";
-                dgvCondicional.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
+                dgvCondicional.DataSource = DALProduto.SelecionarListaComQtd(txtCodigoDeBarras.Text);
 
 
                 //cbMarca.Focus();
@@ -517,35 +374,11 @@ namespace GUI
             else
             {
                 MessageBox.Show("O produto não esta cadastrado !");
-                //cbMarca.Focus();
-                //txtPrecoCompra.Text = "";
-                //txtDescricao.Text = "";
                 txtPrecoCond.Text = "";
                 //txtPorcentagem.Text = "";
                 txtQtdCond.Text = "1";
-                //txtDescricao.Text = "2017";
 
-                //cbMarcaCond.DataSource = BLLProduto.ListarMarca();
-                //cbMarcaCond.ValueMember = "id";
-                //cbMarcaCond.DisplayMember = "nome";
-
-                //cbModeloCond.DataSource = BLLProduto.ListarModelo();
-                //cbModeloCond.ValueMember = "id";
-                //cbModeloCond.DisplayMember = "nome";
-
-                //cbTamanhoCond.DataSource = BLLProduto.ListarTamanho();
-                //cbTamanhoCond.ValueMember = "id";
-                //cbTamanhoCond.DisplayMember = "nome";
-
-                //cbCategoriaCond.DataSource = BLLCat.listarTodasCat();
-                //cbCategoriaCond.ValueMember = "id";
-                //cbCategoriaCond.DisplayMember = "descricao";
-
-                //cbCorCond.DataSource = BLLProduto.ListarCor();
-                //cbCorCond.ValueMember = "id";
-                //cbCorCond.DisplayMember = "Nome";
-
-                dgvCondicional.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
+                dgvCondicional.DataSource = DALProduto.SelecionarListaComQtd(txtCodigoDeBarras.Text);
             }
         }
 
@@ -630,10 +463,15 @@ namespace GUI
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
                 listaprodutocondicional.Add(obj);
                 dgvProdutosCondicional.DataSource = listaprodutocondicional;
-                
+                dgvProdutosCondicional.Update();
+                dgvProdutosCondicional.Refresh();
+                //txtPreco.Text = 
                 txtCodigoDeBarras.Text = "";
                 dgvCondicional.DataSource = null;
 
+                decimal valor = decimal.Parse(txtPrecoCond.Text);
+                valor = valor + obj.preco;
+                txtPrecoCond.Text = valor.ToString();
             }
             else
             {
@@ -916,6 +754,17 @@ namespace GUI
             }
             else
                 txtPrecoFinal.Text = "";
+        }
+
+        private void btnCarregarClientes_Click(object sender, EventArgs e)
+        {
+            dgvClientesParaCondicional.DataSource = DALVenda.carregarClientesParaCondicional();
+        }
+
+        private void btnIrParaCondicional_Click(object sender, EventArgs e)
+        {
+            int id = (int)dgvClientesParaCondicional.CurrentRow.Cells[3].Value;
+            tabControl1.SelectTab(1);
         }
     }
 }

@@ -187,5 +187,16 @@ namespace GUI
                 else
                     txtPagamento.Text = "";
         }
+
+        private void btnCobranca_Click(object sender, EventArgs e)
+        {
+            int idCliente = (int)dgvClientes.CurrentRow.Cells[0].Value;
+            DALCobranca dalco = new DALCobranca();
+            bool resultado = dalco.realizarCobranca(idCliente);
+            if (resultado)
+                MessageBox.Show("Tudo certo ! Cobrança efetuada !");
+            else
+                MessageBox.Show("Algo deu errado ! Contate o desenvolvedor !");
+        }
     }
 }

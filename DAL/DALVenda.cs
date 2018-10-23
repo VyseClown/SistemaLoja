@@ -42,7 +42,7 @@ namespace DAL
                     if(item.idCategoriaPagamento != 2)
                         cli.totalComprado = cli.totalComprado + item.Valor;
                     cli.totalComprado = cli.totalComprado;
-
+                        cli.Pontos = 20;
                     db.Entry(cli).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     foreach (ItensVenda iv in listaItems)
@@ -391,11 +391,21 @@ namespace DAL
                         }
                         db.Entry(vaux).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
+
+                        c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
+                        c.Pontos = c.Pontos + 2;
+                        db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
                     }
                 }
                 else { 
                     v.valorrestante = v.valorrestante - valorPagamento;
                     db.Entry(v).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+
+                    c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
+                    c.Pontos = c.Pontos + 2;
+                    db.Entry(c).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }
                 return true;
@@ -416,11 +426,57 @@ namespace DAL
                     v.valorrestante = v.valorrestante - valorPagamento;
                     db.Entry(v).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                
+                c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
+                c.Pontos = c.Pontos + 2;
+                db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+
                 return true;
             }
 
 
+        }
+        public static List<ClienteModel> carregarClientesParaCondicional()
+        {
+            List<ClienteModel> cp;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())//timespan não funcionou dentro da query, mudar isso
+            {
+                cp = (from p in db.Pessoa
+                      
+                      join cli in db.Cliente on p.id equals cli.idPessoa
+                      join pag in db.ClientePagamentos on cli.id equals pag.idCliente
+                      join comp in db.Venda on cli.id equals comp.idCliente
+                      join e in db.Endereco on p.idEndereco equals e.id
+                      join c in db.City on e.idCidade equals c.Id
+                      join s in db.State on c.IdState equals s.Id
+                      //where (TimeSpan.Parse(DateTime.Now.ToString()) - TimeSpan.Parse(cli.DataUltimoPagamento.ToString())).TotalDays < 30 && cli.Pontos > 20 && cli.limitecredito > 1000
+                      //orderby c.tamanho
+                      where (System.Data.Entity.SqlServer.SqlFunctions.DateDiff("day",DateTime.Now,(cli.DataUltimoPagamento))) < 30 && cli.Pontos > 20 && cli.limitecredito > 1000
+                      select new ClienteModel()
+                      {
+                          nome = p.nome,
+                          celular = p.celular,
+                          celular2 = p.celular2,
+                          CPF = p.CPF,
+                          dataNascimento = p.datanascimento.Value,
+                          dataUltimoPagamento = p.datanascimento.Value,
+                          email = p.email,
+                          id = p.id,
+                          telefone = p.telefone,
+                          telefone2 = p.telefone2,
+                          limitecredito = cli.limitecredito.Value,
+                          totalComprado = cli.totalComprado.Value,
+                          bairro = e.bairro,
+                          idCidade = c.Id,
+                          idEndereco = e.id,
+                          numero = e.numero,
+                          rua = e.rua,
+                          idEstado = s.Id,
+                          RG = p.RG,
+                          CEP = e.CEP,
+                      }).ToList();
+            }
+            return cp;
         }
 
         //public bool validarExisteCondicional(int id)
