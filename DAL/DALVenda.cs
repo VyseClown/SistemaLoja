@@ -369,6 +369,7 @@ namespace DAL
             {
                 Venda v = new Venda();
                 Cliente c = new Cliente();
+                ClientePagamentos cp = new ClientePagamentos();
 
                 v = (from ven in db.Venda where ven.id == idVenda select ven).FirstOrDefault();
                 decimal ?resto = valorRestante - valorPagamento;
@@ -382,7 +383,7 @@ namespace DAL
                         vaux = (from vend in db.Venda
                             where vend.idCliente == idCliente && vend.valorrestante > 0
                             select vend).FirstOrDefault();
-
+                        //em algum ponto, colocar o novo registro de ClientePagamento que não está sendo feito
                         vaux.valorrestante = vaux.valorrestante - (resto * -1);
                         resto = vaux.valorrestante;
                         if (resto < 0)
