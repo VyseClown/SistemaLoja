@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnRecalcular = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.dgvDividas = new System.Windows.Forms.DataGridView();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.cbRecorrente = new System.Windows.Forms.CheckBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +60,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Location = new System.Drawing.Point(12, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(437, 389);
@@ -137,6 +137,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Divida";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.btnExcluir.Location = new System.Drawing.Point(196, 147);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(98, 46);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // dgvDividas
             // 
@@ -269,22 +280,11 @@
             this.txtNome.Size = new System.Drawing.Size(257, 30);
             this.txtNome.TabIndex = 0;
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnExcluir.Location = new System.Drawing.Point(196, 147);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(98, 46);
-            this.btnExcluir.TabIndex = 9;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
             // frmCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 412);
+            this.ClientSize = new System.Drawing.Size(465, 493);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "frmCaixa";

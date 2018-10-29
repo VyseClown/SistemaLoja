@@ -35,8 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPagamento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvVenda = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,14 +45,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnCobranca = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvPagamentos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -66,7 +64,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Location = new System.Drawing.Point(13, 85);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(887, 654);
@@ -74,11 +72,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.materialRaisedButton1);
             this.tabPage1.Controls.Add(this.txtRestante);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.txtPagamento);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dgvVenda);
             this.tabPage1.Controls.Add(this.label10);
@@ -136,26 +134,6 @@
             this.label7.TabIndex = 96;
             this.label7.Text = "Valor do pagamento";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Location = new System.Drawing.Point(471, 496);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 59);
-            this.groupBox1.TabIndex = 95;
-            this.groupBox1.TabStop = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(6, 19);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(272, 31);
-            this.btnSalvar.TabIndex = 0;
-            this.btnSalvar.Text = "Realizar Pagamento";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -174,6 +152,7 @@
             this.dgvVenda.RowHeadersWidth = 4;
             this.dgvVenda.Size = new System.Drawing.Size(834, 109);
             this.dgvVenda.TabIndex = 92;
+            this.dgvVenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenda_CellDoubleClick);
             // 
             // label10
             // 
@@ -250,7 +229,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnCobranca);
+            this.tabPage2.Controls.Add(this.materialRaisedButton2);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.dgvPagamentos);
             this.tabPage2.Controls.Add(this.label3);
@@ -262,17 +241,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cobrança";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnCobranca
-            // 
-            this.btnCobranca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCobranca.Location = new System.Drawing.Point(11, 521);
-            this.btnCobranca.Name = "btnCobranca";
-            this.btnCobranca.Size = new System.Drawing.Size(272, 31);
-            this.btnCobranca.TabIndex = 98;
-            this.btnCobranca.Text = "Realizar Cobrança";
-            this.btnCobranca.UseVisualStyleBackColor = true;
-            this.btnCobranca.Click += new System.EventHandler(this.btnCobranca_Click);
             // 
             // label2
             // 
@@ -312,19 +280,45 @@
             this.dgvClientes.Size = new System.Drawing.Size(834, 195);
             this.dgvClientes.TabIndex = 94;
             // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(472, 508);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(194, 43);
+            this.materialRaisedButton1.TabIndex = 99;
+            this.materialRaisedButton1.Text = "Realizar Pagamento";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(11, 519);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(179, 31);
+            this.materialRaisedButton2.TabIndex = 99;
+            this.materialRaisedButton2.Text = "Realizar Cobrança";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.btnCobranca_Click);
+            // 
             // frmPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 679);
+            this.ClientSize = new System.Drawing.Size(912, 751);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmPagamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagamentos/Cobrança";
             this.Load += new System.EventHandler(this.frmPagamento_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -351,14 +345,13 @@
         private System.Windows.Forms.DataGridView dgvVenda;
         private System.Windows.Forms.TextBox txtPagamento;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvPagamentos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.TextBox txtRestante;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCobranca;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
     }
 }

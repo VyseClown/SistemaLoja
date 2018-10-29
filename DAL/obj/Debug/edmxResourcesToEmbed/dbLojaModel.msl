@@ -281,5 +281,31 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Permissoes">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Permissoes">
+        <MappingFragment StoreEntitySet="Permissoes">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioPermissoes">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.UsuarioPermissoes">
+        <MappingFragment StoreEntitySet="UsuarioPermissoes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idPermissao" ColumnName="idPermissao" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

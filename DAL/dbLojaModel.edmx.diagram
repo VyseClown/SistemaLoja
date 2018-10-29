@@ -53,6 +53,11 @@
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Produto" />
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_ItensVenda_Venda" />
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_Venda_CategoriaPagamento" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Permissoes" Width="1.5" PointX="10.375" PointY="10.125" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.Usuario" Width="1.5" PointX="10.375" PointY="13" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.UsuarioPermissoes" Width="1.5" PointX="12.625" PointY="9.875" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Permissoes" />
+        <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Usuario" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

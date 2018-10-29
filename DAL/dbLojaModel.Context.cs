@@ -51,5 +51,8 @@ namespace DAL
         public virtual DbSet<ItensCondicional> ItensCondicional { get; set; }
         public virtual DbSet<ItensVenda> ItensVenda { get; set; }
         public virtual DbSet<Venda> Venda { get; set; }
+        public virtual DbSet<Permissoes> Permissoes { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<UsuarioPermissoes> UsuarioPermissoes { get; set; }
     }
 }

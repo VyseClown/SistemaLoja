@@ -98,3 +98,6 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmPagamento.res
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\MaterialSkin.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADUsuario.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmLogin.resources

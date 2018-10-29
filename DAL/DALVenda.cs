@@ -373,6 +373,9 @@ namespace DAL
 
                 v = (from ven in db.Venda where ven.id == idVenda select ven).FirstOrDefault();
                 decimal ?resto = valorRestante - valorPagamento;
+                cp.data = DateTime.Now;
+                cp.valor = valorPagamento;
+                cp.idCliente = idCliente;
                 if (resto < 0)
                 {
                     Venda vaux = new Venda();
@@ -392,10 +395,13 @@ namespace DAL
                         }
                         db.Entry(vaux).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
-
+                                               
                         c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                         c.Pontos = c.Pontos + 2;
                         db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
+
+                        db.ClientePagamentos.Add(cp);
                         db.SaveChanges();
                     }
                 }
@@ -407,6 +413,10 @@ namespace DAL
                     c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                     c.Pontos = c.Pontos + 2;
                     db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+
+                    db.SaveChanges();
+
+                    db.ClientePagamentos.Add(cp);
                     db.SaveChanges();
                 }
                 return true;
@@ -420,16 +430,22 @@ namespace DAL
             {
                 Venda v = new Venda();
                 Cliente c = new Cliente();
-
+                ClientePagamentos cp = new ClientePagamentos();
+                cp.data = DateTime.Now;
+                
+                cp.idCliente = idCliente;
                 v = (from ven in db.Venda where ven.id == idVenda select ven).FirstOrDefault();
                 decimal? resto = valorRestante - valorPagamento;
-                
-                    v.valorrestante = v.valorrestante - valorPagamento;
+                cp.valor = valorPagamento;
+                v.valorrestante = v.valorrestante - valorPagamento;
                     db.Entry(v).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                 c.Pontos = c.Pontos + 2;
                 db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+
+                db.ClientePagamentos.Add(cp);
                 db.SaveChanges();
 
                 return true;

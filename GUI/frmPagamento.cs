@@ -12,10 +12,11 @@ using BLL;
 using System.Text.RegularExpressions;
 using Modelo;
 using System.Globalization;
+using MaterialSkin.Controls;
 
 namespace GUI
 {
-    public partial class frmPagamento : Form
+    public partial class frmPagamento : MaterialForm
     {
         public frmPagamento()
         {
@@ -197,6 +198,36 @@ namespace GUI
                 MessageBox.Show("Tudo certo ! Cobrança efetuada !");
             else
                 MessageBox.Show("Algo deu errado ! Contate o desenvolvedor !");
+        }
+
+        private void dgvVenda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dgvVenda.CurrentRow.Cells[0].Value;
+            DALProduto objDAL = new DALProduto();
+            //ProdutoModel obj = objDAL.SelecionarProdutoModelID(id);
+            //ProdutoModel obj2 = DALProduto.pesquisarProduto(obj.codigodebarra);
+
+
+
+            //List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
+            if (dgvVenda.RowCount > 0)
+            {
+              //  decimal valor = decimal.Parse(txtPreco.Text);
+                //valor = valor + obj.preco;
+           //     txtPreco.Text = valor.ToString();
+             //   listaproduto.Add(obj);
+    //            dgvVenda.DataSource = listaproduto;
+      //          txtCodigoDeBarras.Text = "";
+                dgvProdutos.DataSource = null;
+
+            }
+            else
+            {
+        //        dgvVenda.DataSource = listAntiga;
+          //      listaproduto = listAntiga;
+            //    txtCodigoDeBarras.Text = "";
+                dgvProdutos.DataSource = null;
+            }
         }
     }
 }

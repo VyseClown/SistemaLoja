@@ -59,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(7, 303);
+            this.label1.Location = new System.Drawing.Point(3, 360);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(7, 16);
+            this.label3.Location = new System.Drawing.Point(3, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 25);
             this.label3.TabIndex = 68;
@@ -78,7 +78,7 @@
             // txtCodigoDeBarras
             // 
             this.txtCodigoDeBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtCodigoDeBarras.Location = new System.Drawing.Point(12, 44);
+            this.txtCodigoDeBarras.Location = new System.Drawing.Point(8, 101);
             this.txtCodigoDeBarras.Name = "txtCodigoDeBarras";
             this.txtCodigoDeBarras.Size = new System.Drawing.Size(285, 30);
             this.txtCodigoDeBarras.TabIndex = 0;
@@ -88,7 +88,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(420, 93);
+            this.label5.Location = new System.Drawing.Point(416, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 25);
             this.label5.TabIndex = 78;
@@ -98,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(7, 93);
+            this.label4.Location = new System.Drawing.Point(3, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 25);
             this.label4.TabIndex = 77;
@@ -108,7 +108,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(124, 93);
+            this.label6.Location = new System.Drawing.Point(120, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 25);
             this.label6.TabIndex = 75;
@@ -119,7 +119,7 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(425, 121);
+            this.cbCategoria.Location = new System.Drawing.Point(421, 178);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(216, 33);
             this.cbCategoria.TabIndex = 5;
@@ -129,7 +129,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(426, 16);
+            this.label7.Location = new System.Drawing.Point(422, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 25);
             this.label7.TabIndex = 72;
@@ -138,7 +138,7 @@
             // btnRetira
             // 
             this.btnRetira.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnRetira.Location = new System.Drawing.Point(303, 247);
+            this.btnRetira.Location = new System.Drawing.Point(299, 304);
             this.btnRetira.Name = "btnRetira";
             this.btnRetira.Size = new System.Drawing.Size(216, 36);
             this.btnRetira.TabIndex = 9;
@@ -149,7 +149,7 @@
             // txtQtd
             // 
             this.txtQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtQtd.Location = new System.Drawing.Point(319, 44);
+            this.txtQtd.Location = new System.Drawing.Point(315, 101);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(87, 30);
             this.txtQtd.TabIndex = 1;
@@ -158,7 +158,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(296, 16);
+            this.label9.Location = new System.Drawing.Point(292, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 25);
             this.label9.TabIndex = 81;
@@ -169,7 +169,7 @@
             this.cbTamanho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTamanho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbTamanho.FormattingEnabled = true;
-            this.cbTamanho.Location = new System.Drawing.Point(12, 121);
+            this.cbTamanho.Location = new System.Drawing.Point(8, 178);
             this.cbTamanho.Name = "cbTamanho";
             this.cbTamanho.Size = new System.Drawing.Size(98, 33);
             this.cbTamanho.TabIndex = 3;
@@ -180,7 +180,7 @@
             this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(129, 121);
+            this.cbMarca.Location = new System.Drawing.Point(125, 178);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(285, 33);
             this.cbMarca.TabIndex = 4;
@@ -191,7 +191,7 @@
             this.cbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbModelo.FormattingEnabled = true;
-            this.cbModelo.Location = new System.Drawing.Point(424, 44);
+            this.cbModelo.Location = new System.Drawing.Point(420, 101);
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(217, 33);
             this.cbModelo.TabIndex = 2;
@@ -203,7 +203,7 @@
             this.cbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbCor.FormattingEnabled = true;
-            this.cbCor.Location = new System.Drawing.Point(12, 189);
+            this.cbCor.Location = new System.Drawing.Point(8, 246);
             this.cbCor.Name = "cbCor";
             this.cbCor.Size = new System.Drawing.Size(172, 33);
             this.cbCor.TabIndex = 6;
@@ -213,7 +213,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(7, 161);
+            this.label2.Location = new System.Drawing.Point(3, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 25);
             this.label2.TabIndex = 85;
@@ -222,7 +222,7 @@
             // txtPreco
             // 
             this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPreco.Location = new System.Drawing.Point(207, 189);
+            this.txtPreco.Location = new System.Drawing.Point(203, 246);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(131, 30);
             this.txtPreco.TabIndex = 7;
@@ -231,7 +231,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(192, 161);
+            this.label8.Location = new System.Drawing.Point(188, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 25);
             this.label8.TabIndex = 88;
@@ -240,7 +240,7 @@
             // btnConsulta
             // 
             this.btnConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnConsulta.Location = new System.Drawing.Point(12, 247);
+            this.btnConsulta.Location = new System.Drawing.Point(8, 304);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(285, 36);
             this.btnConsulta.TabIndex = 8;
@@ -251,7 +251,7 @@
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdutos.Location = new System.Drawing.Point(12, 337);
+            this.dgvProdutos.Location = new System.Drawing.Point(8, 394);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.RowHeadersWidth = 4;
             this.dgvProdutos.Size = new System.Drawing.Size(934, 413);
@@ -261,7 +261,7 @@
             // 
             this.lblQtd.AutoSize = true;
             this.lblQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.lblQtd.Location = new System.Drawing.Point(594, 192);
+            this.lblQtd.Location = new System.Drawing.Point(590, 249);
             this.lblQtd.Name = "lblQtd";
             this.lblQtd.Size = new System.Drawing.Size(124, 25);
             this.lblQtd.TabIndex = 91;
@@ -271,7 +271,7 @@
             // 
             this.cbSemEstoque.AutoSize = true;
             this.cbSemEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.cbSemEstoque.Location = new System.Drawing.Point(129, 302);
+            this.cbSemEstoque.Location = new System.Drawing.Point(125, 359);
             this.cbSemEstoque.Name = "cbSemEstoque";
             this.cbSemEstoque.Size = new System.Drawing.Size(350, 29);
             this.cbSemEstoque.TabIndex = 10;
@@ -290,7 +290,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(344, 192);
+            this.label10.Location = new System.Drawing.Point(340, 249);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(244, 25);
             this.label10.TabIndex = 94;
@@ -300,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 762);
+            this.ClientSize = new System.Drawing.Size(970, 819);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblAvisos);
             this.Controls.Add(this.cbSemEstoque);

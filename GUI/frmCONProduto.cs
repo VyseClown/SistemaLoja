@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using DAL;
 using BLL;
 using Modelo;
+using MaterialSkin.Controls;
 
 namespace GUI
 {
-    public partial class frmCONProduto : Form
+    public partial class frmCONProduto : MaterialForm
     {
         public frmCONProduto()
         {

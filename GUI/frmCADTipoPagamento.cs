@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using BLL;
+using MaterialSkin.Controls;
 
 namespace GUI
 {
-    public partial class frmCADTipoPagamento : Form
+    public partial class frmCADTipoPagamento : MaterialForm
     {
         public frmCADTipoPagamento()
         {

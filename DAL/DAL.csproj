@@ -169,6 +169,7 @@
     <Compile Include="DALCaixa.cs" />
     <Compile Include="DALCategoria.cs" />
     <Compile Include="DALCobranca.cs" />
+    <Compile Include="DALLogin.cs" />
     <Compile Include="DALPessoa.cs" />
     <Compile Include="DALProduto.cs" />
     <Compile Include="DALVenda.cs" />
@@ -211,6 +212,9 @@
     <Compile Include="Pedido.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Permissoes.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pessoa.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
@@ -234,6 +238,12 @@
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Tamanhos.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioPermissoes.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Venda.cs">

@@ -12,10 +12,11 @@ using BLL;
 using System.Text.RegularExpressions;
 using Modelo;
 using System.Globalization;
+using MaterialSkin.Controls;
 
 namespace GUI
 {
-    public partial class frmCADPessoa : Form
+    public partial class frmCADPessoa : MaterialForm
     {
         int idPessoaGlobal = 0;
         public frmCADPessoa()

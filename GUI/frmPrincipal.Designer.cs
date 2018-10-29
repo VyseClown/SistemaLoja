@@ -38,12 +38,12 @@
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnVenda = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnConsultaProd = new System.Windows.Forms.Button();
-            this.btnCaixa = new System.Windows.Forms.Button();
-            this.btnPagamento = new System.Windows.Forms.Button();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,83 +122,95 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // button1
+            // materialRaisedButton1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 96);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Cadastro de Produto";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(33, 120);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(157, 67);
+            this.materialRaisedButton1.TabIndex = 9;
+            this.materialRaisedButton1.Text = "Cadastro de Produto";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnVenda
+            // materialRaisedButton2
             // 
-            this.btnVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.btnVenda.Location = new System.Drawing.Point(177, 58);
-            this.btnVenda.Name = "btnVenda";
-            this.btnVenda.Size = new System.Drawing.Size(159, 96);
-            this.btnVenda.TabIndex = 4;
-            this.btnVenda.Text = "Venda";
-            this.btnVenda.UseVisualStyleBackColor = true;
-            this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(199, 120);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(148, 67);
+            this.materialRaisedButton2.TabIndex = 10;
+            this.materialRaisedButton2.Text = "Venda";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.btnVenda_Click);
             // 
-            // button2
+            // materialRaisedButton3
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 160);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 96);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Cadastro de Pessoa";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(199, 204);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(148, 67);
+            this.materialRaisedButton3.TabIndex = 12;
+            this.materialRaisedButton3.Text = "Consulta de Produto";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.btnConsultaProd_Click);
             // 
-            // btnConsultaProd
+            // materialRaisedButton4
             // 
-            this.btnConsultaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultaProd.Location = new System.Drawing.Point(179, 160);
-            this.btnConsultaProd.Name = "btnConsultaProd";
-            this.btnConsultaProd.Size = new System.Drawing.Size(157, 96);
-            this.btnConsultaProd.TabIndex = 6;
-            this.btnConsultaProd.Text = "Consulta de Produto";
-            this.btnConsultaProd.UseVisualStyleBackColor = true;
-            this.btnConsultaProd.Click += new System.EventHandler(this.btnConsultaProd_Click);
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Location = new System.Drawing.Point(33, 204);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(157, 67);
+            this.materialRaisedButton4.TabIndex = 11;
+            this.materialRaisedButton4.Text = "Cadastro de Pessoa";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButton4.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnCaixa
+            // materialRaisedButton5
             // 
-            this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaixa.Location = new System.Drawing.Point(13, 262);
-            this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(157, 96);
-            this.btnCaixa.TabIndex = 7;
-            this.btnCaixa.Text = "Caixa";
-            this.btnCaixa.UseVisualStyleBackColor = true;
-            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(199, 289);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(148, 67);
+            this.materialRaisedButton5.TabIndex = 14;
+            this.materialRaisedButton5.Text = "Pagamento";
+            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButton5.Click += new System.EventHandler(this.btnPagamento_Click);
             // 
-            // btnPagamento
+            // materialRaisedButton6
             // 
-            this.btnPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagamento.Location = new System.Drawing.Point(179, 262);
-            this.btnPagamento.Name = "btnPagamento";
-            this.btnPagamento.Size = new System.Drawing.Size(157, 96);
-            this.btnPagamento.TabIndex = 8;
-            this.btnPagamento.Text = "Pagamento";
-            this.btnPagamento.UseVisualStyleBackColor = true;
-            this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Location = new System.Drawing.Point(33, 289);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(157, 67);
+            this.materialRaisedButton6.TabIndex = 13;
+            this.materialRaisedButton6.Text = "Caixa";
+            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.materialRaisedButton6.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 437);
-            this.Controls.Add(this.btnPagamento);
-            this.Controls.Add(this.btnCaixa);
-            this.Controls.Add(this.btnConsultaProd);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnVenda);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(379, 431);
+            this.Controls.Add(this.materialRaisedButton5);
+            this.Controls.Add(this.materialRaisedButton6);
+            this.Controls.Add(this.materialRaisedButton3);
+            this.Controls.Add(this.materialRaisedButton4);
+            this.Controls.Add(this.materialRaisedButton2);
+            this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
@@ -223,12 +235,12 @@
         private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnVenda;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnConsultaProd;
-        private System.Windows.Forms.Button btnCaixa;
-        private System.Windows.Forms.Button btnPagamento;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
     }
 }
 

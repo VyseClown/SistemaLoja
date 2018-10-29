@@ -12,11 +12,11 @@ using BLL;
 using System.Text.RegularExpressions;
 using Modelo;
 using System.Globalization;
-
+using MaterialSkin.Controls;
 
 namespace GUI
 {
-    public partial class frmCADVenda : Form
+    public partial class frmCADVenda : MaterialForm
     {
         //private int cont = 0;//contador para criar as colunas no primeiro item do datagridview
         private List<ProdutoModel> listaproduto;
@@ -766,5 +766,6 @@ namespace GUI
             int id = (int)dgvClientesParaCondicional.CurrentRow.Cells[3].Value;
             tabControl1.SelectTab(1);
         }
+        
     }
 }

@@ -12,10 +12,11 @@ using BLL;
 using System.Text.RegularExpressions;
 using Modelo;
 using System.Globalization;
+using MaterialSkin.Controls;
 
 namespace GUI
 {
-    public partial class frmCaixa : Form
+    public partial class frmCaixa : MaterialForm
     {
         public frmCaixa()
         {

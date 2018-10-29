@@ -166,6 +166,13 @@
     <Property Name="descricao" Type="varchar" MaxLength="200" />
     <Property Name="data" Type="datetime" />
   </EntityType>
+  <EntityType Name="Permissoes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Pessoa">
     <Key>
       <PropertyRef Name="id" />
@@ -240,6 +247,22 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="50" />
+    <Property Name="senha" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UsuarioPermissoes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="idUsuario" Type="int" />
+    <Property Name="idPermissao" Type="int" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="Venda">
     <Key>
@@ -494,6 +517,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_UsuarioPermissoes_Permissoes">
+    <End Role="Permissoes" Type="Self.Permissoes" Multiplicity="0..1" />
+    <End Role="UsuarioPermissoes" Type="Self.UsuarioPermissoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permissoes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioPermissoes">
+        <PropertyRef Name="idPermissao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPermissoes_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="UsuarioPermissoes" Type="Self.UsuarioPermissoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioPermissoes">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Venda_CategoriaPagamento">
     <End Role="CategoriaPagamento" Type="Self.CategoriaPagamento" Multiplicity="0..1" />
     <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
@@ -538,12 +585,15 @@
     <EntitySet Name="Marcas" EntityType="Self.Marcas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Modelo" EntityType="Self.Modelo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pedido" EntityType="Self.Pedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permissoes" EntityType="Self.Permissoes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pessoa" EntityType="Self.Pessoa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProdutosPedido" EntityType="Self.ProdutosPedido" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tamanhos" EntityType="Self.Tamanhos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuarioPermissoes" EntityType="Self.UsuarioPermissoes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Venda" EntityType="Self.Venda" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Pedido__forneced__2D27B809" Association="Self.FK__Pedido__forneced__2D27B809">
       <End Role="Fornecedor" EntitySet="Fornecedor" />
@@ -624,6 +674,14 @@
     <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
       <End Role="Country" EntitySet="Country" />
       <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPermissoes_Permissoes" Association="Self.FK_UsuarioPermissoes_Permissoes">
+      <End Role="Permissoes" EntitySet="Permissoes" />
+      <End Role="UsuarioPermissoes" EntitySet="UsuarioPermissoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPermissoes_Usuario" Association="Self.FK_UsuarioPermissoes_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioPermissoes" EntitySet="UsuarioPermissoes" />
     </AssociationSet>
     <AssociationSet Name="FK_Venda_CategoriaPagamento" Association="Self.FK_Venda_CategoriaPagamento">
       <End Role="CategoriaPagamento" EntitySet="CategoriaPagamento" />

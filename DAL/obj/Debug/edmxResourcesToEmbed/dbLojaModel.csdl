@@ -115,6 +115,17 @@
       <End Role="CategoriaPagamento" EntitySet="CategoriaPagamento" />
       <End Role="Venda" EntitySet="Venda" />
     </AssociationSet>
+    <EntitySet Name="Permissoes" EntityType="dbLojaQuiteriaModasModel.Permissoes" />
+    <EntitySet Name="Usuario" EntityType="dbLojaQuiteriaModasModel.Usuario" />
+    <EntitySet Name="UsuarioPermissoes" EntityType="dbLojaQuiteriaModasModel.UsuarioPermissoes" />
+    <AssociationSet Name="FK_UsuarioPermissoes_Permissoes" Association="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Permissoes">
+      <End Role="Permissoes" EntitySet="Permissoes" />
+      <End Role="UsuarioPermissoes" EntitySet="UsuarioPermissoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPermissoes_Usuario" Association="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioPermissoes" EntitySet="UsuarioPermissoes" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Categoria">
     <Key>
@@ -675,6 +686,57 @@
       </Principal>
       <Dependent Role="Venda">
         <PropertyRef Name="idCategoriaPagamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Permissoes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UsuarioPermissoes" Relationship="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Permissoes" FromRole="Permissoes" ToRole="UsuarioPermissoes" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UsuarioPermissoes" Relationship="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Usuario" FromRole="Usuario" ToRole="UsuarioPermissoes" />
+  </EntityType>
+  <EntityType Name="UsuarioPermissoes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" />
+    <Property Name="idPermissao" Type="Int32" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Permissoes" Relationship="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Permissoes" FromRole="UsuarioPermissoes" ToRole="Permissoes" />
+    <NavigationProperty Name="Usuario" Relationship="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Usuario" FromRole="UsuarioPermissoes" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_UsuarioPermissoes_Permissoes">
+    <End Type="dbLojaQuiteriaModasModel.Permissoes" Role="Permissoes" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.UsuarioPermissoes" Role="UsuarioPermissoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permissoes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioPermissoes">
+        <PropertyRef Name="idPermissao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPermissoes_Usuario">
+    <End Type="dbLojaQuiteriaModasModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="dbLojaQuiteriaModasModel.UsuarioPermissoes" Role="UsuarioPermissoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioPermissoes">
+        <PropertyRef Name="idUsuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

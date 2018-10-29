@@ -40,7 +40,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(118, 17);
+            this.label4.Location = new System.Drawing.Point(118, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 25);
             this.label4.TabIndex = 15;
@@ -51,7 +51,7 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(123, 45);
+            this.cbCategoria.Location = new System.Drawing.Point(123, 107);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(146, 33);
             this.cbCategoria.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Location = new System.Drawing.Point(12, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 11;
@@ -69,7 +69,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.Location = new System.Drawing.Point(12, 84);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 146);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(121, 39);
             this.btnSalvar.TabIndex = 2;
@@ -80,7 +80,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtDescricao.Location = new System.Drawing.Point(17, 45);
+            this.txtDescricao.Location = new System.Drawing.Point(17, 107);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(100, 30);
             this.txtDescricao.TabIndex = 0;
@@ -88,7 +88,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.btnExcluir.Location = new System.Drawing.Point(148, 84);
+            this.btnExcluir.Location = new System.Drawing.Point(148, 146);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(121, 39);
             this.btnExcluir.TabIndex = 3;
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 152);
+            this.ClientSize = new System.Drawing.Size(292, 237);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbCategoria);

@@ -41,6 +41,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
       <Private>True</Private>
@@ -102,6 +105,12 @@
     <Compile Include="frmCADTipoPagamento.Designer.cs">
       <DependentUpon>frmCADTipoPagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCADUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCADUsuario.Designer.cs">
+      <DependentUpon>frmCADUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCADVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +129,11 @@
     <Compile Include="frmCONProduto.Designer.cs">
       <DependentUpon>frmCONProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEstoque.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEstoque.Designer.cs">
-      <DependentUpon>frmEstoque.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPagamento.cs">
       <SubType>Form</SubType>
@@ -152,6 +161,9 @@
     <EmbeddedResource Include="frmCADTipoPagamento.resx">
       <DependentUpon>frmCADTipoPagamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCADUsuario.resx">
+      <DependentUpon>frmCADUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCADVenda.resx">
       <DependentUpon>frmCADVenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCONProduto.resx">
       <DependentUpon>frmCONProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagamento.resx">
       <DependentUpon>frmPagamento.cs</DependentUpon>
