@@ -27,7 +27,7 @@ namespace GUI
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCADProduto frmCAD = new frmCADProduto();
-            frmCAD.Show();
+            frmCAD.Show();                          
         }
 
         private void button1_Click(object sender, EventArgs e)

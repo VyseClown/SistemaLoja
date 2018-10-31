@@ -206,7 +206,7 @@ namespace GUI
             DALProduto objDAL = new DALProduto();
             //ProdutoModel obj = objDAL.SelecionarProdutoModelID(id);
             //ProdutoModel obj2 = DALProduto.pesquisarProduto(obj.codigodebarra);
-
+            dgvProdutos.DataSource = DALProduto.SelecionarProdutosDaVenda(id);
 
 
             //List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);

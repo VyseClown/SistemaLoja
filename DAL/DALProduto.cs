@@ -766,5 +766,40 @@ namespace DAL
             }
 
         }
+        public static List<ProdutoModel> SelecionarProdutosDaVenda(int id)
+        {
+            List<ProdutoModel> obj = new List<ProdutoModel>();
+            //var itemE = new estoque();
+            //itemE = item;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from iv in db.ItensVenda
+                       where iv.idVenda == id
+                       join p in db.Produto on iv.idProduto equals p.id 
+                       join m in db.Marcas on p.marca equals m.id
+                       join mod in db.Modelo on p.modelo equals mod.id
+                       join cat in db.Categoria on p.categoriaid equals cat.id
+                       join tam in db.Tamanhos on p.tamanho equals tam.id
+                       join c in db.Cor on p.cor equals c.id
+                       //orderby c.tamanho
+                       select new ProdutoModel()
+                       {
+                           categoria = cat.descricao,
+                           condicional = p.condicional,
+                           //descricao = p.descricao,
+                           data = p.data.Value,
+                           id = p.id,
+                           marca = m.nome,
+                           modelo = mod.nome,
+                           preco = p.preco.Value,
+                           tamanho = tam.nome,
+                           codigodebarra = p.codigodebarra,
+                           cor = c.Nome,
+                           quantidade = p.quantidade.Value,
+                       }).ToList();
+
+            }
+            return obj;
+        }
     }
 }
