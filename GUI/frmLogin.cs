@@ -40,6 +40,7 @@ namespace GUI
                 }
                 if (ativado == true) { 
                 frmPrincipal frmCAD = new frmPrincipal();
+                    frmCAD.listp = up;
                 frmCAD.Show();
                 this.Hide();
                 }

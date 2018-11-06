@@ -60,7 +60,7 @@
             this.txtLogin.SelectionLength = 0;
             this.txtLogin.SelectionStart = 0;
             this.txtLogin.Size = new System.Drawing.Size(157, 23);
-            this.txtLogin.TabIndex = 1;
+            this.txtLogin.TabIndex = 0;
             this.txtLogin.UseSystemPasswordChar = false;
             // 
             // materialLabel2
@@ -88,7 +88,7 @@
             this.txtSenha.SelectionLength = 0;
             this.txtSenha.SelectionStart = 0;
             this.txtSenha.Size = new System.Drawing.Size(153, 23);
-            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = false;
             // 
             // btnEntrar
@@ -99,7 +99,7 @@
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Primary = true;
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);

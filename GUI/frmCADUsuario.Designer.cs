@@ -58,7 +58,7 @@
             this.txtLogin.SelectionLength = 0;
             this.txtLogin.SelectionStart = 0;
             this.txtLogin.Size = new System.Drawing.Size(157, 23);
-            this.txtLogin.TabIndex = 3;
+            this.txtLogin.TabIndex = 0;
             this.txtLogin.UseSystemPasswordChar = false;
             // 
             // materialLabel1
@@ -86,7 +86,7 @@
             this.txtSenha.SelectionLength = 0;
             this.txtSenha.SelectionStart = 0;
             this.txtSenha.Size = new System.Drawing.Size(157, 23);
-            this.txtSenha.TabIndex = 5;
+            this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = false;
             // 
             // materialLabel2
@@ -110,7 +110,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Primary = true;
             this.btnCadastrar.Size = new System.Drawing.Size(110, 23);
-            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -123,7 +123,7 @@
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Primary = true;
             this.btnAlterar.Size = new System.Drawing.Size(110, 23);
-            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.TabIndex = 11;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -133,14 +133,14 @@
             this.cbPessoa.AutoSize = true;
             this.cbPessoa.Depth = 0;
             this.cbPessoa.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbPessoa.Location = new System.Drawing.Point(373, 139);
+            this.cbPessoa.Location = new System.Drawing.Point(373, 197);
             this.cbPessoa.Margin = new System.Windows.Forms.Padding(0);
             this.cbPessoa.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbPessoa.MouseState = MaterialSkin.MouseState.HOVER;
             this.cbPessoa.Name = "cbPessoa";
             this.cbPessoa.Ripple = true;
             this.cbPessoa.Size = new System.Drawing.Size(153, 30);
-            this.cbPessoa.TabIndex = 8;
+            this.cbPessoa.TabIndex = 4;
             this.cbPessoa.Text = "Cadastro de Pessoa";
             this.cbPessoa.UseVisualStyleBackColor = true;
             // 
@@ -151,22 +151,23 @@
             this.btnLocalizar.Location = new System.Drawing.Point(250, 135);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(39, 30);
-            this.btnLocalizar.TabIndex = 84;
+            this.btnLocalizar.TabIndex = 1;
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // cbProduto
             // 
             this.cbProduto.AutoSize = true;
             this.cbProduto.Depth = 0;
             this.cbProduto.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbProduto.Location = new System.Drawing.Point(373, 201);
+            this.cbProduto.Location = new System.Drawing.Point(373, 135);
             this.cbProduto.Margin = new System.Windows.Forms.Padding(0);
             this.cbProduto.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbProduto.MouseState = MaterialSkin.MouseState.HOVER;
             this.cbProduto.Name = "cbProduto";
             this.cbProduto.Ripple = true;
             this.cbProduto.Size = new System.Drawing.Size(157, 30);
-            this.cbProduto.TabIndex = 85;
+            this.cbProduto.TabIndex = 2;
             this.cbProduto.Text = "Cadastro de Produto";
             this.cbProduto.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +183,7 @@
             this.cbCaixa.Name = "cbCaixa";
             this.cbCaixa.Ripple = true;
             this.cbCaixa.Size = new System.Drawing.Size(64, 30);
-            this.cbCaixa.TabIndex = 86;
+            this.cbCaixa.TabIndex = 6;
             this.cbCaixa.Text = "Caixa";
             this.cbCaixa.UseVisualStyleBackColor = true;
             // 
@@ -198,7 +199,7 @@
             this.cbVenda.Name = "cbVenda";
             this.cbVenda.Ripple = true;
             this.cbVenda.Size = new System.Drawing.Size(69, 30);
-            this.cbVenda.TabIndex = 87;
+            this.cbVenda.TabIndex = 8;
             this.cbVenda.Text = "Venda";
             this.cbVenda.UseVisualStyleBackColor = true;
             // 
@@ -214,7 +215,7 @@
             this.cbConsultaProd.Name = "cbConsultaProd";
             this.cbConsultaProd.Ripple = true;
             this.cbConsultaProd.Size = new System.Drawing.Size(156, 30);
-            this.cbConsultaProd.TabIndex = 88;
+            this.cbConsultaProd.TabIndex = 3;
             this.cbConsultaProd.Text = "Consulta de Produto";
             this.cbConsultaProd.UseVisualStyleBackColor = true;
             // 
@@ -230,7 +231,7 @@
             this.cbPagamentos.Name = "cbPagamentos";
             this.cbPagamentos.Ripple = true;
             this.cbPagamentos.Size = new System.Drawing.Size(108, 30);
-            this.cbPagamentos.TabIndex = 89;
+            this.cbPagamentos.TabIndex = 5;
             this.cbPagamentos.Text = "Pagamentos";
             this.cbPagamentos.UseVisualStyleBackColor = true;
             // 
@@ -246,7 +247,7 @@
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Ripple = true;
             this.cbUsuario.Size = new System.Drawing.Size(141, 30);
-            this.cbUsuario.TabIndex = 90;
+            this.cbUsuario.TabIndex = 7;
             this.cbUsuario.Text = "Cadastrar Usuario";
             this.cbUsuario.UseVisualStyleBackColor = true;
             // 
@@ -262,7 +263,7 @@
             this.cbDesativado.Name = "cbDesativado";
             this.cbDesativado.Ripple = true;
             this.cbDesativado.Size = new System.Drawing.Size(99, 30);
-            this.cbDesativado.TabIndex = 91;
+            this.cbDesativado.TabIndex = 9;
             this.cbDesativado.Text = "Desativado";
             this.cbDesativado.UseVisualStyleBackColor = true;
             // 

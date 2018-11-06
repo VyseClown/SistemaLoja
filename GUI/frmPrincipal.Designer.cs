@@ -38,12 +38,14 @@
             this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCADProduto = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnVenda = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCONProduto = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCADPessoa = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnPagamento = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCaixa = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnUsuario = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnRelatorio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,8 +60,8 @@
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(379, 24);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Size = new System.Drawing.Size(794, 24);
+            this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // cadastroToolStripMenuItem
@@ -122,100 +124,129 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // materialRaisedButton1
+            // btnCADProduto
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(33, 120);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(157, 67);
-            this.materialRaisedButton1.TabIndex = 9;
-            this.materialRaisedButton1.Text = "Cadastro de Produto";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCADProduto.Depth = 0;
+            this.btnCADProduto.Location = new System.Drawing.Point(33, 120);
+            this.btnCADProduto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCADProduto.Name = "btnCADProduto";
+            this.btnCADProduto.Primary = true;
+            this.btnCADProduto.Size = new System.Drawing.Size(157, 67);
+            this.btnCADProduto.TabIndex = 0;
+            this.btnCADProduto.Text = "Cadastro de Produto";
+            this.btnCADProduto.UseVisualStyleBackColor = true;
+            this.btnCADProduto.Click += new System.EventHandler(this.button1_Click);
             // 
-            // materialRaisedButton2
+            // btnVenda
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(199, 120);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(148, 67);
-            this.materialRaisedButton2.TabIndex = 10;
-            this.materialRaisedButton2.Text = "Venda";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.btnVenda_Click);
+            this.btnVenda.Depth = 0;
+            this.btnVenda.Location = new System.Drawing.Point(199, 120);
+            this.btnVenda.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnVenda.Name = "btnVenda";
+            this.btnVenda.Primary = true;
+            this.btnVenda.Size = new System.Drawing.Size(148, 67);
+            this.btnVenda.TabIndex = 1;
+            this.btnVenda.Text = "Venda";
+            this.btnVenda.UseVisualStyleBackColor = true;
+            this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
             // 
-            // materialRaisedButton3
+            // btnCONProduto
             // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(199, 204);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(148, 67);
-            this.materialRaisedButton3.TabIndex = 12;
-            this.materialRaisedButton3.Text = "Consulta de Produto";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.btnConsultaProd_Click);
+            this.btnCONProduto.Depth = 0;
+            this.btnCONProduto.Location = new System.Drawing.Point(199, 204);
+            this.btnCONProduto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCONProduto.Name = "btnCONProduto";
+            this.btnCONProduto.Primary = true;
+            this.btnCONProduto.Size = new System.Drawing.Size(148, 67);
+            this.btnCONProduto.TabIndex = 3;
+            this.btnCONProduto.Text = "Consulta de Produto";
+            this.btnCONProduto.UseVisualStyleBackColor = true;
+            this.btnCONProduto.Click += new System.EventHandler(this.btnConsultaProd_Click);
             // 
-            // materialRaisedButton4
+            // btnCADPessoa
             // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(33, 204);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(157, 67);
-            this.materialRaisedButton4.TabIndex = 11;
-            this.materialRaisedButton4.Text = "Cadastro de Pessoa";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
-            this.materialRaisedButton4.Click += new System.EventHandler(this.button2_Click);
+            this.btnCADPessoa.Depth = 0;
+            this.btnCADPessoa.Location = new System.Drawing.Point(33, 204);
+            this.btnCADPessoa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCADPessoa.Name = "btnCADPessoa";
+            this.btnCADPessoa.Primary = true;
+            this.btnCADPessoa.Size = new System.Drawing.Size(157, 67);
+            this.btnCADPessoa.TabIndex = 2;
+            this.btnCADPessoa.Text = "Cadastro de Pessoa";
+            this.btnCADPessoa.UseVisualStyleBackColor = true;
+            this.btnCADPessoa.Click += new System.EventHandler(this.button2_Click);
             // 
-            // materialRaisedButton5
+            // btnPagamento
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(199, 289);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(148, 67);
-            this.materialRaisedButton5.TabIndex = 14;
-            this.materialRaisedButton5.Text = "Pagamento";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
-            this.materialRaisedButton5.Click += new System.EventHandler(this.btnPagamento_Click);
+            this.btnPagamento.Depth = 0;
+            this.btnPagamento.Location = new System.Drawing.Point(199, 289);
+            this.btnPagamento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPagamento.Name = "btnPagamento";
+            this.btnPagamento.Primary = true;
+            this.btnPagamento.Size = new System.Drawing.Size(148, 67);
+            this.btnPagamento.TabIndex = 5;
+            this.btnPagamento.Text = "Pagamento";
+            this.btnPagamento.UseVisualStyleBackColor = true;
+            this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
             // 
-            // materialRaisedButton6
+            // btnCaixa
             // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(33, 289);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(157, 67);
-            this.materialRaisedButton6.TabIndex = 13;
-            this.materialRaisedButton6.Text = "Caixa";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
-            this.materialRaisedButton6.Click += new System.EventHandler(this.btnCaixa_Click);
+            this.btnCaixa.Depth = 0;
+            this.btnCaixa.Location = new System.Drawing.Point(33, 289);
+            this.btnCaixa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCaixa.Name = "btnCaixa";
+            this.btnCaixa.Primary = true;
+            this.btnCaixa.Size = new System.Drawing.Size(157, 67);
+            this.btnCaixa.TabIndex = 4;
+            this.btnCaixa.Text = "Caixa";
+            this.btnCaixa.UseVisualStyleBackColor = true;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Depth = 0;
+            this.btnUsuario.Location = new System.Drawing.Point(33, 372);
+            this.btnUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Primary = true;
+            this.btnUsuario.Size = new System.Drawing.Size(157, 67);
+            this.btnUsuario.TabIndex = 6;
+            this.btnUsuario.Text = "Cadastro de usuario";
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.Depth = 0;
+            this.btnRelatorio.Location = new System.Drawing.Point(199, 372);
+            this.btnRelatorio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Primary = true;
+            this.btnRelatorio.Size = new System.Drawing.Size(148, 67);
+            this.btnRelatorio.TabIndex = 7;
+            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 431);
-            this.Controls.Add(this.materialRaisedButton5);
-            this.Controls.Add(this.materialRaisedButton6);
-            this.Controls.Add(this.materialRaisedButton3);
-            this.Controls.Add(this.materialRaisedButton4);
-            this.Controls.Add(this.materialRaisedButton2);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.ClientSize = new System.Drawing.Size(794, 506);
+            this.Controls.Add(this.btnRelatorio);
+            this.Controls.Add(this.btnUsuario);
+            this.Controls.Add(this.btnPagamento);
+            this.Controls.Add(this.btnCaixa);
+            this.Controls.Add(this.btnCONProduto);
+            this.Controls.Add(this.btnCADPessoa);
+            this.Controls.Add(this.btnVenda);
+            this.Controls.Add(this.btnCADProduto);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gerenciamento";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -235,12 +266,14 @@
         private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCADProduto;
+        private MaterialSkin.Controls.MaterialRaisedButton btnVenda;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCONProduto;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCADPessoa;
+        private MaterialSkin.Controls.MaterialRaisedButton btnPagamento;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCaixa;
+        private MaterialSkin.Controls.MaterialRaisedButton btnUsuario;
+        private MaterialSkin.Controls.MaterialRaisedButton btnRelatorio;
     }
 }
 

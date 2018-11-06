@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPagamento));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtRestante = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPagamento = new System.Windows.Forms.TextBox();
@@ -45,12 +46,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvPagamentos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
@@ -94,6 +94,19 @@
             this.tabPage1.Text = "Pagamento";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(472, 508);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(194, 43);
+            this.materialRaisedButton1.TabIndex = 7;
+            this.materialRaisedButton1.Text = "Realizar Pagamento";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // txtRestante
             // 
             this.txtRestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
@@ -102,7 +115,7 @@
             this.txtRestante.Name = "txtRestante";
             this.txtRestante.ReadOnly = true;
             this.txtRestante.Size = new System.Drawing.Size(138, 30);
-            this.txtRestante.TabIndex = 97;
+            this.txtRestante.TabIndex = 6;
             // 
             // label4
             // 
@@ -121,7 +134,7 @@
             this.txtPagamento.MaxLength = 18;
             this.txtPagamento.Name = "txtPagamento";
             this.txtPagamento.Size = new System.Drawing.Size(138, 30);
-            this.txtPagamento.TabIndex = 94;
+            this.txtPagamento.TabIndex = 5;
             this.txtPagamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPagamento_KeyUp);
             // 
             // label7
@@ -151,7 +164,7 @@
             this.dgvVenda.Name = "dgvVenda";
             this.dgvVenda.RowHeadersWidth = 4;
             this.dgvVenda.Size = new System.Drawing.Size(834, 109);
-            this.dgvVenda.TabIndex = 92;
+            this.dgvVenda.TabIndex = 3;
             this.dgvVenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenda_CellDoubleClick);
             // 
             // label10
@@ -171,7 +184,7 @@
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.RowHeadersWidth = 4;
             this.dgvProdutos.Size = new System.Drawing.Size(834, 109);
-            this.dgvProdutos.TabIndex = 90;
+            this.dgvProdutos.TabIndex = 4;
             // 
             // btnLocalizar
             // 
@@ -180,7 +193,7 @@
             this.btnLocalizar.Location = new System.Drawing.Point(206, 123);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(39, 30);
-            this.btnLocalizar.TabIndex = 88;
+            this.btnLocalizar.TabIndex = 2;
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
@@ -191,7 +204,7 @@
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(165, 30);
-            this.txtCPF.TabIndex = 87;
+            this.txtCPF.TabIndex = 1;
             this.txtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label9
@@ -223,7 +236,7 @@
             this.cbCliente.Location = new System.Drawing.Point(28, 59);
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(462, 33);
-            this.cbCliente.TabIndex = 85;
+            this.cbCliente.TabIndex = 0;
             this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
             this.cbCliente.SelectionChangeCommitted += new System.EventHandler(this.cbCliente_SelectionChangeCommitted);
             // 
@@ -242,6 +255,19 @@
             this.tabPage2.Text = "Cobrança";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(11, 519);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(179, 31);
+            this.materialRaisedButton2.TabIndex = 2;
+            this.materialRaisedButton2.Text = "Realizar Cobrança";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.btnCobranca_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -259,7 +285,7 @@
             this.dgvPagamentos.Name = "dgvPagamentos";
             this.dgvPagamentos.RowHeadersWidth = 4;
             this.dgvPagamentos.Size = new System.Drawing.Size(834, 195);
-            this.dgvPagamentos.TabIndex = 96;
+            this.dgvPagamentos.TabIndex = 1;
             // 
             // label3
             // 
@@ -278,33 +304,7 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 4;
             this.dgvClientes.Size = new System.Drawing.Size(834, 195);
-            this.dgvClientes.TabIndex = 94;
-            // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(472, 508);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(194, 43);
-            this.materialRaisedButton1.TabIndex = 99;
-            this.materialRaisedButton1.Text = "Realizar Pagamento";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(11, 519);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(179, 31);
-            this.materialRaisedButton2.TabIndex = 99;
-            this.materialRaisedButton2.Text = "Realizar Cobrança";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.btnCobranca_Click);
+            this.dgvClientes.TabIndex = 0;
             // 
             // frmPagamento
             // 

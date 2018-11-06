@@ -129,6 +129,12 @@
     <Compile Include="frmCONProduto.Designer.cs">
       <DependentUpon>frmCONProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCONRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCONRelatorio.Designer.cs">
+      <DependentUpon>frmCONRelatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCONProduto.resx">
       <DependentUpon>frmCONProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCONRelatorio.resx">
+      <DependentUpon>frmCONRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace GUI
 {
     public partial class frmPrincipal : MaterialForm
     {
+        public List<UsuarioPermissoes> listp;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -64,6 +66,64 @@ namespace GUI
         {
             frmPagamento frmCAD = new frmPagamento();
             frmCAD.Show();
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            frmCADUsuario frmCAD = new frmCADUsuario();
+            frmCAD.Show();
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            frmCONRelatorio frmCAD = new frmCONRelatorio();
+            frmCAD.Show();
+        }
+        private void desativarBotoes(Control.ControlCollection controles)
+        {
+            foreach (Control ctrl in controles)
+            {
+                if (ctrl is Button)
+                {
+                    ((Button)(ctrl)).Enabled = false;
+                }
+            }
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            desativarBotoes(this.Controls);
+            foreach (UsuarioPermissoes usu in listp)
+            {
+                if (usu.idPermissao == 1)
+                {
+                    btnCADProduto.Enabled = true;
+                }
+                if (usu.idPermissao == 2)
+                {
+                    btnCADPessoa.Enabled = true;
+                }
+                if (usu.idPermissao == 3)
+                {
+                    btnCaixa.Enabled = true;
+                }
+                if (usu.idPermissao == 4)
+                {
+                    btnVenda.Enabled = true;
+                }
+                if (usu.idPermissao == 5)
+                {
+                    btnCONProduto.Enabled = true;
+                }
+                if (usu.idPermissao == 6)
+                {
+                    btnPagamento.Enabled = true;
+                }
+                if (usu.idPermissao == 7)
+                {
+                    btnUsuario.Enabled = true;
+                }
+            }
         }
     }
 }
