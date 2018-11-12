@@ -64,6 +64,10 @@ namespace GUI
                     //ven.valorrestante = ven.valorrestante + prod.preco;
                     listiv.Add(iv2);
                 }
+                //if(nudParcelamento.Value > 0)
+                //{
+                    //metodo diferente para parcelamentos
+                //}
                 bool resultado = venda.RealizarVenda(ven, listiv, cli);
                 if (idCondicional != 0)
                 {
@@ -211,7 +215,7 @@ namespace GUI
                 txtCodigoDeBarras.Text = obj.codigodebarra.Trim();
                 txtQtd.Text = "1";
                 txtPreco.Text = obj.preco.ToString();
-                avisos.Visible = true;
+                //avisos.Visible = true;
                 avisos.Text = "Codigo de barras já registrado !";
                 dgvProdutos.DataSource = DALProduto.SelecionarLista(txtCodigoDeBarras.Text);
 
@@ -271,15 +275,18 @@ namespace GUI
                 decimal valor = decimal.Parse(txtPreco.Text);
                 valor = valor + obj.preco;
                 txtPreco.Text = valor.ToString();
+                txtQtd.Text = dgvVenda.RowCount.ToString();
                 listaproduto.Add(obj);
-                dgvVenda.DataSource = listaproduto;
+                //dgvVenda.AutoGenerateColumns = true;
+                dgvVenda.DataSource = listaproduto.ToList();
                 txtCodigoDeBarras.Text = "";
                 dgvProdutos.DataSource = null;
 
             }
             else
             {
-                dgvVenda.DataSource = listAntiga;
+                //dgvVenda.AutoGenerateColumns = true;
+                dgvVenda.DataSource = listAntiga.ToList();
                 listaproduto = listAntiga;
                 txtCodigoDeBarras.Text = "";
                 dgvProdutos.DataSource = null;
@@ -364,7 +371,7 @@ namespace GUI
                 txtCodigoBarrasCond.Text = obj.codigodebarra.Trim();
                 txtQtdCond.Text = "1";
                 txtPrecoCond.Text = obj.preco.ToString();
-                avisosCond.Visible = true;
+                //avisosCond.Visible = true;
                 avisosCond.Text = "Codigo de barras já registrado !";
                 dgvCondicional.DataSource = DALProduto.SelecionarListaComQtd(txtCodigoDeBarras.Text);
 
@@ -763,9 +770,17 @@ namespace GUI
 
         private void btnIrParaCondicional_Click(object sender, EventArgs e)
         {
-            int id = (int)dgvClientesParaCondicional.CurrentRow.Cells[3].Value;
+            int id = (int)dgvClientesParaCondicional.CurrentRow.Cells[0].Value;
+            cbClienteCond.SelectedValue = id;
             tabControl1.SelectTab(1);
         }
-        
+
+        private void cbTipoPagamento_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if ((int)cbTipoPagamento.SelectedValue == 2)
+            {
+                nudParcelamento.Value = 0;
+            }
+        }
     }
 }

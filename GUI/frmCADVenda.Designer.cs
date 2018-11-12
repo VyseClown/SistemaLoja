@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCADVenda));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label12 = new System.Windows.Forms.Label();
             this.txtQtd = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,6 +45,8 @@
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnMaterialConsultar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtPrecoFinal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPorcentagem = new System.Windows.Forms.TextBox();
@@ -103,10 +107,6 @@
             this.btnCarregarClientes = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvClientesParaCondicional = new System.Windows.Forms.DataGridView();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnMaterialConsultar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -132,6 +132,32 @@
             this.groupBox1.Size = new System.Drawing.Size(432, 59);
             this.groupBox1.TabIndex = 52;
             this.groupBox1.TabStop = false;
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(224, 19);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton2.TabIndex = 97;
+            this.materialRaisedButton2.Text = "Limpar";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(23, 19);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton1.TabIndex = 96;
+            this.materialRaisedButton1.Text = "Realizar Venda";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label12
             // 
@@ -296,6 +322,34 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Venda";
             // 
+            // btnMaterialConsultar
+            // 
+            this.btnMaterialConsultar.Depth = 0;
+            this.btnMaterialConsultar.Location = new System.Drawing.Point(35, 67);
+            this.btnMaterialConsultar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMaterialConsultar.Name = "btnMaterialConsultar";
+            this.btnMaterialConsultar.Primary = true;
+            this.btnMaterialConsultar.Size = new System.Drawing.Size(149, 36);
+            this.btnMaterialConsultar.TabIndex = 95;
+            this.btnMaterialConsultar.Text = "Consultar";
+            this.btnMaterialConsultar.UseVisualStyleBackColor = true;
+            this.btnMaterialConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.Hint = "";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(689, 95);
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(75, 23);
+            this.materialSingleLineTextField1.TabIndex = 93;
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            // 
             // txtPrecoFinal
             // 
             this.txtPrecoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
@@ -346,6 +400,7 @@
             this.cbTipoPagamento.Name = "cbTipoPagamento";
             this.cbTipoPagamento.Size = new System.Drawing.Size(155, 33);
             this.cbTipoPagamento.TabIndex = 87;
+            this.cbTipoPagamento.SelectionChangeCommitted += new System.EventHandler(this.cbTipoPagamento_SelectionChangeCommitted);
             // 
             // label14
             // 
@@ -956,60 +1011,6 @@
             this.dgvClientesParaCondicional.RowHeadersWidth = 4;
             this.dgvClientesParaCondicional.Size = new System.Drawing.Size(834, 427);
             this.dgvClientesParaCondicional.TabIndex = 63;
-            // 
-            // materialSingleLineTextField1
-            // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(689, 95);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(75, 23);
-            this.materialSingleLineTextField1.TabIndex = 93;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
-            // 
-            // btnMaterialConsultar
-            // 
-            this.btnMaterialConsultar.Depth = 0;
-            this.btnMaterialConsultar.Location = new System.Drawing.Point(35, 67);
-            this.btnMaterialConsultar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMaterialConsultar.Name = "btnMaterialConsultar";
-            this.btnMaterialConsultar.Primary = true;
-            this.btnMaterialConsultar.Size = new System.Drawing.Size(149, 36);
-            this.btnMaterialConsultar.TabIndex = 95;
-            this.btnMaterialConsultar.Text = "Consultar";
-            this.btnMaterialConsultar.UseVisualStyleBackColor = true;
-            this.btnMaterialConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(23, 19);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton1.TabIndex = 96;
-            this.materialRaisedButton1.Text = "Realizar Venda";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(224, 19);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton2.TabIndex = 97;
-            this.materialRaisedButton2.Text = "Limpar";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmCADVenda
             // 

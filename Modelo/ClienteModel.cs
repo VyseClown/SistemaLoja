@@ -20,7 +20,7 @@ namespace Modelo
         public String RG { get; set; }
         public decimal? limitecredito { get; set; }
         public decimal? totalComprado { get; set; }
-        public DateTime dataUltimoPagamento { get; set; }
+        public DateTime? dataUltimoPagamento { get; set; }
         public int idEndereco { get; set; }
         public int idCidade { get; set; }
         public string rua { get; set; }

@@ -46,12 +46,12 @@ namespace GUI
                     if (pagamento1)
                     {
                         MessageBox.Show("Pagamento realizado com sucesso !");
-                        cbCliente_SelectionChangeCommitted(sender,e);
+                        //cbCliente_SelectionChangeCommitted(sender,e);
                     }
                     else
                     {
                         MessageBox.Show("Pagamento não foi realizado !");
-                        cbCliente_SelectionChangeCommitted(sender, e);
+                        //cbCliente_SelectionChangeCommitted(sender, e);
                     }
                 }
                 else if (dialogResult == DialogResult.No)
@@ -61,12 +61,12 @@ namespace GUI
                     if (pagamento)
                     {
                         MessageBox.Show("Pagamento realizado com sucesso ! O troco é R$ " + resto);
-                        cbCliente_SelectionChangeCommitted(sender, e);
+                        //cbCliente_SelectionChangeCommitted(sender, e);
                     }
                     else
                     {
                         MessageBox.Show("Pagamento não foi realizado !");
-                        cbCliente_SelectionChangeCommitted(sender, e);
+                        //cbCliente_SelectionChangeCommitted(sender, e);
                     }
                 }
                 
@@ -206,7 +206,7 @@ namespace GUI
             DALProduto objDAL = new DALProduto();
             //ProdutoModel obj = objDAL.SelecionarProdutoModelID(id);
             //ProdutoModel obj2 = DALProduto.pesquisarProduto(obj.codigodebarra);
-            dgvProdutos.DataSource = DALProduto.SelecionarProdutosDaVenda(id);
+            dgvProdutos.DataSource = DALProduto.SelecionarProdutosDaVenda(id).ToList();
 
 
             //List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
@@ -218,7 +218,7 @@ namespace GUI
              //   listaproduto.Add(obj);
     //            dgvVenda.DataSource = listaproduto;
       //          txtCodigoDeBarras.Text = "";
-                dgvProdutos.DataSource = null;
+                //dgvProdutos.DataSource = null;
 
             }
             else

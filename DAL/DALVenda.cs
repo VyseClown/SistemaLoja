@@ -42,7 +42,7 @@ namespace DAL
                     if(item.idCategoriaPagamento != 2)
                         cli.totalComprado = cli.totalComprado + item.Valor;
                     cli.totalComprado = cli.totalComprado;
-                        cli.Pontos = 20;
+                        cli.Pontos = cli.Pontos + 20;
                     db.Entry(cli).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     foreach (ItensVenda iv in listaItems)
@@ -386,7 +386,6 @@ namespace DAL
                         vaux = (from vend in db.Venda
                             where vend.idCliente == idCliente && vend.valorrestante > 0
                             select vend).FirstOrDefault();
-                        //em algum ponto, colocar o novo registro de ClientePagamento que não está sendo feito
                         vaux.valorrestante = vaux.valorrestante - (resto * -1);
                         resto = vaux.valorrestante;
                         if (resto < 0)
@@ -398,6 +397,8 @@ namespace DAL
                                                
                         c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                         c.Pontos = c.Pontos + 2;
+                        c.DataUltimoPagamento = cp.data;
+                        //c.totalComprado = c.totalComprado - resto;
                         db.Entry(c).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
 
@@ -412,6 +413,7 @@ namespace DAL
 
                     c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                     c.Pontos = c.Pontos + 2;
+                    c.DataUltimoPagamento = cp.data;
                     db.Entry(c).State = System.Data.Entity.EntityState.Modified;
 
                     db.SaveChanges();
@@ -467,8 +469,10 @@ namespace DAL
                       join c in db.City on e.idCidade equals c.Id
                       join s in db.State on c.IdState equals s.Id
                       //where (TimeSpan.Parse(DateTime.Now.ToString()) - TimeSpan.Parse(cli.DataUltimoPagamento.ToString())).TotalDays < 30 && cli.Pontos > 20 && cli.limitecredito > 1000
-                      //orderby c.tamanho
-                      where (System.Data.Entity.SqlServer.SqlFunctions.DateDiff("day",DateTime.Now,(cli.DataUltimoPagamento))) < 30 && cli.Pontos > 20 && cli.limitecredito > 1000
+                      
+                      //where (System.Data.Entity.SqlServer.SqlFunctions.DateDiff(Day,DateTime.Now,(cli.DataUltimoPagamento))) < 30 && cli.Pontos > 20 && cli.limitecredito > 1000
+                      
+                      //where cli.Pontos > 20 && cli.limitecredito > 1000
                       select new ClienteModel()
                       {
                           nome = p.nome,
@@ -476,7 +480,7 @@ namespace DAL
                           celular2 = p.celular2,
                           CPF = p.CPF,
                           dataNascimento = p.datanascimento.Value,
-                          dataUltimoPagamento = p.datanascimento.Value,
+                          dataUltimoPagamento = cli.DataUltimoPagamento.Value,
                           email = p.email,
                           id = p.id,
                           telefone = p.telefone,
