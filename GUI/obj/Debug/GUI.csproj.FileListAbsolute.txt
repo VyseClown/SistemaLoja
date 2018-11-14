@@ -102,3 +102,7 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\MaterialSkin.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADUsuario.resources
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmLogin.resources
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCONRelatorio.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\FlashControlV71.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmRelatorio.resources

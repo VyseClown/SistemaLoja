@@ -168,6 +168,7 @@
             this.label12.Size = new System.Drawing.Size(124, 25);
             this.label12.TabIndex = 64;
             this.label12.Text = "Quantidade";
+            this.label12.Visible = false;
             // 
             // txtQtd
             // 
@@ -178,6 +179,7 @@
             this.txtQtd.ReadOnly = true;
             this.txtQtd.Size = new System.Drawing.Size(78, 30);
             this.txtQtd.TabIndex = 47;
+            this.txtQtd.Visible = false;
             // 
             // label10
             // 

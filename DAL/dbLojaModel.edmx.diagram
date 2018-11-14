@@ -58,6 +58,7 @@
         <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.UsuarioPermissoes" Width="1.5" PointX="12.625" PointY="9.875" />
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Permissoes" />
         <AssociationConnector Association="dbLojaQuiteriaModasModel.FK_UsuarioPermissoes_Usuario" />
+        <EntityTypeShape EntityType="dbLojaQuiteriaModasModel.FluxoCaixa" Width="1.5" PointX="0.75" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

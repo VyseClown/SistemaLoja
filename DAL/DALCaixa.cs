@@ -97,15 +97,81 @@ namespace DAL
                 db.SaveChanges();
             }
         }
-        //public decimal somarContasAPagar()
-        //{
-        //    using (quiteriamodasEntities db = new quiteriamodasEntities())
-        //    {
-        //        Conta divida = new Conta();
-        //        divida = (from e in db.Conta
-        //                  select e.Valor).FirstOrDefault();
-        //        return divida;
-        //    }
-        //}
+        public FluxoCaixa verificarAberturaCaixa()
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                FluxoCaixa Caixa = new FluxoCaixa();
+                Caixa = (from e in db.FluxoCaixa
+                         where System.Data.Entity.DbFunctions.TruncateTime(DateTime.Now) == System.Data.Entity.DbFunctions.TruncateTime(e.DataAbertura)
+                          select e).FirstOrDefault();
+                return Caixa;
+            }
+        }
+        public FluxoCaixa verificarFechamento(FluxoCaixa caixa)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                FluxoCaixa Caixa = new FluxoCaixa();
+                Caixa = (from e in db.FluxoCaixa
+                         where System.Data.Entity.DbFunctions.TruncateTime(caixa.DataFechamento) == System.Data.Entity.DbFunctions.TruncateTime(e.DataAbertura)
+                         select e).FirstOrDefault();
+                //Caixa.DataFechamento = caixa.DataFechamento;
+                //Caixa.ValorFechamento = caixa.ValorFechamento;
+                Caixa.Fluxo = Caixa.ValorFechamento - Caixa.ValorAbertura;
+                return Caixa;
+            }
+        }
+        public bool AbrirCaixa(FluxoCaixa item)
+        {
+            try
+            {
+                using (quiteriamodasEntities db = new quiteriamodasEntities())
+                {
+                    db.FluxoCaixa.Add(item);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+        public bool FecharCaixa(FluxoCaixa item)
+        {
+            try
+            {
+                using (quiteriamodasEntities db = new quiteriamodasEntities())
+                {
+                    db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+
+        public decimal somarBalanco(DateTime inicio, DateTime final)
+        {
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                decimal fluxo = 0;
+                List<decimal?> balanco;
+                balanco = (from e in db.FluxoCaixa
+                           where System.Data.Entity.DbFunctions.TruncateTime(e.DataFechamento) >= inicio && System.Data.Entity.DbFunctions.TruncateTime(e.DataFechamento) <= final && e.Fluxo != null
+                          select e.Fluxo).ToList();
+                foreach (decimal item in balanco)
+                {
+                    fluxo = fluxo + item;
+                }
+                return fluxo;
+            }
+        }
     }
 }

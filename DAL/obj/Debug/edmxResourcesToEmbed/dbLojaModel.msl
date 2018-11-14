@@ -307,5 +307,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="FluxoCaixa">
+      <EntityTypeMapping TypeName="dbLojaQuiteriaModasModel.FluxoCaixa">
+        <MappingFragment StoreEntitySet="FluxoCaixa">
+          <ScalarProperty Name="Fluxo" ColumnName="Fluxo" />
+          <ScalarProperty Name="ValorFechamento" ColumnName="ValorFechamento" />
+          <ScalarProperty Name="ValorAbertura" ColumnName="ValorAbertura" />
+          <ScalarProperty Name="DataFechamento" ColumnName="DataFechamento" />
+          <ScalarProperty Name="DataAbertura" ColumnName="DataAbertura" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

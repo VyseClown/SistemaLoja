@@ -126,6 +126,7 @@
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="UsuarioPermissoes" EntitySet="UsuarioPermissoes" />
     </AssociationSet>
+    <EntitySet Name="FluxoCaixa" EntityType="dbLojaQuiteriaModasModel.FluxoCaixa" />
   </EntityContainer>
   <EntityType Name="Categoria">
     <Key>
@@ -740,4 +741,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="FluxoCaixa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataAbertura" Type="DateTime" Precision="3" />
+    <Property Name="DataFechamento" Type="DateTime" Precision="3" />
+    <Property Name="ValorAbertura" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ValorFechamento" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Fluxo" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
 </Schema>

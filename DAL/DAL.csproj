@@ -191,6 +191,9 @@
     <Compile Include="Endereco.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FluxoCaixa.cs">
+      <DependentUpon>dbLojaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Fornecedor.cs">
       <DependentUpon>dbLojaModel.tt</DependentUpon>
     </Compile>

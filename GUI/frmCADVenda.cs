@@ -304,15 +304,16 @@ namespace GUI
 
 
             List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
-            if (dgvVenda.RowCount > 0)
+            if (dgvVenda.RowCount > 1)
             {
 
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
                 decimal valor = decimal.Parse(txtPreco.Text);
                 valor = valor - obj.preco;
                 txtPreco.Text = valor.ToString();
-                listaproduto.Remove(obj);
-                dgvVenda.DataSource = listaproduto;//null;//list;
+                //listaproduto.Remove(obj);
+                listaproduto.RemoveAll(l => l.id == id);
+                dgvVenda.DataSource = listaproduto.ToList();//null;//list;
                 txtCodigoDeBarras.Text = "";
                 
 
@@ -469,9 +470,9 @@ namespace GUI
 
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
                 listaprodutocondicional.Add(obj);
-                dgvProdutosCondicional.DataSource = listaprodutocondicional;
-                dgvProdutosCondicional.Update();
-                dgvProdutosCondicional.Refresh();
+                dgvProdutosCondicional.DataSource = listaprodutocondicional.ToList();
+                //dgvProdutosCondicional.Update();
+                //dgvProdutosCondicional.Refresh();
                 //txtPreco.Text = 
                 txtCodigoDeBarras.Text = "";
                 dgvCondicional.DataSource = null;
@@ -482,7 +483,7 @@ namespace GUI
             }
             else
             {
-                dgvProdutosCondicional.DataSource = listAntiga;
+                dgvProdutosCondicional.DataSource = listAntiga.ToList();
                 listaprodutocondicional = listAntiga;
                 txtCodigoDeBarras.Text = "";
                 dgvCondicional.DataSource = null;
@@ -503,8 +504,8 @@ namespace GUI
             {
 
                 //list = DALProduto.SelecionarListaUmItem(obj.id);
-                listaprodutocondicional.Remove(obj);
-                dgvProdutosCondicional.DataSource = listaprodutocondicional;//null;//list;
+                listaprodutocondicional.RemoveAll(l => l.id == id);
+                dgvProdutosCondicional.DataSource = listaprodutocondicional.ToList();//null;//list;
                 txtCodigoDeBarras.Text = "";
 
 
@@ -553,7 +554,7 @@ namespace GUI
         {
             if (dgvListaCondicionais.RowCount > 0)
             {
-                int id = (int)dgvListaCondicionais.CurrentRow.Cells[0].Value;
+                int id = (int)dgvListaCondicionais.CurrentRow.Cells[3].Value;
                 //dgvVenda.DataSource = dgvListaCondicionais.DataSource;
                 idCondicional = id;
                 string status = cbStatusCondicionalLista.SelectedItem.ToString();

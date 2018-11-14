@@ -104,6 +104,17 @@
     <Property Name="bairro" Type="varchar" MaxLength="50" />
     <Property Name="CEP" Type="varchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="FluxoCaixa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataAbertura" Type="datetime" />
+    <Property Name="DataFechamento" Type="datetime" />
+    <Property Name="ValorAbertura" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ValorFechamento" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Fluxo" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
   <EntityType Name="Fornecedor">
     <Key>
       <PropertyRef Name="id" />
@@ -578,6 +589,7 @@
     <EntitySet Name="Cor" EntityType="Self.Cor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Endereco" EntityType="Self.Endereco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FluxoCaixa" EntityType="Self.FluxoCaixa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ItensCondicional" EntityType="Self.ItensCondicional" Schema="dbo" store:Type="Tables" />

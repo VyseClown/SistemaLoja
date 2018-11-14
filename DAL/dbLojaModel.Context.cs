@@ -54,5 +54,6 @@ namespace DAL
         public virtual DbSet<Permissoes> Permissoes { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<UsuarioPermissoes> UsuarioPermissoes { get; set; }
+        public virtual DbSet<FluxoCaixa> FluxoCaixa { get; set; }
     }
 }
