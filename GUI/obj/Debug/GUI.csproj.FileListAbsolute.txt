@@ -82,9 +82,7 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Rep
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\stdole.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.dll.config
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.dll.config
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\Modelo.pdb
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\EntityFramework.xml
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\EntityFramework.SqlServer.xml
@@ -95,9 +93,6 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\System.Threading.Tas
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.exe
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.pdb
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmPagamento.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\MaterialSkin.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmCADUsuario.resources
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmLogin.resources
@@ -106,3 +101,4 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Win
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\FlashControlV71.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmRelatorio.resources
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache

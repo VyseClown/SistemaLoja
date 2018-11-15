@@ -80,8 +80,8 @@ namespace GUI
                 if (resultado)
                 {
                     avisos.Text = "Venda completada !";
-                    frmCADVenda_Load(sender,e);
                     limparTextBoxes(this.Controls);
+                    frmCADVenda_Load(sender,e);
                     listaproduto = null;
                 }
 
