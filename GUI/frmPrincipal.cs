@@ -123,7 +123,12 @@ namespace GUI
                 {
                     btnUsuario.Enabled = true;
                 }
+                if (usu.idPermissao == 9)
+                {
+                    btnRelatorio.Enabled = true;
+                }
             }
         }
+        
     }
 }

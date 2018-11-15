@@ -101,4 +101,8 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\CrystalDecisions.Win
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\FlashControlV71.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.frmRelatorio.resources
-C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\BLL.dll.config
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\bin\Debug\DAL.dll.config
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\alessandrogentil\Desktop\SistemaLoja\GUI\obj\Debug\GUI.csproj.CopyComplete

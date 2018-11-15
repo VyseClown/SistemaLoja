@@ -86,6 +86,11 @@ namespace GUI
                             usup.idPermissao = 8;
                             listp.Add(usup);
                         }
+                        if (((CheckBox)(ctrl)).Name == "cbRelatorio")
+                        {
+                            usup.idPermissao = 9;
+                            listp.Add(usup);
+                        }
                     }
                 }
             }

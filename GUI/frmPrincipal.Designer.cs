@@ -40,12 +40,13 @@
             // 
             // btnCADProduto
             // 
+            this.btnCADProduto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCADProduto.Depth = 0;
-            this.btnCADProduto.Location = new System.Drawing.Point(33, 120);
+            this.btnCADProduto.Location = new System.Drawing.Point(165, 86);
             this.btnCADProduto.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCADProduto.Name = "btnCADProduto";
             this.btnCADProduto.Primary = true;
-            this.btnCADProduto.Size = new System.Drawing.Size(157, 67);
+            this.btnCADProduto.Size = new System.Drawing.Size(267, 149);
             this.btnCADProduto.TabIndex = 0;
             this.btnCADProduto.Text = "Cadastro de Produto";
             this.btnCADProduto.UseVisualStyleBackColor = true;
@@ -53,12 +54,13 @@
             // 
             // btnVenda
             // 
+            this.btnVenda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVenda.Depth = 0;
-            this.btnVenda.Location = new System.Drawing.Point(199, 120);
+            this.btnVenda.Location = new System.Drawing.Point(638, 86);
             this.btnVenda.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Primary = true;
-            this.btnVenda.Size = new System.Drawing.Size(148, 67);
+            this.btnVenda.Size = new System.Drawing.Size(258, 149);
             this.btnVenda.TabIndex = 1;
             this.btnVenda.Text = "Venda";
             this.btnVenda.UseVisualStyleBackColor = true;
@@ -66,12 +68,13 @@
             // 
             // btnCONProduto
             // 
+            this.btnCONProduto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCONProduto.Depth = 0;
-            this.btnCONProduto.Location = new System.Drawing.Point(199, 204);
+            this.btnCONProduto.Location = new System.Drawing.Point(638, 241);
             this.btnCONProduto.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCONProduto.Name = "btnCONProduto";
             this.btnCONProduto.Primary = true;
-            this.btnCONProduto.Size = new System.Drawing.Size(148, 67);
+            this.btnCONProduto.Size = new System.Drawing.Size(258, 149);
             this.btnCONProduto.TabIndex = 3;
             this.btnCONProduto.Text = "Consulta de Produto";
             this.btnCONProduto.UseVisualStyleBackColor = true;
@@ -79,12 +82,13 @@
             // 
             // btnCADPessoa
             // 
+            this.btnCADPessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCADPessoa.Depth = 0;
-            this.btnCADPessoa.Location = new System.Drawing.Point(33, 204);
+            this.btnCADPessoa.Location = new System.Drawing.Point(165, 241);
             this.btnCADPessoa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCADPessoa.Name = "btnCADPessoa";
             this.btnCADPessoa.Primary = true;
-            this.btnCADPessoa.Size = new System.Drawing.Size(157, 67);
+            this.btnCADPessoa.Size = new System.Drawing.Size(267, 149);
             this.btnCADPessoa.TabIndex = 2;
             this.btnCADPessoa.Text = "Cadastro de Pessoa";
             this.btnCADPessoa.UseVisualStyleBackColor = true;
@@ -92,12 +96,13 @@
             // 
             // btnPagamento
             // 
+            this.btnPagamento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPagamento.Depth = 0;
-            this.btnPagamento.Location = new System.Drawing.Point(199, 289);
+            this.btnPagamento.Location = new System.Drawing.Point(638, 396);
             this.btnPagamento.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.Primary = true;
-            this.btnPagamento.Size = new System.Drawing.Size(148, 67);
+            this.btnPagamento.Size = new System.Drawing.Size(258, 149);
             this.btnPagamento.TabIndex = 5;
             this.btnPagamento.Text = "Pagamento";
             this.btnPagamento.UseVisualStyleBackColor = true;
@@ -105,12 +110,13 @@
             // 
             // btnCaixa
             // 
+            this.btnCaixa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCaixa.Depth = 0;
-            this.btnCaixa.Location = new System.Drawing.Point(33, 289);
+            this.btnCaixa.Location = new System.Drawing.Point(165, 396);
             this.btnCaixa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Primary = true;
-            this.btnCaixa.Size = new System.Drawing.Size(157, 67);
+            this.btnCaixa.Size = new System.Drawing.Size(267, 149);
             this.btnCaixa.TabIndex = 4;
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.UseVisualStyleBackColor = true;
@@ -118,12 +124,13 @@
             // 
             // btnUsuario
             // 
+            this.btnUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUsuario.Depth = 0;
-            this.btnUsuario.Location = new System.Drawing.Point(33, 372);
+            this.btnUsuario.Location = new System.Drawing.Point(165, 551);
             this.btnUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Primary = true;
-            this.btnUsuario.Size = new System.Drawing.Size(157, 67);
+            this.btnUsuario.Size = new System.Drawing.Size(267, 149);
             this.btnUsuario.TabIndex = 6;
             this.btnUsuario.Text = "Cadastro de usuario";
             this.btnUsuario.UseVisualStyleBackColor = true;
@@ -131,14 +138,15 @@
             // 
             // btnRelatorio
             // 
+            this.btnRelatorio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRelatorio.Depth = 0;
-            this.btnRelatorio.Location = new System.Drawing.Point(199, 372);
+            this.btnRelatorio.Location = new System.Drawing.Point(638, 551);
             this.btnRelatorio.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Primary = true;
-            this.btnRelatorio.Size = new System.Drawing.Size(148, 67);
+            this.btnRelatorio.Size = new System.Drawing.Size(258, 149);
             this.btnRelatorio.TabIndex = 7;
-            this.btnRelatorio.Text = "Relatório";
+            this.btnRelatorio.Text = "Relatorio";
             this.btnRelatorio.UseVisualStyleBackColor = true;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
@@ -146,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 506);
+            this.ClientSize = new System.Drawing.Size(1057, 712);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnUsuario);
             this.Controls.Add(this.btnPagamento);

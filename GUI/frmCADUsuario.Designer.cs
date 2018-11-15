@@ -44,6 +44,7 @@
             this.cbPagamentos = new MaterialSkin.Controls.MaterialCheckBox();
             this.cbUsuario = new MaterialSkin.Controls.MaterialCheckBox();
             this.cbDesativado = new MaterialSkin.Controls.MaterialCheckBox();
+            this.cbRelatorio = new MaterialSkin.Controls.MaterialCheckBox();
             this.SuspendLayout();
             // 
             // txtLogin
@@ -256,7 +257,7 @@
             this.cbDesativado.AutoSize = true;
             this.cbDesativado.Depth = 0;
             this.cbDesativado.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cbDesativado.Location = new System.Drawing.Point(570, 324);
+            this.cbDesativado.Location = new System.Drawing.Point(373, 384);
             this.cbDesativado.Margin = new System.Windows.Forms.Padding(0);
             this.cbDesativado.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbDesativado.MouseState = MaterialSkin.MouseState.HOVER;
@@ -267,11 +268,28 @@
             this.cbDesativado.Text = "Desativado";
             this.cbDesativado.UseVisualStyleBackColor = true;
             // 
+            // cbRelatorio
+            // 
+            this.cbRelatorio.AutoSize = true;
+            this.cbRelatorio.Depth = 0;
+            this.cbRelatorio.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cbRelatorio.Location = new System.Drawing.Point(570, 324);
+            this.cbRelatorio.Margin = new System.Windows.Forms.Padding(0);
+            this.cbRelatorio.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbRelatorio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbRelatorio.Name = "cbRelatorio";
+            this.cbRelatorio.Ripple = true;
+            this.cbRelatorio.Size = new System.Drawing.Size(85, 30);
+            this.cbRelatorio.TabIndex = 12;
+            this.cbRelatorio.Text = "Relatorio";
+            this.cbRelatorio.UseVisualStyleBackColor = true;
+            // 
             // frmCADUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbRelatorio);
             this.Controls.Add(this.cbDesativado);
             this.Controls.Add(this.cbUsuario);
             this.Controls.Add(this.cbPagamentos);
@@ -288,6 +306,7 @@
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.materialLabel1);
             this.Name = "frmCADUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -311,5 +330,6 @@
         private MaterialSkin.Controls.MaterialCheckBox cbPagamentos;
         private MaterialSkin.Controls.MaterialCheckBox cbUsuario;
         private MaterialSkin.Controls.MaterialCheckBox cbDesativado;
+        private MaterialSkin.Controls.MaterialCheckBox cbRelatorio;
     }
 }
