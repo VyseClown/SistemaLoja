@@ -458,6 +458,7 @@ namespace DAL
                     db.SaveChanges();
                 c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                 c.Pontos = c.Pontos + 2;
+                c.totalComprado = c.totalComprado - valorPagamento;
                 db.Entry(c).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
 

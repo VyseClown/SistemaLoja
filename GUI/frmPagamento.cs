@@ -32,77 +32,73 @@ namespace GUI
                 return;
             }
             //int cont = 0;
-            if(txtPagamento.Text != "" && txtPagamento.Text != "0") {
-                //foreach (char c in txtPagamento.Text)
-                //{
-                //    if(c == ',' || c == '.')
-                //    {
-                //        cont++;
-                //    }
-                //    //bar += c;
-                //}
-                //if(cont >= 2)
-                //{
-                //    MessageBox.Show("Por favor, digite apenas uma virgula ou um ponto !");
-                //}
+            if (txtPagamento.Text != "" && txtPagamento.Text != "0")
+            {
                 Cliente cli = new Cliente();
-            DALPessoa dalpes = new DALPessoa();
-                //cli = (dalpes.retornarCliente((int)cbCliente.SelectedValue));
-
-
-
-                //int cont = 0;
-                //if (txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
-                //{
-                //    cont++;
-
-                //}
-                //if (cont >= 2)
-                //{
-                //    txtPagamento.Text = "";
-                //    cont = 0;
-                //}
+                DALPessoa dalpes = new DALPessoa();
 
 
                 bool temtroco = false;
                 int idVenda = (int)dgvVenda.CurrentRow.Cells[0].Value;
-            int idCliente = (int)dgvVenda.CurrentRow.Cells[1].Value;
-            decimal valorRestante = (decimal)dgvVenda.CurrentRow.Cells[4].Value;
+                int idCliente = (int)dgvVenda.CurrentRow.Cells[1].Value;
+                decimal valorRestante = (decimal)dgvVenda.CurrentRow.Cells[4].Value;
                 decimal valorPago = decimal.Parse(txtPagamento.Text);
                 //decimal valorPago = decimal.Parse(txtValorPagamentoMask.Text);
                 decimal resto = valorRestante - valorPago;
-                if (resto < 0) {
+                if (resto < 0)
+                {
                     temtroco = true;
                     resto = resto * -1;
                 }
                 txtRestante.Text = resto.ToString();
-                DialogResult dialogResult = MessageBox.Show("Quer usar o valor para pagar mais de uma conta ?", "Decisão", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                //if(temtroco == false)
+                if (temtroco == true)
                 {
-                    bool pagamento1 = (new DALVenda().RealizarPagamento(idVenda, idCliente, valorRestante, valorPago));
+                    bool pagamento1 = false;
+                  //  DialogResult dialogResult = MessageBox.Show("Quer usar o valor para pagar mais de uma conta ?", "Decisão", MessageBoxButtons.YesNo);
+                    //if (dialogResult == DialogResult.Yes)
+                    //{
+                      //  pagamento1 = (new DALVenda().RealizarPagamento(idVenda, idCliente, valorRestante, valorPago));
 
-                    if (pagamento1)
-                    {
-                        txtPagamento.Text = "";
-                        
-                        MessageBox.Show("Pagamento realizado com sucesso !");
-                        //cbCliente_SelectionChangeCommitted(sender,e);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Pagamento não foi realizado !");
-                        //cbCliente_SelectionChangeCommitted(sender, e);
-                    }
+                        //if (pagamento1)
+                        //{
+                          //  txtPagamento.Text = "";
+
+                            //MessageBox.Show("Pagamento realizado com sucesso !");
+                            //cbCliente_SelectionChangeCommitted(sender,e);
+                        //}
+                        //else
+                        //{
+                         //   MessageBox.Show("Pagamento não foi realizado !");
+                            //cbCliente_SelectionChangeCommitted(sender, e);
+                       // }
+                    //}
+                    //else if (dialogResult == DialogResult.No)
+                    //{
+                        bool pagamento = (new DALVenda().RealizarPagamentoComTroco(idVenda, idCliente, valorRestante, valorPago));
+
+                        if (pagamento)
+                        {
+                            MessageBox.Show("Pagamento realizado com sucesso ! O troco é R$ " + resto);
+                            //cbCliente_SelectionChangeCommitted(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Pagamento não foi realizado !");
+                            //cbCliente_SelectionChangeCommitted(sender, e);
+                        }
+                    //}
                 }
                 //else if (dialogResult == DialogResult.No)
-                //if(temtroco == true)
+                if (temtroco == false)
                 {
+
                     bool pagamento = (new DALVenda().RealizarPagamentoComTroco(idVenda, idCliente, valorRestante, valorPago));
 
                     if (pagamento)
                     {
-                        MessageBox.Show("Pagamento realizado com sucesso ! O troco é R$ " + resto);
+                        MessageBox.Show("Pagamento efetuado com suceso !");
+                        txtPagamento.Text = "";
+                        //MessageBox.Show("Pagamento realizado com sucesso ! O troco é R$ " + resto);
                         //cbCliente_SelectionChangeCommitted(sender, e);
                     }
                     else
@@ -111,7 +107,7 @@ namespace GUI
                         //cbCliente_SelectionChangeCommitted(sender, e);
                     }
                 }
-                
+
             }
         }
 
@@ -143,7 +139,7 @@ namespace GUI
             pes = (dalpes.retornarPessoa(((int)cbCliente.SelectedValue)));
 
             txtCPF.Text = pes.CPF;
-            
+
             dgvVenda.Columns[0].Visible = false;
             dgvVenda.Columns[1].Visible = false;
             dgvProdutos.DataSource = null;
@@ -162,7 +158,7 @@ namespace GUI
                     cbCliente.Text = "";//testar se o codigo está mudando com a mudança do selectedtext
                     cbCliente.SelectedText = cli.nome;
                     dgvVenda.DataSource = (new DALVenda().carregarVendasCliente(cli.id));
-                    
+
                     dgvProdutos.DataSource = null;
                     //idPessoaGlobal = cli.id;
                 }
@@ -214,22 +210,22 @@ namespace GUI
 
         private void cbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtPagamento_KeyUp(object sender, KeyEventArgs e)
         {
-           
+
 
             //if (txtPagamento.Text != null)
-              //  {
-                    //if (!System.Text.RegularExpressions.Regex.IsMatch(txtPagamento.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$") )//|| txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
-                    //{
-                    //    txtPagamento.Text = "";
-                    //}
-                //}
-               // else
-                 //   txtPagamento.Text = "";
+            //  {
+            //if (!System.Text.RegularExpressions.Regex.IsMatch(txtPagamento.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$") )//|| txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
+            //{
+            //    txtPagamento.Text = "";
+            //}
+            //}
+            // else
+            //   txtPagamento.Text = "";
         }
 
         private void btnCobranca_Click(object sender, EventArgs e)
@@ -255,20 +251,20 @@ namespace GUI
             //List<ProdutoModel> listAntiga = DALProduto.SelecionarListaUmItem(obj.id);
             if (dgvVenda.RowCount > 0)
             {
-              //  decimal valor = decimal.Parse(txtPreco.Text);
+                //  decimal valor = decimal.Parse(txtPreco.Text);
                 //valor = valor + obj.preco;
-           //     txtPreco.Text = valor.ToString();
-             //   listaproduto.Add(obj);
-    //            dgvVenda.DataSource = listaproduto;
-      //          txtCodigoDeBarras.Text = "";
+                //     txtPreco.Text = valor.ToString();
+                //   listaproduto.Add(obj);
+                //            dgvVenda.DataSource = listaproduto;
+                //          txtCodigoDeBarras.Text = "";
                 //dgvProdutos.DataSource = null;
 
             }
             else
             {
-        //        dgvVenda.DataSource = listAntiga;
-          //      listaproduto = listAntiga;
-            //    txtCodigoDeBarras.Text = "";
+                //        dgvVenda.DataSource = listAntiga;
+                //      listaproduto = listAntiga;
+                //    txtCodigoDeBarras.Text = "";
                 dgvProdutos.DataSource = null;
             }
         }
