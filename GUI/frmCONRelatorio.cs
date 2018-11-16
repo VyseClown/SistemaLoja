@@ -42,5 +42,65 @@ namespace GUI
             rel = null;
             rpt = null;
         }
+
+        private void btnInadimplentes_Click(object sender, EventArgs e)
+        {
+            DAL.Relatorios.RelatorioInadimplentes rpt = new DAL.Relatorios.RelatorioInadimplentes();
+            //rpt.SetDatabaseLogon(usuario, senha);
+            rpt.SetParameterValue(0, int.Parse(txtDiasInad.Text));
+            frmRelatorio rel = new frmRelatorio();
+            rel.crystalReportViewer1.ReportSource = rpt;
+            rel.ShowDialog();
+            rel = null;
+            rpt = null;
+        }
+
+        private void btnFinanceiro_Click(object sender, EventArgs e)
+        {
+            DAL.Relatorios.RelatorioFinanceiro rpt = new DAL.Relatorios.RelatorioFinanceiro();
+            //rpt.SetDatabaseLogon(usuario, senha);
+            //rpt.SetParameterValue(0, txtDataInicioFinanceiro.Text);
+            //rpt.SetParameterValue(1, txtDataFimFinanceiro.Text);
+            rpt.SetParameterValue(0, dtpInicioFinanceiro.Text);
+            rpt.SetParameterValue(1, dtpFimFinanceiro.Text);
+
+            frmRelatorio rel = new frmRelatorio();
+            rel.crystalReportViewer1.ReportSource = rpt;
+            rel.ShowDialog();
+            rel = null;
+            rpt = null;
+        }
+
+        private void btnCondicionais_Click(object sender, EventArgs e)
+        {
+            DAL.Relatorios.RelatorioClienteCondicional rpt = new DAL.Relatorios.RelatorioClienteCondicional();
+            //rpt.SetDatabaseLogon(usuario, senha);
+            //rpt.SetParameterValue(0, txtDataInicioFinanceiro.Text);
+            //rpt.SetParameterValue(1, txtDataFimFinanceiro.Text);
+            rpt.SetParameterValue(0, dtpInicioCondicionais.Text);
+            rpt.SetParameterValue(1, dtpFimCondicionais.Text);
+
+            frmRelatorio rel = new frmRelatorio();
+            rel.crystalReportViewer1.ReportSource = rpt;
+            rel.ShowDialog();
+            rel = null;
+            rpt = null;
+        }
+
+        private void btnVendasMarcas_Click(object sender, EventArgs e)
+        {
+            DAL.Relatorios.RelatorioVendaMarca rpt = new DAL.Relatorios.RelatorioVendaMarca();
+            //rpt.SetDatabaseLogon(usuario, senha);
+            //rpt.SetParameterValue(0, txtDataInicioFinanceiro.Text);
+            //rpt.SetParameterValue(1, txtDataFimFinanceiro.Text);
+            rpt.SetParameterValue(0, dtpInicioVendasMarcas.Text);
+            rpt.SetParameterValue(1, dtpFimVendasMarcas.Text);
+
+            frmRelatorio rel = new frmRelatorio();
+            rel.crystalReportViewer1.ReportSource = rpt;
+            rel.ShowDialog();
+            rel = null;
+            rpt = null;
+        }
     }
 }

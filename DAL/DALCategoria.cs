@@ -86,6 +86,63 @@ namespace DAL
 
             return obj?.id ?? 0;
         }
+        public static int SelecionarCodModelo(string descricao)
+        {
+            //var obj = new categoria();
+            Modelo obj;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from c in db.Modelo
+                       where c.nome.Contains(descricao)
+                       orderby c.nome
+                       select c).FirstOrDefault();
+            }
+
+            return obj?.id ?? 0;
+        }
+        public static int SelecionarCodMarca(string descricao)
+        {
+            //var obj = new categoria();
+            Marcas obj;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from c in db.Marcas
+                       where c.nome.Contains(descricao)
+                       orderby c.nome
+                       select c).FirstOrDefault();
+            }
+
+            return obj?.id ?? 0;
+        }
+        public static int SelecionarCodTamanho(string descricao)
+        {
+            //var obj = new categoria();
+            Tamanhos obj;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from c in db.Tamanhos
+                       where c.nome.Contains(descricao)
+                       orderby c.nome
+                       select c).FirstOrDefault();
+            }
+
+            return obj?.id ?? 0;
+        }
+        public static int SelecionarCodCor(string descricao)
+        {
+            //var obj = new categoria();
+            Cor obj;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from c in db.Cor
+                       where c.Nome.Contains(descricao)
+                       orderby c.Nome
+                       select c).FirstOrDefault();
+            }
+
+            return obj?.id ?? 0;
+        }
+
 
 
         public static string SelecionarcodInt(int codigo)

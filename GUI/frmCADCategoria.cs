@@ -69,7 +69,7 @@ namespace GUI
             DAL.Modelo mod = new DAL.Modelo();
             BLLProduto objProduto = new BLLProduto();
             var BLLCat = new BLLCategoria();
-            if (txtNomeModelo.Text != "" /*&& BLLCat.selecionarIDCategoria(txtNomeModelo.Text) == 0*/)
+            if (txtNomeModelo.Text != "" && DALCategoria.SelecionarCodModelo(txtNomeModelo.Text) == 0)
             {
                 mod.nome = txtNomeModelo.Text;
                 objProduto.IncluirModelo(mod);
@@ -91,7 +91,7 @@ namespace GUI
             Marcas m = new Marcas();
             BLLProduto objProduto = new BLLProduto();
             var BLLCat = new BLLCategoria();
-            if (txtNomeMarca.Text != ""/* && BLLCat.selecionarIDCategoria(txtNomeMarca.Text) == 0*/)
+            if (txtNomeMarca.Text != "" && DALCategoria.SelecionarCodMarca(txtNomeMarca.Text) == 0)
             {
                 m.nome = txtNomeMarca.Text;
                 objProduto.IncluirMarca(m);
@@ -111,7 +111,7 @@ namespace GUI
             Tamanhos tam = new Tamanhos();
             BLLProduto objProduto = new BLLProduto();
             var BLLCat = new BLLCategoria();
-            if (txtNomeTamanho.Text != "" /*&& BLLCat.selecionarIDCategoria(txtNomeTamanho.Text) == 0*/)
+            if (txtNomeTamanho.Text != "" && DALCategoria.SelecionarCodTamanho(txtNomeTamanho.Text) == 0)
             {
                 tam.nome = txtNomeTamanho.Text;
                 objProduto.IncluirTamanho(tam);
@@ -131,7 +131,7 @@ namespace GUI
             Cor m = new Cor();
             BLLProduto objProduto = new BLLProduto();
             var BLLCat = new BLLCategoria();
-            if (txtCor.Text != "" /*&& BLLCat.selecionarIDCategoria(txtCor.Text) == 0*/)
+            if (txtCor.Text != "" && DALCategoria.SelecionarCodCor(txtCor.Text) == 0)
             {
                 m.Nome = txtCor.Text;
                 objProduto.IncluirCor(m);

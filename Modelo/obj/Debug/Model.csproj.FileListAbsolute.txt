@@ -1,6 +1,5 @@
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\bin\Debug\Modelo.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\bin\Debug\Modelo.pdb
+C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.dll
 C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Modelo.pdb
-C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Model.csprojAssemblyReference.cache
-C:\Users\alessandrogentil\Desktop\SistemaLoja\Modelo\obj\Debug\Model.csproj.CoreCompileInputs.cache

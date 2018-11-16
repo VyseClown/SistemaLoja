@@ -28,6 +28,10 @@ namespace GUI
                 {
                     ((TextBox)(ctrl)).Text = String.Empty;
                 }
+                if(ctrl is MaterialSingleLineTextField)
+                {
+                    ((MaterialSingleLineTextField)(ctrl)).Text = String.Empty;
+                }
                 if(ctrl is CheckBox)
                 {
                     ((CheckBox)(ctrl)).Checked = false;
@@ -48,49 +52,59 @@ namespace GUI
                     {
                         if(((CheckBox)(ctrl)).Name == "cbProduto")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 1;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbPessoa")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 2;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbCaixa")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 3;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbVenda")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 4;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbConsultaProd")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 5;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbPagamento")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 6;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbUsuario")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 7;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbDesativado")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 8;
                             listp.Add(usup);
                         }
                         if (((CheckBox)(ctrl)).Name == "cbRelatorio")
                         {
+                            usup.idUsuario = idUsuario;
                             usup.idPermissao = 9;
                             listp.Add(usup);
                         }
+                        usup = new UsuarioPermissoes();
                     }
                 }
             }
@@ -122,8 +136,14 @@ namespace GUI
         {
             if (idUsuario != 0)
             {
+                DALLogin objDAL = new DALLogin();
+                Usuario usu = new Usuario();
                 List<UsuarioPermissoes> list = verificarPermissoes(this.Controls);
-
+                usu = objDAL.retornarUsuario(idUsuario);
+                objDAL.Alterar(usu,list);
+                limparTextBoxes(this.Controls);
+                idUsuario = 0;
+                MessageBox.Show("Usuario alterado com sucesso !");
                 //escrever o modificar aqui com as permissões
             }
             else
@@ -172,8 +192,11 @@ namespace GUI
                     {
                         cbDesativado.Checked = true;
                     }
+                    if(usu.idPermissao == 9)
+                    {
+                        cbRelatorio.Checked = true;
+                    }
                 }
-                //atribuir as permissões
             }
         }
     }

@@ -25,26 +25,67 @@ namespace GUI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if(txtPagamento.Text != "" && txtPagamento.Text != "0") { 
-            Cliente cli = new Cliente();
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtPagamento.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$"))//|| txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
+            {
+                txtPagamento.Text = "";
+                MessageBox.Show("Informe um valor de pagamento valido ! Exemplo: 50.00 ou 50,00");
+                return;
+            }
+            //int cont = 0;
+            if(txtPagamento.Text != "" && txtPagamento.Text != "0") {
+                //foreach (char c in txtPagamento.Text)
+                //{
+                //    if(c == ',' || c == '.')
+                //    {
+                //        cont++;
+                //    }
+                //    //bar += c;
+                //}
+                //if(cont >= 2)
+                //{
+                //    MessageBox.Show("Por favor, digite apenas uma virgula ou um ponto !");
+                //}
+                Cliente cli = new Cliente();
             DALPessoa dalpes = new DALPessoa();
-            //cli = (dalpes.retornarCliente((int)cbCliente.SelectedValue));
-            
-            
-            int idVenda = (int)dgvVenda.CurrentRow.Cells[0].Value;
+                //cli = (dalpes.retornarCliente((int)cbCliente.SelectedValue));
+
+
+
+                //int cont = 0;
+                //if (txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
+                //{
+                //    cont++;
+
+                //}
+                //if (cont >= 2)
+                //{
+                //    txtPagamento.Text = "";
+                //    cont = 0;
+                //}
+
+
+                bool temtroco = false;
+                int idVenda = (int)dgvVenda.CurrentRow.Cells[0].Value;
             int idCliente = (int)dgvVenda.CurrentRow.Cells[1].Value;
             decimal valorRestante = (decimal)dgvVenda.CurrentRow.Cells[4].Value;
-            decimal valorPago = decimal.Parse(txtPagamento.Text);
+                decimal valorPago = decimal.Parse(txtPagamento.Text);
+                //decimal valorPago = decimal.Parse(txtValorPagamentoMask.Text);
                 decimal resto = valorRestante - valorPago;
-                if (resto < 0)
+                if (resto < 0) {
+                    temtroco = true;
                     resto = resto * -1;
+                }
+                txtRestante.Text = resto.ToString();
                 DialogResult dialogResult = MessageBox.Show("Quer usar o valor para pagar mais de uma conta ?", "Decisão", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
+                //if(temtroco == false)
                 {
                     bool pagamento1 = (new DALVenda().RealizarPagamento(idVenda, idCliente, valorRestante, valorPago));
 
                     if (pagamento1)
                     {
+                        txtPagamento.Text = "";
+                        
                         MessageBox.Show("Pagamento realizado com sucesso !");
                         //cbCliente_SelectionChangeCommitted(sender,e);
                     }
@@ -54,7 +95,8 @@ namespace GUI
                         //cbCliente_SelectionChangeCommitted(sender, e);
                     }
                 }
-                else if (dialogResult == DialogResult.No)
+                //else if (dialogResult == DialogResult.No)
+                //if(temtroco == true)
                 {
                     bool pagamento = (new DALVenda().RealizarPagamentoComTroco(idVenda, idCliente, valorRestante, valorPago));
 
@@ -177,16 +219,17 @@ namespace GUI
 
         private void txtPagamento_KeyUp(object sender, KeyEventArgs e)
         {
-            
-                if (txtPagamento.Text != null)
-                {
-                    if (!System.Text.RegularExpressions.Regex.IsMatch(txtPagamento.Text, "[0-9]") || txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
-                    {
-                        txtPagamento.Text = "";
-                    }
-                }
-                else
-                    txtPagamento.Text = "";
+           
+
+            //if (txtPagamento.Text != null)
+              //  {
+                    //if (!System.Text.RegularExpressions.Regex.IsMatch(txtPagamento.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$") )//|| txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
+                    //{
+                    //    txtPagamento.Text = "";
+                    //}
+                //}
+               // else
+                 //   txtPagamento.Text = "";
         }
 
         private void btnCobranca_Click(object sender, EventArgs e)

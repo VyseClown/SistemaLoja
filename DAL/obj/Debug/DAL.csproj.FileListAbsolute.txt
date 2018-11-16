@@ -88,8 +88,8 @@ C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\bin\Debug\System.Diagnostics.D
 C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\bin\Debug\System.Interactive.Async.xml
 C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.dll
-C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.pdb
 C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.dll
+C:\Users\alessandrogentil\Desktop\SistemaLoja\DAL\obj\Debug\DAL.pdb

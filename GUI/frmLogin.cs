@@ -24,7 +24,7 @@ namespace GUI
             DALLogin login = new DALLogin();
             List<UsuarioPermissoes> up = new List<UsuarioPermissoes>();
             bool ativado = false;
-            if((up = login.logarNoSistema(txtLogin.Text, txtSenha.Text)) != null)
+            if((up = login.logarNoSistema(txtLogin.Text, txtSenha.Text)) != null && up.Count != 0)
             {
                 //UsuarioPermissoes updesativado = new UsuarioPermissoes();
                 foreach(UsuarioPermissoes updesativado in up)
@@ -43,6 +43,10 @@ namespace GUI
                     frmCAD.listp = up;
                 frmCAD.Show();
                 this.Hide();
+                }
+                else
+                {
+                    //MessageBox.Show("Usuario foi desativado !");
                 }
             }
             else

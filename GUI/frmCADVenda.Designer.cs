@@ -107,6 +107,7 @@
             this.btnCarregarClientes = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvClientesParaCondicional = new System.Windows.Forms.DataGridView();
+            this.btnCadTipoPagamento = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -125,18 +126,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCadTipoPagamento);
             this.groupBox1.Controls.Add(this.materialRaisedButton2);
             this.groupBox1.Controls.Add(this.materialRaisedButton1);
             this.groupBox1.Location = new System.Drawing.Point(35, 598);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 59);
+            this.groupBox1.Size = new System.Drawing.Size(678, 59);
             this.groupBox1.TabIndex = 52;
             this.groupBox1.TabStop = false;
             // 
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(224, 19);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(476, 19);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -1014,6 +1016,19 @@
             this.dgvClientesParaCondicional.Size = new System.Drawing.Size(834, 427);
             this.dgvClientesParaCondicional.TabIndex = 63;
             // 
+            // btnCadTipoPagamento
+            // 
+            this.btnCadTipoPagamento.Depth = 0;
+            this.btnCadTipoPagamento.Location = new System.Drawing.Point(250, 19);
+            this.btnCadTipoPagamento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCadTipoPagamento.Name = "btnCadTipoPagamento";
+            this.btnCadTipoPagamento.Primary = true;
+            this.btnCadTipoPagamento.Size = new System.Drawing.Size(182, 31);
+            this.btnCadTipoPagamento.TabIndex = 98;
+            this.btnCadTipoPagamento.Text = "Cadastrar forma de pagamento";
+            this.btnCadTipoPagamento.UseVisualStyleBackColor = true;
+            this.btnCadTipoPagamento.Click += new System.EventHandler(this.btnCadTipoPagamento_Click);
+            // 
             // frmCADVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1126,5 +1141,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnMaterialConsultar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCadTipoPagamento;
     }
 }

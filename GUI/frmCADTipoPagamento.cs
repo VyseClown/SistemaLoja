@@ -26,7 +26,7 @@ namespace GUI
             var cat = new CategoriaPagamento();
             var BLLCat = new BLLVenda();
 
-            if (txtDescricao.Text != "")
+            if (txtDescricao.Text != "" && DALVenda.SelecionarCodTipoPagamento(txtDescricao.Text) == 0)
             {
                 cat.nome = txtDescricao.Text;
 
@@ -38,7 +38,7 @@ namespace GUI
                 MessageBox.Show("Salvo com sucesso !");
             }
             else
-                MessageBox.Show("Informe algum nome !");
+                MessageBox.Show("Informe algum nome ! Lembre-se, não pode ser um que já existe !");
         }
 
         private void frmCADTipoPagamento_Load(object sender, EventArgs e)

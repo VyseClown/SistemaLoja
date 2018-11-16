@@ -239,6 +239,20 @@ namespace DAL
             }
             return cp;
         }
+        public static int SelecionarCodTipoPagamento(string descricao)
+        {
+            //var obj = new categoria();
+            CategoriaPagamento obj;
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                obj = (from c in db.CategoriaPagamento
+                       where c.nome.Contains(descricao)
+                       orderby c.nome
+                       select c).FirstOrDefault();
+            }
+
+            return obj?.id ?? 0;
+        }
         //lista de produtos model
         public List<ProdutoModel> listaProdutosModelsDoCondicional(int idCondicional)
         {
@@ -321,7 +335,7 @@ namespace DAL
                     join cli in db.Cliente on v.idCliente equals cli.id
                     join pes in db.Pessoa on cli.idPessoa equals pes.id
                     join cp in db.CategoriaPagamento on v.idCategoriaPagamento equals cp.id
-                    where pes.id == id
+                    where pes.id == id && v.valorrestante > 0
 
 
                     select new VendaModel()
@@ -472,7 +486,7 @@ namespace DAL
                       
                       //where (System.Data.Entity.SqlServer.SqlFunctions.DateDiff(Day,DateTime.Now,(cli.DataUltimoPagamento))) < 30 && cli.Pontos > 20 && cli.limitecredito > 1000
                       
-                      //where cli.Pontos > 20 && cli.limitecredito > 1000
+                      where cli.Pontos > 20 && cli.limitecredito > 1000
                       select new ClienteModel()
                       {
                           nome = p.nome,

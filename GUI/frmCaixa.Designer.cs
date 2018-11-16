@@ -30,8 +30,11 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.dtpFim = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.btnRecalcular = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCaixa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -57,13 +60,8 @@
             this.btnFecharCaixa = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txtValorFechamento = new System.Windows.Forms.TextBox();
-            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.dtpFim = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDividas)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -79,7 +77,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 76);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(842, 437);
+            this.tabControl1.Size = new System.Drawing.Size(437, 310);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -89,21 +87,64 @@
             this.tabPage1.Controls.Add(this.materialLabel1);
             this.tabPage1.Controls.Add(this.dtpInicio);
             this.tabPage1.Controls.Add(this.btnRecalcular);
-            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.txtCaixa);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(834, 411);
+            this.tabPage1.Size = new System.Drawing.Size(429, 284);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Caixa";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(197, 70);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(47, 25);
+            this.materialLabel2.TabIndex = 100;
+            this.materialLabel2.Text = "Fim";
+            // 
+            // dtpFim
+            // 
+            this.dtpFim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFim.Location = new System.Drawing.Point(202, 98);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(148, 30);
+            this.dtpFim.TabIndex = 99;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(42, 70);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(63, 25);
+            this.materialLabel1.TabIndex = 98;
+            this.materialLabel1.Text = "Inicio";
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(47, 98);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(149, 30);
+            this.dtpInicio.TabIndex = 97;
+            // 
             // btnRecalcular
             // 
             this.btnRecalcular.Depth = 0;
-            this.btnRecalcular.Location = new System.Drawing.Point(12, 236);
+            this.btnRecalcular.Location = new System.Drawing.Point(47, 168);
             this.btnRecalcular.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRecalcular.Name = "btnRecalcular";
             this.btnRecalcular.Primary = true;
@@ -113,28 +154,20 @@
             this.btnRecalcular.UseVisualStyleBackColor = true;
             this.btnRecalcular.Click += new System.EventHandler(this.btnRecalcular_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(364, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(398, 300);
-            this.dataGridView1.TabIndex = 3;
-            // 
             // txtCaixa
             // 
             this.txtCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtCaixa.Location = new System.Drawing.Point(12, 80);
+            this.txtCaixa.Location = new System.Drawing.Point(202, 174);
             this.txtCaixa.Name = "txtCaixa";
             this.txtCaixa.ReadOnly = true;
-            this.txtCaixa.Size = new System.Drawing.Size(100, 30);
+            this.txtCaixa.Size = new System.Drawing.Size(148, 30);
             this.txtCaixa.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(7, 40);
+            this.label5.Location = new System.Drawing.Point(202, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 1;
@@ -159,7 +192,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(834, 411);
+            this.tabPage2.Size = new System.Drawing.Size(429, 284);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Divida";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -167,7 +200,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Depth = 0;
-            this.btnLimpar.Location = new System.Drawing.Point(422, 157);
+            this.btnLimpar.Location = new System.Drawing.Point(285, 199);
             this.btnLimpar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Primary = true;
@@ -221,7 +254,7 @@
             this.dgvDividas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDividas.Location = new System.Drawing.Point(11, 199);
             this.dgvDividas.Name = "dgvDividas";
-            this.dgvDividas.Size = new System.Drawing.Size(542, 155);
+            this.dgvDividas.Size = new System.Drawing.Size(268, 36);
             this.dgvDividas.TabIndex = 8;
             this.dgvDividas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDividas_CellDoubleClick);
             // 
@@ -322,7 +355,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(834, 411);
+            this.tabPage3.Size = new System.Drawing.Size(429, 284);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Abertura";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -330,7 +363,7 @@
             // btnAbrir
             // 
             this.btnAbrir.Depth = 0;
-            this.btnAbrir.Location = new System.Drawing.Point(21, 90);
+            this.btnAbrir.Location = new System.Drawing.Point(126, 164);
             this.btnAbrir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Primary = true;
@@ -344,7 +377,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(16, 26);
+            this.label6.Location = new System.Drawing.Point(106, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(179, 25);
             this.label6.TabIndex = 97;
@@ -353,10 +386,10 @@
             // txtValorAbertura
             // 
             this.txtValorAbertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtValorAbertura.Location = new System.Drawing.Point(21, 54);
+            this.txtValorAbertura.Location = new System.Drawing.Point(126, 128);
             this.txtValorAbertura.MaxLength = 30;
             this.txtValorAbertura.Name = "txtValorAbertura";
-            this.txtValorAbertura.Size = new System.Drawing.Size(209, 30);
+            this.txtValorAbertura.Size = new System.Drawing.Size(149, 30);
             this.txtValorAbertura.TabIndex = 96;
             this.txtValorAbertura.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValorAbertura_KeyUp);
             this.txtValorAbertura.Leave += new System.EventHandler(this.txtValorAbertura_Leave);
@@ -369,7 +402,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(834, 411);
+            this.tabPage4.Size = new System.Drawing.Size(429, 284);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Fechamento";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -377,7 +410,7 @@
             // btnFecharCaixa
             // 
             this.btnFecharCaixa.Depth = 0;
-            this.btnFecharCaixa.Location = new System.Drawing.Point(30, 82);
+            this.btnFecharCaixa.Location = new System.Drawing.Point(126, 164);
             this.btnFecharCaixa.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnFecharCaixa.Name = "btnFecharCaixa";
             this.btnFecharCaixa.Primary = true;
@@ -391,7 +424,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(25, 18);
+            this.label7.Location = new System.Drawing.Point(106, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(211, 25);
             this.label7.TabIndex = 100;
@@ -400,61 +433,19 @@
             // txtValorFechamento
             // 
             this.txtValorFechamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtValorFechamento.Location = new System.Drawing.Point(30, 46);
+            this.txtValorFechamento.Location = new System.Drawing.Point(126, 128);
             this.txtValorFechamento.MaxLength = 30;
             this.txtValorFechamento.Name = "txtValorFechamento";
-            this.txtValorFechamento.Size = new System.Drawing.Size(209, 30);
+            this.txtValorFechamento.Size = new System.Drawing.Size(149, 30);
             this.txtValorFechamento.TabIndex = 99;
             this.txtValorFechamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValorFechamento_KeyUp);
             this.txtValorFechamento.Leave += new System.EventHandler(this.txtValorFechamento_Leave);
-            // 
-            // dtpInicio
-            // 
-            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicio.Location = new System.Drawing.Point(12, 138);
-            this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(100, 20);
-            this.dtpInicio.TabIndex = 97;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 117);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(46, 19);
-            this.materialLabel1.TabIndex = 98;
-            this.materialLabel1.Text = "Inicio";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(12, 182);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(34, 19);
-            this.materialLabel2.TabIndex = 100;
-            this.materialLabel2.Text = "Fim";
-            // 
-            // dtpFim
-            // 
-            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFim.Location = new System.Drawing.Point(12, 204);
-            this.dtpFim.Name = "dtpFim";
-            this.dtpFim.Size = new System.Drawing.Size(100, 20);
-            this.dtpFim.TabIndex = 99;
             // 
             // frmCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 525);
+            this.ClientSize = new System.Drawing.Size(469, 424);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "frmCaixa";
@@ -464,7 +455,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDividas)).EndInit();
@@ -492,7 +482,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCaixa;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvDividas;
         private System.Windows.Forms.TabPage tabPage3;
         private MaterialSkin.Controls.MaterialRaisedButton btnAbrir;

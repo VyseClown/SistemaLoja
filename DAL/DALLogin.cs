@@ -65,7 +65,8 @@ namespace DAL
                     }
 
                     foreach (UsuarioPermissoes item in per)
-                    {                       
+                    {
+                       // item.idUsuario = usu.id;
                         db.UsuarioPermissoes.Add(item);
                         db.SaveChanges();
                     }
@@ -102,6 +103,18 @@ namespace DAL
             {
                 per = (from usu in db.Usuario
                        where usu.login == login
+                       select usu).FirstOrDefault();
+                return per;
+            }
+        }
+        public Usuario retornarUsuario(int id)
+        {
+            Usuario per = new Usuario();
+
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                per = (from usu in db.Usuario
+                       where usu.id == id
                        select usu).FirstOrDefault();
                 return per;
             }
