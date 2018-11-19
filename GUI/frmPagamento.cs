@@ -144,6 +144,7 @@ namespace GUI
             cbCliente.ValueMember = "id";
             cbCliente.DisplayMember = "nome";
 
+            DALCobranca dalCOB = new DALCobranca();
             Cliente cli = new Cliente();
             DALPessoa dalpes = new DALPessoa();
             Pessoa pes = new Pessoa();
@@ -156,6 +157,8 @@ namespace GUI
             dgvVenda.Columns[0].Visible = false;
             dgvVenda.Columns[1].Visible = false;
             dgvProdutos.DataSource = null;
+
+            dgvClientes.DataSource = dalCOB.carregarClientes().ToList();
         }
 
         private void btnLocalizar_Click(object sender, EventArgs e)
@@ -280,6 +283,13 @@ namespace GUI
                 //    txtCodigoDeBarras.Text = "";
                 dgvProdutos.DataSource = null;
             }
+        }
+
+        private void dgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dgvClientes.CurrentRow.Cells[0].Value;
+            DALCobranca objCOB = new DALCobranca();
+            dgvPagamentos.DataSource = objCOB.carregarPagamentosPorCliente(id).ToList();
         }
     }
 }

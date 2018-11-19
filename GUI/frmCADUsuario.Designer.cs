@@ -87,7 +87,7 @@
             this.txtSenha.SelectionLength = 0;
             this.txtSenha.SelectionStart = 0;
             this.txtSenha.Size = new System.Drawing.Size(157, 23);
-            this.txtSenha.TabIndex = 1;
+            this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = false;
             // 
             // materialLabel2
@@ -111,7 +111,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Primary = true;
             this.btnCadastrar.Size = new System.Drawing.Size(110, 23);
-            this.btnCadastrar.TabIndex = 10;
+            this.btnCadastrar.TabIndex = 12;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -124,7 +124,7 @@
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Primary = true;
             this.btnAlterar.Size = new System.Drawing.Size(110, 23);
-            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -168,7 +168,7 @@
             this.cbProduto.Name = "cbProduto";
             this.cbProduto.Ripple = true;
             this.cbProduto.Size = new System.Drawing.Size(157, 30);
-            this.cbProduto.TabIndex = 2;
+            this.cbProduto.TabIndex = 3;
             this.cbProduto.Text = "Cadastro de Produto";
             this.cbProduto.UseVisualStyleBackColor = true;
             // 
@@ -184,7 +184,7 @@
             this.cbCaixa.Name = "cbCaixa";
             this.cbCaixa.Ripple = true;
             this.cbCaixa.Size = new System.Drawing.Size(64, 30);
-            this.cbCaixa.TabIndex = 6;
+            this.cbCaixa.TabIndex = 5;
             this.cbCaixa.Text = "Caixa";
             this.cbCaixa.UseVisualStyleBackColor = true;
             // 
@@ -200,7 +200,7 @@
             this.cbVenda.Name = "cbVenda";
             this.cbVenda.Ripple = true;
             this.cbVenda.Size = new System.Drawing.Size(69, 30);
-            this.cbVenda.TabIndex = 8;
+            this.cbVenda.TabIndex = 6;
             this.cbVenda.Text = "Venda";
             this.cbVenda.UseVisualStyleBackColor = true;
             // 
@@ -216,7 +216,7 @@
             this.cbConsultaProd.Name = "cbConsultaProd";
             this.cbConsultaProd.Ripple = true;
             this.cbConsultaProd.Size = new System.Drawing.Size(156, 30);
-            this.cbConsultaProd.TabIndex = 3;
+            this.cbConsultaProd.TabIndex = 8;
             this.cbConsultaProd.Text = "Consulta de Produto";
             this.cbConsultaProd.UseVisualStyleBackColor = true;
             // 
@@ -232,7 +232,7 @@
             this.cbPagamentos.Name = "cbPagamentos";
             this.cbPagamentos.Ripple = true;
             this.cbPagamentos.Size = new System.Drawing.Size(108, 30);
-            this.cbPagamentos.TabIndex = 5;
+            this.cbPagamentos.TabIndex = 9;
             this.cbPagamentos.Text = "Pagamentos";
             this.cbPagamentos.UseVisualStyleBackColor = true;
             // 
@@ -248,7 +248,7 @@
             this.cbUsuario.Name = "cbUsuario";
             this.cbUsuario.Ripple = true;
             this.cbUsuario.Size = new System.Drawing.Size(141, 30);
-            this.cbUsuario.TabIndex = 7;
+            this.cbUsuario.TabIndex = 10;
             this.cbUsuario.Text = "Cadastrar Usuario";
             this.cbUsuario.UseVisualStyleBackColor = true;
             // 
@@ -264,7 +264,7 @@
             this.cbDesativado.Name = "cbDesativado";
             this.cbDesativado.Ripple = true;
             this.cbDesativado.Size = new System.Drawing.Size(99, 30);
-            this.cbDesativado.TabIndex = 9;
+            this.cbDesativado.TabIndex = 7;
             this.cbDesativado.Text = "Desativado";
             this.cbDesativado.UseVisualStyleBackColor = true;
             // 
@@ -280,7 +280,7 @@
             this.cbRelatorio.Name = "cbRelatorio";
             this.cbRelatorio.Ripple = true;
             this.cbRelatorio.Size = new System.Drawing.Size(85, 30);
-            this.cbRelatorio.TabIndex = 12;
+            this.cbRelatorio.TabIndex = 11;
             this.cbRelatorio.Text = "Relatorio";
             this.cbRelatorio.UseVisualStyleBackColor = true;
             // 

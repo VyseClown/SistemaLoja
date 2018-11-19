@@ -9,28 +9,36 @@ namespace DAL
 {
     public class DALCobranca
     {
+        //public int idCliente { get; set; }
+        public DateTime? data { get; set; }
+        public decimal? valor { get; set; }
         public List<ClienteModel> carregarClientes()
         {
             List<ClienteModel> cp;
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
+
                 //DateTime ultimo = (from c in db.Cliente select c.DataUltimoPagamento);
                 TimeSpan? diferenca;
                 
-                DateTime? agora = DateTime.Now;
+                DateTime agora = DateTime.Now;
+                agora = agora.AddDays(-30);
+                DateTime agora2 = DateTime.Now;
+                agora2 = agora2.AddDays(-7);
+                
                 int dias = 0; //= diferenca.Days;
                 
                 cp = (from c in db.Cliente
-                      where ( (TimeSpan.Parse(c.DataUltimoPagamento.ToString()) - TimeSpan.Parse(agora.ToString())).TotalDays > 30 && c.totalComprado > 0 && TimeSpan.Parse(c.DataUltimaCobranca.ToString()).Days > 7)
-                      join pag in db.ClientePagamentos on c.id equals pag.idCliente
+                      where (c.DataUltimoPagamento <= agora && c.totalComprado > 0 && (c.DataUltimaCobranca < agora2 || c.DataUltimaCobranca == null))//&& System.Data.Entity.DbFunctions.TruncateTime(c.DataUltimaCobranca.Value) < agora2)
+                      //join pag in db.ClientePagamentos on c.id equals pag.idCliente
                       join pes in db.Pessoa on c.idPessoa equals pes.id
-                      join ven in db.Venda on c.id equals ven.idCliente
+                      //join ven in db.Venda on c.id equals ven.idCliente
                       select new ClienteModel()
                       {
                           id = c.id,
                           totalComprado = c.totalComprado,
                           nome = pes.nome,
-                          dataUltimoPagamento = DateTime.Parse(c.DataUltimoPagamento.ToString()),
+                          dataUltimoPagamento = c.DataUltimoPagamento,
                           telefone = pes.telefone,
 
 
@@ -39,19 +47,19 @@ namespace DAL
             return cp;
         }
 
-        public List<ClientePagamentos> carregarPagamentosPorCliente(int id)
+        public List<DALCobranca> carregarPagamentosPorCliente(int id)
         {
-            List<ClientePagamentos> cp;
+            List<DALCobranca> cp;
             using (quiteriamodasEntities db = new quiteriamodasEntities())
             {
                 cp = (from c in db.ClientePagamentos
-                      join cli in db.Cliente on c.idCliente equals cli.id
-                      join pes in db.Pessoa on cli.idPessoa equals pes.id
+                      //join cli in db.Cliente on c.idCliente equals cli.id
+                      //join pes in db.Pessoa on cli.idPessoa equals pes.id
                       where c.idCliente == id
 
-                      select new ClientePagamentos()
+                      select new DALCobranca()
                       {
-                          idCliente = cli.id,
+                         // idCliente = cli.id,
                           data = c.data,
                           valor = c.valor,
 

@@ -60,7 +60,19 @@ namespace GUI
                 {
                     ItensVenda iv2 = new ItensVenda();
                     iv2.idProduto = prod.id;
-                   // ven.Valor = ven.Valor + prod.preco;
+
+
+                    //foreach (ProdutoModel item in listaprodutocondicional)
+                    //{
+                    //    if (item.id == prod.id)
+                    //    {
+                    //        MessageBox.Show("Por favor, não selecione uma quantidade maior de um produto do que há");
+                    //    }
+                    //}
+
+
+
+                    // ven.Valor = ven.Valor + prod.preco;
                     //ven.valorrestante = ven.valorrestante + prod.preco;
                     listiv.Add(iv2);
                 }
@@ -403,6 +415,7 @@ namespace GUI
                 DALPessoa dalpes = new DALPessoa();
                 cli = (dalpes.retornarCliente((int)cbClienteCond.SelectedValue));
                 ven.idCliente = cli.id;//(int)cbCliente.SelectedValue;
+               // int testarProduto = 0;
 
                 //ven.Valor = decimal.Parse(txtPreco.Text);
                 ven.data = DateTime.Now;

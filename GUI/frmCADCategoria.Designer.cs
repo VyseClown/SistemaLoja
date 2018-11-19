@@ -31,39 +31,39 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtDescricao = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label4 = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtNomeModelo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbModelo = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtNomeMarca = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label7 = new System.Windows.Forms.Label();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtNomeTamanho = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbTamanho = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txtCor = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCor = new System.Windows.Forms.ComboBox();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtNomeModelo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNomeMarca = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNomeTamanho = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtCor = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -111,6 +111,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Categoria";
             // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(159, 101);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton2.TabIndex = 3;
+            this.materialRaisedButton2.Text = "Excluir";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.btnExcluirCategoria_Click);
+            // 
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
@@ -119,7 +132,7 @@
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton1.TabIndex = 12;
+            this.materialRaisedButton1.TabIndex = 2;
             this.materialRaisedButton1.Text = "Salvar";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -136,7 +149,7 @@
             this.txtDescricao.SelectionLength = 0;
             this.txtDescricao.SelectionStart = 0;
             this.txtDescricao.Size = new System.Drawing.Size(142, 23);
-            this.txtDescricao.TabIndex = 11;
+            this.txtDescricao.TabIndex = 0;
             this.txtDescricao.UseSystemPasswordChar = false;
             // 
             // label4
@@ -172,6 +185,47 @@
             this.tabPage2.Size = new System.Drawing.Size(490, 255);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modelo";
+            // 
+            // txtNomeModelo
+            // 
+            this.txtNomeModelo.Depth = 0;
+            this.txtNomeModelo.Hint = "";
+            this.txtNomeModelo.Location = new System.Drawing.Point(11, 48);
+            this.txtNomeModelo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNomeModelo.Name = "txtNomeModelo";
+            this.txtNomeModelo.PasswordChar = '\0';
+            this.txtNomeModelo.SelectedText = "";
+            this.txtNomeModelo.SelectionLength = 0;
+            this.txtNomeModelo.SelectionStart = 0;
+            this.txtNomeModelo.Size = new System.Drawing.Size(142, 23);
+            this.txtNomeModelo.TabIndex = 0;
+            this.txtNomeModelo.UseSystemPasswordChar = false;
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(159, 109);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton3.TabIndex = 3;
+            this.materialRaisedButton3.Text = "Excluir";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.btnExcluirModelo_Click);
+            // 
+            // materialRaisedButton4
+            // 
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Location = new System.Drawing.Point(11, 109);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton4.TabIndex = 2;
+            this.materialRaisedButton4.Text = "Salvar";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButton4.Click += new System.EventHandler(this.btnSalvarModelo_Click);
             // 
             // label5
             // 
@@ -216,6 +270,47 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Marca";
             // 
+            // txtNomeMarca
+            // 
+            this.txtNomeMarca.Depth = 0;
+            this.txtNomeMarca.Hint = "";
+            this.txtNomeMarca.Location = new System.Drawing.Point(11, 51);
+            this.txtNomeMarca.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNomeMarca.Name = "txtNomeMarca";
+            this.txtNomeMarca.PasswordChar = '\0';
+            this.txtNomeMarca.SelectedText = "";
+            this.txtNomeMarca.SelectionLength = 0;
+            this.txtNomeMarca.SelectionStart = 0;
+            this.txtNomeMarca.Size = new System.Drawing.Size(142, 23);
+            this.txtNomeMarca.TabIndex = 0;
+            this.txtNomeMarca.UseSystemPasswordChar = false;
+            // 
+            // materialRaisedButton5
+            // 
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(159, 124);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton5.TabIndex = 3;
+            this.materialRaisedButton5.Text = "Excluir";
+            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButton5.Click += new System.EventHandler(this.btnExcluirMarca_Click);
+            // 
+            // materialRaisedButton6
+            // 
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Location = new System.Drawing.Point(11, 124);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton6.TabIndex = 2;
+            this.materialRaisedButton6.Text = "Salvar";
+            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.materialRaisedButton6.Click += new System.EventHandler(this.btnSalvarMarca_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -258,6 +353,47 @@
             this.tabPage4.Size = new System.Drawing.Size(490, 255);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tamanho";
+            // 
+            // txtNomeTamanho
+            // 
+            this.txtNomeTamanho.Depth = 0;
+            this.txtNomeTamanho.Hint = "";
+            this.txtNomeTamanho.Location = new System.Drawing.Point(11, 52);
+            this.txtNomeTamanho.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNomeTamanho.Name = "txtNomeTamanho";
+            this.txtNomeTamanho.PasswordChar = '\0';
+            this.txtNomeTamanho.SelectedText = "";
+            this.txtNomeTamanho.SelectionLength = 0;
+            this.txtNomeTamanho.SelectionStart = 0;
+            this.txtNomeTamanho.Size = new System.Drawing.Size(142, 23);
+            this.txtNomeTamanho.TabIndex = 0;
+            this.txtNomeTamanho.UseSystemPasswordChar = false;
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Location = new System.Drawing.Point(159, 109);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton7.TabIndex = 3;
+            this.materialRaisedButton7.Text = "Excluir";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.btnExcluirTamanho_Click);
+            // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Location = new System.Drawing.Point(11, 109);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton8.TabIndex = 2;
+            this.materialRaisedButton8.Text = "Salvar";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.btnSalvaTamanho_Click);
             // 
             // label8
             // 
@@ -302,6 +438,47 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Cor";
             // 
+            // txtCor
+            // 
+            this.txtCor.Depth = 0;
+            this.txtCor.Hint = "";
+            this.txtCor.Location = new System.Drawing.Point(11, 46);
+            this.txtCor.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtCor.Name = "txtCor";
+            this.txtCor.PasswordChar = '\0';
+            this.txtCor.SelectedText = "";
+            this.txtCor.SelectionLength = 0;
+            this.txtCor.SelectionStart = 0;
+            this.txtCor.Size = new System.Drawing.Size(142, 23);
+            this.txtCor.TabIndex = 0;
+            this.txtCor.UseSystemPasswordChar = false;
+            // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Location = new System.Drawing.Point(159, 97);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton9.TabIndex = 3;
+            this.materialRaisedButton9.Text = "Excluir";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.btnExcluirCor_Click);
+            // 
+            // materialRaisedButton10
+            // 
+            this.materialRaisedButton10.Depth = 0;
+            this.materialRaisedButton10.Location = new System.Drawing.Point(11, 97);
+            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton10.Name = "materialRaisedButton10";
+            this.materialRaisedButton10.Primary = true;
+            this.materialRaisedButton10.Size = new System.Drawing.Size(142, 37);
+            this.materialRaisedButton10.TabIndex = 2;
+            this.materialRaisedButton10.Text = "Salvar";
+            this.materialRaisedButton10.UseVisualStyleBackColor = true;
+            this.materialRaisedButton10.Click += new System.EventHandler(this.btnSalvarCor_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -328,183 +505,6 @@
             this.cbCor.Name = "cbCor";
             this.cbCor.Size = new System.Drawing.Size(227, 33);
             this.cbCor.TabIndex = 1;
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(159, 101);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton2.TabIndex = 13;
-            this.materialRaisedButton2.Text = "Excluir";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.btnExcluirCategoria_Click);
-            // 
-            // materialRaisedButton3
-            // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(159, 109);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton3.TabIndex = 91;
-            this.materialRaisedButton3.Text = "Excluir";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.btnExcluirModelo_Click);
-            // 
-            // materialRaisedButton4
-            // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(11, 109);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton4.TabIndex = 90;
-            this.materialRaisedButton4.Text = "Salvar";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
-            this.materialRaisedButton4.Click += new System.EventHandler(this.btnSalvarModelo_Click);
-            // 
-            // materialRaisedButton5
-            // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(159, 124);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton5.TabIndex = 89;
-            this.materialRaisedButton5.Text = "Excluir";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
-            this.materialRaisedButton5.Click += new System.EventHandler(this.btnExcluirMarca_Click);
-            // 
-            // materialRaisedButton6
-            // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(11, 124);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton6.TabIndex = 88;
-            this.materialRaisedButton6.Text = "Salvar";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
-            this.materialRaisedButton6.Click += new System.EventHandler(this.btnSalvarMarca_Click);
-            // 
-            // materialRaisedButton7
-            // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(159, 109);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton7.TabIndex = 90;
-            this.materialRaisedButton7.Text = "Excluir";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
-            this.materialRaisedButton7.Click += new System.EventHandler(this.btnExcluirTamanho_Click);
-            // 
-            // materialRaisedButton8
-            // 
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(11, 109);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton8.TabIndex = 89;
-            this.materialRaisedButton8.Text = "Salvar";
-            this.materialRaisedButton8.UseVisualStyleBackColor = true;
-            this.materialRaisedButton8.Click += new System.EventHandler(this.btnSalvaTamanho_Click);
-            // 
-            // materialRaisedButton9
-            // 
-            this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(159, 97);
-            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton9.Name = "materialRaisedButton9";
-            this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton9.TabIndex = 95;
-            this.materialRaisedButton9.Text = "Excluir";
-            this.materialRaisedButton9.UseVisualStyleBackColor = true;
-            this.materialRaisedButton9.Click += new System.EventHandler(this.btnExcluirCor_Click);
-            // 
-            // materialRaisedButton10
-            // 
-            this.materialRaisedButton10.Depth = 0;
-            this.materialRaisedButton10.Location = new System.Drawing.Point(11, 97);
-            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton10.Name = "materialRaisedButton10";
-            this.materialRaisedButton10.Primary = true;
-            this.materialRaisedButton10.Size = new System.Drawing.Size(142, 37);
-            this.materialRaisedButton10.TabIndex = 94;
-            this.materialRaisedButton10.Text = "Salvar";
-            this.materialRaisedButton10.UseVisualStyleBackColor = true;
-            this.materialRaisedButton10.Click += new System.EventHandler(this.btnSalvarCor_Click);
-            // 
-            // txtNomeModelo
-            // 
-            this.txtNomeModelo.Depth = 0;
-            this.txtNomeModelo.Hint = "";
-            this.txtNomeModelo.Location = new System.Drawing.Point(11, 48);
-            this.txtNomeModelo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNomeModelo.Name = "txtNomeModelo";
-            this.txtNomeModelo.PasswordChar = '\0';
-            this.txtNomeModelo.SelectedText = "";
-            this.txtNomeModelo.SelectionLength = 0;
-            this.txtNomeModelo.SelectionStart = 0;
-            this.txtNomeModelo.Size = new System.Drawing.Size(142, 23);
-            this.txtNomeModelo.TabIndex = 92;
-            this.txtNomeModelo.UseSystemPasswordChar = false;
-            // 
-            // txtNomeMarca
-            // 
-            this.txtNomeMarca.Depth = 0;
-            this.txtNomeMarca.Hint = "";
-            this.txtNomeMarca.Location = new System.Drawing.Point(11, 51);
-            this.txtNomeMarca.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNomeMarca.Name = "txtNomeMarca";
-            this.txtNomeMarca.PasswordChar = '\0';
-            this.txtNomeMarca.SelectedText = "";
-            this.txtNomeMarca.SelectionLength = 0;
-            this.txtNomeMarca.SelectionStart = 0;
-            this.txtNomeMarca.Size = new System.Drawing.Size(142, 23);
-            this.txtNomeMarca.TabIndex = 93;
-            this.txtNomeMarca.UseSystemPasswordChar = false;
-            // 
-            // txtNomeTamanho
-            // 
-            this.txtNomeTamanho.Depth = 0;
-            this.txtNomeTamanho.Hint = "";
-            this.txtNomeTamanho.Location = new System.Drawing.Point(11, 52);
-            this.txtNomeTamanho.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNomeTamanho.Name = "txtNomeTamanho";
-            this.txtNomeTamanho.PasswordChar = '\0';
-            this.txtNomeTamanho.SelectedText = "";
-            this.txtNomeTamanho.SelectionLength = 0;
-            this.txtNomeTamanho.SelectionStart = 0;
-            this.txtNomeTamanho.Size = new System.Drawing.Size(142, 23);
-            this.txtNomeTamanho.TabIndex = 93;
-            this.txtNomeTamanho.UseSystemPasswordChar = false;
-            // 
-            // txtCor
-            // 
-            this.txtCor.Depth = 0;
-            this.txtCor.Hint = "";
-            this.txtCor.Location = new System.Drawing.Point(11, 46);
-            this.txtCor.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtCor.Name = "txtCor";
-            this.txtCor.PasswordChar = '\0';
-            this.txtCor.SelectedText = "";
-            this.txtCor.SelectionLength = 0;
-            this.txtCor.SelectionStart = 0;
-            this.txtCor.Size = new System.Drawing.Size(142, 23);
-            this.txtCor.TabIndex = 96;
-            this.txtCor.UseSystemPasswordChar = false;
             // 
             // frmCADCategoria
             // 

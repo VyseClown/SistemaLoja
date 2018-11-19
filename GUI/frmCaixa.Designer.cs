@@ -101,12 +101,12 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(197, 70);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(47, 25);
+            this.materialLabel2.Size = new System.Drawing.Size(34, 19);
             this.materialLabel2.TabIndex = 100;
             this.materialLabel2.Text = "Fim";
             // 
@@ -117,18 +117,18 @@
             this.dtpFim.Location = new System.Drawing.Point(202, 98);
             this.dtpFim.Name = "dtpFim";
             this.dtpFim.Size = new System.Drawing.Size(148, 30);
-            this.dtpFim.TabIndex = 99;
+            this.dtpFim.TabIndex = 1;
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(42, 70);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(63, 25);
+            this.materialLabel1.Size = new System.Drawing.Size(46, 19);
             this.materialLabel1.TabIndex = 98;
             this.materialLabel1.Text = "Inicio";
             // 
@@ -139,7 +139,7 @@
             this.dtpInicio.Location = new System.Drawing.Point(47, 98);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(149, 30);
-            this.dtpInicio.TabIndex = 97;
+            this.dtpInicio.TabIndex = 0;
             // 
             // btnRecalcular
             // 
@@ -149,7 +149,7 @@
             this.btnRecalcular.Name = "btnRecalcular";
             this.btnRecalcular.Primary = true;
             this.btnRecalcular.Size = new System.Drawing.Size(149, 36);
-            this.btnRecalcular.TabIndex = 96;
+            this.btnRecalcular.TabIndex = 2;
             this.btnRecalcular.Text = "Recalcular";
             this.btnRecalcular.UseVisualStyleBackColor = true;
             this.btnRecalcular.Click += new System.EventHandler(this.btnRecalcular_Click);
@@ -161,7 +161,7 @@
             this.txtCaixa.Name = "txtCaixa";
             this.txtCaixa.ReadOnly = true;
             this.txtCaixa.Size = new System.Drawing.Size(148, 30);
-            this.txtCaixa.TabIndex = 2;
+            this.txtCaixa.TabIndex = 3;
             // 
             // label5
             // 
@@ -368,7 +368,7 @@
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Primary = true;
             this.btnAbrir.Size = new System.Drawing.Size(149, 36);
-            this.btnAbrir.TabIndex = 98;
+            this.btnAbrir.TabIndex = 1;
             this.btnAbrir.Text = "Abrir";
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
@@ -390,7 +390,7 @@
             this.txtValorAbertura.MaxLength = 30;
             this.txtValorAbertura.Name = "txtValorAbertura";
             this.txtValorAbertura.Size = new System.Drawing.Size(149, 30);
-            this.txtValorAbertura.TabIndex = 96;
+            this.txtValorAbertura.TabIndex = 0;
             this.txtValorAbertura.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValorAbertura_KeyUp);
             this.txtValorAbertura.Leave += new System.EventHandler(this.txtValorAbertura_Leave);
             // 
@@ -415,7 +415,7 @@
             this.btnFecharCaixa.Name = "btnFecharCaixa";
             this.btnFecharCaixa.Primary = true;
             this.btnFecharCaixa.Size = new System.Drawing.Size(149, 36);
-            this.btnFecharCaixa.TabIndex = 101;
+            this.btnFecharCaixa.TabIndex = 1;
             this.btnFecharCaixa.Text = "Fechar";
             this.btnFecharCaixa.UseVisualStyleBackColor = true;
             this.btnFecharCaixa.Click += new System.EventHandler(this.btnFecharCaixa_Click);
@@ -437,7 +437,7 @@
             this.txtValorFechamento.MaxLength = 30;
             this.txtValorFechamento.Name = "txtValorFechamento";
             this.txtValorFechamento.Size = new System.Drawing.Size(149, 30);
-            this.txtValorFechamento.TabIndex = 99;
+            this.txtValorFechamento.TabIndex = 0;
             this.txtValorFechamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtValorFechamento_KeyUp);
             this.txtValorFechamento.Leave += new System.EventHandler(this.txtValorFechamento_Leave);
             // 

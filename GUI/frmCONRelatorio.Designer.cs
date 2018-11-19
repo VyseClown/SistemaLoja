@@ -71,7 +71,7 @@
             this.cbCategoria.Location = new System.Drawing.Point(53, 52);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(227, 33);
-            this.cbCategoria.TabIndex = 105;
+            this.cbCategoria.TabIndex = 0;
             // 
             // btnRelatorioInventario
             // 
@@ -81,7 +81,7 @@
             this.btnRelatorioInventario.Name = "btnRelatorioInventario";
             this.btnRelatorioInventario.Primary = true;
             this.btnRelatorioInventario.Size = new System.Drawing.Size(131, 36);
-            this.btnRelatorioInventario.TabIndex = 104;
+            this.btnRelatorioInventario.TabIndex = 1;
             this.btnRelatorioInventario.Text = "Relatorio";
             this.btnRelatorioInventario.UseVisualStyleBackColor = true;
             this.btnRelatorioInventario.Click += new System.EventHandler(this.btnRelatorioInventario_Click);
@@ -104,7 +104,7 @@
             this.btnInadimplentes.Name = "btnInadimplentes";
             this.btnInadimplentes.Primary = true;
             this.btnInadimplentes.Size = new System.Drawing.Size(131, 36);
-            this.btnInadimplentes.TabIndex = 106;
+            this.btnInadimplentes.TabIndex = 1;
             this.btnInadimplentes.Text = "Relatorio";
             this.btnInadimplentes.UseVisualStyleBackColor = true;
             this.btnInadimplentes.Click += new System.EventHandler(this.btnInadimplentes_Click);
@@ -116,7 +116,7 @@
             this.txtDiasInad.MaxLength = 4;
             this.txtDiasInad.Name = "txtDiasInad";
             this.txtDiasInad.Size = new System.Drawing.Size(100, 30);
-            this.txtDiasInad.TabIndex = 105;
+            this.txtDiasInad.TabIndex = 0;
             // 
             // label1
             // 
@@ -200,7 +200,7 @@
             this.btnFinanceiro.Name = "btnFinanceiro";
             this.btnFinanceiro.Primary = true;
             this.btnFinanceiro.Size = new System.Drawing.Size(131, 36);
-            this.btnFinanceiro.TabIndex = 108;
+            this.btnFinanceiro.TabIndex = 2;
             this.btnFinanceiro.Text = "Relatorio";
             this.btnFinanceiro.UseVisualStyleBackColor = true;
             this.btnFinanceiro.Click += new System.EventHandler(this.btnFinanceiro_Click);
@@ -222,7 +222,7 @@
             this.dtpInicioFinanceiro.Location = new System.Drawing.Point(26, 43);
             this.dtpInicioFinanceiro.Name = "dtpInicioFinanceiro";
             this.dtpInicioFinanceiro.Size = new System.Drawing.Size(131, 30);
-            this.dtpInicioFinanceiro.TabIndex = 105;
+            this.dtpInicioFinanceiro.TabIndex = 0;
             // 
             // dtpFimFinanceiro
             // 
@@ -231,7 +231,7 @@
             this.dtpFimFinanceiro.Location = new System.Drawing.Point(174, 43);
             this.dtpFimFinanceiro.Name = "dtpFimFinanceiro";
             this.dtpFimFinanceiro.Size = new System.Drawing.Size(134, 30);
-            this.dtpFimFinanceiro.TabIndex = 106;
+            this.dtpFimFinanceiro.TabIndex = 1;
             // 
             // tabPage9
             // 
@@ -266,7 +266,7 @@
             this.btnCondicionais.Name = "btnCondicionais";
             this.btnCondicionais.Primary = true;
             this.btnCondicionais.Size = new System.Drawing.Size(131, 36);
-            this.btnCondicionais.TabIndex = 113;
+            this.btnCondicionais.TabIndex = 2;
             this.btnCondicionais.Text = "Relatorio";
             this.btnCondicionais.UseVisualStyleBackColor = true;
             this.btnCondicionais.Click += new System.EventHandler(this.btnCondicionais_Click);
@@ -288,7 +288,7 @@
             this.dtpInicioCondicionais.Location = new System.Drawing.Point(23, 44);
             this.dtpInicioCondicionais.Name = "dtpInicioCondicionais";
             this.dtpInicioCondicionais.Size = new System.Drawing.Size(131, 30);
-            this.dtpInicioCondicionais.TabIndex = 110;
+            this.dtpInicioCondicionais.TabIndex = 0;
             // 
             // dtpFimCondicionais
             // 
@@ -297,7 +297,7 @@
             this.dtpFimCondicionais.Location = new System.Drawing.Point(171, 44);
             this.dtpFimCondicionais.Name = "dtpFimCondicionais";
             this.dtpFimCondicionais.Size = new System.Drawing.Size(134, 30);
-            this.dtpFimCondicionais.TabIndex = 111;
+            this.dtpFimCondicionais.TabIndex = 1;
             // 
             // tabPage10
             // 
@@ -332,7 +332,7 @@
             this.btnVendasMarcas.Name = "btnVendasMarcas";
             this.btnVendasMarcas.Primary = true;
             this.btnVendasMarcas.Size = new System.Drawing.Size(131, 36);
-            this.btnVendasMarcas.TabIndex = 118;
+            this.btnVendasMarcas.TabIndex = 2;
             this.btnVendasMarcas.Text = "Relatorio";
             this.btnVendasMarcas.UseVisualStyleBackColor = true;
             this.btnVendasMarcas.Click += new System.EventHandler(this.btnVendasMarcas_Click);
@@ -354,7 +354,7 @@
             this.dtpInicioVendasMarcas.Location = new System.Drawing.Point(24, 43);
             this.dtpInicioVendasMarcas.Name = "dtpInicioVendasMarcas";
             this.dtpInicioVendasMarcas.Size = new System.Drawing.Size(131, 30);
-            this.dtpInicioVendasMarcas.TabIndex = 115;
+            this.dtpInicioVendasMarcas.TabIndex = 0;
             // 
             // dtpFimVendasMarcas
             // 
@@ -363,7 +363,7 @@
             this.dtpFimVendasMarcas.Location = new System.Drawing.Point(172, 43);
             this.dtpFimVendasMarcas.Name = "dtpFimVendasMarcas";
             this.dtpFimVendasMarcas.Size = new System.Drawing.Size(134, 30);
-            this.dtpFimVendasMarcas.TabIndex = 116;
+            this.dtpFimVendasMarcas.TabIndex = 1;
             // 
             // frmCONRelatorio
             // 

@@ -307,6 +307,7 @@
             this.dgvClientes.RowHeadersWidth = 4;
             this.dgvClientes.Size = new System.Drawing.Size(834, 195);
             this.dgvClientes.TabIndex = 0;
+            this.dgvClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellDoubleClick);
             // 
             // frmPagamento
             // 
