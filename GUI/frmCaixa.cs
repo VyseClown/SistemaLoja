@@ -223,7 +223,7 @@ namespace GUI
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            if (txtValorAbertura.Text != "")
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtValorAbertura.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$"))
             {
                 DALCaixa objDAL = new DALCaixa();
                 FluxoCaixa caixa = new FluxoCaixa();
@@ -257,7 +257,7 @@ namespace GUI
 
         private void btnFecharCaixa_Click(object sender, EventArgs e)
         {
-            if (txtValorFechamento.Text != "")
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtValorFechamento.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$"))
             {
                 DALCaixa objDAL = new DALCaixa();
                 FluxoCaixa caixa = new FluxoCaixa();
@@ -290,39 +290,39 @@ namespace GUI
 
         private void txtValorAbertura_KeyUp(object sender, KeyEventArgs e)
         {
-            if (txtValorAbertura.Text != null)
-            {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(txtValorAbertura.Text, "[0-9]") || txtValorAbertura.Text.Contains(",") || txtValorAbertura.Text.Contains("."))
-                {
-                    txtValorAbertura.Text = "";
+            //if (txtValorAbertura.Text != null)
+           // {
+             //   if (!System.Text.RegularExpressions.Regex.IsMatch(txtValorAbertura.Text, "[0-9]") || txtValorAbertura.Text.Contains(",") || txtValorAbertura.Text.Contains("."))
+               // {
+                 //   txtValorAbertura.Text = "";
                     //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
                     //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
-                }
-            }
-            else
-                txtValorAbertura.Text = "";
+       //         }
+         //   }
+           // else
+             //   txtValorAbertura.Text = "";
         }
 
         private void txtValorFechamento_KeyUp(object sender, KeyEventArgs e)
         {
-            if (txtValorFechamento.Text != null)
-            {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(txtValorFechamento.Text, "[0-9]") || txtValorFechamento.Text.Contains(",") || txtValorFechamento.Text.Contains("."))
-                {
-                    txtValorFechamento.Text = "";
+            //if (txtValorFechamento.Text != null)
+            //{
+              //  if (!System.Text.RegularExpressions.Regex.IsMatch(txtValorFechamento.Text, "[0-9]") || txtValorFechamento.Text.Contains(",") || txtValorFechamento.Text.Contains("."))
+                //{
+                  //  txtValorFechamento.Text = "";
                     //txtLimite.Text = txtLimite.Text.Remove(txtLimite.Text.Length - 1);
                     //txtLimite.Text.Remove(txtLimite.Text.Count - 1)
-                }
-            }
-            else
-                txtValorFechamento.Text = "";
+                //}
+           // }
+            //else
+              //  txtValorFechamento.Text = "";
         }
 
         private void txtValorFechamento_Leave(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtValorFechamento.Text, "[0-9]"))
             {
-                txtValorFechamento.Text = string.Format("{0:#,###0.00}", double.Parse(txtValorFechamento.Text));
+               // txtValorFechamento.Text = string.Format("{0:#,###0.00}", double.Parse(txtValorFechamento.Text));
             }
         }
 
@@ -330,7 +330,7 @@ namespace GUI
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtValorAbertura.Text, "[0-9]"))
             {
-                txtValorAbertura.Text = string.Format("{0:#,###0.00}", double.Parse(txtValorAbertura.Text));
+              //  txtValorAbertura.Text = string.Format("{0:#,###0.00}", double.Parse(txtValorAbertura.Text));
             }
         }
     }

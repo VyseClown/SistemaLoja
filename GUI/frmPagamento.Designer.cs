@@ -97,7 +97,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(472, 508);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(235, 508);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -110,22 +110,24 @@
             // txtRestante
             // 
             this.txtRestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtRestante.Location = new System.Drawing.Point(247, 521);
+            this.txtRestante.Location = new System.Drawing.Point(560, 521);
             this.txtRestante.MaxLength = 18;
             this.txtRestante.Name = "txtRestante";
             this.txtRestante.ReadOnly = true;
             this.txtRestante.Size = new System.Drawing.Size(138, 30);
             this.txtRestante.TabIndex = 6;
+            this.txtRestante.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(242, 496);
+            this.label4.Location = new System.Drawing.Point(555, 496);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 25);
             this.label4.TabIndex = 98;
             this.label4.Text = "Valor restante";
+            this.label4.Visible = false;
             // 
             // txtPagamento
             // 
@@ -312,6 +314,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 751);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
             this.Name = "frmPagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagamentos/Cobrança";

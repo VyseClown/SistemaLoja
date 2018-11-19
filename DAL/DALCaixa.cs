@@ -145,6 +145,7 @@ namespace DAL
             {
                 using (quiteriamodasEntities db = new quiteriamodasEntities())
                 {
+                    item.DataFechamento = DateTime.Now;
                     db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     return true;

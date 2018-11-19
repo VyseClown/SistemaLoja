@@ -25,6 +25,12 @@ namespace GUI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (dgvVenda.SelectedRows.Count == 0)
+            {
+
+                MessageBox.Show("Selecione ao menos uma venda !");
+                return;
+            }
             if (!System.Text.RegularExpressions.Regex.IsMatch(txtPagamento.Text, "^[0-9]{1,4}([,.][0-9]{1,2})?$"))//|| txtPagamento.Text.Contains(",") || txtPagamento.Text.Contains("."))
             {
                 txtPagamento.Text = "";
@@ -79,8 +85,13 @@ namespace GUI
                         if (pagamento)
                         {
                             MessageBox.Show("Pagamento realizado com sucesso ! O troco é R$ " + resto);
-                            //cbCliente_SelectionChangeCommitted(sender, e);
-                        }
+
+                        txtPagamento.Text = "";
+                        txtRestante.Text = "";
+
+                        frmPagamento_Load(sender, e);
+                        //cbCliente_SelectionChangeCommitted(sender, e);
+                    }
                         else
                         {
                             MessageBox.Show("Pagamento não foi realizado !");
@@ -97,7 +108,9 @@ namespace GUI
                     if (pagamento)
                     {
                         MessageBox.Show("Pagamento efetuado com suceso !");
+                        frmPagamento_Load(sender, e);
                         txtPagamento.Text = "";
+                        txtRestante.Text = "";
                         //MessageBox.Show("Pagamento realizado com sucesso ! O troco é R$ " + resto);
                         //cbCliente_SelectionChangeCommitted(sender, e);
                     }

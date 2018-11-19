@@ -305,6 +305,7 @@
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.materialLabel1);
+            this.MaximizeBox = false;
             this.Name = "frmCADUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Usuario";

@@ -79,9 +79,10 @@ namespace GUI
                 
                 if (resultado)
                 {
-                    avisos.Text = "Venda completada !";
+                    //avisos.Text = "Venda completada !";
+                    MessageBox.Show("Venda completada !");
                     limparTextBoxes(this.Controls);
-                    frmCADVenda_Load(sender,e);
+                    //frmCADVenda_Load(sender,e);
                     listaproduto = null;
                 }
 
@@ -708,6 +709,22 @@ namespace GUI
                     ((TextBox)(ctrl)).Text = String.Empty;
                 }
             }
+
+            cbCliente.DataSource = ((new BLLPessoa()).listarClientes());
+            cbCliente.ValueMember = "id";
+            cbCliente.DisplayMember = "nome";
+            cbClienteCond.DataSource = ((new BLLPessoa()).listarClientes());
+            cbClienteCond.ValueMember = "id";
+            cbClienteCond.DisplayMember = "nome";
+            cbClienteLista.DataSource = ((new BLLPessoa()).listarClientes());
+            cbClienteLista.ValueMember = "id";
+            cbClienteLista.DisplayMember = "nome";
+            cbTipoPagamento.DataSource = BLLVenda.listarCategoriaPagamento();
+            cbTipoPagamento.ValueMember = "id";
+            cbTipoPagamento.DisplayMember = "nome";
+            List<String> listaNomesCondicional = new List<string>(new string[] { "Pendente", "Devolvido" });
+            cbStatusCondicionalLista.DataSource = listaNomesCondicional;
+            dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
         }
 
         private void cbCliente_SelectionChangeCommitted(object sender, EventArgs e)

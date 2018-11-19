@@ -453,12 +453,18 @@ namespace DAL
                 v = (from ven in db.Venda where ven.id == idVenda select ven).FirstOrDefault();
                 decimal? resto = valorRestante - valorPagamento;
                 cp.valor = valorPagamento;
-                v.valorrestante = v.valorrestante - valorPagamento;
+                if (resto < 0)
+                {
+                    v.valorrestante = 0;
+                }
+                else
+                    v.valorrestante = v.valorrestante - valorPagamento;
                     db.Entry(v).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 c = (from cli in db.Cliente where cli.id == idCliente select cli).FirstOrDefault();
                 c.Pontos = c.Pontos + 2;
                 c.totalComprado = c.totalComprado - valorPagamento;
+                c.DataUltimoPagamento = cp.data;
                 db.Entry(c).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
 

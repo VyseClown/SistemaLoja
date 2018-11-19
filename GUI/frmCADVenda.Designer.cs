@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCADVenda));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCadTipoPagamento = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label12 = new System.Windows.Forms.Label();
@@ -69,9 +70,6 @@
             this.txtCPFCond = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnIrVenda = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnRealizarCondicional = new System.Windows.Forms.Button();
             this.avisosCond = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvCondicional = new System.Windows.Forms.DataGridView();
@@ -87,10 +85,8 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnNomeCliente = new System.Windows.Forms.Button();
             this.avisosLista = new System.Windows.Forms.Label();
-            this.btnMudarStatus = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.cbStatusCondicionalLista = new System.Windows.Forms.ComboBox();
-            this.btnIrVendaLista = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.dtpFinal = new System.Windows.Forms.DateTimePicker();
@@ -103,11 +99,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dgvListaCondicionais = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnIrParaCondicional = new System.Windows.Forms.Button();
-            this.btnCarregarClientes = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvClientesParaCondicional = new System.Windows.Forms.DataGridView();
-            this.btnCadTipoPagamento = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -129,11 +129,24 @@
             this.groupBox1.Controls.Add(this.btnCadTipoPagamento);
             this.groupBox1.Controls.Add(this.materialRaisedButton2);
             this.groupBox1.Controls.Add(this.materialRaisedButton1);
-            this.groupBox1.Location = new System.Drawing.Point(35, 598);
+            this.groupBox1.Location = new System.Drawing.Point(35, 529);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(678, 59);
             this.groupBox1.TabIndex = 52;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCadTipoPagamento
+            // 
+            this.btnCadTipoPagamento.Depth = 0;
+            this.btnCadTipoPagamento.Location = new System.Drawing.Point(250, 19);
+            this.btnCadTipoPagamento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCadTipoPagamento.Name = "btnCadTipoPagamento";
+            this.btnCadTipoPagamento.Primary = true;
+            this.btnCadTipoPagamento.Size = new System.Drawing.Size(182, 31);
+            this.btnCadTipoPagamento.TabIndex = 98;
+            this.btnCadTipoPagamento.Text = "Cadastrar forma de pagamento";
+            this.btnCadTipoPagamento.UseVisualStyleBackColor = true;
+            this.btnCadTipoPagamento.Click += new System.EventHandler(this.btnCadTipoPagamento_Click);
             // 
             // materialRaisedButton2
             // 
@@ -165,7 +178,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(30, 421);
+            this.label12.Location = new System.Drawing.Point(767, 617);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(124, 25);
             this.label12.TabIndex = 64;
@@ -175,7 +188,7 @@
             // txtQtd
             // 
             this.txtQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtQtd.Location = new System.Drawing.Point(58, 446);
+            this.txtQtd.Location = new System.Drawing.Point(795, 642);
             this.txtQtd.MaxLength = 4;
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.ReadOnly = true;
@@ -206,7 +219,7 @@
             // txtPreco
             // 
             this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPreco.Location = new System.Drawing.Point(41, 538);
+            this.txtPreco.Location = new System.Drawing.Point(35, 459);
             this.txtPreco.MaxLength = 18;
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ReadOnly = true;
@@ -228,7 +241,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(36, 513);
+            this.label7.Location = new System.Drawing.Point(30, 434);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 25);
             this.label7.TabIndex = 58;
@@ -284,7 +297,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 75);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(951, 709);
+            this.tabControl1.Size = new System.Drawing.Size(951, 625);
             this.tabControl1.TabIndex = 67;
             // 
             // tabPage1
@@ -322,7 +335,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(943, 683);
+            this.tabPage1.Size = new System.Drawing.Size(943, 599);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Venda";
             // 
@@ -357,7 +370,7 @@
             // txtPrecoFinal
             // 
             this.txtPrecoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPrecoFinal.Location = new System.Drawing.Point(344, 538);
+            this.txtPrecoFinal.Location = new System.Drawing.Point(338, 459);
             this.txtPrecoFinal.MaxLength = 18;
             this.txtPrecoFinal.Name = "txtPrecoFinal";
             this.txtPrecoFinal.ReadOnly = true;
@@ -369,7 +382,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(346, 513);
+            this.label3.Location = new System.Drawing.Point(340, 434);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 25);
             this.label3.TabIndex = 92;
@@ -378,7 +391,7 @@
             // txtPorcentagem
             // 
             this.txtPorcentagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPorcentagem.Location = new System.Drawing.Point(209, 538);
+            this.txtPorcentagem.Location = new System.Drawing.Point(203, 459);
             this.txtPorcentagem.MaxLength = 3;
             this.txtPorcentagem.Name = "txtPorcentagem";
             this.txtPorcentagem.Size = new System.Drawing.Size(97, 30);
@@ -389,7 +402,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(203, 513);
+            this.label2.Location = new System.Drawing.Point(197, 434);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 90;
@@ -400,7 +413,7 @@
             this.cbTipoPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbTipoPagamento.FormattingEnabled = true;
-            this.cbTipoPagamento.Location = new System.Drawing.Point(714, 537);
+            this.cbTipoPagamento.Location = new System.Drawing.Point(708, 458);
             this.cbTipoPagamento.Name = "cbTipoPagamento";
             this.cbTipoPagamento.Size = new System.Drawing.Size(155, 33);
             this.cbTipoPagamento.TabIndex = 87;
@@ -410,7 +423,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(715, 510);
+            this.label14.Location = new System.Drawing.Point(709, 431);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(200, 25);
             this.label14.TabIndex = 88;
@@ -420,7 +433,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(527, 510);
+            this.label13.Location = new System.Drawing.Point(521, 431);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(144, 25);
             this.label13.TabIndex = 86;
@@ -429,7 +442,7 @@
             // nudParcelamento
             // 
             this.nudParcelamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.nudParcelamento.Location = new System.Drawing.Point(530, 538);
+            this.nudParcelamento.Location = new System.Drawing.Point(524, 459);
             this.nudParcelamento.Maximum = new decimal(new int[] {
             12,
             0,
@@ -535,7 +548,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(943, 683);
+            this.tabPage2.Size = new System.Drawing.Size(943, 599);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Condicional";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -593,47 +606,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnIrVenda);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.btnRealizarCondicional);
-            this.groupBox2.Location = new System.Drawing.Point(35, 589);
+            this.groupBox2.Controls.Add(this.materialRaisedButton5);
+            this.groupBox2.Controls.Add(this.materialRaisedButton3);
+            this.groupBox2.Controls.Add(this.materialRaisedButton4);
+            this.groupBox2.Location = new System.Drawing.Point(35, 511);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(649, 59);
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
-            // 
-            // btnIrVenda
-            // 
-            this.btnIrVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrVenda.Location = new System.Drawing.Point(259, 19);
-            this.btnIrVenda.Name = "btnIrVenda";
-            this.btnIrVenda.Size = new System.Drawing.Size(250, 31);
-            this.btnIrVenda.TabIndex = 3;
-            this.btnIrVenda.Text = "Ir para venda";
-            this.btnIrVenda.UseVisualStyleBackColor = true;
-            this.btnIrVenda.Click += new System.EventHandler(this.btnIrVenda_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(515, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 31);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Limpar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnRealizarCondicional
-            // 
-            this.btnRealizarCondicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRealizarCondicional.Location = new System.Drawing.Point(6, 19);
-            this.btnRealizarCondicional.Name = "btnRealizarCondicional";
-            this.btnRealizarCondicional.Size = new System.Drawing.Size(250, 31);
-            this.btnRealizarCondicional.TabIndex = 0;
-            this.btnRealizarCondicional.Text = "Realizar Condicional";
-            this.btnRealizarCondicional.UseVisualStyleBackColor = true;
-            this.btnRealizarCondicional.Click += new System.EventHandler(this.btnRealizarCondicional_Click);
             // 
             // avisosCond
             // 
@@ -692,7 +672,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(65, 470);
+            this.label21.Location = new System.Drawing.Point(36, 450);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(124, 25);
             this.label21.TabIndex = 110;
@@ -711,7 +691,7 @@
             // txtQtdCond
             // 
             this.txtQtdCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtQtdCond.Location = new System.Drawing.Point(93, 495);
+            this.txtQtdCond.Location = new System.Drawing.Point(64, 475);
             this.txtQtdCond.MaxLength = 4;
             this.txtQtdCond.Name = "txtQtdCond";
             this.txtQtdCond.ReadOnly = true;
@@ -721,7 +701,7 @@
             // txtPrecoCond
             // 
             this.txtPrecoCond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtPrecoCond.Location = new System.Drawing.Point(210, 495);
+            this.txtPrecoCond.Location = new System.Drawing.Point(181, 475);
             this.txtPrecoCond.MaxLength = 18;
             this.txtPrecoCond.Name = "txtPrecoCond";
             this.txtPrecoCond.ReadOnly = true;
@@ -741,7 +721,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label28.Location = new System.Drawing.Point(205, 470);
+            this.label28.Location = new System.Drawing.Point(176, 450);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(68, 25);
             this.label28.TabIndex = 106;
@@ -760,12 +740,12 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.materialRaisedButton7);
+            this.tabPage3.Controls.Add(this.materialRaisedButton6);
             this.tabPage3.Controls.Add(this.btnNomeCliente);
             this.tabPage3.Controls.Add(this.avisosLista);
-            this.tabPage3.Controls.Add(this.btnMudarStatus);
             this.tabPage3.Controls.Add(this.label32);
             this.tabPage3.Controls.Add(this.cbStatusCondicionalLista);
-            this.tabPage3.Controls.Add(this.btnIrVendaLista);
             this.tabPage3.Controls.Add(this.label31);
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.dtpFinal);
@@ -780,7 +760,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(943, 683);
+            this.tabPage3.Size = new System.Drawing.Size(943, 599);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lista de condicionais";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -807,22 +787,11 @@
             this.avisosLista.Text = "label18";
             this.avisosLista.Visible = false;
             // 
-            // btnMudarStatus
-            // 
-            this.btnMudarStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMudarStatus.Location = new System.Drawing.Point(306, 502);
-            this.btnMudarStatus.Name = "btnMudarStatus";
-            this.btnMudarStatus.Size = new System.Drawing.Size(150, 31);
-            this.btnMudarStatus.TabIndex = 132;
-            this.btnMudarStatus.Text = "Mudar Status";
-            this.btnMudarStatus.UseVisualStyleBackColor = true;
-            this.btnMudarStatus.Click += new System.EventHandler(this.btnMudarStatus_Click);
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.label32.Location = new System.Drawing.Point(175, 472);
+            this.label32.Location = new System.Drawing.Point(211, 467);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(74, 25);
             this.label32.TabIndex = 131;
@@ -832,21 +801,10 @@
             // 
             this.cbStatusCondicionalLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.cbStatusCondicionalLista.FormattingEnabled = true;
-            this.cbStatusCondicionalLista.Location = new System.Drawing.Point(180, 500);
+            this.cbStatusCondicionalLista.Location = new System.Drawing.Point(212, 495);
             this.cbStatusCondicionalLista.Name = "cbStatusCondicionalLista";
             this.cbStatusCondicionalLista.Size = new System.Drawing.Size(121, 33);
             this.cbStatusCondicionalLista.TabIndex = 130;
-            // 
-            // btnIrVendaLista
-            // 
-            this.btnIrVendaLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrVendaLista.Location = new System.Drawing.Point(24, 500);
-            this.btnIrVendaLista.Name = "btnIrVendaLista";
-            this.btnIrVendaLista.Size = new System.Drawing.Size(150, 31);
-            this.btnIrVendaLista.TabIndex = 129;
-            this.btnIrVendaLista.Text = "Ir para venda";
-            this.btnIrVendaLista.UseVisualStyleBackColor = true;
-            this.btnIrVendaLista.Click += new System.EventHandler(this.btnIrVendaLista_Click);
             // 
             // label31
             // 
@@ -963,39 +921,17 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.btnIrParaCondicional);
-            this.tabPage4.Controls.Add(this.btnCarregarClientes);
+            this.tabPage4.Controls.Add(this.materialRaisedButton9);
+            this.tabPage4.Controls.Add(this.materialRaisedButton8);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.dgvClientesParaCondicional);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(943, 683);
+            this.tabPage4.Size = new System.Drawing.Size(943, 599);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Clientes para Condicional";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // btnIrParaCondicional
-            // 
-            this.btnIrParaCondicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIrParaCondicional.Location = new System.Drawing.Point(327, 533);
-            this.btnIrParaCondicional.Name = "btnIrParaCondicional";
-            this.btnIrParaCondicional.Size = new System.Drawing.Size(263, 31);
-            this.btnIrParaCondicional.TabIndex = 131;
-            this.btnIrParaCondicional.Text = "Ir para condicional";
-            this.btnIrParaCondicional.UseVisualStyleBackColor = true;
-            this.btnIrParaCondicional.Click += new System.EventHandler(this.btnIrParaCondicional_Click);
-            // 
-            // btnCarregarClientes
-            // 
-            this.btnCarregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarregarClientes.Location = new System.Drawing.Point(21, 533);
-            this.btnCarregarClientes.Name = "btnCarregarClientes";
-            this.btnCarregarClientes.Size = new System.Drawing.Size(263, 31);
-            this.btnCarregarClientes.TabIndex = 130;
-            this.btnCarregarClientes.Text = "Carregar clientes";
-            this.btnCarregarClientes.UseVisualStyleBackColor = true;
-            this.btnCarregarClientes.Click += new System.EventHandler(this.btnCarregarClientes_Click);
             // 
             // label4
             // 
@@ -1016,24 +952,108 @@
             this.dgvClientesParaCondicional.Size = new System.Drawing.Size(834, 427);
             this.dgvClientesParaCondicional.TabIndex = 63;
             // 
-            // btnCadTipoPagamento
+            // materialRaisedButton3
             // 
-            this.btnCadTipoPagamento.Depth = 0;
-            this.btnCadTipoPagamento.Location = new System.Drawing.Point(250, 19);
-            this.btnCadTipoPagamento.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCadTipoPagamento.Name = "btnCadTipoPagamento";
-            this.btnCadTipoPagamento.Primary = true;
-            this.btnCadTipoPagamento.Size = new System.Drawing.Size(182, 31);
-            this.btnCadTipoPagamento.TabIndex = 98;
-            this.btnCadTipoPagamento.Text = "Cadastrar forma de pagamento";
-            this.btnCadTipoPagamento.UseVisualStyleBackColor = true;
-            this.btnCadTipoPagamento.Click += new System.EventHandler(this.btnCadTipoPagamento_Click);
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(6, 19);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton3.TabIndex = 118;
+            this.materialRaisedButton3.Text = "Realizar Condicional";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.btnRealizarCondicional_Click);
+            // 
+            // materialRaisedButton4
+            // 
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton4.Location = new System.Drawing.Point(220, 19);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton4.TabIndex = 119;
+            this.materialRaisedButton4.Text = "Ir para venda";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButton4.Click += new System.EventHandler(this.btnIrVenda_Click);
+            // 
+            // materialRaisedButton5
+            // 
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(461, 19);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton5.TabIndex = 120;
+            this.materialRaisedButton5.Text = "Limpar";
+            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButton5.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // materialRaisedButton6
+            // 
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton6.Location = new System.Drawing.Point(24, 497);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton6.TabIndex = 135;
+            this.materialRaisedButton6.Text = "Ir para venda";
+            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.materialRaisedButton6.Click += new System.EventHandler(this.btnIrVendaLista_Click);
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton7.Location = new System.Drawing.Point(339, 497);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton7.TabIndex = 136;
+            this.materialRaisedButton7.Text = "Mudar Status";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.btnMudarStatus_Click);
+            // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton8.Location = new System.Drawing.Point(21, 496);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton8.TabIndex = 136;
+            this.materialRaisedButton8.Text = "Carregar Clientes";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.btnCarregarClientes_Click);
+            // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton9.Location = new System.Drawing.Point(209, 496);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton9.TabIndex = 137;
+            this.materialRaisedButton9.Text = "Ir para Condicional";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.btnIrParaCondicional_Click);
             // 
             // frmCADVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 787);
+            this.ClientSize = new System.Drawing.Size(983, 712);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "frmCADVenda";
@@ -1100,10 +1120,8 @@
         private System.Windows.Forms.MaskedTextBox txtCPFLista;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox cbClienteLista;
-        private System.Windows.Forms.Button btnIrVendaLista;
         private System.Windows.Forms.ComboBox cbStatusCondicionalLista;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Button btnMudarStatus;
         private System.Windows.Forms.Label avisosLista;
         private System.Windows.Forms.Button btnNomeCliente;
         private System.Windows.Forms.TextBox txtPorcentagem;
@@ -1117,9 +1135,6 @@
         private System.Windows.Forms.MaskedTextBox txtCPFCond;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnIrVenda;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnRealizarCondicional;
         private System.Windows.Forms.Label avisosCond;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridView dgvCondicional;
@@ -1135,12 +1150,17 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvClientesParaCondicional;
-        private System.Windows.Forms.Button btnCarregarClientes;
-        private System.Windows.Forms.Button btnIrParaCondicional;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private MaterialSkin.Controls.MaterialRaisedButton btnMaterialConsultar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton btnCadTipoPagamento;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
     }
 }

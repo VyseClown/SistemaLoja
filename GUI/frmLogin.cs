@@ -24,7 +24,7 @@ namespace GUI
             DALLogin login = new DALLogin();
             List<UsuarioPermissoes> up = new List<UsuarioPermissoes>();
             bool ativado = false;
-            if((up = login.logarNoSistema(txtLogin.Text, txtSenha.Text)) != null && up.Count != 0)
+            if((up = login.logarNoSistema(txtLogin.Text, txtSenha.Text)) != null && up.Count != 0 && up.Count != 0)
             {
                 //UsuarioPermissoes updesativado = new UsuarioPermissoes();
                 foreach(UsuarioPermissoes updesativado in up)
@@ -49,9 +49,13 @@ namespace GUI
                     //MessageBox.Show("Usuario foi desativado !");
                 }
             }
+            else if(txtLogin.Text != "")
+            {
+                MessageBox.Show("Por favor, informe a senha");
+            }
             else
             {
-                MessageBox.Show("Se esqueceu da senha ?");
+                MessageBox.Show("Por favor, informe algum dado");
             }
         }
     }
