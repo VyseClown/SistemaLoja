@@ -93,10 +93,11 @@ namespace GUI
                 {
                     //avisos.Text = "Venda completada !";
                     MessageBox.Show("Venda completada !");
-                    limparTextBoxes(this.Controls);//não está limpando os textbox da venda !
+                    limparTextBoxes(this.Controls);
+                    limparTextBoxEMasked(tabPage1);
+                    dgvVenda.DataSource = null;
                     //frmCADVenda_Load(sender,e);
                     listaproduto = null;
-
                 }
 
                 else
@@ -110,7 +111,24 @@ namespace GUI
             }
             
         }
-        
+        private void limparTextBoxEMasked(TabPage tab)//acho que funciona !
+        {
+            foreach (Control verifica in tab.Controls)
+            {
+
+
+                if (verifica is TextBox || verifica is MaskedTextBox)
+                {
+                    if (verifica.Text != string.Empty)
+                    {
+                        verifica.Text = "";
+
+                    }
+
+
+                }
+            }
+        }
 
         private void txtCodigoDeBarras_KeyDown(object sender, KeyEventArgs e)
         {
@@ -725,24 +743,6 @@ namespace GUI
             }
             else
                 txtPrecoFinal.Text = "";
-        }
-        private void limparTextBoxEMasked(TabPage tab)//acho que funciona !
-        {
-            foreach (Control verifica in tab.Controls)
-            {
-
-
-                if (verifica is TextBox || verifica is MaskedTextBox)
-                {
-                    if (verifica.Text != string.Empty)
-                    {
-                        verifica.Text = "";
-
-                    }
-
-
-                }
-            }
         }
         private void limparTextBoxes(Control.ControlCollection controles)
         {
