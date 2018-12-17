@@ -132,10 +132,14 @@ namespace GUI
             Pessoa pes = new Pessoa();
             pes = (dalpes.retornarPessoa(((int)cbCliente.SelectedValue)));
             txtCPF.Text = pes.CPF;
-            dgvVenda.DataSource = (new DALVenda().carregarVendasCliente(cli.id));
-            dgvVenda.Columns[0].Visible = false;
-            dgvVenda.Columns[1].Visible = false;
+            int ?idPes = cli.idPessoa;
+            dgvVenda.DataSource = (new DALVenda().carregarVendasCliente(idPes));
+
             dgvProdutos.DataSource = null;
+     //       dgvVenda.DataSource = (new DALVenda().carregarVendasCliente(cli.id));
+       //     dgvVenda.Columns[0].Visible = false;
+         //   dgvVenda.Columns[1].Visible = false;
+           // dgvProdutos.DataSource = null;
         }
 
         private void frmPagamento_Load(object sender, EventArgs e)

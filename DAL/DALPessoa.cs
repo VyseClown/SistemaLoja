@@ -203,6 +203,18 @@ namespace DAL
             }
             return pes;
         }
+        public Pessoa retornarPessoaComIDCliente(int id)
+        {
+            Pessoa pes = new Pessoa();
+            using (quiteriamodasEntities db = new quiteriamodasEntities())
+            {
+                pes = (from cli in db.Cliente
+                       where cli.id == id
+                       join p in db.Pessoa on cli.idPessoa equals p.id
+                       select p).FirstOrDefault();
+            }
+            return pes;
+        }
         public Cliente retornarCliente(int id)
         {
             Cliente pes = new Cliente();

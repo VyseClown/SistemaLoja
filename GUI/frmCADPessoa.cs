@@ -96,7 +96,7 @@ namespace GUI
                         Cliente cli = new Cliente();
                         Funcionario fun = new Funcionario();
                         bool func = false;
-
+                        limparTextBoxes(this.Controls);
 
                         if (rbCliente.Checked)
                         {

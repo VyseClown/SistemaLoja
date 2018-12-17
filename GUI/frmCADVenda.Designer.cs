@@ -70,6 +70,9 @@
             this.txtCPFCond = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.avisosCond = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvCondicional = new System.Windows.Forms.DataGridView();
@@ -83,6 +86,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.btnConsultarCond = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnNomeCliente = new System.Windows.Forms.Button();
             this.avisosLista = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -99,15 +104,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dgvListaCondicionais = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvClientesParaCondicional = new System.Windows.Forms.DataGridView();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -451,6 +451,7 @@
             this.nudParcelamento.Name = "nudParcelamento";
             this.nudParcelamento.Size = new System.Drawing.Size(120, 30);
             this.nudParcelamento.TabIndex = 11;
+            this.nudParcelamento.ValueChanged += new System.EventHandler(this.nudParcelamento_ValueChanged);
             // 
             // btnLocalizar
             // 
@@ -615,6 +616,47 @@
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
             // 
+            // materialRaisedButton5
+            // 
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(461, 19);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton5.TabIndex = 2;
+            this.materialRaisedButton5.Text = "Limpar";
+            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButton5.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(6, 19);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton3.TabIndex = 0;
+            this.materialRaisedButton3.Text = "Realizar Condicional";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.btnRealizarCondicional_Click);
+            // 
+            // materialRaisedButton4
+            // 
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton4.Location = new System.Drawing.Point(220, 19);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton4.TabIndex = 1;
+            this.materialRaisedButton4.Text = "Ir para venda";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButton4.Click += new System.EventHandler(this.btnIrVenda_Click);
+            // 
             // avisosCond
             // 
             this.avisosCond.AutoSize = true;
@@ -764,6 +806,34 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lista de condicionais";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton7.Location = new System.Drawing.Point(339, 497);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton7.TabIndex = 11;
+            this.materialRaisedButton7.Text = "Mudar Status";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.btnMudarStatus_Click);
+            // 
+            // materialRaisedButton6
+            // 
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton6.Location = new System.Drawing.Point(24, 497);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton6.TabIndex = 9;
+            this.materialRaisedButton6.Text = "Ir para venda";
+            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.materialRaisedButton6.Click += new System.EventHandler(this.btnIrVendaLista_Click);
             // 
             // btnNomeCliente
             // 
@@ -933,6 +1003,34 @@
             this.tabPage4.Text = "Clientes para Condicional";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton9.Location = new System.Drawing.Point(209, 496);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton9.TabIndex = 137;
+            this.materialRaisedButton9.Text = "Ir para Condicional";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.btnIrParaCondicional_Click);
+            // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.materialRaisedButton8.Location = new System.Drawing.Point(21, 496);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(182, 31);
+            this.materialRaisedButton8.TabIndex = 136;
+            this.materialRaisedButton8.Text = "Carregar Clientes";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.btnCarregarClientes_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -951,103 +1049,6 @@
             this.dgvClientesParaCondicional.RowHeadersWidth = 4;
             this.dgvClientesParaCondicional.Size = new System.Drawing.Size(834, 427);
             this.dgvClientesParaCondicional.TabIndex = 63;
-            // 
-            // materialRaisedButton3
-            // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.materialRaisedButton3.Location = new System.Drawing.Point(6, 19);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton3.TabIndex = 0;
-            this.materialRaisedButton3.Text = "Realizar Condicional";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            this.materialRaisedButton3.Click += new System.EventHandler(this.btnRealizarCondicional_Click);
-            // 
-            // materialRaisedButton4
-            // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.materialRaisedButton4.Location = new System.Drawing.Point(220, 19);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton4.TabIndex = 1;
-            this.materialRaisedButton4.Text = "Ir para venda";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
-            this.materialRaisedButton4.Click += new System.EventHandler(this.btnIrVenda_Click);
-            // 
-            // materialRaisedButton5
-            // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(461, 19);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton5.TabIndex = 2;
-            this.materialRaisedButton5.Text = "Limpar";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
-            this.materialRaisedButton5.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // materialRaisedButton6
-            // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.materialRaisedButton6.Location = new System.Drawing.Point(24, 497);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton6.TabIndex = 9;
-            this.materialRaisedButton6.Text = "Ir para venda";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
-            this.materialRaisedButton6.Click += new System.EventHandler(this.btnIrVendaLista_Click);
-            // 
-            // materialRaisedButton7
-            // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.materialRaisedButton7.Location = new System.Drawing.Point(339, 497);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton7.TabIndex = 11;
-            this.materialRaisedButton7.Text = "Mudar Status";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
-            this.materialRaisedButton7.Click += new System.EventHandler(this.btnMudarStatus_Click);
-            // 
-            // materialRaisedButton8
-            // 
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.materialRaisedButton8.Location = new System.Drawing.Point(21, 496);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton8.TabIndex = 136;
-            this.materialRaisedButton8.Text = "Carregar Clientes";
-            this.materialRaisedButton8.UseVisualStyleBackColor = true;
-            this.materialRaisedButton8.Click += new System.EventHandler(this.btnCarregarClientes_Click);
-            // 
-            // materialRaisedButton9
-            // 
-            this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.materialRaisedButton9.Location = new System.Drawing.Point(209, 496);
-            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton9.Name = "materialRaisedButton9";
-            this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(182, 31);
-            this.materialRaisedButton9.TabIndex = 137;
-            this.materialRaisedButton9.Text = "Ir para Condicional";
-            this.materialRaisedButton9.UseVisualStyleBackColor = true;
-            this.materialRaisedButton9.Click += new System.EventHandler(this.btnIrParaCondicional_Click);
             // 
             // frmCADVenda
             // 
