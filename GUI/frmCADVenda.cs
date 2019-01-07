@@ -94,6 +94,8 @@ namespace GUI
                     //avisos.Text = "Venda completada !";
                     MessageBox.Show("Venda completada !");
                     limparTextBoxes(this.Controls);
+                    limparTextBoxEMasked(tabPage1);
+                    dgvVenda.DataSource = null;
                     //frmCADVenda_Load(sender,e);
                     listaproduto = null;
                 }
@@ -109,7 +111,24 @@ namespace GUI
             }
             
         }
-        
+        private void limparTextBoxEMasked(TabPage tab)//acho que funciona !
+        {
+            foreach (Control verifica in tab.Controls)
+            {
+
+
+                if (verifica is TextBox || verifica is MaskedTextBox)
+                {
+                    if (verifica.Text != string.Empty)
+                    {
+                        verifica.Text = "";
+
+                    }
+
+
+                }
+            }
+        }
 
         private void txtCodigoDeBarras_KeyDown(object sender, KeyEventArgs e)
         {
@@ -435,8 +454,12 @@ namespace GUI
                 }
                 bool resultado = venda.RealizarCondicional(ven, listiv, cli);
                 dgvListaCondicionais.DataSource = (new DALVenda().carregarCondicionais()).ToList();
+                dgvProdutosCondicional.DataSource = null;
+                txtQtdCond.Text = "";
+                txtPrecoCond.Text = "";
                 if (resultado)
                     avisosCond.Text = "Condicional completado !";
+
                 else
                 {
                     avisosCond.Text = "Condicional não completado !";
@@ -455,6 +478,7 @@ namespace GUI
                 dgvVenda.DataSource = dgvProdutosCondicional.DataSource;
                 foreach (DataGridViewRow r in dgvProdutosCondicional.Rows)
                 {
+                    listaproduto = new List<ProdutoModel>();
                     ProdutoModel prod = new ProdutoModel();
                     prod = new DALProduto().SelecionarProdutoModelID((int)r.Cells[0].Value);//falta o teste, se funcionar é só colocar na parte da lista de condicionais também
                     listaproduto.Add(prod);
@@ -494,6 +518,10 @@ namespace GUI
                 decimal valor = decimal.Parse(txtPrecoCond.Text);
                 valor = valor + obj.preco;
                 txtPrecoCond.Text = valor.ToString();
+                txtQtdCond.Text = dgvProdutosCondicional.RowCount.ToString();
+
+
+
             }
             else
             {
@@ -549,7 +577,11 @@ namespace GUI
                 }
 
                 txtPreco.Text = precosomado.ToString();
-                cbCliente.SelectedValue = (int)dgvListaCondicionais.CurrentRow.Cells[0].Value;
+                DALPessoa objDAL = new DALPessoa();
+                Pessoa cm = new Pessoa();
+                cm = objDAL.retornarPessoaComIDCliente((int)dgvListaCondicionais.CurrentRow.Cells[0].Value);
+                cbCliente.SelectedValue = cm.id;//(int)dgvListaCondicionais.CurrentRow.Cells[0].Value;
+                txtCPF.Text = cm.CPF;
                 //foreach (DataGridViewRow r in dgvVenda.Rows)//na duvida se não der certo, só tirar esse foreach
                 //{
                  //   ProdutoModel prod = new ProdutoModel();
@@ -811,6 +843,14 @@ namespace GUI
             if ((int)cbTipoPagamento.SelectedValue == 2)
             {
                 nudParcelamento.Value = 0;
+            }
+        }
+
+        private void nudParcelamento_ValueChanged(object sender, EventArgs e)
+        {
+            if(nudParcelamento.Value > 0)
+            {
+                cbTipoPagamento.SelectedValue = 3;
             }
         }
     }

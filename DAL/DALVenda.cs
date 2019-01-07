@@ -326,7 +326,7 @@ namespace DAL
             }
             return cp;
         }
-        public List<VendaModel> carregarVendasCliente(int id)
+        public List<VendaModel> carregarVendasCliente(int ?id)
         {
             List<VendaModel> vm;
             using (quiteriamodasEntities db = new quiteriamodasEntities())
@@ -516,8 +516,13 @@ namespace DAL
                           idEstado = s.Id,
                           RG = p.RG,
                           CEP = e.CEP,
-                      }).ToList();
+                      }).Distinct().ToList();
             }
+            
+            
+            //List<ClienteModel> cp2 = new List<ClienteModel>();
+            //cp2 = cp.GroupBy(o => o.id);//retirar os clientes duplicados
+          
             return cp;
         }
 

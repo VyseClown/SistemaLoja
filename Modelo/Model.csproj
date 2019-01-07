@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteCobrancaModel.cs" />
     <Compile Include="ClienteModel.cs" />
     <Compile Include="CondicionalModel.cs" />
     <Compile Include="DividaModel.cs" />

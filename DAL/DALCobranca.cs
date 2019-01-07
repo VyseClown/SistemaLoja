@@ -29,17 +29,43 @@ namespace DAL
                 int dias = 0; //= diferenca.Days;
                 
                 cp = (from c in db.Cliente
-                      where (c.DataUltimoPagamento <= agora && c.totalComprado > 0 && (c.DataUltimaCobranca < agora2 || c.DataUltimaCobranca == null))//&& System.Data.Entity.DbFunctions.TruncateTime(c.DataUltimaCobranca.Value) < agora2)
+                      where ((c.DataUltimoPagamento <= agora || c.DataUltimoPagamento == null) && c.totalComprado > 0 && (c.DataUltimaCobranca < agora2 || c.DataUltimaCobranca == null))//&& System.Data.Entity.DbFunctions.TruncateTime(c.DataUltimaCobranca.Value) < agora2)
                       //join pag in db.ClientePagamentos on c.id equals pag.idCliente
-                      join pes in db.Pessoa on c.idPessoa equals pes.id
+                      join p in db.Pessoa on c.idPessoa equals p.id
+                      join e in db.Endereco on p.idEndereco equals e.id 
                       //join ven in db.Venda on c.id equals ven.idCliente
                       select new ClienteModel()
                       {
-                          id = c.id,
-                          totalComprado = c.totalComprado,
-                          nome = pes.nome,
-                          dataUltimoPagamento = c.DataUltimoPagamento,
-                          telefone = pes.telefone,
+                          //id = c.id,
+                          //totalComprado = c.totalComprado,
+                          //nome = pes.nome,
+                          //dataUltimoPagamento = c.DataUltimoPagamento,
+                          //telefone = pes.telefone,
+
+
+
+                          nome = p.nome,
+                          celular = p.celular,
+                          celular2 = p.celular2,
+                          CPF = p.CPF,
+                          dataNascimento = p.datanascimento.Value,
+                          dataUltimoPagamento = c.DataUltimoPagamento.Value,
+                          email = p.email,
+                          id = p.id,
+                          telefone = p.telefone,
+                          telefone2 = p.telefone2,
+                          limitecredito = c.limitecredito.Value,
+                          totalComprado = c.totalComprado.Value,
+                          bairro = e.bairro,
+                          idEndereco = e.id,
+                          numero = e.numero,
+                          rua = e.rua,
+                          RG = p.RG,
+                          CEP = e.CEP,
+
+
+
+
 
 
                       }).ToList();
